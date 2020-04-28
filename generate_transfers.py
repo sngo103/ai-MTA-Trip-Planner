@@ -38,7 +38,7 @@ for stop, trains in transferDict.items():
     #print(output)
     output = output[:-1] + '\n'
 
-output = output[:-2]
+output = output[:-1]
 
 #write to csv file
 outputFile = open('transfers.csv', 'w')
