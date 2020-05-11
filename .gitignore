@@ -1,6 +1,9 @@
 # API Key File
 api_key.txt
 
+# Visual Studio Auto-gen Files
+.vs/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
