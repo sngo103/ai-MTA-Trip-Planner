@@ -2,14 +2,14 @@ import numpy as np
 
 #import data.csv
 #id_name: connects IDs to station names
-id_name = open('id_name.csv','r').read().split('\n')
+id_name = open('data/id_name.csv','r').read().split('\n')
 
 #import stop order.csv
 #stop_order: connects line names to routes
-stop_order = open('stop order.csv','r').read().split('\n')
+stop_order = open('data/stop order.csv','r').read().split('\n')
 
 #import transfers.csv
-transfers = open('transfers.csv','r').read().split('\n')
+transfers = open('data/transfers.csv','r').read().split('\n')
 
 class Subway_System():
     def __init__(self, id_name_data, stop_order_data, transfers_data):
@@ -33,7 +33,7 @@ class Subway_System():
         print(routeDict)
 
 
-test = Subway_System()
+test = Subway_System(id_name, stop_order, transfers)
 print(test.stop_order)
 
 '''
@@ -59,7 +59,7 @@ class Station(Subway_System):
     #stop_order: connects line names to routes
     #transfers: connects station IDs with all the trains stopping there (if there are transfers)
 
-    def __init__(self, stationID, transfers=[], id_name_data, stop_order_data, transfers_data):
+    def __init__(self, stationID=-1, transfers=[], id_name_data=[], stop_order_data=[], transfers_data=[]):
         super(Subway_System, self).__init__() # Need parameters?
         mta = Subway_System(id_name_data, stop_order_data, transfers_data)
         if stationID in mta.transfers:
