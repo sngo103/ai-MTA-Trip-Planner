@@ -1,0 +1,19 @@
+Things to Do:
+
+- build out linked list using stop order.csv
+    -user input: station name 
+        -program changes station name into stationID using data.csv (rename that)
+        -stationID generates available starting trains using stop order.csv
+        -transfer options are listed out in transfers.csv
+- write heuristics: 0.5 * number_of_stops + 0.5 * number_of_transfers (fewer is better)
+    - least number of transfers
+    - least number of stops
+- ensure that the user enters the exact name of desired stops.
+- Write A* Algorithm without transfers
+- Write A* Algorithm with transfers
+
+Things Completed:
+
+
+
+
