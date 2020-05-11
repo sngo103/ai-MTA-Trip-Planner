@@ -29,9 +29,9 @@ class Subway_System():
         for line in dataSet:
             #print (stop_order['Line'])
             thisLine = line.split(',')
-            routeDict[thisLine[0]] = thisLine[1:] 
-        print(routeDict)        
-        
+            routeDict[thisLine[0]] = thisLine[1:]
+        print(routeDict)
+
 
 test = Subway_System()
 print(test.stop_order)
@@ -42,10 +42,10 @@ class Stop():
     #id_name: connects IDs to station names
     #stop_order: connects line names to routes
     #transfers: connects station IDs with all the trains stopping there (if there are transfers)
-    
+
     def __init__(self, stationID):
-        self.line_name = 
-    
+        self.line_name =
+
     def __init__(self, line_name='Unknown', station_name, station_id, transfers=[]):
         self.line_name = line_name
         self.station_name = station_id
@@ -58,7 +58,7 @@ class Station(Subway_System):
     #id_name: connects IDs to station names
     #stop_order: connects line names to routes
     #transfers: connects station IDs with all the trains stopping there (if there are transfers)
-    
+
     def __init__(self, stationID, transfers=[], id_name_data, stop_order_data, transfers_data):
         super(Subway_System, self).__init__() # Need parameters?
         mta = Subway_System(id_name_data, stop_order_data, transfers_data)
@@ -66,4 +66,3 @@ class Station(Subway_System):
             self.transfers = mta.transfers[stationID]
         else:
             self.transfers = []
-    
