@@ -1,7 +1,8 @@
 from queue import PriorityQueue
+from collections import deque
 from subway_system import Subway_System
 import sys
-
+args = sys.argv[1:]
 
 # Stop Directory
 #stop_order: connects line names to routes
@@ -21,42 +22,65 @@ def route(start, end):
 
     start = mta.findStop(start)
     end = mta.findStop(end)
+
     if not start or not end:
         return '\nNo station with the specified name was found. Please try again, or contact an administrator.'
     
-    # Initialization
-    frontier = PriorityQueue()
-    frontier.put(start)
+    # Initialization (temporarily using deque before heuristic is completed)
+    frontier = deque()
+    frontier.append(start)
+
+    #frontier = PriorityQueue()
+    #frontier.put(start)
+    
+    
     explored = set()
     #expanded = 0
     #max_search_depth = 0
 
 
-    while not frontier.empty():
+    #while not frontier.empty():
+    while frontier:
 
-        currentStop = frontier.get()
+        #currentStop = frontier.get()
+        currentStop = frontier.pop()
+
         explored.add(currentStop.stopID)
 
-        if currentStop.stopID == end.stopID:
+        if end.station_name in currentStop.station_name:
             route = '\n\nArrive at: ' + end.station_name + '\n'
             #trace back route
             while currentStop.lastStop != None:
-                currentStop = currentStop.lastStop
+                #currentStop = currentStop.lastStop
+                #print(currentStop.lastStop)
                 route = currentStop.station_name + '\n' + route
+                currentStop = currentStop.lastStop
 
-            route = '\nStart at: ' + start.station_name + '\n\n\n' + 'Intermediate Stops:\n\n' + route
+            route = '\n\n\nStart at: ' + start.station_name + '\n\n\n' + 'Intermediate Stops:\n\n' + route
             return route
 
         #expanded += 1
-        neighbor_dirs = [currentStop.nextStop] #+ currentStop.transfers
+
+        #Get neighbors: nextStop, prevStop, transfers
+        neighbor_dirs = []
+        if currentStop.nextStop:
+            neighbor_dirs += [currentStop.nextStop]
+        if currentStop.prevStop:
+            neighbor_dirs += [currentStop.prevStop]
+        #if currentStop.transfers:
+            #neighbor_dirs += currentStop.transfers
         #print (currentStop.transfers)
         
         #=======NEXT FIX: MAKE TRANSFER LIST CONSIST OF STOPS, NOT STOP_IDS=======
-        
         for direc in neighbor_dirs:
-            direc.lastStop = currentStop
+            #direc.lastStop = currentStop
+
             if direc.stopID not in explored:
-                frontier.put(direc)
+
+                direc.lastStop = currentStop
+
+                #frontier.put(direc)
+                currentStop = frontier.append(direc)
 
             '''
             neighbor_temp = board_structure.board_state()
@@ -78,7 +102,11 @@ def route(start, end):
     return None, None, None
 
 #transfer-less test [WORKING!]
-print (route('Neck Rd', 'Av H'))
+if len(args) > 1:
+    print (route(args[0],args[1]))
+
+else:
+    print (route('Neck Rd', 'Av H'))
 
 #transfer test [not working: see notes]
 #print (route('Brighton Beach', '68th St - Hunter College'))

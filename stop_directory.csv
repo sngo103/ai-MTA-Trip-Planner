@@ -185,9 +185,9 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 183,Canarsie,Atlantic Av,L,FALSE,40.675345,-73.903097
 184,Canarsie,Bedford Av,L,FALSE,40.717304,-73.956872
 185,Canarsie,Bushwick Av,L,FALSE,40.682829,-73.905249
-186,Canarsie,Canarsie - Rockaway Parkway,L,FALSE,40.645957,-73.901741
-187,Canarsie,Canarsie - Rockaway Parkway,L,FALSE,40.645757,-73.9025
-188,Canarsie,Canarsie - Rockaway Parkway,L,FALSE,40.646654,-73.90185
+186,None,None,None,FALSE,-1,-1
+187,None,None,None,FALSE,-1,-1
+188,None,None,None,FALSE,-1,-1
 189,Canarsie,DeKalb Av,L,FALSE,40.703811,-73.918425
 190,Canarsie,East 105th St,L,FALSE,40.650573,-73.899485
 191,Canarsie,Graham Av,L,FALSE,40.714565,-73.944053
@@ -301,8 +301,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 299,8 Avenue,145th St,D,TRUE,40.824783,-73.944216
 300,8 Avenue,155th St,C,FALSE,40.830518,-73.941514
 301,8 Avenue,163rd St - Amsterdam Av,C,FALSE,40.836013,-73.939892
-302,8 Avenue,168th St,A,TRUE,40.840719,-73.939561
-303,8 Avenue,168th St,C,TRUE,40.840719,-73.939561
+302,None,None,None,FALSE,-1,-1
+303,None,None,None,FALSE,-1,-1
 304,8 Avenue,175th St,A,FALSE,40.847391,-73.939704
 305,8 Avenue,181st St,A,FALSE,40.851695,-73.937969
 306,8 Avenue,190th St,A,FALSE,40.859022,-73.93418
@@ -467,7 +467,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 465,Queens Boulevard,Kew Gardens - Union Turnpike,F,TRUE,40.714441,-73.831008
 466,Queens Boulevard,Lexington Av - 53rd St,E,TRUE,40.757552,-73.969055
 467,Queens Boulevard,Lexington Av - 53rd St,M,TRUE,40.757552,-73.969055
-468,Queens Boulevard,51st St,6,TRUE,40.757552,-73.969055
+468,None,None,None,FALSE,-1,-1
 469,Queens Boulevard,Northern Blvd,M,TRUE,40.752885,-73.906006
 470,Queens Boulevard,Northern Blvd,R,TRUE,40.752885,-73.906006
 471,Queens Boulevard,Parsons Blvd,F,FALSE,40.707564,-73.803326
@@ -497,7 +497,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 495,Rockaway,Broad Channel,A3,TRUE,40.608382,-73.815925
 496,Rockaway,Broad Channel,S3,TRUE,40.608382,-73.815925
 497,Rockaway,Far Rockaway - Mott Av,A2,TRUE,40.603995,-73.755405
-498,Rockaway,Far Rockaway - Mott Av,A3,TRUE,40.603995,-73.755405
+498,None,None,None,FALSE,-1,-1
 499,Rockaway,Howard Beach - JFK Airport,A2,TRUE,40.660476,-73.830301
 500,Rockaway,Howard Beach - JFK Airport,A3,TRUE,40.660476,-73.830301
 501,Rockaway,Rockaway Park - Beach 116th,A3,TRUE,40.580903,-73.835592
@@ -655,8 +655,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 653,Lexington,23rd St,6,FALSE,40.739864,-73.986599
 654,Lexington,28th St,6,FALSE,40.74307,-73.984264
 655,Lexington,33rd St,6,FALSE,40.746081,-73.982076
-656,Lexington,51st St,E,TRUE,40.757107,-73.97192
-657,Lexington,51st St,M,TRUE,40.757107,-73.97192
+656,None,None,None,FALSE,-1,-1
+657,None,None,None,FALSE,-1,-1
 658,Lexington,51st St,6,TRUE,40.757107,-73.97192
 659,Lexington,68th St - Hunter College,6,FALSE,40.768141,-73.96387
 660,Lexington,77th St,6,FALSE,40.77362,-73.959874

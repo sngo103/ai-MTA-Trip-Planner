@@ -12,7 +12,7 @@ class Stop():
     longitude = 0
     prevStop = 0 # reference to previous stop's node
     nextStop = 0 # reference to next stop's node
-    lastStop = None # reference to last stop visited (mainly used by algorithm)
+    lastStop = None # reference to last stop visited (set by search algorithm)
 
     def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):
         self.stopID = str(stopID)
@@ -31,10 +31,10 @@ class Stop():
         self.prevStop = prev
         return
 
-    def getNextStop(self, next):
+    def getNextStop(self):
         return self.nextStop
     
-    def getPrevStop(self, prev):
+    def getPrevStop(self):
         return self.prevStop
 
     def __str__(self):
@@ -89,7 +89,7 @@ class Subway_System():
             _station_name = data[2]
             _train = data[3]
             _transfers = self.transfers[_stopID]
-            _transfers = _transfers
+            #_transfers = _transfers
             _latitude = data[5]
             _longitude = data[6]
             directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude)
@@ -107,14 +107,28 @@ class Subway_System():
             order = data[1:]
             order = list(map(lambda x: self.directory[x], order))
 
-            #add next stops
+            #Set previous and next stops
             for stop in range(len(order)):
                 if stop < len(order)-1:
                     order[stop].setNextStop(order[stop+1])
+                    #print('Set Next Stop: ' + str(order[stop+1]))
                 else:
                     order[stop].setNextStop(None)
 
+                if stop > 0:
+                    order[stop].setPrevStop(order[stop-1])
+                    #print('Set Previous Stop: ' + str(order[stop-1]))
+                else:
+                    order[stop].setPrevStop(None)
+
+                self.directory[order[stop]] = order[stop]
+                #print(self.directory[order[stop]].nextStop)#[stop].prevStop)
+
+                #if order[stop].station_name == '51st St':
+                    #print (order[stop].prevStop)
+
             system_dict[train] = order
+
         # print("SYSTEM DICT:", system_dict)
         return system_dict
 
@@ -127,8 +141,10 @@ class Subway_System():
     #Get the StopID given a station name
     def findStop(self, stop_name):
         for stop in self.directory:
-            if self.directory[stop].station_name == stop_name:
+            
+            if stop_name in self.directory[stop].station_name:
                 return self.directory[stop]
+
         return False
 
     def __str__(self):
