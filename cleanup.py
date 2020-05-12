@@ -14,13 +14,14 @@ transfers = {}
 with open('stop_directory.csv', 'r') as read_obj:
     csv_reader = reader(read_obj)
     for row in csv_reader:
-        print(row)
+        #print(row)
         transfers[row[0]] = []
-        try:
-            transfers_data[row[5]+row[6]].append(row[0])
-        except:
-            transfers_data[row[5]+row[6]] = []
-            transfers_data[row[5]+row[6]].append(row[0])
+        if row[5] != '-1' and row[6] != '-1':
+            try:
+                transfers_data[row[5]+row[6]].append(row[0])
+            except:
+                transfers_data[row[5]+row[6]] = []
+                transfers_data[row[5]+row[6]].append(row[0])
 
 # print("transfers_data:")
 # print(transfers_data)
@@ -51,7 +52,7 @@ for key, value in transfers_data.items():
 #         print(retStr)
 #         f.write(retStr)
 
-with open('newstops_transfers.csv', 'w', newline='') as write_obj:
+with open('stop_transfers.csv', 'w', newline='') as write_obj:
     csv_writer = csv.writer(write_obj)
     for key, value in transfers.items():
         if key == "Stop ID":

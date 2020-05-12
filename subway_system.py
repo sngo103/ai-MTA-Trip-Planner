@@ -1,52 +1,7 @@
 import numpy as np
 
-# Stop Directory
-#stop_order: connects line names to routes
-directory_data = open('stop_directory.csv','r').read().split('\n')
 
-# Transfers Directory
-transfers_data = open('stop_transfers.csv', 'r').read().split('\n')
-
-
-class Subway_System():
-
-    def __init__(self, directory, transfers):
-        self.transfers = self.set_tails(transfers) # Dictionary: key stopID -> value list of transferable stops
-        self.directory = self.set_tails(directory) # Array of Stop Nodes
-        self.total_stops = len(directory)  # Total node(stops) in the search space
-
-        #self.boroughs = ['Manhattan'] # Boroughs included in the search space
-        #set this up later
-        #self.total_lines = len(stop_order)
-        #self.line_starts = [] # Array of pointers to start nodes for each line
-        #self.stop_order = self.set_tails(stop_order_data)
-        #self.id_name = self.set_tails(id_name_data)
-        #self.transfers = self.set_tails(transfers_data)
-
-    # Sets up data
-    # Makes a dictionary where the keys are 'head' of each line and the 'tails' are the end of each line
-    def set_tails(self, dataSet):
-        routeDict = {}
-        #for line in stop_order:
-        for line in dataSet:
-            #print (stop_order['Line'])
-            thisLine = line.split(',')
-            routeDict[thisLine[0]] = thisLine[1:]
-        return routeDict
-
-    def __str__(self):
-        return 'Thank you for riding with the MTA New York City Transit!'
-
-    #methods to write
-    def findSurroundingStops(self, stopID):
-        #temporary
-        return (-1, -1)
-
-'''test_subway_system = Subway_System()
-print(test_subway_system)
-print(test_subway_system.stops)'''
-
-class Stop(Subway_System):
+class Stop():
     # Variables
     stopID = -1
     neighborhood = ''
@@ -58,34 +13,87 @@ class Stop(Subway_System):
     prevStop = 0 # reference to previous stop's node
     nextStop = 0 # reference to next stop's node'
 
-    def __init__(self, stopID):
-        #do we really need all these initializing variables? they're all
-        #accessible via the data set. shouldn't just stopID be enough?
-
-        super(Subway_System, self).__init__() # Need parameters?
-        mta = Subway_System(directory_data, transfers_data)
+    def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):
         self.stopID = str(stopID)
-
-        my_directory = mta.directory[stopID]
-        my_transfers = mta.transfers[stopID]
-
-        self.neighborhood = my_directory[0]
-        self.station_name = my_directory[1]
-        self.line = my_directory[2]
-        self.transfers = my_transfers
-        self.latitude = my_directory[4]
-        self.longitude = my_directory[5]
+        self.neighborhood = neighborhood
+        self.station_name = station_name
+        self.line = line
+        self.transfers = transfers
+        self.latitude = latitude
+        self.longitude = longitude
         
-        surroundingStops = self.findSurroundingStops(stopID)
-        self.prevStop = surroundingStops[0]
-        self.nextStop = surroundingStops[1]
+    def setNextStop(self, next):
+        self.nextStop = next
+        return
+    
+    def setPrevStop(self, prev):
+        self.prevStop = prev
+        return
+
+    def getNextStop(self, next):
+        return self.nextStop
+    
+    def getPrevStop(self, prev):
+        return self.prevStop
 
     def __str__(self):
         return self.stopID + ': ' + self.station_name + ', ' + self.line
 
 
-brighton = Stop('48')
+''' *Working
+brighton = Stop('49','Brighton','Brighton Beach','Q',[],'40.577621','-73.961376')
 print(brighton)
+print(brighton.prevStop)
+print(brighton.nextStop)
+print(brighton.transfers)
+'''
 
-# Datasets
-# 1. All the stations in order: stopID, Line
+# ================================================================================
+
+# Stop Directory
+#stop_order: connects line names to routes
+directory_data = open('stop_directory.csv','r').read().split('\n')
+
+# Transfers Directory
+transfers_data = open('stop_transfers.csv', 'r').read().split('\n')
+
+#Stop Order Directory
+stop_order_data = open('stop_order.csv', 'r').read().split('\n')
+
+class Subway_System():
+
+    def __init__(self, directory, transfers, train_lines):
+        self.transfers = self.setupTransfers(transfers) # Dictionary: key stopID -> value list of transferable stops
+        self.directory = self.setupDirectory(directory) # Dictionary of Stop Nodes: key stopID -> Stop Node
+        self.system = 0 # TBD, Dictionary of Routes (Stop Order) 
+        self.total_stops = len(directory)  # Total node(stops) in the search space
+
+    def setupTransfers(self, transfers):
+        transfers_dict = {}
+        for line in transfers:
+            data = line.split(',')
+            train = data[0]
+            transfer_stops = data[1:]
+            transfers_dict[train] = transfer_stops
+        # print("Transfers DICT:", transfers_dict)
+        return transfers_dict
+
+    def setupDirectory(self, directory):
+        directory_dict = {}
+        for line in directory:
+            data = line.split(',') # Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
+            _stopID = data[0]
+            _neighborhood = data[1]
+            _station_name = data[2]
+            _train = data[3]
+            _transfers = self.transfers[_stopID]
+            _latitude = data[5]
+            _longitude = data[6]
+            directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude)
+        # print(directory_dict)
+        return directory_dict
+
+    def __str__(self):
+        return 'Thank you for riding with the MTA New York City Transit!'
+
+mta = Subway_System(directory_data, transfers_data, stop_order_data)

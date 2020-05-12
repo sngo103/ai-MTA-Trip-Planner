@@ -55,8 +55,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 53,Brighton,Kings Highway,B,True,40.60867,-73.957734
 54,Brighton,Kings Highway,Q,True,40.60867,-73.957734
 55,Brighton,Neck Rd,Q,False,40.595246,-73.955161
-56,Brighton,Newkirk Av,B,True,40.635082,-73.962793
-57,Brighton,Newkirk Av,Q,True,40.635082,-73.962793
+56,Brighton,Newkirk Plaza,B,True,40.635082,-73.962793
+57,Brighton,Newkirk Plaza,Q,True,40.635082,-73.962793
 58,Brighton,Ocean Parkway,Q,False,40.576312,-73.968501
 59,Brighton,Parkside Av,Q,False,40.655292,-73.961495
 60,Brighton,Prospect Park,B,True,40.661614,-73.962246
@@ -64,10 +64,10 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 62,Brighton,Prospect Park,S2,True,40.661614,-73.962246
 63,Brighton,Sheepshead Bay,B,True,40.586896,-73.954155
 64,Brighton,Sheepshead Bay,Q,True,40.586896,-73.954155
-65,Brighton,Stillwell Av,D,True,40.577422,-73.98123299999997
-66,Brighton,Stillwell Av,F,True,40.577422,-73.98123299999997
-67,Brighton,Stillwell Av,N,True,40.577422,-73.98123299999997
-68,Brighton,Stillwell Av,Q,True,40.577422,-73.98123299999997
+65,Brighton,Coney Island – Stillwell Av,D,True,40.577422,-73.98123299999997
+66,Brighton,Coney Island – Stillwell Av,F,True,40.577422,-73.98123299999997
+67,Brighton,Coney Island – Stillwell Av,N,True,40.577422,-73.98123299999997
+68,Brighton,Coney Island – Stillwell Av,Q,True,40.577422,-73.98123299999997
 69,Brighton,West 8th St - New York Aquarium,F,True,40.576127,-73.975939
 70,Brighton,West 8th St - New York Aquarium,Q,True,40.576127,-73.975939
 71,Broadway,23rd St,R,True,40.741303,-73.98934399999997
@@ -111,16 +111,16 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 109,Broadway,Lexington Av - 59th St,N,True,40.76266,-73.967258
 110,Broadway,Lexington Av - 59th St,R,True,40.76266,-73.967258
 111,Broadway,Lexington Av - 59th St,W,True,40.76266,-73.967258
-112,Broadway,Lexington Av - 59th St,4,True,40.76266,-73.967258
-113,Broadway,Lexington Av - 59th St,5,True,40.76266,-73.967258
-114,Broadway,Lexington Av - 59th St,6,True,40.76266,-73.967258
+112,Broadway,59th St,4,True,40.76266,-73.967258
+113,Broadway,59th St,5,True,40.76266,-73.967258
+114,Broadway,59th St,6,True,40.76266,-73.967258
 115,Broadway,Prince St,W,True,40.724329,-73.997702
 116,Broadway,Prince St,R,True,40.724329,-73.997702
 117,Broadway,Rector St,R,True,40.70722,-74.01334200000002
 118,Broadway,Rector St,W,True,40.70722,-74.01334200000002
-119,Broadway,Times Square - 42nd St,A,True,40.754672,-73.986754
-120,Broadway,Times Square - 42nd St,C,True,40.754672,-73.986754
-121,Broadway,Times Square - 42nd St,E,True,40.754672,-73.986754
+119,Broadway,42nd St – Port Authority Bus Terminal,A,True,40.754672,-73.986754
+120,Broadway,42nd St – Port Authority Bus Terminal,C,True,40.754672,-73.986754
+121,Broadway,42nd St – Port Authority Bus Terminal,E,True,40.754672,-73.986754
 122,Broadway,Times Square - 42nd St,N,True,40.754672,-73.986754
 123,Broadway,Times Square - 42nd St,Q,True,40.754672,-73.986754
 124,Broadway,Times Square - 42nd St,R,True,40.754672,-73.986754
@@ -138,9 +138,9 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 136,Broadway,14th St - Union Square,4,True,40.735736,-73.99056800000002
 137,Broadway,14th St - Union Square,5,True,40.735736,-73.99056800000002
 138,Broadway,14th St - Union Square,6,True,40.735736,-73.99056800000002
-139,Broadway,Whitehall St - South Ferry,R,True,40.703087,-74.01299399999998
-140,Broadway,Whitehall St - South Ferry,W,True,40.703087,-74.01299399999998
-141,Broadway,Whitehall St - South Ferry,1,True,40.703087,-74.01299399999998
+139,Broadway,Whitehall St,R,True,40.703087,-74.01299399999998
+140,Broadway,Whitehall St,W,True,40.703087,-74.01299399999998
+141,Broadway,South Ferry,1,True,40.703087,-74.01299399999998
 142,Broadway Jamaica,104th St,J,True,40.69517800000001,-73.84433
 143,Broadway Jamaica,104th St,Z,True,40.69517800000001,-73.84433
 144,Broadway Jamaica,111th St,J,False,40.697418,-73.836345
@@ -178,10 +178,10 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 176,Broadway Jamaica,Woodhaven Blvd,Z,True,40.693879,-73.851576
 177,Canarsie,1st Av,L,False,40.730953,-73.981628
 178,Canarsie,3rd Av,L,False,40.732849,-73.986122
-179,Canarsie,14th St - 8 Av,A,True,40.739777,-74.002578
-180,Canarsie,14th St - 8 Av,C,True,40.739777,-74.002578
-181,Canarsie,14th St - 8 Av,E,True,40.739777,-74.002578
-182,Canarsie,14th St - 8 Av,L,True,40.739777,-74.002578
+179,Canarsie,14th St,A,True,40.739777,-74.002578
+180,Canarsie,14th St,C,True,40.739777,-74.002578
+181,Canarsie,14th St,E,True,40.739777,-74.002578
+182,Canarsie,8 Av,L,True,40.739777,-74.002578
 183,Canarsie,Atlantic Av,L,False,40.675345,-73.903097
 184,Canarsie,Bedford Av,L,False,40.717304,-73.956872
 185,Canarsie,Bushwick Av,L,False,40.682829,-73.905249
@@ -195,8 +195,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 193,Canarsie,Halsey St,L,False,40.695602,-73.904084
 194,Canarsie,Jefferson St,L,False,40.706607,-73.922913
 195,Canarsie,Livonia Av,L,False,40.664038,-73.900571
-196,Canarsie,Lorimer St - Metropolitan Av,G,True,40.714063,-73.950275
-197,Canarsie,Lorimer St - Metropolitan Av,L,True,40.714063,-73.950275
+196,Canarsie,Metropolitan Av,G,True,40.714063,-73.950275
+197,Canarsie,Lorimer St,L,True,40.714063,-73.950275
 198,Canarsie,Montrose Av,L,False,40.707739,-73.93985
 199,Canarsie,Morgan Av,L,False,40.706152,-73.93314699999998
 200,Canarsie,Myrtle - Wyckoff Avs,L,True,40.699814,-73.911586
@@ -242,12 +242,12 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 240,63rd Street,Lexington Av - 63rd St,F,True,40.764627,-73.96611
 241,63rd Street,Lexington Av - 63rd St,Q,True,40.764627,-73.96611
 242,63rd Street,Roosevelt Island,F,False,40.759145,-73.95326
-243,6 Avenue,14th St - 6 Av,F,True,40.738228,-73.996209
-244,6 Avenue,14th St - 6 Av,L,True,40.738228,-73.996209
-245,6 Avenue,14th St - 6 Av,M,True,40.738228,-73.996209
-246,6 Avenue,14th St - 6 Av,1,True,40.738228,-73.996209
-247,6 Avenue,14th St - 6 Av,2,True,40.738228,-73.996209
-248,6 Avenue,14th St - 6 Av,3,True,40.738228,-73.996209
+243,6 Avenue,14th St,F,True,40.738228,-73.996209
+244,6 Avenue,6 Av,L,True,40.738228,-73.996209
+245,6 Avenue,14th St,M,True,40.738228,-73.996209
+246,6 Avenue,14th St,1,True,40.738228,-73.996209
+247,6 Avenue,14th St,2,True,40.738228,-73.996209
+248,6 Avenue,14th St,3,True,40.738228,-73.996209
 249,6 Avenue,23rd St,F,True,40.74287800000001,-73.99282099999998
 250,6 Avenue,23rd St,M,True,40.74287800000001,-73.99282099999998
 251,6 Avenue,2nd Av,F,False,40.723402,-73.989938
@@ -255,7 +255,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 253,6 Avenue,42nd St - Bryant Park,D,True,40.754222,-73.984569
 254,6 Avenue,42nd St - Bryant Park,F,True,40.754222,-73.984569
 255,6 Avenue,42nd St - Bryant Park,M,True,40.754222,-73.984569
-256,6 Avenue,42nd St - Bryant Park,7,True,40.754222,-73.984569
+256,6 Avenue,5 Av,7,True,40.754222,-73.984569
 257,6 Avenue,47-50th Sts - Rockefeller Center,B,True,40.758663,-73.981329
 258,6 Avenue,47-50th Sts - Rockefeller Center,D,True,40.758663,-73.981329
 259,6 Avenue,47-50th Sts - Rockefeller Center,F,True,40.758663,-73.981329
@@ -264,11 +264,11 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 262,6 Avenue,7th Av,F,True,40.666271,-73.980305
 263,6 Avenue,Bergen St,F,True,40.686145,-73.99086199999998
 264,6 Avenue,Bergen St,G,True,40.686145,-73.99086199999998
-265,6 Avenue,Broadway - Lafayette St (Bleecker St),B,True,40.725297,-73.996204
-266,6 Avenue,Broadway - Lafayette St (Bleecker St),D,True,40.725297,-73.996204
-267,6 Avenue,Broadway - Lafayette St (Bleecker St),F,True,40.725297,-73.996204
-268,6 Avenue,Broadway - Lafayette St (Bleecker St),M,True,40.725297,-73.996204
-269,6 Avenue,Broadway - Lafayette St (Bleecker St),6,True,40.725297,-73.996204
+265,6 Avenue,Broadway - Lafayette St,B,True,40.725297,-73.996204
+266,6 Avenue,Broadway - Lafayette St,D,True,40.725297,-73.996204
+267,6 Avenue,Broadway - Lafayette St,F,True,40.725297,-73.996204
+268,6 Avenue,Broadway - Lafayette St,M,True,40.725297,-73.996204
+269,6 Avenue,Bleecker St,6,True,40.725297,-73.996204
 270,6 Avenue,Carroll St,F,True,40.680303,-73.995048
 271,6 Avenue,Carroll St,G,True,40.680303,-73.995048
 272,6 Avenue,Church Av,F,True,40.644041,-73.979678
@@ -283,7 +283,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 281,6 Avenue,15 St - Prospect Park,F,True,40.66036500000001,-73.979493
 282,6 Avenue,Smith - 9th Sts,F,True,40.67358,-73.995959
 283,6 Avenue,Smith - 9th Sts,G,True,40.67358,-73.995959
-284,6 Avenue,Smith - 9th Sts,R,True,40.67358,-73.995959
+284,None,None,None,False,-1,-1
 285,6 Avenue,York St,F,False,40.699743,-73.986885
 286,8 Avenue,103rd St,B,True,40.796092,-73.961454
 287,8 Avenue,103rd St,C,True,40.796092,-73.961454
@@ -331,11 +331,11 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 329,8 Avenue,Canal St,E,True,40.720824,-74.005229
 330,8 Avenue,Cathedral Parkway - 110th St,B,True,40.800605,-73.958158
 331,8 Avenue,Cathedral Parkway - 110th St,C,True,40.800605,-73.958158
-332,8 Avenue,Chambers St - Park Place - World Trade Center,A,True,40.714111,-74.008585
-333,8 Avenue,Chambers St - Park Place - World Trade Center,C,True,40.714111,-74.008585
-334,8 Avenue,Chambers St - Park Place - World Trade Center,E,True,40.714111,-74.008585
-335,8 Avenue,Chambers St - Park Place - World Trade Center,2,True,40.714111,-74.008585
-336,8 Avenue,Chambers St - Park Place - World Trade Center,3,True,40.714111,-74.008585
+332,8 Avenue,Chambers St,A,True,40.714111,-74.008585
+333,8 Avenue,Chambers St,C,True,40.714111,-74.008585
+334,8 Avenue,World Trade Center,E,True,40.714111,-74.008585
+335,8 Avenue,Park Place,2,True,40.714111,-74.008585
+336,8 Avenue,Park Place,3,True,40.714111,-74.008585
 337,8 Avenue,Dyckman St,A,False,40.865491,-73.92727099999998
 338,8 Avenue,High St,A,True,40.699337,-73.990531
 339,8 Avenue,High St,C,True,40.699337,-73.990531
@@ -406,22 +406,22 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 404,Fulton,Hoyt - Schermerhorn Sts,A,True,40.688484,-73.985001
 405,Fulton,Hoyt - Schermerhorn Sts,C,True,40.688484,-73.985001
 406,Fulton,Hoyt - Schermerhorn Sts,G,True,40.688484,-73.985001
-407,Fulton,Kingston - Throop Avs,A,True,40.679921,-73.94085799999998
+407,None,None,None,False,-1,-1
 408,Fulton,Kingston - Throop Avs,C,True,40.679921,-73.94085799999998
 409,Fulton,Lafayette Av,C,False,40.686113,-73.973946
-410,Fulton,Liberty Av,A,True,40.674542,-73.896548
+410,None,None,None,False,-1,-1
 411,Fulton,Liberty Av,C,True,40.674542,-73.896548
 412,Fulton,Nostrand Av,A,True,40.680438,-73.95042600000002
 413,Fulton,Nostrand Av,C,True,40.680438,-73.95042600000002
-414,Fulton,Ralph Av,A,True,40.678822,-73.92078599999998
+414,None,None,None,False,-1,-1
 415,Fulton,Ralph Av,C,True,40.678822,-73.92078599999998
-416,Fulton,Rockaway Av,A,True,40.67834000000001,-73.911946
+416,None,None,None,False,-1,-1
 417,Fulton,Rockaway Av,C,True,40.67834000000001,-73.911946
-418,Fulton,Shepherd Av,A,True,40.67413,-73.88075
+418,None,None,None,False,-1,-1
 419,Fulton,Shepherd Av,C,True,40.67413,-73.88075
 420,Fulton,Utica Av,A,True,40.679364,-73.930729
 421,Fulton,Utica Av,C,True,40.679364,-73.930729
-422,Fulton,Van Siclen Av,A,True,40.67271,-73.89035799999998
+422,None,None,None,False,-1,-1
 423,Fulton,Van Siclen Av,C,True,40.67271,-73.89035799999998
 424,Liberty,104th St,A,False,40.681711,-73.837683
 425,Liberty,111th St,A,False,40.684331,-73.832163
@@ -461,13 +461,13 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 459,Queens Boulevard,Jackson Heights - Roosevelt Ave,F,True,40.746644,-73.891338
 460,Queens Boulevard,Jackson Heights - Roosevelt Ave,M,True,40.746644,-73.891338
 461,Queens Boulevard,Jackson Heights - Roosevelt Ave,R,True,40.746644,-73.891338
-462,Queens Boulevard,Jackson Heights - Roosevelt Ave,7,True,40.746644,-73.891338
+462,Queens Boulevard,74 St – Broadway,7,True,40.746644,-73.891338
 463,Queens Boulevard,Jamaica - 179th St,F,False,40.712646,-73.783817
 464,Queens Boulevard,Kew Gardens - Union Turnpike,E,True,40.714441,-73.831008
 465,Queens Boulevard,Kew Gardens - Union Turnpike,F,True,40.714441,-73.831008
 466,Queens Boulevard,Lexington Av - 53rd St,E,True,40.757552,-73.96905500000003
 467,Queens Boulevard,Lexington Av - 53rd St,M,True,40.757552,-73.96905500000003
-468,Queens Boulevard,Lexington Av - 53rd St,6,True,40.757552,-73.96905500000003
+468,Queens Boulevard,51st St,6,True,40.757552,-73.96905500000003
 469,Queens Boulevard,Northern Blvd,M,True,40.752885,-73.906006
 470,Queens Boulevard,Northern Blvd,R,True,40.752885,-73.906006
 471,Queens Boulevard,Parsons Blvd,F,False,40.707564,-73.803326
@@ -539,18 +539,18 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 537,Broadway-7th Ave,Chambers St,2,True,40.715478,-74.009266
 538,Broadway-7th Ave,Chambers St,3,True,40.715478,-74.009266
 539,Broadway-7th Ave,Christopher St,1,False,40.733422,-74.00290600000002
-540,Broadway-7th Ave,WTC - Cortlandt,1,False,-1.0,-1.0
+540,Broadway-7th Ave,WTC - Cortlandt,1,False,40,74
 541,Broadway-7th Ave,Dyckman St,1,False,40.860531,-73.925536
 542,Broadway-7th Ave,Franklin St,1,False,40.719318,-74.006886
 543,Broadway-7th Ave,Houston St,1,False,40.728251,-74.005367
 544,Broadway-7th Ave,Marble Hill - 225th St,1,False,40.874561,-73.90983100000003
 545,Broadway-7th Ave,Rector St,1,False,40.707513,-74.01378299999998
 546,Broadway-7th Ave,Van Cortlandt Park - 242nd St,1,False,40.889248,-73.898583
-547,Clark,Court St - Borough Hall,R,True,40.693219,-73.989998
-548,Clark,Court St - Borough Hall,2,True,40.693219,-73.989998
-549,Clark,Court St - Borough Hall,3,True,40.693219,-73.989998
-550,Clark,Court St - Borough Hall,4,True,40.693219,-73.989998
-551,Clark,Court St - Borough Hall,5,True,40.693219,-73.989998
+547,Clark,Court St,R,True,40.693219,-73.989998
+548,Clark,Borough Hall,2,True,40.693219,-73.989998
+549,Clark,Borough Hall,3,True,40.693219,-73.989998
+550,Clark,Borough Hall,4,True,40.693219,-73.989998
+551,Clark,Borough Hall,5,True,40.693219,-73.989998
 552,Clark,Clark St,2,True,40.697466,-73.993086
 553,Clark,Clark St,3,True,40.697466,-73.993086
 554,Clark,Fulton St,A,True,40.709416,-74.006571
@@ -587,14 +587,14 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 585,Eastern Parkway,Nevins St,4,True,40.688246,-73.980492
 586,Eastern Parkway,Nevins St,5,True,40.688246,-73.980492
 587,Eastern Parkway,Nostrand Av,3,False,40.669847,-73.950466
-588,Eastern Parkway,Utica Av,3,True,40.668897,-73.93294200000003
-589,Eastern Parkway,Utica Av,4,True,40.668897,-73.93294200000003
+588,Eastern Parkway,Crown Heights – Utica Av,3,True,40.668897,-73.93294200000003
+589,Eastern Parkway,Crown Heights – Utica Av,4,True,40.668897,-73.93294200000003
 590,Flushing,103rd St,7,False,40.749865,-73.8627
 591,Flushing,111th St,7,False,40.75173,-73.855334
 592,Flushing,34 St - Hudson Yards,7,False,40.755882,-74.00191
-593,Flushing,Court Sq,E,True,40.747023,-73.945264
+593,Flushing,Court Sq – 23 St,E,True,40.747023,-73.945264
 594,Flushing,Court Sq,G,True,40.747023,-73.945264
-595,Flushing,Court Sq,M,True,40.747023,-73.945264
+595,Flushing,Court Sq – 23 St,M,True,40.747023,-73.945264
 596,Flushing,Court Sq,7,True,40.747023,-73.945264
 597,Flushing,82nd St - Jackson Heights,7,False,40.74765900000001,-73.883697
 598,Flushing,90th St Elmhurst,7,False,40.74840800000001,-73.876613
@@ -667,11 +667,11 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 665,Lexington,Astor Place,6,False,40.730054,-73.99107
 666,Lexington,Bowling Green,4,True,40.704817,-74.014065
 667,Lexington,Bowling Green,5,True,40.704817,-74.014065
-668,Lexington,Brooklyn Bridge - City Hall (Chambers St),J,True,40.713065,-74.004131
-669,Lexington,Brooklyn Bridge - City Hall (Chambers St),Z,True,40.713065,-74.004131
-670,Lexington,Brooklyn Bridge - City Hall (Chambers St),4,True,40.713065,-74.004131
-671,Lexington,Brooklyn Bridge - City Hall (Chambers St),5,True,40.713065,-74.004131
-672,Lexington,Brooklyn Bridge - City Hall (Chambers St),6,True,40.713065,-74.004131
+668,Lexington,Chambers St,J,True,40.713065,-74.004131
+669,Lexington,Chambers St,Z,True,40.713065,-74.004131
+670,Lexington,Brooklyn Bridge - City Hall,4,True,40.713065,-74.004131
+671,Lexington,Brooklyn Bridge - City Hall,5,True,40.713065,-74.004131
+672,Lexington,Brooklyn Bridge - City Hall,6,True,40.713065,-74.004131
 673,Lexington,Spring St,6,False,40.722301,-73.997141
 674,Lexington,Wall St,4,True,40.707557,-74.011862
 675,Lexington,Wall St,5,True,40.707557,-74.011862
@@ -719,19 +719,19 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 717,White Plains Road,174th St,2,True,40.837288,-73.887734
 718,White Plains Road,174th St,5,True,40.837288,-73.887734
 719,White Plains Road,219th St,2,True,40.883895,-73.862633
-720,White Plains Road,219th St,5,True,40.883895,-73.862633
+720,None,None,None,False,-1,-1
 721,White Plains Road,225th St,2,True,40.888022,-73.860341
-722,White Plains Road,225th St,5,True,40.888022,-73.860341
+722,None,None,None,False,-1,-1
 723,White Plains Road,233rd St,2,True,40.893193,-73.857473
-724,White Plains Road,233rd St,5,True,40.893193,-73.857473
+724,None,None,None,False,-1,-1
 725,White Plains Road,Nereid Av,2,True,40.898379,-73.854376
-726,White Plains Road,Nereid Av,5,True,40.898379,-73.854376
+726,None,None,None,False,-1,-1
 727,White Plains Road,Allerton Av,2,True,40.865462,-73.867352
-728,White Plains Road,Allerton Av,5,True,40.865462,-73.867352
+728,None,None,None,False,-1,-1
 729,White Plains Road,Bronx Park East,2,True,40.84882800000001,-73.86845699999998
-730,White Plains Road,Bronx Park East,5,True,40.84882800000001,-73.86845699999998
+730,None,None,None,False,-1,-1
 731,White Plains Road,Burke Av,2,True,40.871356,-73.867164
-732,White Plains Road,Burke Av,5,True,40.871356,-73.867164
+732,None,None,None,False,-1,-1
 733,White Plains Road,East 180th St,2,True,40.841894,-73.873488
 734,White Plains Road,East 180th St,5,True,40.841894,-73.873488
 735,White Plains Road,West Farms Sq - East Tremont Av,2,True,40.84029500000001,-73.880049
@@ -739,27 +739,27 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 737,White Plains Road,Freeman St,2,True,40.829993,-73.891865
 738,White Plains Road,Freeman St,5,True,40.829993,-73.891865
 739,White Plains Road,Gun Hill Rd,2,True,40.87785,-73.866256
-740,White Plains Road,Gun Hill Rd,5,True,40.87785,-73.866256
+740,None,None,None,False,-1,-1
 741,White Plains Road,Intervale Av,2,True,40.822181,-73.896736
 742,White Plains Road,Intervale Av,5,True,40.822181,-73.896736
 743,White Plains Road,Jackson Av,2,True,40.81649,-73.90780699999998
 744,White Plains Road,Jackson Av,5,True,40.81649,-73.90780699999998
 745,White Plains Road,Pelham Parkway,2,True,40.857192,-73.867615
-746,White Plains Road,Pelham Parkway,5,True,40.857192,-73.867615
+746,None,None,None,False,-1,-1
 747,White Plains Road,Prospect Av,2,True,40.819585,-73.90177
 748,White Plains Road,Prospect Av,5,True,40.819585,-73.90177
 749,White Plains Road,Simpson St,2,True,40.824073,-73.893064
 750,White Plains Road,Simpson St,5,True,40.824073,-73.893064
 751,White Plains Road,Wakefield - 241st St,2,True,40.903125,-73.85061999999998
-752,White Plains Road,Wakefield - 241st St,5,True,40.903125,-73.85061999999998
+752,None,None,None,False,-1,-1
 753,2 Avenue,72nd St,Q,True,40.768878,-73.95756300000002
 754,2 Avenue,86th St,Q,True,40.777989,-73.951589
 755,2 Avenue,96th St,Q,True,40.783692,-73.94765799999998
 756,Broadway Jamaica,Alabama Av,Z,True,40.676992,-73.89865400000002
 757,Broadway,City Hall,W,True,40.713282,-74.006978
 758,Queens Boulevard,Briarwood - Van Wyck Blvd,E,True,40.709179,-73.820574
-759,Broadway Jamaica,Lorimer St,J,True,-1,-1
-760,Broadway Jamaica,Lorimer St,M,True,-1,-1
+759,Broadway Jamaica,Lorimer St,J,True,40,73
+760,Broadway Jamaica,Lorimer St,M,True,40,73
 761,Crosstown,Church Av,G,True,40.644041,-73.979678
 762,Crosstown,Fort Hamilton Parkway,G,True,40.650782,-73.975776
 763,Crosstown,15 St - Prospect Park,G,True,40.66036500000001,-73.979493
