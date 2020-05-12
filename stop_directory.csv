@@ -101,7 +101,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 99,Broadway,Canal St,W,True,40.719527,-74.001775
 100,Broadway,Canal St,Z,True,40.719527,-74.001775
 101,Broadway,Canal St,6,True,40.719527,-74.001775
-102,Broadway,City Hall,R,False,40.713282,-74.006978
+102,Broadway,City Hall,R,True,40.713282,-74.006978
 103,Broadway,Cortlandt St,R,True,40.710668,-74.01102900000002
 104,Broadway,Cortlandt St,W,True,40.710668,-74.01102900000002
 105,Broadway,Jay St - Metrotech,A,True,40.69218,-73.98594200000002
@@ -114,22 +114,22 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 112,Broadway,Lexington Av - 59th St,4,True,40.76266,-73.967258
 113,Broadway,Lexington Av - 59th St,5,True,40.76266,-73.967258
 114,Broadway,Lexington Av - 59th St,6,True,40.76266,-73.967258
-115,Broadway,Prince St,N,True,40.724329,-73.997702
+115,Broadway,Prince St,W,True,40.724329,-73.997702
 116,Broadway,Prince St,R,True,40.724329,-73.997702
 117,Broadway,Rector St,R,True,40.70722,-74.01334200000002
 118,Broadway,Rector St,W,True,40.70722,-74.01334200000002
-119,Broadway,Times Square - 42nd St ,A,True,40.754672,-73.986754
-120,Broadway,Times Square - 42nd St ,C,True,40.754672,-73.986754
-121,Broadway,Times Square - 42nd St ,E,True,40.754672,-73.986754
-122,Broadway,Times Square - 42nd St ,N,True,40.754672,-73.986754
-123,Broadway,Times Square - 42nd St ,Q,True,40.754672,-73.986754
-124,Broadway,Times Square - 42nd St ,R,True,40.754672,-73.986754
-125,Broadway,Times Square - 42nd St ,W,True,40.754672,-73.986754
-126,Broadway,Times Square - 42nd St ,1,True,40.754672,-73.986754
-127,Broadway,Times Square - 42nd St ,2,True,40.754672,-73.986754
-128,Broadway,Times Square - 42nd St ,3,True,40.754672,-73.986754
-129,Broadway,Times Square - 42nd St ,7,True,40.754672,-73.986754
-130,Broadway,Times Square - 42nd St ,S1,True,40.754672,-73.986754
+119,Broadway,Times Square - 42nd St,A,True,40.754672,-73.986754
+120,Broadway,Times Square - 42nd St,C,True,40.754672,-73.986754
+121,Broadway,Times Square - 42nd St,E,True,40.754672,-73.986754
+122,Broadway,Times Square - 42nd St,N,True,40.754672,-73.986754
+123,Broadway,Times Square - 42nd St,Q,True,40.754672,-73.986754
+124,Broadway,Times Square - 42nd St,R,True,40.754672,-73.986754
+125,Broadway,Times Square - 42nd St,W,True,40.754672,-73.986754
+126,Broadway,Times Square - 42nd St,1,True,40.754672,-73.986754
+127,Broadway,Times Square - 42nd St,2,True,40.754672,-73.986754
+128,Broadway,Times Square - 42nd St,3,True,40.754672,-73.986754
+129,Broadway,Times Square - 42nd St,7,True,40.754672,-73.986754
+130,Broadway,Times Square - 42nd St,S1,True,40.754672,-73.986754
 131,Broadway,14th St - Union Square,L,True,40.735736,-73.99056800000002
 132,Broadway,14th St - Union Square,N,True,40.735736,-73.99056800000002
 133,Broadway,14th St - Union Square,Q,True,40.735736,-73.99056800000002
@@ -146,7 +146,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 144,Broadway Jamaica,111th St,J,False,40.697418,-73.836345
 145,Broadway Jamaica,121st St,J,True,40.700492,-73.828294
 146,Broadway Jamaica,121st St,Z,True,40.700492,-73.828294
-147,Broadway Jamaica,Alabama Av,J,False,40.676992,-73.89865400000002
+147,Broadway Jamaica,Alabama Av,J,True,40.676992,-73.89865400000002
 148,Broadway Jamaica,Chauncey St,J,True,40.682893,-73.91045600000002
 149,Broadway Jamaica,Chauncey St,Z,True,40.682893,-73.91045600000002
 150,Broadway Jamaica,Cleveland St,J,False,40.679947,-73.884639
@@ -261,7 +261,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 259,6 Avenue,47-50th Sts - Rockefeller Center,F,True,40.758663,-73.981329
 260,6 Avenue,47-50th Sts - Rockefeller Center,M,True,40.758663,-73.981329
 261,6 Avenue,57th St,F,False,40.763972,-73.97745
-262,6 Avenue,7th Av,F,False,40.666271,-73.980305
+262,6 Avenue,7th Av,F,True,40.666271,-73.980305
 263,6 Avenue,Bergen St,F,True,40.686145,-73.99086199999998
 264,6 Avenue,Bergen St,G,True,40.686145,-73.99086199999998
 265,6 Avenue,Broadway - Lafayette St (Bleecker St),B,True,40.725297,-73.996204
@@ -271,16 +271,16 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 269,6 Avenue,Broadway - Lafayette St (Bleecker St),6,True,40.725297,-73.996204
 270,6 Avenue,Carroll St,F,True,40.680303,-73.995048
 271,6 Avenue,Carroll St,G,True,40.680303,-73.995048
-272,6 Avenue,Church Av,F,False,40.644041,-73.979678
+272,6 Avenue,Church Av,F,True,40.644041,-73.979678
 273,6 Avenue,Delancey St,F,True,40.718611,-73.988114
 274,6 Avenue,Delancey St,J,True,40.718611,-73.988114
 275,6 Avenue,Delancey St,M,True,40.718611,-73.988114
 276,6 Avenue,Delancey St,Z,True,40.718611,-73.988114
 277,6 Avenue,East Broadway,F,False,40.713715,-73.990173
-278,6 Avenue,Fort Hamilton Parkway,F,False,40.650782,-73.975776
+278,6 Avenue,Fort Hamilton Parkway,F,True,40.650782,-73.975776
 279,6 Avenue,Grand St,B,True,40.718267,-73.993753
 280,6 Avenue,Grand St,D,True,40.718267,-73.993753
-281,6 Avenue,15 St - Prospect Park,F,False,40.66036500000001,-73.979493
+281,6 Avenue,15 St - Prospect Park,F,True,40.66036500000001,-73.979493
 282,6 Avenue,Smith - 9th Sts,F,True,40.67358,-73.995959
 283,6 Avenue,Smith - 9th Sts,G,True,40.67358,-73.995959
 284,6 Avenue,Smith - 9th Sts,R,True,40.67358,-73.995959
@@ -448,7 +448,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 446,Queens Boulevard,7th Av,B,True,40.762862,-73.981637
 447,Queens Boulevard,7th Av,D,True,40.762862,-73.981637
 448,Queens Boulevard,7th Av,E,True,40.762862,-73.981637
-449,Queens Boulevard,Briarwood - Van Wyck Blvd,F,False,40.709179,-73.820574
+449,Queens Boulevard,Briarwood - Van Wyck Blvd,F,True,40.709179,-73.820574
 450,Queens Boulevard,Elmhurst Av,M,True,40.742454,-73.882017
 451,Queens Boulevard,Elmhurst Av,R,True,40.742454,-73.882017
 452,Queens Boulevard,Forest Hills - 71st Av,E,True,40.721691,-73.844521
@@ -753,8 +753,14 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 751,White Plains Road,Wakefield - 241st St,2,True,40.903125,-73.85061999999998
 752,White Plains Road,Wakefield - 241st St,5,True,40.903125,-73.85061999999998
 753,2 Avenue,72nd St,Q,True,40.768878,-73.95756300000002
-754,2 Avenue,72nd St,N,True,40.768878,-73.95756300000002
-755,2 Avenue,86th St,Q,True,40.777989,-73.951589
-756,2 Avenue,86th St,N,True,40.777989,-73.951589
-757,2 Avenue,96th St,Q,True,40.783692,-73.94765799999998
-758,2 Avenue,96th St,N,True,40.783692,-73.94765799999998
+754,2 Avenue,86th St,Q,True,40.777989,-73.951589
+755,2 Avenue,96th St,Q,True,40.783692,-73.94765799999998
+756,Broadway Jamaica,Alabama Av,Z,True,40.676992,-73.89865400000002
+757,Broadway,City Hall,W,True,40.713282,-74.006978
+758,Queens Boulevard,Briarwood - Van Wyck Blvd,E,True,40.709179,-73.820574
+759,Broadway Jamaica,Lorimer St,J,True,-1,-1
+760,Broadway Jamaica,Lorimer St,M,True,-1,-1
+761,Crosstown,Church Av,G,True,40.644041,-73.979678
+762,Crosstown,Fort Hamilton Parkway,G,True,40.650782,-73.975776
+763,Crosstown,15 St - Prospect Park,G,True,40.66036500000001,-73.979493
+764,6 Avenue,7th Av,G,True,40.666271,-73.980305
