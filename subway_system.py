@@ -1,5 +1,4 @@
-import numpy as np
-
+# Subway system and stop class
 
 class Stop():
     # Variables
@@ -22,23 +21,27 @@ class Stop():
         self.transfers = transfers # List of stopIDs that can be transfered it
         self.latitude = latitude
         self.longitude = longitude
-        
+
     def setNextStop(self, next):
         self.nextStop = next
         return
-    
+
     def setPrevStop(self, prev):
         self.prevStop = prev
         return
 
+    def setTransfers(self, transfers_list):
+        self.transfers = transfers_list
+        return
+
     def getNextStop(self):
         return self.nextStop
-    
+
     def getPrevStop(self):
         return self.prevStop
 
-    def __str__(self):
-        return self.stopID + ': ' + self.station_name + ', ' + self.line
+    # def __str__(self):
+    #     return self.stopID + ': ' + self.station_name + ', ' + self.line
 
 
 ''' *Working
@@ -66,9 +69,9 @@ class Subway_System():
     def __init__(self, directory, transfers, train_lines):
         self.transfers = self.setupTransfers(transfers) # Dictionary: key stopID -> value list of transferable stops
         self.directory = self.setupDirectory(directory) # Dictionary of Stop Nodes: key stopID -> Stop Node
-        self.system = self.setupSystem(train_lines)  # TBD, Dictionary of Routes (Stop Order) 
-        self.connectStops()
-        self.total_stops = len(directory) # Total node(stops) in the search space
+        self.system = self.setupSystem(train_lines)  # TBD, Dictionary of Routes (Stop Order)
+        self.addNodeTransfers()
+        self.total_stops = len(self.directory) # Total node(stops) in the search space
 
     def setupTransfers(self, transfers):
         transfers_dict = {}
@@ -83,16 +86,18 @@ class Subway_System():
     def setupDirectory(self, directory):
         directory_dict = {}
         for line in directory:
-            data = line.split(',') # Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
-            _stopID = data[0]
-            _neighborhood = data[1]
-            _station_name = data[2]
-            _train = data[3]
-            _transfers = self.transfers[_stopID]
-            #_transfers = _transfers
-            _latitude = data[5]
-            _longitude = data[6]
-            directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude)
+            if line != "Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude":
+                data = line.split(',') # Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
+                _stopID = data[0]
+                _neighborhood = data[1]
+                _station_name = data[2]
+                _train = data[3]
+                _transfers = self.transfers[_stopID]
+                #print("TRANSFERS:", _transfers)
+                #_transfers = _transfers
+                _latitude = data[5]
+                _longitude = data[6]
+                directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude)
         # print(directory_dict)
         return directory_dict
 
@@ -107,41 +112,44 @@ class Subway_System():
             order = data[1:]
             order = list(map(lambda x: self.directory[x], order))
 
-            #Set previous and next stops
-            for stop in range(len(order)):
-                if stop < len(order)-1:
-                    order[stop].setNextStop(order[stop+1])
-                    #print('Set Next Stop: ' + str(order[stop+1]))
-                else:
-                    order[stop].setNextStop(None)
-
-                if stop > 0:
-                    order[stop].setPrevStop(order[stop-1])
-                    #print('Set Previous Stop: ' + str(order[stop-1]))
-                else:
-                    order[stop].setPrevStop(None)
-
-                self.directory[order[stop]] = order[stop]
-                #print(self.directory[order[stop]].nextStop)#[stop].prevStop)
-
-                #if order[stop].station_name == '51st St':
-                    #print (order[stop].prevStop)
+            # #Set previous and next stops
+            # for stop in range(len(order)):
+            #     if stop < len(order)-1:
+            #         order[stop].setNextStop(order[stop+1])
+            #         #print('Set Next Stop: ' + str(order[stop+1]))
+            #     else:
+            #         order[stop].setNextStop(None)
+            #
+            #     if stop > 0:
+            #         order[stop].setPrevStop(order[stop-1])
+            #         #print('Set Previous Stop: ' + str(order[stop-1]))
+            #     else:
+            #         order[stop].setPrevStop(None)
+            #
+            #     self.directory[order[stop]] = order[stop]
+            #     #print(self.directory[order[stop]].nextStop)#[stop].prevStop)
+            #
+            #     #if order[stop].station_name == '51st St':
+            #         #print (order[stop].prevStop)
 
             system_dict[train] = order
 
         # print("SYSTEM DICT:", system_dict)
         return system_dict
 
-    def connectStops(self):
-        for train in self.system:
-            order = self.system[train]
-            #for i in range(len(order)):
+    def addNodeTransfers(self):
+        #print(self.directory.items())
+        # for id in self.directory:
+        #     print("Key", id, "-> Node", self.directory[id].transfers)
+        for id, node in self.directory.items():
+            # print("Before:", id, "->", node.transfers)
+            node.transfers = list(map(lambda x: self.directory[x], node.transfers))
+            # print("After:", id, "->", node.transfers)
         return
 
     #Get the StopID given a station name
     def findStop(self, stop_name):
         for stop in self.directory:
-            
             if stop_name in self.directory[stop].station_name:
                 return self.directory[stop]
 
