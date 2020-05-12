@@ -1,25 +1,27 @@
 import numpy as np
 
-#import data.csv
-#id_name: connects IDs to station names
-id_name = open('data/id_name.csv','r').read().split('\n')
-
-#import stop order.csv
+# Stop Directory
 #stop_order: connects line names to routes
-stop_order = open('data/stop order.csv','r').read().split('\n')
+directory_data = open('stop_directory.csv','r').read().split('\n')
 
-#import transfers.csv
-transfers = open('data/transfers.csv','r').read().split('\n')
+# Transfers Directory
+transfers_data = open('stop_transfers.csv', 'r').read().split('\n')
+
 
 class Subway_System():
-    def __init__(self, id_name_data, stop_order_data, transfers_data):
-        self.total_stops = 119 # Total node(stops) in the search space
-        self.boroughs = ['Manhattan'] # Boroughs included in the search space
-        self.total_lines = len(stop_order)
-        self.line_starts = [] # Array of pointers to start nodes for each line
-        self.stop_order = self.set_tails(stop_order_data)
-        self.id_name = self.set_tails(id_name_data)
-        self.transfers = self.set_tails(transfers_data)
+
+    def __init__(self, directory, transfers):
+        self.transfers = self.set_tails(transfers) # Dictionary: key stopID -> value list of transferable stops
+        self.directory = self.set_tails(directory) # Array of Stop Nodes
+        self.total_stops = len(directory)  # Total node(stops) in the search space
+
+        #self.boroughs = ['Manhattan'] # Boroughs included in the search space
+        #set this up later
+        #self.total_lines = len(stop_order)
+        #self.line_starts = [] # Array of pointers to start nodes for each line
+        #self.stop_order = self.set_tails(stop_order_data)
+        #self.id_name = self.set_tails(id_name_data)
+        #self.transfers = self.set_tails(transfers_data)
 
     # Sets up data
     # Makes a dictionary where the keys are 'head' of each line and the 'tails' are the end of each line
@@ -30,39 +32,60 @@ class Subway_System():
             #print (stop_order['Line'])
             thisLine = line.split(',')
             routeDict[thisLine[0]] = thisLine[1:]
-        print(routeDict)
+        return routeDict
 
+    def __str__(self):
+        return 'Thank you for riding with the MTA New York City Transit!'
 
-test = Subway_System(id_name, stop_order, transfers)
-print(test.stop_order)
+    #methods to write
+    def findSurroundingStops(self, stopID):
+        #temporary
+        return (-1, -1)
 
-'''
-class Stop():
-    #3 data files
-    #id_name: connects IDs to station names
-    #stop_order: connects line names to routes
-    #transfers: connects station IDs with all the trains stopping there (if there are transfers)
+'''test_subway_system = Subway_System()
+print(test_subway_system)
+print(test_subway_system.stops)'''
 
-    def __init__(self, stationID):
-        self.line_name =
+class Stop(Subway_System):
+    # Variables
+    stopID = -1
+    neighborhood = ''
+    station_name = ''
+    line = 0
+    transfers = []
+    latitude = 0
+    longitude = 0
+    prevStop = 0 # reference to previous stop's node
+    nextStop = 0 # reference to next stop's node'
 
-    def __init__(self, line_name='Unknown', station_name, station_id, transfers=[]):
-        self.line_name = line_name
-        self.station_name = station_id
-        self.line_name = line_name
-        self.transfers = transfers
-'''
+    def __init__(self, stopID):
+        #do we really need all these initializing variables? they're all
+        #accessible via the data set. shouldn't just stopID be enough?
 
-class Station(Subway_System):
-    #3 data files
-    #id_name: connects IDs to station names
-    #stop_order: connects line names to routes
-    #transfers: connects station IDs with all the trains stopping there (if there are transfers)
-
-    def __init__(self, stationID=-1, transfers=[], id_name_data=[], stop_order_data=[], transfers_data=[]):
         super(Subway_System, self).__init__() # Need parameters?
-        mta = Subway_System(id_name_data, stop_order_data, transfers_data)
-        if stationID in mta.transfers:
-            self.transfers = mta.transfers[stationID]
-        else:
-            self.transfers = []
+        mta = Subway_System(directory_data, transfers_data)
+        self.stopID = str(stopID)
+
+        my_directory = mta.directory[stopID]
+        my_transfers = mta.transfers[stopID]
+
+        self.neighborhood = my_directory[0]
+        self.station_name = my_directory[1]
+        self.line = my_directory[2]
+        self.transfers = my_transfers
+        self.latitude = my_directory[4]
+        self.longitude = my_directory[5]
+        
+        surroundingStops = self.findSurroundingStops(stopID)
+        self.prevStop = surroundingStops[0]
+        self.nextStop = surroundingStops[1]
+
+    def __str__(self):
+        return self.stopID + ': ' + self.station_name + ', ' + self.line
+
+
+brighton = Stop('48')
+print(brighton)
+
+# Datasets
+# 1. All the stations in order: stopID, Line
