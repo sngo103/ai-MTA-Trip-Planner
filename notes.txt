@@ -1,5 +1,8 @@
 Things to Do:
 
+NEXT FIX: MAKE TRANSFER LIST CONSIST OF STOPS, NOT STOP_IDS
+
+
 - build out linked list using stop order.csv
     -user input: station name 
         -program changes station name into stationID using data.csv (rename that)
@@ -14,6 +17,8 @@ Things to Do:
 
 Things Completed:
 
+Basic transfer-less search
+Fully completed four-borough data set
 
 
 
