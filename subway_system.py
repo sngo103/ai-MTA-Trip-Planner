@@ -40,8 +40,8 @@ class Stop():
     def getPrevStop(self):
         return self.prevStop
 
-    # def __str__(self):
-    #     return self.stopID + ': ' + self.station_name + ', ' + self.line
+    def __str__(self):
+        return '[' + self.stopID + ': ' + self.station_name + ', ' + self.line + ']'
 
 
 ''' *Working
@@ -71,6 +71,7 @@ class Subway_System():
         self.directory = self.setupDirectory(directory) # Dictionary of Stop Nodes: key stopID -> Stop Node
         self.system = self.setupSystem(train_lines)  # TBD, Dictionary of Routes (Stop Order)
         self.addNodeTransfers()
+        self.addPrevNext()
         self.total_stops = len(self.directory) # Total node(stops) in the search space
 
     def setupTransfers(self, transfers):
@@ -111,6 +112,7 @@ class Subway_System():
             train = data[0]
             order = data[1:]
             order = list(map(lambda x: self.directory[x], order))
+            system_dict[train] = order
 
             # #Set previous and next stops
             # for stop in range(len(order)):
@@ -132,19 +134,33 @@ class Subway_System():
             #     #if order[stop].station_name == '51st St':
             #         #print (order[stop].prevStop)
 
-            system_dict[train] = order
-
         # print("SYSTEM DICT:", system_dict)
         return system_dict
 
     def addNodeTransfers(self):
-        #print(self.directory.items())
-        # for id in self.directory:
-        #     print("Key", id, "-> Node", self.directory[id].transfers)
         for id, node in self.directory.items():
             # print("Before:", id, "->", node.transfers)
             node.transfers = list(map(lambda x: self.directory[x], node.transfers))
             # print("After:", id, "->", node.transfers)
+        return
+
+    def addPrevNext(self):
+        for train, order in self.system.items():
+            print("=======================================================")
+            print("Train", train, "->", order)
+            print()
+            for i in range(len(order)):
+                if i == 0:
+                    order[i].setPrevStop(None)
+                    order[i].setNextStop(order[i+1])
+                elif i == len(order)-1:
+                    order[i].setPrevStop(order[i-1])
+                    order[i].setNextStop(None)
+                else:
+                    order[i].setPrevStop(order[i-1])
+                    order[i].setNextStop(order[i+1])
+            for item in order:
+                print("[", item.getPrevStop(), "->", item, '->', item.getNextStop(), "]")
         return
 
     #Get the StopID given a station name
@@ -152,7 +168,6 @@ class Subway_System():
         for stop in self.directory:
             if stop_name in self.directory[stop].station_name:
                 return self.directory[stop]
-
         return False
 
     def __str__(self):
