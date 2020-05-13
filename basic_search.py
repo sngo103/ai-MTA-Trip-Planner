@@ -72,12 +72,12 @@ def route(start, end):
 
         #Get neighbors: nextStop, prevStop, transfers
         neighbor_dirs = []
-        if currentStop.nextStop:
-            neighbor_dirs += [currentStop.nextStop]
         if currentStop.prevStop:
             neighbor_dirs += [currentStop.prevStop]
         if currentStop.transfers:
             neighbor_dirs += currentStop.transfers
+        if currentStop.nextStop:
+            neighbor_dirs += [currentStop.nextStop]
         
         #=======NEXT FIX: MAKE TRANSFER LIST CONSIST OF STOPS, NOT STOP_IDS=======
         for direc in neighbor_dirs:
