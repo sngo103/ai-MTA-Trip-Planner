@@ -6,55 +6,65 @@ Start at: Brighton Beach
 
 Intermediate Stops:
 
-Sheepshead Bay
-Kings Highway
-Newkirk Plaza
-Church Av
-Prospect Park
-7th Av
-Atlantic Av - Barclays Ctr
-DeKalb Av
-Grand St
-Broadway - Lafayette St
-West 4th St - Washington Square
-34th St - Herald Sq
-42nd St - Bryant Park
-47-50th Sts - Rockefeller Center
-7th Av
-59th St - Columbus Circle
-72nd St
-81st St - Museum of Natural History
-86th St
-96th St
-103rd St
-Cathedral Parkway - 110th St
-116th St
-125th St
-135th St
-145th St
-155th St
-161st St - Yankee Stadium
-149th St - Grand Concourse
-138th St
-125th St
-116th St
-110th St
-103rd St
-96th St
-86th St
-59th St
-51st St
-Grand Central - 42 St
-Times Square - 42nd St
-34th St - Penn Station
-14th St
-Christopher St
-Houston St
-Canal St
-Franklin St
-Chambers St
-Park Place
-World Trade Center
+B, Sheepshead Bay
+B, Kings Highway
+B, Newkirk Plaza
+B, Church Av
+B, Prospect Park
+B, 7th Av
+B, Atlantic Av - Barclays Ctr
+B, DeKalb Av
+B, Grand St
+B, Broadway - Lafayette St
+B, West 4th St - Washington Square
+B, 34th St - Herald Sq
+B, 42nd St - Bryant Park
+B, 47-50th Sts - Rockefeller Center
+B, 7th Av
+B, 59th St - Columbus Circle
+B, 72nd St
+B, 81st St - Museum of Natural History
+B, 86th St
+B, 96th St
+B, 103rd St
+B, Cathedral Parkway - 110th St
+B, 116th St
+B, 125th St
+B, 135th St
+B, 145th St
+B, 155th St
+B, 161st St - Yankee Stadium
+4, 161st St - Yankee Stadium
+4, 149th St - Grand Concourse
+5, 149th St - Grand Concourse
+5, 138th St
+5, 125th St
+6, 125th St
+6, 116th St
+6, 110th St
+6, 103rd St
+6, 96th St
+6, 86th St
+4, 86th St
+4, 59th St
+6, 59th St
+6, 51st St
+6, Grand Central - 42 St
+S1, Grand Central - 42 St
+S1, Times Square - 42nd St
+3, Times Square - 42nd St
+3, 34th St - Penn Station
+2, 34th St - Penn Station
+2, 14th St
+1, 14th St
+1, Christopher St
+1, Houston St
+1, Canal St
+1, Franklin St
+1, Chambers St
+3, Chambers St
+3, Park Place
+E, World Trade Center
 
 
 Arrive at: World Trade Center

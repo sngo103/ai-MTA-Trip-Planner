@@ -605,7 +605,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 603,Flushing,Grand Central - 42 St,5,TRUE,40.751431,-73.976041
 604,Flushing,Grand Central - 42 St,6,TRUE,40.751431,-73.976041
 605,Flushing,Grand Central - 42 St,7,TRUE,40.751431,-73.976041
-606,Flushing,Grand Central - 42 St,S,TRUE,40.751431,-73.976041
+606,Flushing,Grand Central - 42 St,S1,TRUE,40.751431,-73.976041
 607,Flushing,Hunters Point Av,7,FALSE,40.742216,-73.948916
 608,Flushing,Junction Blvd,7,FALSE,40.749145,-73.869527
 609,Flushing,52nd St - Lincoln Av,7,FALSE,40.744149,-73.912549
