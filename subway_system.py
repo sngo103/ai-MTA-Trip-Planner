@@ -43,15 +43,6 @@ class Stop():
     def __str__(self):
         return '[' + self.stopID + ': ' + self.station_name + ', ' + self.line + ']'
 
-
-''' *Working
-brighton = Stop('49','Brighton','Brighton Beach','Q',[],'40.577621','-73.961376')
-print(brighton)
-print(brighton.prevStop)
-print(brighton.nextStop)
-print(brighton.transfers)
-'''
-
 # ================================================================================
 
 # Stop Directory
@@ -146,9 +137,9 @@ class Subway_System():
 
     def addPrevNext(self):
         for train, order in self.system.items():
-            print("=======================================================")
-            print("Train", train, "->", order)
-            print()
+            #print("=======================================================")
+            #print("Train", train, "->", order)
+            #print()
             for i in range(len(order)):
                 if i == 0:
                     order[i].setPrevStop(None)
@@ -159,8 +150,8 @@ class Subway_System():
                 else:
                     order[i].setPrevStop(order[i-1])
                     order[i].setNextStop(order[i+1])
-            for item in order:
-                print("[", item.getPrevStop(), "->", item, '->', item.getNextStop(), "]")
+            #for item in order:
+                #print("[", item.getPrevStop(), "->", item, '->', item.getNextStop(), "]")
         return
 
     #Get the StopID given a station name
@@ -172,5 +163,3 @@ class Subway_System():
 
     def __str__(self):
         return 'Thank you for riding with the MTA New York City Transit!'
-
-mta = Subway_System(directory_data, transfers_data, stop_order_data)

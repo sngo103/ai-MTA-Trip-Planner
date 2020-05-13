@@ -47,13 +47,22 @@ def route(start, end):
 
         explored.add(currentStop.stopID)
 
+        if currentStop.lastStop:
+            for stop in currentStop.lastStop.transfers[1:]:
+                explored.add(stop.stopID)
+                #print (explored)
+
         if end.station_name in currentStop.station_name:
             route = '\n\nArrive at: ' + end.station_name + '\n'
             #trace back route
+            tempStop = None
             while currentStop.lastStop != None:
                 #currentStop = currentStop.lastStop
                 #print(currentStop.lastStop)
-                route = currentStop.station_name + '\n' + route
+                if not tempStop or currentStop.station_name != tempStop.station_name:
+                    route = currentStop.station_name + '\n' + route
+                
+                tempStop = currentStop
                 currentStop = currentStop.lastStop
 
             route = '\n\n\nStart at: ' + start.station_name + '\n\n\n' + 'Intermediate Stops:\n\n' + route
@@ -67,20 +76,21 @@ def route(start, end):
             neighbor_dirs += [currentStop.nextStop]
         if currentStop.prevStop:
             neighbor_dirs += [currentStop.prevStop]
-        #if currentStop.transfers:
-            #neighbor_dirs += currentStop.transfers
-        #print (currentStop.transfers)
+        if currentStop.transfers:
+            neighbor_dirs += currentStop.transfers
         
         #=======NEXT FIX: MAKE TRANSFER LIST CONSIST OF STOPS, NOT STOP_IDS=======
         for direc in neighbor_dirs:
+            #if currentStop == start:
+            #    print(explored)
             #direc.lastStop = currentStop
 
-            if direc.stopID not in explored:
+            if direc.stopID not in explored and direc not in frontier:
 
                 direc.lastStop = currentStop
 
                 #frontier.put(direc)
-                currentStop = frontier.append(direc)
+                frontier.append(direc)
 
             '''
             neighbor_temp = board_structure.board_state()
@@ -102,11 +112,13 @@ def route(start, end):
     return None, None, None
 
 #transfer-less test [WORKING!]
+
+output = open('route.txt', 'w')
 if len(args) > 1:
-    print (route(args[0],args[1]))
+    text = route(args[0],args[1])
+    output.write(text)
 
 else:
-    print (route('Neck Rd', 'Av H'))
-
-#transfer test [not working: see notes]
-#print (route('Brighton Beach', '68th St - Hunter College'))
+    text = route('Neck Rd', 'Av H')
+    
+print (text)
