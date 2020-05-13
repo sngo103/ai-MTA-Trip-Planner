@@ -1,26 +1,23 @@
-Things to Do:
+Note: All three of us have been working together via Microsoft LiveShare.
+We are hosting on Daniel's PC, so most commits are in his name.
 
 NEXT FIXES: 
-- MAKE TRANSFER LIST CONSIST OF STOPS, NOT STOP_IDS
-- ADD COMPATIBILITY FOR SOUTHBOUND ("BACKWARD") ROUTES
+-Apply current_state structure to __lt__ and heuristic methods in stop
+-Figure out bug with __eq__ in Stop class
 
 
-- build out linked list using stop order.csv
-    -user input: station name 
-        -program changes station name into stationID using data.csv (rename that)
-        -stationID generates available starting trains using stop order.csv
-        -transfer options are listed out in transfers.csv
 - write heuristics: 0.5 * number_of_stops + 0.5 * number_of_transfers (fewer is better)
     - least number of transfers
     - least number of stops
-- ensure that the user enters the exact name of desired stops.
-- Write A* Algorithm without transfers
-- Write A* Algorithm with transfers
+- ensure that the user does not need to enter the exact name of desired stops
+    -use a drop-down GUI?
+
 
 Things Completed:
 
-Basic transfer-less search
+Basic transfer-less A* search
 Fully completed four-borough data set
+Internal state tracking structure
 
 
 
