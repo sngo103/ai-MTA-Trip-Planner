@@ -11,7 +11,7 @@ class Stop():
     longitude = 0
     prevStop = 0 # reference to previous stop's node
     nextStop = 0 # reference to next stop's node
-    lastStop = None # reference to last stop visited (set by search algorithm)
+    lastVisited = None # reference to last stop visited (set by search algorithm)
 
     def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):
         self.stopID = str(stopID)

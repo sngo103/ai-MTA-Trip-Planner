@@ -47,8 +47,8 @@ def route(start, end):
 
         explored.add(currentStop.stopID)
 
-        if currentStop.lastStop:
-            for stop in currentStop.lastStop.transfers:
+        if currentStop.lastVisited:
+            for stop in currentStop.lastVisited.transfers:
                 explored.add(stop.stopID)
                 #print (explored)
 
@@ -56,14 +56,14 @@ def route(start, end):
             route = '\n\nArrive at: ' + end.station_name + '\n'
             #trace back route
             tempStop = None
-            while currentStop.lastStop != None:
-                #currentStop = currentStop.lastStop
-                #print(currentStop.lastStop)
+            while currentStop.lastVisited != None:
+                #currentStop = currentStop.lastVisited
+                #print(currentStop.lastVisited)
                 if not tempStop or currentStop.station_name != tempStop.station_name:
                     route = currentStop.station_name + '\n' + route
                 
                 tempStop = currentStop
-                currentStop = currentStop.lastStop
+                currentStop = currentStop.lastVisited
 
             route = '\n\n\nStart at: ' + start.station_name + '\n\n\n' + 'Intermediate Stops:\n\n' + route
             return route
@@ -83,11 +83,11 @@ def route(start, end):
         for direc in neighbor_dirs:
             #if currentStop == start:
             #    print(explored)
-            #direc.lastStop = currentStop
+            #direc.lastVisited = currentStop
 
             if direc.stopID not in explored and direc not in frontier:
 
-                direc.lastStop = currentStop
+                direc.lastVisited = currentStop
 
                 #frontier.put(direc)
                 frontier.append(direc)
