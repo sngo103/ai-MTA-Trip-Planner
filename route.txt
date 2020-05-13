@@ -1,69 +1,38 @@
 
 
 
-Start at: Brighton Beach
+Start at: Coney Island – Stillwell Av
 
 
 Intermediate Stops:
 
-B, Sheepshead Bay
-B, Kings Highway
-B, Newkirk Plaza
-B, Church Av
-B, Prospect Park
-B, 7th Av
-B, Atlantic Av - Barclays Ctr
-B, DeKalb Av
-B, Grand St
-B, Broadway - Lafayette St
-B, West 4th St - Washington Square
-B, 34th St - Herald Sq
-B, 42nd St - Bryant Park
-B, 47-50th Sts - Rockefeller Center
-B, 7th Av
-B, 59th St - Columbus Circle
-B, 72nd St
-B, 81st St - Museum of Natural History
-B, 86th St
-B, 96th St
-B, 103rd St
-B, Cathedral Parkway - 110th St
-B, 116th St
-B, 125th St
-B, 135th St
-B, 145th St
-B, 155th St
-B, 161st St - Yankee Stadium
-4, 161st St - Yankee Stadium
-4, 149th St - Grand Concourse
-5, 149th St - Grand Concourse
-5, 138th St
-5, 125th St
-6, 125th St
-6, 116th St
-6, 110th St
-6, 103rd St
-6, 96th St
-6, 86th St
-4, 86th St
-4, 59th St
-6, 59th St
-6, 51st St
-6, Grand Central - 42 St
-S1, Grand Central - 42 St
-S1, Times Square - 42nd St
-3, Times Square - 42nd St
-3, 34th St - Penn Station
-2, 34th St - Penn Station
-2, 14th St
-1, 14th St
-1, Christopher St
-1, Houston St
-1, Canal St
-1, Franklin St
-1, Chambers St
-3, Chambers St
-3, Park Place
+N, Coney Island – Stillwell Av
+N, 86th St
+N, Av U
+N, Kings Highway
+N, Bay Parkway
+N, 20th Av
+N, 18th Av
+N, 62nd St - New Utrecht Av
+D, 62nd St - New Utrecht Av
+D, 55th St
+D, 50th St
+D, Fort Hamilton Parkway
+D, 9th Av
+D, 36th St
+R, 36th St
+R, 25th St
+R, Prospect Av
+R, 4th Av - 9th St
+F, 4th Av - 9th St
+F, Smith - 9th Sts
+F, Carroll St
+F, Bergen St
+F, Jay St - Metrotech
+C, Jay St - Metrotech
+C, High St
+C, Fulton St
+C, Chambers St
 E, World Trade Center
 
 

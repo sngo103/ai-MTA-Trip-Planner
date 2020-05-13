@@ -15,8 +15,9 @@ class Stop():
     prevStop = 0 # reference to previous stop's node
     nextStop = 0 # reference to next stop's node
     lastVisited = None # reference to last stop visited (set by search algorithm)
+    #current_state = None
 
-    def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):
+    def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):#, current_state):
         self.stopID = str(stopID)
         self.neighborhood = neighborhood
         self.station_name = station_name
@@ -24,6 +25,7 @@ class Stop():
         self.transfers = transfers # List of stopIDs that can be transfered it
         self.latitude = latitude
         self.longitude = longitude
+        #self.current_state = current_state
 
     def setNextStop(self, next):
         self.nextStop = next
@@ -48,20 +50,24 @@ class Stop():
 
     # Comparisons for heuristic + priority queue
     def __lt__(self, stop2):
-        return self.getDist(self.latitude, stop2.latitude, self.longitude, stop2.longitude)
+        #lat2 = 40.714111
+        #long2 = -74.008585
+        #return self.getDist(self.latitude, stop2.latitude, self.longitude, stop2.longitude)
+        #return self.getDist(self.latitude, lat2, self.longitude, long2)
+        return self.heuristic(self.start, self.end) < stop2.heuristic(self.start, self.end)
 
     # Will involve measurement of distance to the landmark
     
     #__eq__ seems to be breaking stuff?
     #def __eq__ (self, stop2):
-        #return self.lastVisited and stop2 in self.lastVisited.transfers
+    #    return self.lastVisited and stop2 in self.lastVisited.transfers
 
     # Apply latitude/longitude distance formula
     def getDist(self, lat1, lat2, long1, long2):
-        lat1 = radians(lat1)
-        lat2 = radians(lat2)
-        long1 = radians(long1)
-        long2 = radians(long2)
+        lat1 = math.radians(float(lat1))
+        lat2 = math.radians(float(lat2))
+        long1 = math.radians(float(long1))
+        long2 = math.radians(float(long2))
 
         radius = 6371
 
@@ -72,7 +78,11 @@ class Stop():
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
         
         return radius * c
-    
+
+    def heuristic(self, start, end):
+        
+        return (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude) 
+            + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
 
     def __hash__(self):
         return hash(str(self))
@@ -125,7 +135,8 @@ class Subway_System():
                 #_transfers = _transfers
                 _latitude = data[5]
                 _longitude = data[6]
-                directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude)
+                #current_state = Current_State('', '', 0)
+                directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude)#, current_state)
         return directory_dict
 
     def setupSystem(self, stop_order):
@@ -198,3 +209,34 @@ class Subway_System():
 
     def __str__(self):
         return 'Thank you for riding with the MTA New York City Transit!'
+
+class Current_State():
+    start = ''
+    end = ''
+    transfers_made = 0
+    stops_visted = 0
+    current_stop = ''
+    
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+        self.transfers_made = 0
+        self.stops_visted = 0
+        self.current_state = start
+
+    def increment_transfer(self):
+        self.transfer_made += 1
+
+    def increment_stops(self):
+        self.stops_visted += 1
+
+    def update_stop(self, stop):
+        self.current_stop = stop
+        
+    def __str__(self):
+        ret = 'Start: ' + self.start.station_name + '\n'
+        ret += 'End: ' + self.start.station_name + '\n'
+        ret += 'Transfers Made: ' + str(self.transfers_made) + '\n'
+        ret += 'Stops Visited: ' + str(self.stops_visited) + '\n'
+        return ret
+    
