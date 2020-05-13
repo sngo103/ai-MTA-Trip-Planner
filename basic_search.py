@@ -48,7 +48,7 @@ def route(start, end):
         explored.add(currentStop.stopID)
 
         if currentStop.lastStop:
-            for stop in currentStop.lastStop.transfers[1:]:
+            for stop in currentStop.lastStop.transfers:
                 explored.add(stop.stopID)
                 #print (explored)
 
