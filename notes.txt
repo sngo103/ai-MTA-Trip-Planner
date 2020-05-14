@@ -5,6 +5,9 @@ NEXT FIXES:
 -Apply current_state structure to __lt__ and heuristic methods in stop
 -Figure out bug with __eq__ in Stop class
 
+ISSUE:
+-Heuristic requires access to state of algorithm
+
 
 - write heuristics: 0.5 * number_of_stops + 0.5 * number_of_transfers (fewer is better)
     - least number of transfers
