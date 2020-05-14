@@ -102,7 +102,7 @@ def route(start, end, mta, current_state):
         #Get neighbors: nextStop, prevStop, transfers
         neighbor_dirs = []
         
-        if currentStop.nextStop: 
+        if currentStop.nextStop:
             neighbor_dirs.append(currentStop.nextStop)
 
         if currentStop.transfers: #Already a list, so we can concatenate
@@ -110,7 +110,6 @@ def route(start, end, mta, current_state):
 
         if currentStop.prevStop:
             neighbor_dirs.append(currentStop.prevStop)
-        
         
         #Add unexplored neighbors to frontier
         for direc in neighbor_dirs:

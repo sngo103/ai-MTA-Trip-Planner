@@ -1,23 +1,38 @@
 
 
 
-Start at: Brighton Beach (B)
+Start at: Far Rockaway - Mott Av (A2)
 
 
 Intermediate Stops:
 
-B, Brighton Beach, 0
-Q, Brighton Beach, 0
-Q, Ocean Parkway, 0
-Q, West 8th St - New York Aquarium, 0
-Q, Coney Island - Stillwell Av, 0
-N, Coney Island - Stillwell Av, 1
-N, 86th St, 1
-N, Av U, 1
-N, Kings Highway, 1
-N, Bay Parkway, 1
-N, 20th Av, 1
-N, 18th Av, 1
+A2, Far Rockaway - Mott Av, 0
+A2, Beach 25th St, 0
+A2, Beach 36th St, 0
+A2, Beach 44th St, 0
+A2, Beach 60th St, 0
+A2, Beach 67th St, 0
+A2, Howard Beach - JFK Airport, 0
+A2, Aqueduct - North Conduit Av, 0
+A2, Aqueduct Racetrack, 0
+A3, Rockaway Blvd, 1
+A, Rockaway Blvd, 2
+A, 88th St, 2
+A, 80th St, 2
+A, Grant Av, 2
+A, Euclid Av, 2
+A, Broadway Junction, 2
+Z, Broadway Junction, 3
+Z, Alabama Av, 3
+Z, Van Siclen Av, 3
+Z, Norwood Av, 3
+Z, Crescent St, 3
+Z, 75th St - Elderts Ln, 3
+Z, Woodhaven Blvd, 3
+Z, 104th St, 3
+Z, 121st St, 3
+Z, Sutphin Blvd - Archer Av - JFK Airport, 3
+E, Sutphin Blvd - Archer Av - JFK Airport, 3
 
 
-Arrive at: 18th Av (N)
+Arrive at: Sutphin Blvd - Archer Av - JFK Airport (E)

@@ -5,12 +5,13 @@ NEXT FIXES:
 -(Manually) fill in unlisted latitude and longitude values in stop_directory.csv
 -Apply current_state structure?
 -General code cleanup in Subway_System
+-Fix transferStopsToGoal: seems to be making routes worse for some cases
 
 ISSUE:
 -Import loops resulting from current_state structure
 
 NEXT STEPS:
-- -Have algorithm better detect which train to start/end with if the user inputs stops with many available trains
+- Have algorithm better detect which train to start/end with if the user inputs stops with many available trains
 - Find a way to calculate stopsToGoal from different lines?
 - ensure that the user does not need to enter the exact name of desired stops
     -there is presently no way to distinguish between stops with the same station name
@@ -23,9 +24,9 @@ Things Completed:
 
 -Much improved A* search, supporting transfers and routes in both directions
 -Heuristic that takes into account latitude/longitude-based distance to the end stop, number of transfers made, and distance to the end stop (now including transfers!)
--Created an iterative method to calculate stopsToGoal from different lines
 -Four-borough data set (though a few latitude and longitude values need to be inputted)
 -Standardized station names in stop_directory (same types of dashes are used; "th," "rd" or "nd" are inputted for all numbered station names)
+-Continuing to fix issues related to null pointers in data files
 -Resolved issue in Stop class __eq__ method
 
 

@@ -75,7 +75,7 @@ class Stop():
 
     def checkEnd(self, end):
         if self.__eq__(end):
-            return -10000
+            return -100000000
         return 0
 
     # Apply latitude/longitude distance formula
@@ -101,10 +101,7 @@ class Stop():
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude) 
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
 
-        #print (totalDist + 3 * self.transferCount)
-        #print (self.transferCount)
-
-        return (totalDist + 10 * self.transferCount + self.stopsToGoal + self.checkEnd(end))
+        return (totalDist + 300000000 * self.transferCount + self.checkEnd(end) +  self.stopsToGoal)
 
     def __hash__(self):
         return hash(str(self))
@@ -231,9 +228,9 @@ class Subway_System():
         return abs(self.idIndex(line, stop.stopID) - self.idIndex(line, stop.end.stopID))
 
     #find the "index" of a given stop on a given line's route assuming that the stop appears on its route.
-    def idIndex(self, line, stopID1):
+    def idIndex(self, line, stopID):
         for i in range(len(self.system[line])):
-            if self.system[line][i].stopID == stopID1:
+            if self.system[line][i].stopID == stopID:
                 return i
 
         #Yell at user for bad input
@@ -255,7 +252,13 @@ class Subway_System():
 
         #check if you can transfer from stop to a train that stops at end
         for transfer in stop.transfers:
-            return self.stopsToEnd(transfer.line, transfer)
+
+            #There should be a better way to ensure that end is set
+            transfer.end = stop.end
+
+            #if a transfer is on the same line as the goal
+            if transfer.line in endTransferLines:
+                return self.stopsToEnd(transfer.line, transfer) 
 
         #heuristic will not prioritize taking trains that do not stop at end, 
         #or transferring at stops that lack transfers to a train that stops at end
