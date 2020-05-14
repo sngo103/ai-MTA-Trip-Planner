@@ -46,8 +46,6 @@ def route(start, end, mta, current_state):
     
     start = mta.findStop(start)
     end = mta.findStop(end)
-
-    
  
     start.start = start
     start.end = end
@@ -71,6 +69,8 @@ def route(start, end, mta, current_state):
 
         # Pop from pqueue
         currentStop = frontier.get()
+
+        #if currentStop.line != direc.line:
         
         # Pop from deque
         # #currentStop = frontier.pop()
@@ -86,18 +86,18 @@ def route(start, end, mta, current_state):
         # Goal test
         if end.station_name in currentStop.station_name:
             #trace back route
-            route = '\n\nArrive at: ' + end.station_name + '\n'
+            route = '\n\nArrive at: ' + end.station_name + ' (' + end.line + ')\n'
             
             # tempStop = None
-            while currentStop.lastVisited != None:
+            while currentStop:
 
                 #if not tempStop or currentStop.station_name != tempStop.station_name:
-                route = currentStop.line + ', ' + currentStop.station_name + '\n' + route
+                route = currentStop.line + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + '\n' + route
                 
                 #tempStop = currentStop
                 currentStop = currentStop.lastVisited
 
-            route = '\n\n\nStart at: ' + start.station_name + '\n\n\n' + 'Intermediate Stops:\n\n' + route
+            route = '\n\n\nStart at: ' + start.station_name + ' (' + start.line + ')\n\n\n' + 'Intermediate Stops:\n\n' + route
             
             return route
 
@@ -106,12 +106,15 @@ def route(start, end, mta, current_state):
         #Prioritizes next stop on current line (LIFO)
         
         if currentStop.nextStop: 
-            neighbor_dirs += [currentStop.nextStop]
+            neighbor_dirs.append(currentStop.nextStop)
         if currentStop.transfers: #Already a list
             neighbor_dirs += currentStop.transfers
+            #for transfer in range(len(currentStop.transfers)):
+            #    currentStop.transfers[transfer].transferCount = transferCount + 1
+            #    neighbor_dirs.append(currentStop.transfers[transfer])
 
         if currentStop.prevStop:
-            neighbor_dirs += [currentStop.prevStop]
+            neighbor_dirs.append(currentStop.prevStop)
         
         
         #Add unexplored neighbors to frontier
@@ -123,6 +126,16 @@ def route(start, end, mta, current_state):
                 direc.end = end
 
                 direc.lastVisited = currentStop #Set last visited stop for each unexplored neighbor
+
+                #update transferCount
+                if currentStop.line != direc.line:
+                    direc.transferCount = currentStop.transferCount + 1
+                else:
+                    direc.transferCount = currentStop.transferCount
+
+                #update stopsToGoal if neighbor and end lines are the same
+                if direc.line == end.line:
+                    direc.stopsToGoal = mta.stopsBtwn(direc.line, direc.stopID, end.stopID)
 
                 frontier.put(direc)
                 #frontier.append(direc)

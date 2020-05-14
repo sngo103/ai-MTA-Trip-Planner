@@ -2,25 +2,28 @@ Note: All three of us have been working together via Microsoft LiveShare.
 We are hosting on Daniel's PC, so most commits are in his name.
 
 NEXT FIXES: 
--Apply current_state structure to __lt__ and heuristic methods in stop
--Figure out bug with __eq__ in Stop class
+-Apply current_state structure?
+-Figure out bug with __eq__ (if necessary?)
+-(Manually) fill in unlisted latitude and longitude values in stop_directory.csv
 
 ISSUE:
--Heuristic requires access to state of algorithm
+-Import loops resulting from current_state structure
 
 
-- write heuristics: 0.5 * number_of_stops + 0.5 * number_of_transfers (fewer is better)
-    - least number of transfers
-    - least number of stops
+NEXT STEPS:
+- Find a way to calculate stopsToGoal from different lines?
 - ensure that the user does not need to enter the exact name of desired stops
-    -use a drop-down GUI?
+    -there is presently no way to distinguish between stops with the same station name
+        -ex: "7 Av" is a stop in Brooklyn on the F/G, a different Brooklyn stop on the B/Q, and a Manhattan stop on the B/D/E
+        -the current method of relating user-inputted station names to stopIDs (mta.findStop) cannot distinguish between these different stations       
+    -potential solution: use a drop-down GUI?
 
 
 Things Completed:
 
-Basic transfer-less A* search
-Fully completed four-borough data set
-Internal state tracking structure
+Much improved A* search, supporting transfers and routes in both directions
+Heuristic that takes into account latitude/longitude-based distance to the end stop, number of transfers made, and distance to the end stop (assuming that currentLine == endLine)
+Four-borough data set (though a few latitude and longitude values need to be inputted)
 
 
 

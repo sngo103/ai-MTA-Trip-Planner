@@ -17,6 +17,12 @@ class Stop():
     lastVisited = None # reference to last stop visited (set by search algorithm)
     #current_state = None
 
+    #heuristic uses the number of times the algorithm has "transferred"
+    #and the number of stops left to the goal if the current and ending stops are on the same line
+    transferCount = 0
+    #initialized as a large number to encourage staying on a train that stops at the goal stop
+    stopsToGoal = 1000
+
     def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):#, current_state):
         self.stopID = str(stopID)
         self.neighborhood = neighborhood
@@ -80,9 +86,15 @@ class Stop():
         return radius * c
 
     def heuristic(self, start, end):
-        
-        return (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude) 
+
+        #totalDist = distToStart + distToGoal
+        totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude) 
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
+
+        #print (totalDist + 3 * self.transferCount)
+        #print (self.transferCount)
+
+        return (totalDist + 5 * self.transferCount + self.stopsToGoal)
 
     def __hash__(self):
         return hash(str(self))
@@ -104,7 +116,7 @@ class Subway_System():
     def __init__(self, directory, transfers, train_lines):
         self.transfers = self.setupTransfers(transfers) # Dictionary: key stopID -> value list of transferable stops
         self.directory = self.setupDirectory(directory) # Dictionary of Stop Nodes: key stopID -> Stop Node
-        self.system = self.setupSystem(train_lines)  # TBD, Dictionary of Routes (Stop Order)
+        self.system = self.setupSystem(train_lines)  # Dictionary of Routes : Stop Order
         self.addNodeTransfers()
         self.addPrevNext()
         self.total_stops = len(self.directory) # Total node(stops) in the search space
@@ -203,6 +215,23 @@ class Subway_System():
             if stop_name in self.directory[stop].station_name:
                 return self.directory[stop]
         return False
+
+    #calculate the number of stops between two stations on the same line
+    def stopsBtwn(self, line, stopID1, stopID2):
+        return abs(self.idIndex(line, stopID1) - self.idIndex(line, stopID2))
+
+        stopIndex1 = self.system[line].index(stopID1)
+        stopIndex2 = self.system[line].index(stopID2)
+        return math.abs(stopIndex2 - stopIndex1)
+
+    def idIndex(self, line, stopID1):
+        for i in range(len(self.system[line])):
+            if self.system[line][i].stopID == stopID1:
+                return i
+        #Yell at user for bad input
+        #print ('The ' + line + ' train does not stop at Stop#' + stopID1 + '. Please try again.')
+        exit()
+        
         
     #def encuentra_estacion_con_linea(self, nombre_del_estacion, nombre_del_linea)
             
