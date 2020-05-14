@@ -2,4 +2,4 @@
 ### By Team Wish Upon A*
 ### Anton Goretsky, Samantha Ngo, Daniel Rozenzaft
 
-For our project proposal and project timeline, please see the associated pdfs.
+For our current plans, issues, and features, please see notes.txt
