@@ -64,9 +64,19 @@ class Stop():
 
     # Will involve measurement of distance to the landmark
     
-    #__eq__ seems to be breaking stuff?
-    #def __eq__ (self, stop2):
-    #    return self.lastVisited and stop2 in self.lastVisited.transfers
+    def __eq__ (self, stop2):
+        a = stop2.stopID == self.stopID
+        b = False
+        for stop in range(len(self.transfers)):
+            if self.transfers[stop].stopID == stop2.stopID:
+                b = True
+
+        return a or b
+
+    def checkEnd(self, end):
+        if self.__eq__(end):
+            return -10000
+        return 0
 
     # Apply latitude/longitude distance formula
     def getDist(self, lat1, lat2, long1, long2):
@@ -94,7 +104,7 @@ class Stop():
         #print (totalDist + 3 * self.transferCount)
         #print (self.transferCount)
 
-        return (totalDist + 5 * self.transferCount + self.stopsToGoal)
+        return (totalDist + 10 * self.transferCount + self.stopsToGoal + self.checkEnd(end))
 
     def __hash__(self):
         return hash(str(self))
@@ -217,24 +227,39 @@ class Subway_System():
         return False
 
     #calculate the number of stops between two stations on the same line
-    def stopsBtwn(self, line, stopID1, stopID2):
-        return abs(self.idIndex(line, stopID1) - self.idIndex(line, stopID2))
+    def stopsToEnd(self, line, stop):
+        return abs(self.idIndex(line, stop.stopID) - self.idIndex(line, stop.end.stopID))
 
-        stopIndex1 = self.system[line].index(stopID1)
-        stopIndex2 = self.system[line].index(stopID2)
-        return math.abs(stopIndex2 - stopIndex1)
-
+    #find the "index" of a given stop on a given line's route assuming that the stop appears on its route.
     def idIndex(self, line, stopID1):
         for i in range(len(self.system[line])):
             if self.system[line][i].stopID == stopID1:
                 return i
+
         #Yell at user for bad input
-        #print ('The ' + line + ' train does not stop at Stop#' + stopID1 + '. Please try again.')
-        exit()
-        
-        
-    #def encuentra_estacion_con_linea(self, nombre_del_estacion, nombre_del_linea)
-            
+        #print ('The ' + line + ' train does not stop at Stop #' + stopID1 + '. Please try again.')
+        return 100000
+
+    # calculate the number of stops needed to the end goal, INCLUDING TRANSFERS
+    def transferStopsToEnd(self, stop):
+        noTransfer = self.idIndex(stop.line, stop.stopID)
+        endTransferLines = []
+
+        #if there's no transfer, use the single line method
+        if noTransfer < 100:
+            return noTransfer
+
+        #find lines stopping at end
+        for endTransfer in stop.end.transfers:
+            endTransferLines.append(endTransfer.line)
+
+        #check if you can transfer from stop to a train that stops at end
+        for transfer in stop.transfers:
+            return self.stopsToEnd(transfer.line, transfer)
+
+        #heuristic will not prioritize taking trains that do not stop at end, 
+        #or transferring at stops that lack transfers to a train that stops at end
+        return 100000
 
     def __str__(self):
         return 'Thank you for riding with the MTA New York City Transit!'

@@ -28,12 +28,12 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 26,4 Avenue,DeKalb Av,R,TRUE,40.690635,-73.981824
 27,4 Avenue,Prospect Av,R,FALSE,40.665414,-73.992872
 28,4 Avenue,Union St,R,FALSE,40.677316,-73.98311
-29,Astoria,30 Av,N,TRUE,40.766779,-73.921479
-30,Astoria,30 Av,W,TRUE,40.766779,-73.921479
-31,Astoria,36 Av,N,TRUE,40.756804,-73.929575
-32,Astoria,36 Av,W,TRUE,40.756804,-73.929575
-33,Astoria,39 Av,N,TRUE,40.752882,-73.932755
-34,Astoria,39 Av,W,TRUE,40.752882,-73.932755
+29,Astoria,30th Av,N,TRUE,40.766779,-73.921479
+30,Astoria,30th Av,W,TRUE,40.766779,-73.921479
+31,Astoria,36th Av,N,TRUE,40.756804,-73.929575
+32,Astoria,36th Av,W,TRUE,40.756804,-73.929575
+33,Astoria,39th Av,N,TRUE,40.752882,-73.932755
+34,Astoria,39th Av,W,TRUE,40.752882,-73.932755
 35,Astoria,Astoria Blvd,N,TRUE,40.770258,-73.917843
 36,Astoria,Astoria Blvd,W,TRUE,40.770258,-73.917843
 37,Astoria,Broadway,N,TRUE,40.76182,-73.925508
@@ -64,24 +64,24 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 62,Brighton,Prospect Park,S2,TRUE,40.661614,-73.962246
 63,Brighton,Sheepshead Bay,B,TRUE,40.586896,-73.954155
 64,Brighton,Sheepshead Bay,Q,TRUE,40.586896,-73.954155
-65,Brighton,Coney Island – Stillwell Av,D,TRUE,40.577422,-73.981233
-66,Brighton,Coney Island – Stillwell Av,F,TRUE,40.577422,-73.981233
-67,Brighton,Coney Island – Stillwell Av,N,TRUE,40.577422,-73.981233
-68,Brighton,Coney Island – Stillwell Av,Q,TRUE,40.577422,-73.981233
+65,Brighton,Coney Island - Stillwell Av,D,TRUE,40.577422,-73.981233
+66,Brighton,Coney Island - Stillwell Av,F,TRUE,40.577422,-73.981233
+67,Brighton,Coney Island - Stillwell Av,N,TRUE,40.577422,-73.981233
+68,Brighton,Coney Island - Stillwell Av,Q,TRUE,40.577422,-73.981233
 69,Brighton,West 8th St - New York Aquarium,F,TRUE,40.576127,-73.975939
 70,Brighton,West 8th St - New York Aquarium,Q,TRUE,40.576127,-73.975939
 71,Broadway,23rd St,R,TRUE,40.741303,-73.989344
 72,Broadway,23rd St,W,TRUE,40.741303,-73.989344
 73,Broadway,28th St,R,TRUE,40.745494,-73.988691
 74,Broadway,28th St,W,TRUE,40.745494,-73.988691
-75,Broadway,34th St - Herald Sq,B,TRUE,40.749567,-73.98795
-76,Broadway,34th St - Herald Sq,D,TRUE,40.749567,-73.98795
-77,Broadway,34th St - Herald Sq,F,TRUE,40.749567,-73.98795
-78,Broadway,34th St - Herald Sq,M,TRUE,40.749567,-73.98795
-79,Broadway,34th St - Herald Sq,N,TRUE,40.749567,-73.98795
-80,Broadway,34th St - Herald Sq,Q,TRUE,40.749567,-73.98795
-81,Broadway,34th St - Herald Sq,R,TRUE,40.749567,-73.98795
-82,Broadway,34th St - Herald Sq,W,TRUE,40.749567,-73.98795
+75,Broadway,34th St - Herald Square,B,TRUE,40.749567,-73.98795
+76,Broadway,34th St - Herald Square,D,TRUE,40.749567,-73.98795
+77,Broadway,34th St - Herald Square,F,TRUE,40.749567,-73.98795
+78,Broadway,34th St - Herald Square,M,TRUE,40.749567,-73.98795
+79,Broadway,34th St - Herald Square,N,TRUE,40.749567,-73.98795
+80,Broadway,34th St - Herald Square,Q,TRUE,40.749567,-73.98795
+81,Broadway,34th St - Herald Square,R,TRUE,40.749567,-73.98795
+82,Broadway,34th St - Herald Square,W,TRUE,40.749567,-73.98795
 83,Broadway,49th St,N,TRUE,40.759901,-73.984139
 84,Broadway,49th St,R,TRUE,40.759901,-73.984139
 85,Broadway,49th St,W,TRUE,40.759901,-73.984139
@@ -118,9 +118,9 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 116,Broadway,Prince St,R,TRUE,40.724329,-73.997702
 117,Broadway,Rector St,R,TRUE,40.70722,-74.013342
 118,Broadway,Rector St,W,TRUE,40.70722,-74.013342
-119,Broadway,42nd St – Port Authority Bus Terminal,A,TRUE,40.754672,-73.986754
-120,Broadway,42nd St – Port Authority Bus Terminal,C,TRUE,40.754672,-73.986754
-121,Broadway,42nd St – Port Authority Bus Terminal,E,TRUE,40.754672,-73.986754
+119,Broadway,42nd St - Port Authority Bus Terminal,A,TRUE,40.754672,-73.986754
+120,Broadway,42nd St - Port Authority Bus Terminal,C,TRUE,40.754672,-73.986754
+121,Broadway,42nd St - Port Authority Bus Terminal,E,TRUE,40.754672,-73.986754
 122,Broadway,Times Square - 42nd St,N,TRUE,40.754672,-73.986754
 123,Broadway,Times Square - 42nd St,Q,TRUE,40.754672,-73.986754
 124,Broadway,Times Square - 42nd St,R,TRUE,40.754672,-73.986754
@@ -181,7 +181,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 179,Canarsie,14th St,A,TRUE,40.739777,-74.002578
 180,Canarsie,14th St,C,TRUE,40.739777,-74.002578
 181,Canarsie,14th St,E,TRUE,40.739777,-74.002578
-182,Canarsie,8 Av,L,TRUE,40.739777,-74.002578
+182,Canarsie,8th Av,L,TRUE,40.739777,-74.002578
 183,Canarsie,Atlantic Av,L,FALSE,40.675345,-73.903097
 184,Canarsie,Bedford Av,L,FALSE,40.717304,-73.956872
 185,Canarsie,Bushwick Av,L,FALSE,40.682829,-73.905249
@@ -230,8 +230,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 228,West End,25th Av,D,FALSE,40.597704,-73.986829
 229,West End,50th St,D,FALSE,40.63626,-73.994791
 230,West End,55th St,D,FALSE,40.631435,-73.995476
-231,West End,62nd St - New Utrecht Av,D,TRUE,40.626472,-73.996895
-232,West End,62nd St - New Utrecht Av,N,TRUE,40.626472,-73.996895
+231,West End,62nd St,D,TRUE,40.626472,-73.996895
+232,West End,New Utrecht Av,N,TRUE,40.626472,-73.996895
 233,West End,71st St,D,FALSE,40.619589,-73.998864
 234,West End,79th St,D,FALSE,40.613501,-74.00061
 235,West End,9th Av,D,FALSE,40.646292,-73.994324
@@ -243,7 +243,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 241,63rd Street,Lexington Av - 63rd St,Q,TRUE,40.764627,-73.96611
 242,63rd Street,Roosevelt Island,F,FALSE,40.759145,-73.95326
 243,6 Avenue,14th St,F,TRUE,40.738228,-73.996209
-244,6 Avenue,6 Av,L,TRUE,40.738228,-73.996209
+244,6 Avenue,6th Av,L,TRUE,40.738228,-73.996209
 245,6 Avenue,14th St,M,TRUE,40.738228,-73.996209
 246,6 Avenue,14th St,1,TRUE,40.738228,-73.996209
 247,6 Avenue,14th St,2,TRUE,40.738228,-73.996209
@@ -255,7 +255,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 253,6 Avenue,42nd St - Bryant Park,D,TRUE,40.754222,-73.984569
 254,6 Avenue,42nd St - Bryant Park,F,TRUE,40.754222,-73.984569
 255,6 Avenue,42nd St - Bryant Park,M,TRUE,40.754222,-73.984569
-256,6 Avenue,5 Av,7,TRUE,40.754222,-73.984569
+256,6 Avenue,5th Av,7,TRUE,40.754222,-73.984569
 257,6 Avenue,47-50th Sts - Rockefeller Center,B,TRUE,40.758663,-73.981329
 258,6 Avenue,47-50th Sts - Rockefeller Center,D,TRUE,40.758663,-73.981329
 259,6 Avenue,47-50th Sts - Rockefeller Center,F,TRUE,40.758663,-73.981329
@@ -280,7 +280,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 278,6 Avenue,Fort Hamilton Parkway,F,TRUE,40.650782,-73.975776
 279,6 Avenue,Grand St,B,TRUE,40.718267,-73.993753
 280,6 Avenue,Grand St,D,TRUE,40.718267,-73.993753
-281,6 Avenue,15 St - Prospect Park,F,TRUE,40.660365,-73.979493
+281,6 Avenue,15th St - Prospect Park,F,TRUE,40.660365,-73.979493
 282,6 Avenue,Smith - 9th Sts,F,TRUE,40.67358,-73.995959
 283,6 Avenue,Smith - 9th Sts,G,TRUE,40.67358,-73.995959
 284,None,None,None,FALSE,-1,-1
@@ -457,11 +457,11 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 455,Queens Boulevard,Forest Hills - 71st Av,R,TRUE,40.721691,-73.844521
 456,Queens Boulevard,Grand Av - Newtown,M,TRUE,40.737015,-73.877223
 457,Queens Boulevard,Grand Av - Newtown,R,TRUE,40.737015,-73.877223
-458,Queens Boulevard,Jackson Heights - Roosevelt Ave,E,TRUE,40.746644,-73.891338
-459,Queens Boulevard,Jackson Heights - Roosevelt Ave,F,TRUE,40.746644,-73.891338
-460,Queens Boulevard,Jackson Heights - Roosevelt Ave,M,TRUE,40.746644,-73.891338
-461,Queens Boulevard,Jackson Heights - Roosevelt Ave,R,TRUE,40.746644,-73.891338
-462,Queens Boulevard,74 St – Broadway,7,TRUE,40.746644,-73.891338
+458,Queens Boulevard,Jackson Heights - Roosevelt Av,E,TRUE,40.746644,-73.891338
+459,Queens Boulevard,Jackson Heights - Roosevelt Av,F,TRUE,40.746644,-73.891338
+460,Queens Boulevard,Jackson Heights - Roosevelt Av,M,TRUE,40.746644,-73.891338
+461,Queens Boulevard,Jackson Heights - Roosevelt Av,R,TRUE,40.746644,-73.891338
+462,Queens Boulevard,74th St - Broadway,7,TRUE,40.746644,-73.891338
 463,Queens Boulevard,Jamaica - 179th St,F,FALSE,40.712646,-73.783817
 464,Queens Boulevard,Kew Gardens - Union Turnpike,E,TRUE,40.714441,-73.831008
 465,Queens Boulevard,Kew Gardens - Union Turnpike,F,TRUE,40.714441,-73.831008
@@ -500,8 +500,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 498,None,None,None,FALSE,-1,-1
 499,Rockaway,Howard Beach - JFK Airport,A2,TRUE,40.660476,-73.830301
 500,Rockaway,Howard Beach - JFK Airport,A3,TRUE,40.660476,-73.830301
-501,Rockaway,Rockaway Park - Beach 116th,A3,TRUE,40.580903,-73.835592
-502,Rockaway,Rockaway Park - Beach 116th,S3,TRUE,40.580903,-73.835592
+501,Rockaway,Rockaway Park - Beach 116th St,A3,TRUE,40.580903,-73.835592
+502,Rockaway,Rockaway Park - Beach 116th St,S3,TRUE,40.580903,-73.835592
 503,Broadway-7th Ave,103rd St,1,FALSE,40.799446,-73.968379
 504,Broadway-7th Ave,116th St - Columbia University,1,FALSE,40.807722,-73.96411
 505,Broadway-7th Ave,125th St,1,FALSE,40.815581,-73.958372
@@ -587,25 +587,25 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 585,Eastern Parkway,Nevins St,4,TRUE,40.688246,-73.980492
 586,Eastern Parkway,Nevins St,5,TRUE,40.688246,-73.980492
 587,Eastern Parkway,Nostrand Av,3,FALSE,40.669847,-73.950466
-588,Eastern Parkway,Crown Heights – Utica Av,3,TRUE,40.668897,-73.932942
-589,Eastern Parkway,Crown Heights – Utica Av,4,TRUE,40.668897,-73.932942
+588,Eastern Parkway,Crown Heights - Utica Av,3,TRUE,40.668897,-73.932942
+589,Eastern Parkway,Crown Heights - Utica Av,4,TRUE,40.668897,-73.932942
 590,Flushing,103rd St,7,FALSE,40.749865,-73.8627
 591,Flushing,111th St,7,FALSE,40.75173,-73.855334
-592,Flushing,34 St - Hudson Yards,7,FALSE,40.755882,-74.00191
-593,Flushing,Court Sq – 23 St,E,TRUE,40.747023,-73.945264
-594,Flushing,Court Sq,G,TRUE,40.747023,-73.945264
-595,Flushing,Court Sq – 23 St,M,TRUE,40.747023,-73.945264
-596,Flushing,Court Sq,7,TRUE,40.747023,-73.945264
+592,Flushing,34th St - Hudson Yards,7,FALSE,40.755882,-74.00191
+593,Flushing,Court Square - 23 St,E,TRUE,40.747023,-73.945264
+594,Flushing,Court Square - 23 St,G,TRUE,40.747023,-73.945264
+595,Flushing,Court Square - 23 St,M,TRUE,40.747023,-73.945264
+596,Flushing,Court Square - 23 St,7,TRUE,40.747023,-73.945264
 597,Flushing,82nd St - Jackson Heights,7,FALSE,40.747659,-73.883697
 598,Flushing,90th St Elmhurst,7,FALSE,40.748408,-73.876613
 599,Flushing,46th St - Bliss St,7,FALSE,40.743132,-73.918435
 600,Flushing,69th St - Fisk Av,7,FALSE,40.746325,-73.896403
 601,Flushing,Flushing - Main St,7,FALSE,40.7596,-73.83003
-602,Flushing,Grand Central - 42 St,4,TRUE,40.751431,-73.976041
-603,Flushing,Grand Central - 42 St,5,TRUE,40.751431,-73.976041
-604,Flushing,Grand Central - 42 St,6,TRUE,40.751431,-73.976041
-605,Flushing,Grand Central - 42 St,7,TRUE,40.751431,-73.976041
-606,Flushing,Grand Central - 42 St,S1,TRUE,40.751431,-73.976041
+602,Flushing,Grand Central - 42nd St,4,TRUE,40.751431,-73.976041
+603,Flushing,Grand Central - 42nd St,5,TRUE,40.751431,-73.976041
+604,Flushing,Grand Central - 42nd St,6,TRUE,40.751431,-73.976041
+605,Flushing,Grand Central - 42nd St,7,TRUE,40.751431,-73.976041
+606,Flushing,Grand Central - 42nd St,S1,TRUE,40.751431,-73.976041
 607,Flushing,Hunters Point Av,7,FALSE,40.742216,-73.948916
 608,Flushing,Junction Blvd,7,FALSE,40.749145,-73.869527
 609,Flushing,52nd St - Lincoln Av,7,FALSE,40.744149,-73.912549
@@ -714,8 +714,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 712,Pelham,Westchester Square - East Tremont Av,6,FALSE,40.839892,-73.842952
 713,Pelham,Whitlock Av,6,FALSE,40.826525,-73.886283
 714,Pelham,Zerega Av,6,FALSE,40.836488,-73.847036
-715,White Plains Road,3rd Av - 149 St,2,TRUE,40.816109,-73.917757
-716,White Plains Road,3rd Av - 149 St,5,TRUE,40.816109,-73.917757
+715,White Plains Road,3rd Av - 149th St,2,TRUE,40.816109,-73.917757
+716,White Plains Road,3rd Av - 149th St,5,TRUE,40.816109,-73.917757
 717,White Plains Road,174th St,2,TRUE,40.837288,-73.887734
 718,White Plains Road,174th St,5,TRUE,40.837288,-73.887734
 719,White Plains Road,219th St,2,TRUE,40.883895,-73.862633
@@ -734,8 +734,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 732,None,None,None,FALSE,-1,-1
 733,White Plains Road,East 180th St,2,TRUE,40.841894,-73.873488
 734,White Plains Road,East 180th St,5,TRUE,40.841894,-73.873488
-735,White Plains Road,West Farms Sq - East Tremont Av,2,TRUE,40.840295,-73.880049
-736,White Plains Road,West Farms Sq - East Tremont Av,5,TRUE,40.840295,-73.880049
+735,White Plains Road,West Farms Square - East Tremont Av,2,TRUE,40.840295,-73.880049
+736,White Plains Road,West Farms Square - East Tremont Av,5,TRUE,40.840295,-73.880049
 737,White Plains Road,Freeman St,2,TRUE,40.829993,-73.891865
 738,White Plains Road,Freeman St,5,TRUE,40.829993,-73.891865
 739,White Plains Road,Gun Hill Rd,2,TRUE,40.87785,-73.866256

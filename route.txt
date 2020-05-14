@@ -1,64 +1,23 @@
 
 
 
-Start at: Neptune Av (F)
+Start at: Brighton Beach (B)
 
 
 Intermediate Stops:
 
-F, Neptune Av, 0
-F, Av X, 0
-F, Av U, 0
-F, Kings Highway, 0
-F, Av P, 0
-F, Av N, 0
-F, Bay Parkway, 0
-F, Av I, 0
-F, 18th Av, 0
-F, Ditmas Av, 0
-F, Church Av, 0
-F, Fort Hamilton Parkway, 0
-F, 15 St - Prospect Park, 0
-F, 7th Av, 0
-F, 4th Av - 9th St, 0
-F, Smith - 9th Sts, 0
-F, Carroll St, 0
-F, Bergen St, 0
-F, Jay St - Metrotech, 0
-F, York St, 0
-F, East Broadway, 0
-F, Delancey St, 0
-F, 2nd Av, 0
-F, Broadway - Lafayette St, 0
-F, West 4th St - Washington Square, 0
-F, 14th St, 0
-1, 14th St, 1
-1, 18th St, 1
-1, 23rd St, 1
-1, 28th St, 1
-1, 34th St - Penn Station, 1
-1, Times Square - 42nd St, 1
-1, 50th St, 1
-1, 59th St - Columbus Circle, 1
-1, 66th St - Lincoln Center, 1
-1, 72nd St, 1
-1, 79th St, 1
-1, 86th St, 1
-1, 96th St, 1
-1, 103rd St, 1
-1, Cathedral Parkway - 110th St, 1
-1, 116th St - Columbia University, 1
-1, 125th St, 1
-1, 137th St - City College, 1
-1, 145th St, 1
-1, 157th St, 1
-1, 168th St, 1
-1, 181st St, 1
-1, 191st St, 1
-1, Dyckman St, 1
-1, 207th St, 1
-1, 215th St, 1
-1, Marble Hill - 225th St, 1
+B, Brighton Beach, 0
+Q, Brighton Beach, 0
+Q, Ocean Parkway, 0
+Q, West 8th St - New York Aquarium, 0
+Q, Coney Island - Stillwell Av, 0
+N, Coney Island - Stillwell Av, 1
+N, 86th St, 1
+N, Av U, 1
+N, Kings Highway, 1
+N, Bay Parkway, 1
+N, 20th Av, 1
+N, 18th Av, 1
 
 
-Arrive at: Marble Hill - 225th St (1)
+Arrive at: 18th Av (N)

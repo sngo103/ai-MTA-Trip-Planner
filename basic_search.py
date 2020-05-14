@@ -84,17 +84,15 @@ def route(start, end, mta, current_state):
                 explored.add(stop.stopID)
 
         # Goal test
-        if end.station_name in currentStop.station_name:
+        #if end.station_name in currentStop.station_name:
+        if end.stopID == currentStop.stopID:
             #trace back route
             route = '\n\nArrive at: ' + end.station_name + ' (' + end.line + ')\n'
             
-            # tempStop = None
             while currentStop:
 
-                #if not tempStop or currentStop.station_name != tempStop.station_name:
                 route = currentStop.line + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + '\n' + route
                 
-                #tempStop = currentStop
                 currentStop = currentStop.lastVisited
 
             route = '\n\n\nStart at: ' + start.station_name + ' (' + start.line + ')\n\n\n' + 'Intermediate Stops:\n\n' + route
@@ -103,15 +101,12 @@ def route(start, end, mta, current_state):
 
         #Get neighbors: nextStop, prevStop, transfers
         neighbor_dirs = []
-        #Prioritizes next stop on current line (LIFO)
         
         if currentStop.nextStop: 
             neighbor_dirs.append(currentStop.nextStop)
-        if currentStop.transfers: #Already a list
+
+        if currentStop.transfers: #Already a list, so we can concatenate
             neighbor_dirs += currentStop.transfers
-            #for transfer in range(len(currentStop.transfers)):
-            #    currentStop.transfers[transfer].transferCount = transferCount + 1
-            #    neighbor_dirs.append(currentStop.transfers[transfer])
 
         if currentStop.prevStop:
             neighbor_dirs.append(currentStop.prevStop)
@@ -119,23 +114,25 @@ def route(start, end, mta, current_state):
         
         #Add unexplored neighbors to frontier
         for direc in neighbor_dirs:
-            if direc.stopID not in explored: # and direc not in frontier:
+            if direc.stopID not in explored:# and direc not in frontier:
 
                 #hn = direc.heuristic(end)
+
+                #ideally we wouldn't have to set these every time, but the workaround for this (the Current_State class) is under... construction
                 direc.start = start
                 direc.end = end
 
                 direc.lastVisited = currentStop #Set last visited stop for each unexplored neighbor
 
                 #update transferCount
-                if currentStop.line != direc.line:
+                if currentStop.line != direc.line and currentStop != start and direc != end:
                     direc.transferCount = currentStop.transferCount + 1
                 else:
                     direc.transferCount = currentStop.transferCount
 
                 #update stopsToGoal if neighbor and end lines are the same
-                if direc.line == end.line:
-                    direc.stopsToGoal = mta.stopsBtwn(direc.line, direc.stopID, end.stopID)
+                #if direc.line == end.line:
+                direc.stopsToGoal = mta.transferStopsToEnd(direc)
 
                 frontier.put(direc)
                 #frontier.append(direc)
