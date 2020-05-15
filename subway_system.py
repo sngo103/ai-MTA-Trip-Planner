@@ -15,13 +15,14 @@ class Stop():
     prevStop = 0 # reference to previous stop's node
     nextStop = 0 # reference to next stop's node
     lastVisited = None # reference to last stop visited (set by search algorithm)
+    startEval = False #used to change __eq__ when determining the best starting stop
     #current_state = None
 
     #heuristic uses the number of times the algorithm has "transferred"
     #and the number of stops left to the goal if the current and ending stops are on the same line
     transferCount = 0
     #initialized as a large number to encourage staying on a train that stops at the goal stop
-    stopsToGoal = 1000
+    stopsToEnd = 1000
 
     def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):#, current_state):
         self.stopID = str(stopID)
@@ -45,6 +46,13 @@ class Stop():
         self.transfers = transfers_list
         return
 
+    def getTransferLines(self):
+        #find available line transfers
+        transferLines = []      
+        for transfer in self.transfers:
+            transferLines.append(transfer.line)
+        return transferLines
+
     def getNextStop(self):
         return self.nextStop
 
@@ -56,26 +64,38 @@ class Stop():
 
     # Comparisons for heuristic + priority queue
     def __lt__(self, stop2):
-        #lat2 = 40.714111
-        #long2 = -74.008585
-        #return self.getDist(self.latitude, stop2.latitude, self.longitude, stop2.longitude)
-        #return self.getDist(self.latitude, lat2, self.longitude, long2)
-        return self.heuristic(self.start, self.end) < stop2.heuristic(self.start, self.end)
+        
+        myVal = self.heuristic(self.start, self.end) 
+        otherVal = stop2.heuristic(stop2.start, stop2.end)
+
+        return (myVal < otherVal)
 
     # Will involve measurement of distance to the landmark
     
     def __eq__ (self, stop2):
+        #stops are equal if they have the same stopID
         a = stop2.stopID == self.stopID
+
+        #b is not included in measurement for start evaluation, since the transfers of stop are not equally good
+        c = self.startEval and stop2.startEval
+        if c:
+            return a
+
+        #a stop is as good as it's transfers when we're not evaluating a starting stop
         b = False
         for stop in range(len(self.transfers)):
             if self.transfers[stop].stopID == stop2.stopID:
                 b = True
-
         return a or b
 
-    def checkEnd(self, end):
-        if self.__eq__(end):
+    def checkEndStop(self, end):
+        if self == end:
             return -100000000
+        return 0
+
+    def checkEndLines(self, end):
+        if self.line in end.getTransferLines():
+            return -50
         return 0
 
     # Apply latitude/longitude distance formula
@@ -100,8 +120,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude) 
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-
-        return (totalDist + 300000000 * self.transferCount + self.checkEnd(end) +  self.stopsToGoal)
+        return (totalDist + 30 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + self.stopsToEnd)
 
     def __hash__(self):
         return hash(str(self))
@@ -225,30 +244,34 @@ class Subway_System():
 
     #calculate the number of stops between two stations on the same line
     def stopsToEnd(self, line, stop):
-        return abs(self.idIndex(line, stop.stopID) - self.idIndex(line, stop.end.stopID))
+        lineInd = self.idIndex(line, stop.stopID)
+        endInd = self.idIndex(line, stop.end.stopID)
+        if lineInd >= 0 and endInd >= 0:
+            return abs(self.idIndex(line, stop.stopID) - self.idIndex(line, stop.end.stopID))
+        #function doesn't like stations on different lines
+        return 100
 
     #find the "index" of a given stop on a given line's route assuming that the stop appears on its route.
     def idIndex(self, line, stopID):
         for i in range(len(self.system[line])):
-            if self.system[line][i].stopID == stopID:
+            if self.system[line][i] == self.directory[stopID]:
                 return i
 
         #Yell at user for bad input
-        #print ('The ' + line + ' train does not stop at Stop #' + stopID1 + '. Please try again.')
-        return 100000
+        #print ('The ' + line + ' train does not stop at ' + str(self.directory[stopID]) + '. Please try again.')
+        return -1
 
     # calculate the number of stops needed to the end goal, INCLUDING TRANSFERS
     def transferStopsToEnd(self, stop):
-        noTransfer = self.idIndex(stop.line, stop.stopID)
-        endTransferLines = []
+        noTransfer = self.stopsToEnd(stop.line, stop)
+        endTransferLines = stop.end.getTransferLines()
 
         #if there's no transfer, use the single line method
+        
         if noTransfer < 100:
-            return noTransfer
-
-        #find lines stopping at end
-        for endTransfer in stop.end.transfers:
-            endTransferLines.append(endTransfer.line)
+            ret = noTransfer
+            #print(ret)
+            return ret
 
         #check if you can transfer from stop to a train that stops at end
         for transfer in stop.transfers:
@@ -258,11 +281,11 @@ class Subway_System():
 
             #if a transfer is on the same line as the goal
             if transfer.line in endTransferLines:
-                return self.stopsToEnd(transfer.line, transfer) 
+                return self.stopsToEnd(transfer.line, transfer)
 
         #heuristic will not prioritize taking trains that do not stop at end, 
         #or transferring at stops that lack transfers to a train that stops at end
-        return 100000
+        return 10000000
 
     def __str__(self):
         return 'Thank you for riding with the MTA New York City Transit!'

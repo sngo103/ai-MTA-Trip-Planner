@@ -4,8 +4,7 @@ We often host on Daniel's PC, so most commits are in his name.
 NEXT FIXES: 
 -(Manually) fill in unlisted latitude and longitude values in stop_directory.csv
 -Apply current_state structure?
--General code cleanup in Subway_System
--Fix transferStopsToGoal: seems to be making routes worse for some cases
+-General code cleanup in subway_system.py and basic_search.py
 
 ISSUE:
 -Import loops resulting from current_state structure
@@ -28,6 +27,7 @@ Things Completed:
 -Standardized station names in stop_directory (same types of dashes are used; "th," "rd" or "nd" are inputted for all numbered station names)
 -Continuing to fix issues related to null pointers in data files
 -Resolved issue in Stop class __eq__ method
+-Smarter, heuristic-based train selection for starting stations with multiple line options
 
 
 

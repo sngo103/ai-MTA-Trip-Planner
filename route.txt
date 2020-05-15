@@ -1,38 +1,43 @@
 
 
 
-Start at: Far Rockaway - Mott Av (A2)
+Start at: 72nd St (B)
 
 
 Intermediate Stops:
 
-A2, Far Rockaway - Mott Av, 0
-A2, Beach 25th St, 0
-A2, Beach 36th St, 0
-A2, Beach 44th St, 0
-A2, Beach 60th St, 0
-A2, Beach 67th St, 0
-A2, Howard Beach - JFK Airport, 0
-A2, Aqueduct - North Conduit Av, 0
-A2, Aqueduct Racetrack, 0
-A3, Rockaway Blvd, 1
-A, Rockaway Blvd, 2
-A, 88th St, 2
-A, 80th St, 2
-A, Grant Av, 2
-A, Euclid Av, 2
-A, Broadway Junction, 2
-Z, Broadway Junction, 3
-Z, Alabama Av, 3
-Z, Van Siclen Av, 3
-Z, Norwood Av, 3
-Z, Crescent St, 3
-Z, 75th St - Elderts Ln, 3
-Z, Woodhaven Blvd, 3
-Z, 104th St, 3
-Z, 121st St, 3
-Z, Sutphin Blvd - Archer Av - JFK Airport, 3
-E, Sutphin Blvd - Archer Av - JFK Airport, 3
+B, 72nd St, 0
+B, 59th St - Columbus Circle, 0
+B, 7th Av, 0
+B, 47-50th Sts - Rockefeller Center, 0
+B, 42nd St - Bryant Park, 0
+B, 34th St - Herald Square, 0
+R, 34th St - Herald Square, 1
+R, 28th St, 1
+R, 23rd St, 1
+R, 14th St - Union Square, 1
+R, 8th St - NYU, 1
+R, Prince St, 1
+R, Canal St, 1
+R, City Hall, 1
+R, Cortlandt St, 1
+R, Rector St, 1
+R, Whitehall St, 1
+R, Court St, 1
+R, Jay St - Metrotech, 1
+R, DeKalb Av, 1
+R, Atlantic Av - Barclays Ctr, 1
+R, Union St, 1
+R, 4th Av - 9th St, 1
+R, Prospect Av, 1
+R, 25th St, 1
+R, 36th St, 1
+R, 45th St, 1
+R, 53rd St, 1
+R, 59th St, 1
+R, Bay Ridge Av, 1
+R, 77th St, 1
+R, 86th St, 1
 
 
-Arrive at: Sutphin Blvd - Archer Av - JFK Airport (E)
+Arrive at: 86th St (R)

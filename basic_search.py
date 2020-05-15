@@ -46,21 +46,38 @@ def route(start, end, mta, current_state):
     
     start = mta.findStop(start)
     end = mta.findStop(end)
- 
-    start.start = start
-    start.end = end
-
-
+    
     if not start or not end:
         return '\nNo station with the specified name was found. Please try again, or contact an administrator.'
-    
-    # Initialization (temporarily using deque before heuristic is completed)
-    #frontier = deque()
-    #frontier.append(start)
 
+    #This needs cleaning
+    start.start = start
+    start.end = end
+    end.start = start
+    end.end = end
+
+    #pick best starting station
+    start_pick = PriorityQueue()
+    start_pick.put(start)
+    
+    for start_transfer in start.transfers:
+        start_transfer.startEval = True # Change definition of equality to exclude transfers for start evaluation
+        start_transfer.start, start_transfer.end = start, end # Set start and end stops
+
+        if start_transfer.station_name != start.station_name: #Display transfer (without counting one) for differently-named starting options
+            start_transfer.lastVisited = start
+
+        start_transfer.stopsToEnd = mta.transferStopsToEnd(start_transfer) # Facilitate heuristic calculation
+
+        start_pick.put(start_transfer) #Put into start_pick priority queue
+    
+    # Initialization
+
+    start = start_pick.get() #Get best stop from priority queue
+    #print('start: ' + str(start))
+    
     frontier = PriorityQueue()
     frontier.put(start)
-    
     
     explored = set()
 
@@ -84,10 +101,9 @@ def route(start, end, mta, current_state):
                 explored.add(stop.stopID)
 
         # Goal test
-        #if end.station_name in currentStop.station_name:
-        if end.stopID == currentStop.stopID:
+        if end == currentStop:
             #trace back route
-            route = '\n\nArrive at: ' + end.station_name + ' (' + end.line + ')\n'
+            route = '\n\nArrive at: ' + end.station_name + ' (' + currentStop.line + ')\n'
             
             while currentStop:
 
@@ -122,6 +138,7 @@ def route(start, end, mta, current_state):
                 direc.end = end
 
                 direc.lastVisited = currentStop #Set last visited stop for each unexplored neighbor
+                direc.startEval = False
 
                 #update transferCount
                 if currentStop.line != direc.line and currentStop != start and direc != end:
@@ -131,7 +148,7 @@ def route(start, end, mta, current_state):
 
                 #update stopsToGoal if neighbor and end lines are the same
                 #if direc.line == end.line:
-                direc.stopsToGoal = mta.transferStopsToEnd(direc)
+                direc.stopsToEnd = mta.transferStopsToEnd(direc)
 
                 frontier.put(direc)
                 #frontier.append(direc)
