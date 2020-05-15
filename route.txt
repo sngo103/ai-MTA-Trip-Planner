@@ -1,18 +1,27 @@
 
 
 
-Start at: Cortlandt St (R)
+Start at: Coney Island - Stillwell Av (N)
 
 
 Intermediate Stops:
 
-W, Cortlandt St, 0, 102.05112366152544
-W, City Hall, 0, 102.06375801574868
-W, Canal St, 0, 4.051476447702123
-6, Canal St, 1, 54.05147644770213
-6, Spring St, 1, 53.08685859537451
-6, Bleecker St, 1, -99999947.94887634
-D, Broadway - Lafayette St, 1, -99999947.94887634
+N, 86th St, 0, 115.27882682015868
+N, Av U, 0, 115.26161087452913
+N, Kings Highway, 0, 115.2483807911635
+N, Bay Parkway, 0, 115.23897542273629
+N, 20th Av, 0, 115.21570206637348
+N, 18th Av, 0, 115.20981759469181
+N, New Utrecht Av, 0, 115.26012557234951
+N, Fort Hamilton Parkway, 0, 115.41942536844603
+N, 8th Av, 0, 115.60377848587437
+N, 59th St, 0, 115.81059230767265
+N, 36th St, 0, 115.28588903640811
+N, Atlantic Av - Barclays Ctr, 0, 21.719808956479444
+N, Canal St, 0, 17.64158099188942
+J, Canal St, 1, 67.64158099188941
+J, Chambers St, 1, -99999934.79396485
+4, Brooklyn Bridge - City Hall, 1, -99999934.79396485
 
 
-Arrive at: Broadway - Lafayette St (D)
+Arrive at: Brooklyn Bridge - City Hall (4)

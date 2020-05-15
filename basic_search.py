@@ -111,12 +111,12 @@ def route(start, end, mta, current_state):
             for stop in currentStop.lastVisited.transfers: # Add all transfers of last visited stop to explored.
                 explored.add(stop.stopID)
 
-            #Update start if the first step is a transfer
+            '''#Update start if the first step is a transfer
             #This probably needs cleaning
             if currentStop == start:
                 start = currentStop
                 currentStop.start = start
-                currentStop.lastVisited = None
+                currentStop.lastVisited = None'''
 
         # Goal test
         #if end == currentStop:
@@ -124,11 +124,14 @@ def route(start, end, mta, current_state):
             #trace back route
             route = '\n\nArrive at: ' + end.station_name + ' (' + currentStop.line + ')\n'
             
-            while currentStop:
+            #Maybe some cleanup is needed?
+            while currentStop != start:
 
                 route = currentStop.line + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + '\n' + route
                 
                 currentStop = currentStop.lastVisited
+
+            start = currentStop
 
             route = '\n\n\nStart at: ' + start.station_name + ' (' + start.line + ')\n\n\n' + 'Intermediate Stops:\n\n' + route
             
