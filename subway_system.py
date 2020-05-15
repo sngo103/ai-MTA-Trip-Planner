@@ -1,4 +1,4 @@
-import math
+import math, random
 #import random
 
 # Subway system and stop class
@@ -120,15 +120,14 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude) 
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return (totalDist + 50 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + self.stopsToEnd)
+        return (totalDist + 100 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + self.stopsToEnd)
 
     def __hash__(self):
         return hash(str(self))
 
 # ================================================================================
 
-# Stop Directory
-#stop_order: connects line names to routes
+# Stop Directory: connects line names to route details
 directory_data = open('stop_directory.csv','r').read().split('\n')
 
 # Transfers Directory: connections stopIDs to available transfers at the same location
@@ -178,7 +177,7 @@ class Subway_System():
         return directory_dict
 
     def setupSystem(self, stop_order):
-        #associated with stop_order
+        # Associated with stop_order
         # {line : list of stops in correct order (south -> north)} 
         system_dict = {}
         train = ""
@@ -237,55 +236,64 @@ class Subway_System():
             # Get the first StopID that matches a user-inputted station name
 
     def findStop(self, stop_name):
+        # Relate user input names into stops
+
+        options = []
         for stop in self.directory:
             if stop_name in self.directory[stop].station_name:
-                return self.directory[stop]
+                options.append(self.directory[stop])
+
+        # Randomly choose between stations with the same name or search keyword
+        if options:
+            return random.choice(options)
+
+        # Prevent inputs that are not stop names
         return False
 
-    #calculate the number of stops between two stations on the same line
+    # Calculate the number of stops between two stations on the same line
     def stopsToEnd(self, line, stop):
         lineInd = self.idIndex(line, stop.stopID)
         endInd = self.idIndex(line, stop.end.stopID)
         if lineInd >= 0 and endInd >= 0:
             return abs(self.idIndex(line, stop.stopID) - self.idIndex(line, stop.end.stopID))
-        #function doesn't like stations on different lines
+
+        # Function doesn't like stations on different lines
         return 100
 
-    #find the "index" of a given stop on a given line's route assuming that the stop appears on its route.
+    # Find the "index" of a given stop on a given line's route, assuming that the stop appears on its route.
     def idIndex(self, line, stopID):
         for i in range(len(self.system[line])):
             if self.system[line][i] == self.directory[stopID]:
                 return i
 
-        #Yell at user for bad input
+        #Yell at programmer if the stops are on different lines
         #print ('The ' + line + ' train does not stop at ' + str(self.directory[stopID]) + '. Please try again.')
         return -1
 
-    # calculate the number of stops needed to the end goal, INCLUDING TRANSFERS
+    # Calculate the number of stops needed to the end goal, INCLUDING TRANSFERS
     def transferStopsToEnd(self, stop):
         noTransfer = self.stopsToEnd(stop.line, stop)
         endTransferLines = stop.end.getTransferLines()
 
-        #if there's no transfer, use the single line method
+        # If there's no transfer, use the single line method
         
         if noTransfer < 100:
             ret = noTransfer
             #print(ret)
             return ret
 
-        #check if you can transfer from stop to a train that stops at end
+        # Check if you can transfer from stop to a train that stops at end
         for transfer in stop.transfers:
 
-            #There should be a better way to ensure that end is set
+            # There should probably be a better way to ensure that end is set
             transfer.end = stop.end
 
-            #if a transfer is on the same line as the goal
+            # If a transfer is on the same line as the goal, return the single line stops to end
             if transfer.line in endTransferLines:
                 return self.stopsToEnd(transfer.line, transfer)
 
-        #heuristic will not prioritize taking trains that do not stop at end, 
-        #or transferring at stops that lack transfers to a train that stops at end
-        return 50
+        # Heuristic will not prioritize taking trains that do not stop at end, or transferring at stops that lack transfers to a train that stops at end
+        return 100
 
     def __str__(self):
         return 'Thank you for riding with the MTA New York City Transit!'

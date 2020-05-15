@@ -1,34 +1,18 @@
 
 
 
-Start at: 72nd St (C)
+Start at: Cortlandt St (R)
 
 
 Intermediate Stops:
 
-B, 72nd St, 0, 117.55825364284388
-B, 59th St - Columbus Circle, 0, 67.58922950193083
-B, 7th Av, 0, 67.56018953707522
-B, 47-50th Sts - Rockefeller Center, 0, 67.55965308029388
-B, 42nd St - Bryant Park, 0, 67.55945957185274
-B, 34th St - Herald Square, 0, 67.56768999597327
-B, West 4th St - Washington Square, 0, 67.63780539986897
-B, Broadway - Lafayette St, 0, 67.56432700021557
-B, Grand St, 0, 67.56209896997741
-B, DeKalb Av, 0, 67.97390992240531
-B, Atlantic Av - Barclays Ctr, 0, 68.19107385627507
-R, Atlantic Av - Barclays Ctr, 1, 79.19107385627507
-R, Union St, 1, 78.11871017939902
-R, 4th Av - 9th St, 1, 77.02448896329173
-R, Prospect Av, 1, 75.94727616055715
-R, 25th St, 1, 74.8503627170018
-R, 36th St, 1, 73.76123768672531
-R, 45th St, 1, 72.6712415449939
-R, 53rd St, 1, 71.62437013850806
-R, 59th St, 1, 70.5880462964127
-R, Bay Ridge Av, 1, 69.56011283595267
-R, 77th St, 1, 68.5592980791055
-R, 86th St, 1, -99999932.44174635
+W, Cortlandt St, 0, 102.05112366152544
+W, City Hall, 0, 102.06375801574868
+W, Canal St, 0, 4.051476447702123
+6, Canal St, 1, 54.05147644770213
+6, Spring St, 1, 53.08685859537451
+6, Bleecker St, 1, -99999947.94887634
+D, Broadway - Lafayette St, 1, -99999947.94887634
 
 
-Arrive at: 86th St (R)
+Arrive at: Broadway - Lafayette St (D)

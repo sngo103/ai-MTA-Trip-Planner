@@ -119,7 +119,8 @@ def route(start, end, mta, current_state):
                 currentStop.lastVisited = None
 
         # Goal test
-        if end == currentStop:
+        #if end == currentStop:
+        if end == currentStop and end.station_name == currentStop.station_name:
             #trace back route
             route = '\n\nArrive at: ' + end.station_name + ' (' + currentStop.line + ')\n'
             
