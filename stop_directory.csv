@@ -13,15 +13,15 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
 11,4 Avenue,4th Av - 9th St,F,TRUE,40.670847,-73.988302
 12,4 Avenue,4th Av - 9th St,G,TRUE,40.670847,-73.988302
 13,4 Avenue,4th Av - 9th St,R,TRUE,40.670847,-73.988302
-14,4 Avenue,Atlantic Av - Barclays Ctr,B,TRUE,40.683666,-73.97881
-15,4 Avenue,Atlantic Av - Barclays Ctr,Q,TRUE,40.683666,-73.97881
-16,4 Avenue,Atlantic Av - Barclays Ctr,D,TRUE,40.683666,-73.97881
-17,4 Avenue,Atlantic Av - Barclays Ctr,N,TRUE,40.683666,-73.97881
-18,4 Avenue,Atlantic Av - Barclays Ctr,R,TRUE,40.683666,-73.97881
-19,4 Avenue,Atlantic Av - Barclays Ctr,2,TRUE,40.683666,-73.97881
-20,4 Avenue,Atlantic Av - Barclays Ctr,3,TRUE,40.683666,-73.97881
-21,4 Avenue,Atlantic Av - Barclays Ctr,4,TRUE,40.683666,-73.97881
-22,4 Avenue,Atlantic Av - Barclays Ctr,5,TRUE,40.683666,-73.97881
+14,4 Avenue,Atlantic Av - Barclays Center,B,TRUE,40.683666,-73.97881
+15,4 Avenue,Atlantic Av - Barclays Center,Q,TRUE,40.683666,-73.97881
+16,4 Avenue,Atlantic Av - Barclays Center,D,TRUE,40.683666,-73.97881
+17,4 Avenue,Atlantic Av - Barclays Center,N,TRUE,40.683666,-73.97881
+18,4 Avenue,Atlantic Av - Barclays Center,R,TRUE,40.683666,-73.97881
+19,4 Avenue,Atlantic Av - Barclays Center,2,TRUE,40.683666,-73.97881
+20,4 Avenue,Atlantic Av - Barclays Center,3,TRUE,40.683666,-73.97881
+21,4 Avenue,Atlantic Av - Barclays Center,4,TRUE,40.683666,-73.97881
+22,4 Avenue,Atlantic Av - Barclays Center,5,TRUE,40.683666,-73.97881
 23,4 Avenue,Bay Ridge Av,R,FALSE,40.634967,-74.023377
 24,4 Avenue,DeKalb Av,B,TRUE,40.690635,-73.981824
 25,4 Avenue,DeKalb Av,Q,TRUE,40.690635,-73.981824
