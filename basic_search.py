@@ -58,9 +58,8 @@ def route(start, end, mta, current_state):
 
     #pick best starting station
     start_pick = PriorityQueue()
-    start_pick.put(start)
     
-    for start_transfer in start.transfers:
+    for start_transfer in [start] + start.transfers:
         start_transfer.startEval = True # Change definition of equality to exclude transfers for start evaluation
         start_transfer.start, start_transfer.end = start, end # Set start and end stops
 
@@ -75,7 +74,7 @@ def route(start, end, mta, current_state):
 
     start = start_pick.get() #Get best stop from priority queue
     #print('start: ' + str(start))
-    
+
     frontier = PriorityQueue()
     frontier.put(start)
     
@@ -107,7 +106,7 @@ def route(start, end, mta, current_state):
             
             while currentStop:
 
-                route = currentStop.line + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + '\n' + route
+                route = currentStop.line + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + '\n' + route
                 
                 currentStop = currentStop.lastVisited
 

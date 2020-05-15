@@ -1,43 +1,27 @@
 
 
 
-Start at: 72nd St (B)
+Start at: Coney Island - Stillwell Av (N)
 
 
 Intermediate Stops:
 
-B, 72nd St, 0
-B, 59th St - Columbus Circle, 0
-B, 7th Av, 0
-B, 47-50th Sts - Rockefeller Center, 0
-B, 42nd St - Bryant Park, 0
-B, 34th St - Herald Square, 0
-R, 34th St - Herald Square, 1
-R, 28th St, 1
-R, 23rd St, 1
-R, 14th St - Union Square, 1
-R, 8th St - NYU, 1
-R, Prince St, 1
-R, Canal St, 1
-R, City Hall, 1
-R, Cortlandt St, 1
-R, Rector St, 1
-R, Whitehall St, 1
-R, Court St, 1
-R, Jay St - Metrotech, 1
-R, DeKalb Av, 1
-R, Atlantic Av - Barclays Ctr, 1
-R, Union St, 1
-R, 4th Av - 9th St, 1
-R, Prospect Av, 1
-R, 25th St, 1
-R, 36th St, 1
-R, 45th St, 1
-R, 53rd St, 1
-R, 59th St, 1
-R, Bay Ridge Av, 1
-R, 77th St, 1
-R, 86th St, 1
+N, Coney Island - Stillwell Av, 0, -15.849966667459192
+N, 86th St, 0, -16.820297028076595
+N, Av U, 0, -17.835011529110922
+N, Kings Highway, 0, -18.844745710841163
+N, Bay Parkway, 0, -19.849356665361434
+N, 20th Av, 0, -20.844763685647642
+N, 18th Av, 0, -21.794775034054695
+N, New Utrecht Av, 0, -22.679594597790288
+N, Fort Hamilton Parkway, 0, -23.44067611670691
+N, 8th Av, 0, -24.20421663872461
+N, 59th St, 0, -24.952686199434336
+N, 36th St, 0, -26.57343710243702
+N, Atlantic Av - Barclays Ctr, 0, -27.8162027947067
+N, Canal St, 0, -28.566314114525827
+N, 14th St - Union Square, 0, -29.825010863068258
+N, 34th St - Herald Square, 0, -100000030.84996666
 
 
-Arrive at: 86th St (R)
+Arrive at: 34th St - Herald Square (N)
