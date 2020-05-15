@@ -1,27 +1,34 @@
 
 
 
-Start at: Coney Island - Stillwell Av (N)
+Start at: 72nd St (C)
 
 
 Intermediate Stops:
 
-N, Coney Island - Stillwell Av, 0, -15.849966667459192
-N, 86th St, 0, -16.820297028076595
-N, Av U, 0, -17.835011529110922
-N, Kings Highway, 0, -18.844745710841163
-N, Bay Parkway, 0, -19.849356665361434
-N, 20th Av, 0, -20.844763685647642
-N, 18th Av, 0, -21.794775034054695
-N, New Utrecht Av, 0, -22.679594597790288
-N, Fort Hamilton Parkway, 0, -23.44067611670691
-N, 8th Av, 0, -24.20421663872461
-N, 59th St, 0, -24.952686199434336
-N, 36th St, 0, -26.57343710243702
-N, Atlantic Av - Barclays Ctr, 0, -27.8162027947067
-N, Canal St, 0, -28.566314114525827
-N, 14th St - Union Square, 0, -29.825010863068258
-N, 34th St - Herald Square, 0, -100000030.84996666
+B, 72nd St, 0, 117.55825364284388
+B, 59th St - Columbus Circle, 0, 67.58922950193083
+B, 7th Av, 0, 67.56018953707522
+B, 47-50th Sts - Rockefeller Center, 0, 67.55965308029388
+B, 42nd St - Bryant Park, 0, 67.55945957185274
+B, 34th St - Herald Square, 0, 67.56768999597327
+B, West 4th St - Washington Square, 0, 67.63780539986897
+B, Broadway - Lafayette St, 0, 67.56432700021557
+B, Grand St, 0, 67.56209896997741
+B, DeKalb Av, 0, 67.97390992240531
+B, Atlantic Av - Barclays Ctr, 0, 68.19107385627507
+R, Atlantic Av - Barclays Ctr, 1, 79.19107385627507
+R, Union St, 1, 78.11871017939902
+R, 4th Av - 9th St, 1, 77.02448896329173
+R, Prospect Av, 1, 75.94727616055715
+R, 25th St, 1, 74.8503627170018
+R, 36th St, 1, 73.76123768672531
+R, 45th St, 1, 72.6712415449939
+R, 53rd St, 1, 71.62437013850806
+R, 59th St, 1, 70.5880462964127
+R, Bay Ridge Av, 1, 69.56011283595267
+R, 77th St, 1, 68.5592980791055
+R, 86th St, 1, -99999932.44174635
 
 
-Arrive at: 34th St - Herald Square (N)
+Arrive at: 86th St (R)

@@ -2,7 +2,7 @@ from queue import PriorityQueue
 #from collections import deque
 from subway_system import Subway_System
 from subway_system import Current_State
-import sys
+import sys, math
 args = sys.argv[1:]
 
 
@@ -50,21 +50,33 @@ def route(start, end, mta, current_state):
     if not start or not end:
         return '\nNo station with the specified name was found. Please try again, or contact an administrator.'
 
-    #This needs cleaning
-    start.start = start
+    #This probably needs cleaning
     start.end = end
-    end.start = start
     end.end = end
 
     #pick best starting station
+    '''minStop = ('', math.inf)
+    for start_transfer in [start] + start.transfers:
+        start_transfer.stopsToEnd = mta.transferStopsToEnd(start_transfer) # Facilitate heuristic calculation
+        val = start_transfer.heuristic(start, end)
+        print(val)
+        if val  < minStop[1]:
+            minStop = (start_transfer, val)
+
+    start = minStop[0]
     start_pick = PriorityQueue()
     
     for start_transfer in [start] + start.transfers:
         start_transfer.startEval = True # Change definition of equality to exclude transfers for start evaluation
-        start_transfer.start, start_transfer.end = start, end # Set start and end stops
+        start_transfer.start = start
+        start_transfer.end = end # Set start and end stops
 
         if start_transfer.station_name != start.station_name: #Display transfer (without counting one) for differently-named starting options
             start_transfer.lastVisited = start
+
+        if start_transfer != start:
+            print (start_transfer)
+            start_transfer.transferCount += 1
 
         start_transfer.stopsToEnd = mta.transferStopsToEnd(start_transfer) # Facilitate heuristic calculation
 
@@ -73,7 +85,7 @@ def route(start, end, mta, current_state):
     # Initialization
 
     start = start_pick.get() #Get best stop from priority queue
-    #print('start: ' + str(start))
+    #print('start: ' + str(start))'''
 
     frontier = PriorityQueue()
     frontier.put(start)
@@ -98,6 +110,13 @@ def route(start, end, mta, current_state):
         if currentStop.lastVisited: # If it's not the starting stop
             for stop in currentStop.lastVisited.transfers: # Add all transfers of last visited stop to explored.
                 explored.add(stop.stopID)
+
+            #Update start if the first step is a transfer
+            #This probably needs cleaning
+            if currentStop == start:
+                start = currentStop
+                currentStop.start = start
+                currentStop.lastVisited = None
 
         # Goal test
         if end == currentStop:
@@ -137,16 +156,16 @@ def route(start, end, mta, current_state):
                 direc.end = end
 
                 direc.lastVisited = currentStop #Set last visited stop for each unexplored neighbor
-                direc.startEval = False
+                #direc.startEval = False
 
                 #update transferCount
-                if currentStop.line != direc.line and currentStop != start and direc != end:
+                if currentStop.line != direc.line and direc != start and direc != end:
                     direc.transferCount = currentStop.transferCount + 1
                 else:
+                    #print (str(start) + ', ' + str(currentStop) + ', ' + str(direc) + ', ' + str(start.startEval))
                     direc.transferCount = currentStop.transferCount
 
-                #update stopsToGoal if neighbor and end lines are the same
-                #if direc.line == end.line:
+                #update stopsToEnd if neighbor and end lines are the same
                 direc.stopsToEnd = mta.transferStopsToEnd(direc)
 
                 frontier.put(direc)

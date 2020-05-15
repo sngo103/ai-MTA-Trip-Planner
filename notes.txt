@@ -5,9 +5,7 @@ NEXT FIXES:
 -(Manually) fill in unlisted latitude and longitude values in stop_directory.csv
 -Apply current_state structure?
 -General code cleanup in subway_system.py and basic_search.py
--Route is sometimes not picking the shortest path
-    -See test for  "72" "86"
-    -72 (B) -> Atlantic (B/R) -> 86 (R) is better than 72 (B) to 34 (B/R) -> 86 (R)
+-Route is sometimes not picking the shortest path (needs more testing)
 
 ISSUE:
 -Import loops resulting from current_state structure

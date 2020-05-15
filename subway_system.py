@@ -15,14 +15,14 @@ class Stop():
     prevStop = 0 # reference to previous stop's node
     nextStop = 0 # reference to next stop's node
     lastVisited = None # reference to last stop visited (set by search algorithm)
-    startEval = False #used to change __eq__ when determining the best starting stop
+    #startEval = False #used to change __eq__ when determining the best starting stop
     #current_state = None
 
     #heuristic uses the number of times the algorithm has "transferred"
     #and the number of stops left to the goal if the current and ending stops are on the same line
     transferCount = 0
     #initialized as a large number to encourage staying on a train that stops at the goal stop
-    stopsToEnd = 1000
+    stopsToEnd = 100
 
     def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):#, current_state):
         self.stopID = str(stopID)
@@ -77,9 +77,9 @@ class Stop():
         a = stop2.stopID == self.stopID
 
         #b is not included in measurement for start evaluation, since the transfers of stop are not equally good
-        c = self.startEval and stop2.startEval
+        '''c = self.startEval and stop2.startEval
         if c:
-            return a
+            return a'''
 
         #a stop is as good as it's transfers when we're not evaluating a starting stop
         b = False
@@ -120,7 +120,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude) 
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return (totalDist + 30 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + self.stopsToEnd)
+        return (totalDist + 50 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + self.stopsToEnd)
 
     def __hash__(self):
         return hash(str(self))
@@ -285,7 +285,7 @@ class Subway_System():
 
         #heuristic will not prioritize taking trains that do not stop at end, 
         #or transferring at stops that lack transfers to a train that stops at end
-        return 10000000
+        return 50
 
     def __str__(self):
         return 'Thank you for riding with the MTA New York City Transit!'
