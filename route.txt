@@ -1,34 +1,20 @@
 
 
 
-Start at: Van Cortlandt Park - 242nd St (1)
+Start at: Ocean Parkway (Q)
 
 
 Intermediate Stops:
 
-1, 238th St, 0, 2023.4801187076107
-1, 231st St, 0, 2023.4878487377882
-1, Marble Hill - 225th St, 0, 2023.5243163543914
-1, 215th St, 0, 2023.5721745581804
-1, 207th St, 0, 2023.586739253514
-1, Dyckman St, 0, 2023.6908222310894
-1, 191st St, 0, 2023.7086149290435
-1, 181st St, 0, 2023.7307212251387
-1, 168th St, 0, 543.7705179357688
-A, 168th St, 1, 383.77051793576885
-A, 145th St, 1, 363.67111375426987
-A, 125th St, 1, 343.70488888410557
-A, 59th St - Columbus Circle, 1, 324.0391066047305
-A, 42nd St - Port Authority Bus Terminal, 1, 304.06369324132504
-A, 34th St - Penn Station, 1, 284.3221572295699
-A, 14th St, 1, 264.67658473247667
-A, West 4th St - Washington Square, 1, 244.4899609668175
-A, Canal St, 1, 224.74769981611894
-A, Chambers St, 1, 205.03799074972818
-A, Fulton St, 1, 184.91910519195875
-A, High St, 1, 163.78473847707681
-A, Jay St - Metrotech, 1, 143.53273136805868
-A, Hoyt - Schermerhorn Sts, 1, -99999876.52045481
+Q, Brighton Beach, 0, 262.50219669151903
+B, Brighton Beach, 1, 202.50219669151903
+B, Sheepshead Bay, 1, 182.64864935922753
+B, Kings Highway, 1, 162.23776958790197
+B, Newkirk Plaza, 1, 142.12134491197057
+B, Church Av, 1, 122.18472408416716
+B, Prospect Park, 1, 102.32189803569149
+B, 7th Av, 1, 82.12084814943877
+B, Atlantic Av - Barclays Center, 1, -99999938.03112079
 
 
-Arrive at: Hoyt - Schermerhorn Sts (A)
+Arrive at: Atlantic Av - Barclays Center (B)
