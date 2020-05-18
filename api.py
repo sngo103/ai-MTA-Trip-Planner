@@ -63,10 +63,10 @@ def directions(origin, destination, mode="transit", depart_time=datetime.now(), 
     retList = []
     if arrive_time != 0:
         directions = gmaps.directions(origin=origin, destination=destination, mode=mode, departure_time=depart_time)
-        entry = "Directions from " + origin + " to " + destination + " arriving at " + str(arrive_time)
+        entry = "Directions from " + str(origin) + " to " + str(destination) + " arriving at " + str(arrive_time)
     else:
         directions = gmaps.directions(origin=origin, destination=destination, mode=mode, arrival_time=arrive_time)
-        entry = "Directions from " + origin + " to" + destination + " leaving at " + str(depart_time)
+        entry = "Directions from " + str(origin) + " to" + str(destination) + " leaving at " + str(depart_time)
     retList.append(entry)
     directions = directions[0]['legs'][0]['steps']
     #print(directions)

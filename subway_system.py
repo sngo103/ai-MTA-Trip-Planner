@@ -289,11 +289,17 @@ class Subway_System():
         #print ('The ' + line + ' train does not stop at ' + str(self.directory[stopID]) + '. Please try again.')
         return -1
 
-    def startToStation(self, address_str):
+    # Get walking directions from origin to nearest subway station
+    # Params:
+    # - start_addr: text query address of origin, NOT lat,long
+    def startToStation(self, start_addr): # Assumes the start station is unknown
         retDict = {"start":{"address" : "", "name" : "", "latitude" : 0, "longitude" : 0},
                    "nearest_station": -1,
                    "walking_instructions" : []}
-        place = self.gmaps.find_place(input=address_str, input_type="textquery",fields=["formatted_address", "geometry", "name"], language="en", location_bias="rectangle:40.495992,-74.257159|40.915568,-73.699215")["candidates"][0]
+        try:
+            place = self.gmaps.find_place(input=start_addr, input_type="textquery",fields=["formatted_address", "geometry", "name"], language="en", location_bias="rectangle:40.495992,-74.257159|40.915568,-73.699215")["candidates"][0]
+        except:
+            return {"error": "We couldn't find a place matching the address you entered. Please try again."}
         place_lat = place['geometry']['location']['lat']
         retDict["start"]["latitude"] = place_lat
         place_lng = place['geometry']['location']['lng']
@@ -312,16 +318,52 @@ class Subway_System():
                 leastDist = dist
                 stopID = id
         retDict["nearest_station"] = stopID
-        param_origin = retDict["start"]["name"] # Can be address or coordinates
-        param_dest = station_name
+        param_origin = [place_lat, place_lng]
+        param_dest = [station_lat, station_lng]
         param_mode = "walking"
         param_depart_time = datetime(year=2020, month=6, day=5, hour=10, minute=0, second=0)
         param_arrive_time = 0
-        retDict["walking_instructions"] = api.directions(origin=param_origin, destination=param_dest, mode=param_mode, depart_time=param_depart_time, arrive_time=param_arrive_time)
+        retDict["walking_instructions"].append("Directions from " + start_addr + " to " + station_name + " departing at " + str(param_depart_time))
+        retDict["walking_instructions"] += api.directions(origin=param_origin, destination=param_dest, mode=param_mode, depart_time=param_depart_time, arrive_time=param_arrive_time)
         return retDict
 
-    def stationToEnd(self):
-        pass
+    # Get walking directions from nearest subway station to destination
+    # Params:
+    # - end_addr(str): text query address of destination, NOT lat,long
+    def stationToEnd(self, end_addr): # End station can be known or unknown
+        retDict = {"end":{"address" : "", "name" : "", "latitude" : 0, "longitude" : 0},
+                   "nearest_station": -1,
+                   "walking_instructions" : []}
+        try:
+            place = self.gmaps.find_place(input=end_addr, input_type="textquery",fields=["formatted_address", "geometry", "name"], language="en", location_bias="rectangle:40.495992,-74.257159|40.915568,-73.699215")["candidates"][0]
+        except:
+            return {"error": "We couldn't find a place matching the address you entered. Please try again."}
+        place_lat = place['geometry']['location']['lat']
+        retDict["end"]["latitude"] = place_lat
+        place_lng = place['geometry']['location']['lng']
+        retDict["end"]["longitude"] = place_lng
+        retDict["end"]["address"] = place['formatted_address']
+        retDict["end"]["name"] = place['name']
+        nearest = self.gmaps.places_nearby(location=[place_lat, place_lng], rank_by="distance", type="subway_station")['results'][0]
+        station_name = nearest['name']
+        station_lat = nearest['geometry']['location']['lat']
+        station_lng = nearest['geometry']['location']['lng']
+        stopID = -1
+        leastDist = 1000000000
+        for id, node in self.directory.items():
+            dist = node.getDist(node.latitude, station_lat, node.longitude, station_lng)
+            if dist < leastDist:
+                leastDist = dist
+                stopID = id
+        retDict["nearest_station"] = stopID
+        param_origin = [station_lat, station_lng]
+        param_dest = [place_lat, place_lng]
+        param_mode = "walking"
+        param_depart_time = datetime(year=2020, month=6, day=5, hour=10, minute=0, second=0)
+        param_arrive_time = 0
+        retDict["walking_instructions"].append("Directions from " + station_name + " to " + end_addr + " departing at " + str(param_depart_time))
+        retDict["walking_instructions"] += api.directions(origin=param_origin, destination=param_dest, mode=param_mode, depart_time=param_depart_time, arrive_time=param_arrive_time)
+        return retDict
 
     # Calculate the number of stops needed to the end goal, INCLUDING TRANSFERS
     def transferStopsToEnd(self, stop):
