@@ -61,7 +61,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 59,Brighton,Parkside Av,Q,False,40.655291999999996,-73.961495,local,NEITHER
 60,Brighton,Prospect Park,B,True,40.661614,-73.962246,express,BOTH
 61,Brighton,Prospect Park,Q,True,40.661614,-73.962246,local,BOTH
-62,Brighton,Prospect Park,S2,True,40.661614,-73.962246,local,BOTH
+62,Brighton,Prospect Park,S2,True,40.661614,-73.962246,express,BOTH
 63,Brighton,Sheepshead Bay,B,True,40.586896,-73.954155,express,NEITHER
 64,Brighton,Sheepshead Bay,Q,True,40.586896,-73.954155,local,NEITHER
 65,Brighton,Coney Island - Stillwell Av,D,True,40.577422,-73.98123299999999,express,BOTH
@@ -202,8 +202,8 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 203,Canarsie,Sutter Av,L,False,40.669367,-73.901975,local,NEITHER
 204,Canarsie,Wilson Av,L,False,40.688764,-73.904046,local,UPTOWN
 205,Franklin,Franklin Av,C,True,40.680596,-73.955827,local,BOTH
-206,Franklin,Franklin Av,S2,True,40.680596,-73.955827,local,BOTH
-207,Franklin,Park Place,S2,False,40.674772,-73.957624,local,BOTH
+206,Franklin,Franklin Av,S2,True,40.680596,-73.955827,express,BOTH
+207,Franklin,Park Place,S2,False,40.674772,-73.957624,express,BOTH
 208,Myrtle,Central Av,M,False,40.697857,-73.927397,local,NEITHER
 209,Myrtle,Forest Av,M,False,40.704423,-73.903077,local,NEITHER
 210,Myrtle,Fresh Pond Rd,M,False,40.706185999999995,-73.895877,local,NEITHER
@@ -557,7 +557,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 570,Eastern Parkway,Bergen St,3,True,40.680828999999996,-73.975098,local,NEITHER
 571,Eastern Parkway,Eastern Parkway - Brooklyn Museum,2,True,40.671987,-73.964375,local,NEITHER
 572,Eastern Parkway,Eastern Parkway - Brooklyn Museum,3,True,40.671987,-73.964375,local,NEITHER
-573,Eastern Parkway,Botanic Garden,S2,True,40.670682,-73.95813100000001,local,NEITHER
+573,Eastern Parkway,Botanic Garden,S2,True,40.670682,-73.95813100000001,express,NEITHER
 574,Eastern Parkway,Franklin Av,2,True,40.670682,-73.95813100000001,local,NEITHER
 575,Eastern Parkway,Franklin Av,3,True,40.670682,-73.95813100000001,local,NEITHER
 576,Eastern Parkway,Franklin Av,4,True,40.670682,-73.95813100000001,express,NEITHER
