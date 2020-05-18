@@ -1,5 +1,7 @@
 import math, random
-#import random
+import sys
+import json
+import googlemaps
 
 # Subway system and stop class
 
@@ -48,7 +50,7 @@ class Stop():
 
     def getTransferLines(self):
         #find available line transfers
-        transferLines = []      
+        transferLines = []
         for transfer in self.transfers:
             transferLines.append(transfer.line)
         return transferLines
@@ -64,14 +66,14 @@ class Stop():
 
     # Comparisons for heuristic + priority queue
     def __lt__(self, stop2):
-        
-        myVal = self.heuristic(self.start, self.end) 
+
+        myVal = self.heuristic(self.start, self.end)
         otherVal = stop2.heuristic(stop2.start, stop2.end)
 
         return (myVal < otherVal)
 
     # Will involve measurement of distance to the landmark
-    
+
     def __eq__ (self, stop2):
         #stops are equal if they have the same stopID
         a = stop2.stopID == self.stopID
@@ -112,13 +114,13 @@ class Stop():
 
         a = (math.sin(d_lat/2) ** 2) + math.cos(lat1) * math.cos(lat2) * (math.sin(d_long/2) ** 2)
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-        
+
         return radius * c
 
     def heuristic(self, start, end):
 
         #totalDist = distToStart + distToGoal
-        totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude) 
+        totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
         return (totalDist + 100 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd)
 
@@ -137,7 +139,6 @@ transfers_data = open('stop_transfers.csv', 'r').read().split('\n')
 stop_order_data = open('stop_order.csv', 'r').read().split('\n')
 
 class Subway_System():
-
     def __init__(self, directory, transfers, train_lines):
         self.transfers = self.setupTransfers(transfers) # Dictionary: key stopID -> value list of transferable stops
         self.directory = self.setupDirectory(directory) # Dictionary of Stop Nodes: key stopID -> Stop Node
@@ -145,6 +146,13 @@ class Subway_System():
         self.addNodeTransfers()
         self.addPrevNext()
         self.total_stops = len(self.directory) # Total node(stops) in the search space
+        try:
+            file = open("api_key.txt")
+            api_key = file.readline()
+            file.close()
+        except:
+            sys.exit("No api_key.txt found.")
+        self.gmaps = googlemaps.Client(key=api_key)
 
     def setupTransfers(self, transfers):
         # {stopID : list of transferable stops}
@@ -178,7 +186,7 @@ class Subway_System():
 
     def setupSystem(self, stop_order):
         # Associated with stop_order
-        # {line : list of stops in correct order (south -> north)} 
+        # {line : list of stops in correct order (south -> north)}
         system_dict = {}
         train = ""
         order = []
@@ -270,13 +278,41 @@ class Subway_System():
         #print ('The ' + line + ' train does not stop at ' + str(self.directory[stopID]) + '. Please try again.')
         return -1
 
+    def startToStation(self, address_str):
+        retDict = {"start":{"address" : "", "name" : "", "latitude" : 0, "longitude" : 0},
+                   "nearest_station": -1,
+                   "walking_instructions" : []}
+        place = self.gmaps.find_place(input=address_str, input_type="textquery",fields=["formatted_address", "geometry", "name"], language="en", location_bias="rectangle:40.495992,-74.257159|40.915568,-73.699215")["candidates"][0]
+        place_lat = place['geometry']['location']['lat']
+        retDict["start"]["latitude"] = place_lat
+        place_lng = place['geometry']['location']['lng']
+        retDict["start"]["longitude"] = place_lng
+        retDict["start"]["address"] = place['formatted_address']
+        retDict["start"]["name"] = place['name']
+        nearest = self.gmaps.places_nearby(location=[place_lat, place_lng], rank_by="distance", type="subway_station")['results'][0]
+        station_name = nearest['name']
+        station_lat = nearest['geometry']['location']['lat']
+        station_lng = nearest['geometry']['location']['lng']
+        stopID = -1
+        leastDist = 1000000000
+        for id, node in self.directory.items():
+            dist = node.getDist(node.latitude, place_lat, node.longitude, place_lng)
+            if dist < leastDist:
+                leastDist = dist
+                stopID = id
+        retDict["nearest_station"] = stopID
+        return place
+
+    def stationToEnd(self):
+        pass
+
     # Calculate the number of stops needed to the end goal, INCLUDING TRANSFERS
     def transferStopsToEnd(self, stop):
         noTransfer = self.stopsToEnd(stop.line, stop)
         endTransferLines = stop.end.getTransferLines()
 
         # If there's no transfer, use the single line method
-        
+
         if noTransfer < 100:
             ret = noTransfer
             #print(ret)
@@ -304,7 +340,7 @@ class Current_State():
     transfers_made = 0
     stops_visted = 0
     current_stop = ''
-    
+
     def __init__(self, start, end):
         self.start = start
         self.end = end
@@ -320,11 +356,10 @@ class Current_State():
 
     def update_stop(self, stop):
         self.current_stop = stop
-        
+
     def __str__(self):
         ret = 'Start: ' + self.start.station_name + '\n'
         ret += 'End: ' + self.start.station_name + '\n'
         ret += 'Transfers Made: ' + str(self.transfers_made) + '\n'
         ret += 'Stops Visited: ' + str(self.stops_visited) + '\n'
         return ret
-    

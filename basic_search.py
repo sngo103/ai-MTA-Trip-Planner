@@ -8,18 +8,19 @@ args = sys.argv[1:]
 
 def main():
 
-    if len(args) != 2:
-        print("Please input a starting and ending stop.")
-        exit()
-        
+    # if len(args) != 2:
+    #     print("Please input a starting and ending stop.")
+    #     exit()
+    #
     directory_data, transfers_data, stop_order_data, mta = initialize_system()
-    current_state = Current_State(mta.findStop(args[0]), mta.findStop(args[1]))
+    # current_state = Current_State(mta.findStop(args[0]), mta.findStop(args[1]))
+    #
+    # output = open('route.txt', 'w')
+    # text = route(args[0],args[1], mta, current_state)
+    # output.write(text)
+    # print (text)
 
-
-    output = open('route.txt', 'w')
-    text = route(args[0],args[1], mta, current_state)
-    output.write(text)
-    print (text)
+    print(mta.startToStation("Hunter College"))
 
 
 def initialize_system():
