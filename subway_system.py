@@ -26,8 +26,6 @@ class Stop():
     lastVisited = None # reference to last stop visited (set by search algorithm)
     express = ""
     accessibility = ""
-    #startEval = False #used to change __eq__ when determining the best starting stop
-    #current_state = None
 
     #heuristic uses the number of times the algorithm has "transferred"
     #and the number of stops left to the goal if the current and ending stops are on the same line
@@ -45,7 +43,6 @@ class Stop():
         self.longitude = longitude
         self.express = express
         self.accessibility = accessibility
-        #self.current_state = current_state
 
     def setNextStop(self, next):
         self.nextStop = next
@@ -197,8 +194,7 @@ class Subway_System():
                 _longitude = data[6]
                 _express = data[7]
                 _accessibility = data[8]
-                #current_state = Current_State('', '', 0)
-                directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude, _express, _accessibility)#, current_state)
+                directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude, _express, _accessibility)
         return directory_dict
 
     def setupSystem(self, stop_order):
@@ -399,33 +395,3 @@ class Subway_System():
 
     def __str__(self):
         return 'Thank you for riding with the MTA New York City Transit!'
-
-class Current_State():
-    start = ''
-    end = ''
-    transfers_made = 0
-    stops_visted = 0
-    current_stop = ''
-
-    def __init__(self, start, end):
-        self.start = start
-        self.end = end
-        self.transfers_made = 0
-        self.stops_visted = 0
-        self.current_state = start
-
-    def increment_transfer(self):
-        self.transfer_made += 1
-
-    def increment_stops(self):
-        self.stops_visted += 1
-
-    def update_stop(self, stop):
-        self.current_stop = stop
-
-    def __str__(self):
-        ret = 'Start: ' + self.start.station_name + '\n'
-        ret += 'End: ' + self.start.station_name + '\n'
-        ret += 'Transfers Made: ' + str(self.transfers_made) + '\n'
-        ret += 'Stops Visited: ' + str(self.stops_visited) + '\n'
-        return ret
