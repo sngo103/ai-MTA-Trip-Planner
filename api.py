@@ -102,3 +102,6 @@ param_transit_mode = "subway"
 param_depart_time = datetime(year=2020, month=6, day=5, hour=10, minute=0, second=0)
 param_arrive_time = datetime(year=2020, month=6, day=5, hour=10, minute=53, second=0)
 directions(origin=param_origin, destination=param_dest, waypoints=[], mode=param_mode, transit_mode=param_transit_mode, depart_time=param_depart_time, arrive_time=param_arrive_time)
+
+def nearestStation():
+    nearest = gmaps.places_nearby(location=[40.600173, -73.933587], rank_by="distance", type="subway_station")

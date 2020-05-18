@@ -12,7 +12,6 @@ def main():
         print("Please input a starting and ending stop.")
         exit()
         
-       
     directory_data, transfers_data, stop_order_data, mta = initialize_system()
     current_state = Current_State(mta.findStop(args[0]), mta.findStop(args[1]))
 
@@ -21,7 +20,7 @@ def main():
     text = route(args[0],args[1], mta, current_state)
     output.write(text)
     print (text)
-    
+
 
 def initialize_system():
     # Stop Directory
@@ -37,16 +36,16 @@ def initialize_system():
     mta = Subway_System(directory_data, transfers_data, stop_order_data)
 
     #current_state = Current_State(mta.findStop(args[0]), mta.findStop(args[1]), 0)
-    
+
 
     return directory_data, transfers_data, stop_order_data, mta
 
 
 def route(start, end, mta, current_state):
-    
+
     start = mta.findStop(start)
     end = mta.findStop(end)
-    
+
     if not start or not end:
         return '\nNo station with the specified name was found. Please try again, or contact an administrator.'
 
@@ -65,7 +64,7 @@ def route(start, end, mta, current_state):
 
     start = minStop[0]
     start_pick = PriorityQueue()
-    
+
     for start_transfer in [start] + start.transfers:
         start_transfer.startEval = True # Change definition of equality to exclude transfers for start evaluation
         start_transfer.start = start
@@ -81,7 +80,7 @@ def route(start, end, mta, current_state):
         start_transfer.stopsToEnd = mta.transferStopsToEnd(start_transfer) # Facilitate heuristic calculation
 
         start_pick.put(start_transfer) #Put into start_pick priority queue
-    
+
     # Initialization
 
     start = start_pick.get() #Get best stop from priority queue
@@ -89,7 +88,7 @@ def route(start, end, mta, current_state):
 
     frontier = PriorityQueue()
     frontier.put(start)
-    
+
     explored = set()
 
     while not frontier.empty():
@@ -99,7 +98,7 @@ def route(start, end, mta, current_state):
         currentStop = frontier.get()
 
         #if currentStop.line != direc.line:
-        
+
         # Pop from deque
         # #currentStop = frontier.pop()
 
@@ -123,23 +122,23 @@ def route(start, end, mta, current_state):
         if end == currentStop and end.station_name == currentStop.station_name:
             #trace back route
             route = '\n\nArrive at: ' + end.station_name + ' (' + currentStop.line + ')\n'
-            
+
             #Maybe some cleanup is needed?
             while currentStop != start:
 
                 route = currentStop.line + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + '\n' + route
-                
+
                 currentStop = currentStop.lastVisited
 
             start = currentStop
 
             route = '\n\n\nStart at: ' + start.station_name + ' (' + start.line + ')\n\n\n' + 'Intermediate Stops:\n\n' + route
-            
+
             return route
 
         #Get neighbors: nextStop, prevStop, transfers
         neighbor_dirs = []
-        
+
         if currentStop.nextStop:
             neighbor_dirs.append(currentStop.nextStop)
 
@@ -148,7 +147,7 @@ def route(start, end, mta, current_state):
 
         if currentStop.prevStop:
             neighbor_dirs.append(currentStop.prevStop)
-        
+
         #Add unexplored neighbors to frontier
         for direc in neighbor_dirs:
             if direc.stopID not in explored:# and direc not in frontier:
@@ -203,15 +202,15 @@ def route(start, end, mta, current_state):
 #
 #    if not start or not end:
 #        return '\nNo station with the specified name was found. Please try again, or contact an administrator.'
-#    
+#
 #    # Initialization (temporarily using deque before heuristic is completed)
 #    frontier = deque()
 #    frontier.append(start)
 #
 #    #frontier = PriorityQueue()
 #    #frontier.put(start)
-#    
-#    
+#
+#
 #    explored = set()
 #    #expanded = 0
 #    #max_search_depth = 0
@@ -236,18 +235,18 @@ def route(start, end, mta, current_state):
 #        if end.station_name in currentStop.station_name:
 #            #trace back route
 #            route = '\n\nArrive at: ' + end.station_name + '\n'
-#            
+#
 #            # tempStop = None
 #            while currentStop.lastVisited != None:
 #
 #                #if not tempStop or currentStop.station_name != tempStop.station_name:
 #                route = currentStop.line + ', ' + currentStop.station_name + '\n' + route
-#                
+#
 #                #tempStop = currentStop
 #                currentStop = currentStop.lastVisited
 #
 #            route = '\n\n\nStart at: ' + start.station_name + '\n\n\n' + 'Intermediate Stops:\n\n' + route
-#            
+#
 #            return route
 #
 #        #expanded += 1
@@ -259,10 +258,10 @@ def route(start, end, mta, current_state):
 #            neighbor_dirs += [currentStop.prevStop]
 #        if currentStop.transfers: #(Already a list)
 #            neighbor_dirs += currentStop.transfers
-#        if currentStop.nextStop: 
+#        if currentStop.nextStop:
 #            neighbor_dirs += [currentStop.nextStop]
-#        
-#        
+#
+#
 #        #Add unexplored neighbors to frontier
 #        for direc in neighbor_dirs:
 #            if direc not in frontier and direc.stopID not in explored:
