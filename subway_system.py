@@ -19,6 +19,7 @@ class Stop():
     prevStop = 0 # reference to previous stop's node
     nextStop = 0 # reference to next stop's node
     lastVisited = None # reference to last stop visited (set by search algorithm)
+    express = ""
     #startEval = False #used to change __eq__ when determining the best starting stop
     #current_state = None
 
@@ -28,7 +29,7 @@ class Stop():
     #initialized as a large number to encourage staying on a train that stops at the goal stop
     stopsToEnd = 100
 
-    def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude):#, current_state):
+    def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude, express):#, current_state):
         self.stopID = str(stopID)
         self.neighborhood = neighborhood
         self.station_name = station_name
@@ -36,6 +37,7 @@ class Stop():
         self.transfers = transfers # List of stopIDs that can be transfered it
         self.latitude = latitude
         self.longitude = longitude
+        self.express = express
         #self.current_state = current_state
 
     def setNextStop(self, next):
@@ -171,7 +173,7 @@ class Subway_System():
         # { stopID : Stop object }
         directory_dict = {}
         for line in directory:
-            if line != "Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude":
+            if line != "Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express":
                 data = line.split(',') # Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude
                 _stopID = data[0]
                 _neighborhood = data[1]
@@ -182,8 +184,9 @@ class Subway_System():
                 #_transfers = _transfers
                 _latitude = data[5]
                 _longitude = data[6]
+                _express = data[7]
                 #current_state = Current_State('', '', 0)
-                directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude)#, current_state)
+                directory_dict[_stopID] = Stop(_stopID, _neighborhood, _station_name, _train, _transfers, _latitude, _longitude, _express)#, current_state)
         return directory_dict
 
     def setupSystem(self, stop_order):
@@ -196,6 +199,7 @@ class Subway_System():
             data = line.split(',')
             train = data[0]
             order = data[1:]
+            print(order)
             order = list(map(lambda x: self.directory[x], order))
             system_dict[train] = order
 
