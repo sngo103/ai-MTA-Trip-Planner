@@ -2,6 +2,12 @@ from csv import reader
 import csv
 import pandas
 
+# df = pandas.read_csv('stop_directory.csv')
+# print(df)
+# new_vals = ["NEITHER"] * 740
+# df.insert(8, "Accessibility", new_vals)
+# df.to_csv('new_stop_directory.csv', index=False)
+
 # # Fix indices in stop_directory.csv:
 # # df = pandas.read_csv('new.csv')
 # # print(df)
