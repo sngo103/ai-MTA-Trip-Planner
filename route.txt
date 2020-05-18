@@ -1,23 +1,34 @@
-
-
-
-Start at: 42nd St - Bryant Park (B)
-
+Start at: Beach 98th St (A3)
 
 Intermediate Stops:
 
-B, 34th St - Herald Square, 0, 238.90217458318713
-B, West 4th St - Washington Square, 0, 219.41685855657613
-B, Broadway - Lafayette St, 0, 199.15535574612244
-B, Grand St, 0, 179.05708338008102
-B, DeKalb Av, 0, 158.84347386165996
-B, Atlantic Av - Barclays Center, 0, 138.8200772692946
-B, 7th Av, 0, 118.7843266758787
-B, Prospect Park, 0, 98.80431488297344
-B, Church Av, 0, 78.78763211860405
-B, Newkirk Plaza, 0, 58.78179278930143
-B, Kings Highway, 0, 38.78200837804026
-B, Sheepshead Bay, 0, -99999981.21821716
+A3, Beach 90th St, 0, 2678.204576788513
+A3, Broad Channel, 0, 2696.017087681862
+A3, Howard Beach - JFK Airport, 0, 2832.7937207280925
+A3, Aqueduct, 0, 2863.550883258781
+A2, Rockaway Blvd, 1, 2961.2215962000832
+A, Rockaway Blvd, 2, 2911.2215962000832
+A, 88th St, 2, 2883.5187702515746
+A, 80th St, 2, 2859.03276831355
+A, Grant Av, 2, 2826.4474689608082
+A, Euclid Av, 2, 2797.873644323617
+A, Broadway Junction, 2, 2783.5178614320976
+C, Broadway Junction, 3, 2933.5178614320976
+C, Rockaway Av, 3, 2940.8408419719476
+C, Ralph Av, 3, 2968.5722825767316
+C, Utica Av, 3, 3016.310779372884
+C, Kingston - Throop Avs, 3, 3076.740875437711
+C, Nostrand Av, 3, 3139.9427752291795
+C, Franklin Av, 3, 3176.389047869001
+S2, Franklin Av, 4, 3226.389047869001
+S2, Park Place, 4, 3202.0591320255867
+S2, Botanic Garden, 4, 3183.4681662912126
+3, Franklin Av, 5, 1333.4681662912126
+3, Nostrand Av, 5, 1253.4269417132548
+3, Kingston Av, 5, 1171.7366894710617
+3, Crown Heights - Utica Av, 5, 1085.3577321526782
+3, Sutter Av, 5, 968.8571463461855
+3, Saratoga Av, 5, -99999114.72129118
 
 
-Arrive at: Sheepshead Bay (B)
+Arrive at: Saratoga Av (3)
