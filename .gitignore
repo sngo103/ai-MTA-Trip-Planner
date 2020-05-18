@@ -1,6 +1,9 @@
 # API Key File
 api_key.txt
 
+# Route File
+route.txt
+
 # Visual Studio Auto-gen Files
 .vs/
 
