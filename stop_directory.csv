@@ -485,7 +485,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 497,Rockaway,Far Rockaway - Mott Av,A2,True,40.603995,-73.75540500000001,local,BOTH
 499,Rockaway,Howard Beach - JFK Airport,A2,True,40.660476,-73.830301,local,BOTH
 500,Rockaway,Howard Beach - JFK Airport,A3,True,40.660476,-73.830301,local,BOTH
-501,Rockaway,Rockaway Park - Beach 116th St,A3,True,40.580903,-73.835592,local,NEITHER
+501,Rockaway,Rockaway Park - Beach 116th St,A3,True,40.580903,-73.835592,local,BOTH
 502,Rockaway,Rockaway Park - Beach 116th St,S3,True,40.580903,-73.835592,local,BOTH
 503,Broadway-7th Ave,103rd St,1,False,40.799446,-73.968379,local,NEITHER
 504,Broadway-7th Ave,116th St - Columbia University,1,False,40.807722,-73.96410999999999,local,NEITHER
