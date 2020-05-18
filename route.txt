@@ -6,21 +6,20 @@ Start at: Ocean Parkway (Q)
 
 Intermediate Stops:
 
-Q, Brighton Beach, 0, 1327.671634069595
-B, Brighton Beach, 1, 1227.671634069595
-B, Sheepshead Bay, 1, 1213.5411291158814
-B, Kings Highway, 1, 1172.6595491810995
-B, Newkirk Plaza, 1, 1146.3517237309302
-B, Church Av, 1, 1126.927060153002
-B, Prospect Park, 1, 1108.3934403871754
-B, 7th Av, 1, 1082.4421792507892
-B, Atlantic Av - Barclays Center, 1, 1061.4673435775571
-B, DeKalb Av, 1, 1041.804515127276
-B, Grand St, 1, 1030.000314083654
-B, Broadway - Lafayette St, 1, 1014.6396367666111
-B, West 4th St - Washington Square, 1, 1006.8372441021943
-B, 34th St - Herald Square, 1, 966.279311131545
-B, 42nd St - Bryant Park, 1, -99999058.54715635
+Q, Brighton Beach, 0, 1373.4781186267255
+B, Brighton Beach, 1, 1183.4781186267255
+B, Sheepshead Bay, 1, 1170.0212195782292
+B, Kings Highway, 1, 1129.2002253267365
+B, Newkirk Plaza, 1, 1102.9150491722312
+B, Church Av, 1, 1083.8777008631082
+B, Prospect Park, 1, 1065.8445450808508
+B, 7th Av, 1, 1038.8045450796571
+B, Atlantic Av - Barclays Center, 1, 1016.8556626037823
+B, DeKalb Av, 1, 996.7500170116264
+B, Grand St, 1, 982.1188722020165
+B, Broadway - Lafayette St, 1, 965.8640240458931
+B, West 4th St - Washington Square, 1, 957.2977643616432
+B, 34th St - Herald Square, 1, -99999083.26018581
 
 
-Arrive at: 42nd St - Bryant Park (B)
+Arrive at: 34th St - Herald Square (B)

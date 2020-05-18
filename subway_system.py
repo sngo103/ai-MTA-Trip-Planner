@@ -1,3 +1,9 @@
+# Team Wish Upon A*
+# Samantha Ngo, Daniel Rozenzaft, Anton Goretsky
+# CSCI 35000 - Artificial Intelligence
+# AI MTA Trip Planner: Class Structure
+# 2020-05-18
+
 import math, random
 import sys
 import json
