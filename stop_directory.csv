@@ -1,741 +1,741 @@
 Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Accessibility
-0,4 Avenue,25th St,R,False,40.660396999999996,-73.998091,local,NEITHER
-1,4 Avenue,36th St,D,True,40.655144,-74.00354899999999,express,NEITHER
-2,4 Avenue,36th St,N,True,40.655144,-74.00354899999999,express,NEITHER
-3,4 Avenue,36th St,R,True,40.655144,-74.00354899999999,local,NEITHER
-4,4 Avenue,45th St,R,False,40.648939,-74.010006,local,NEITHER
-5,4 Avenue,53rd St,R,False,40.645069,-74.014034,local,NEITHER
-6,4 Avenue,59th St,N,True,40.641362,-74.017881,express,NEITHER
-7,4 Avenue,59th St,R,True,40.641362,-74.017881,local,NEITHER
-8,4 Avenue,77th St,R,False,40.629742,-74.02551,local,NEITHER
-9,4 Avenue,86th St,R,False,40.622687,-74.028398,local,NEITHER
-10,4 Avenue,95th St,R,False,40.616622,-74.030876,local,NEITHER
-11,4 Avenue,4th Av - 9th St,F,True,40.670846999999995,-73.988302,local,NEITHER
-12,4 Avenue,4th Av - 9th St,G,True,40.670846999999995,-73.988302,local,NEITHER
-13,4 Avenue,4th Av - 9th St,R,True,40.670846999999995,-73.988302,local,NEITHER
-14,4 Avenue,Atlantic Av - Barclays Center,B,True,40.683665999999995,-73.97881,express,BOTH
-15,4 Avenue,Atlantic Av - Barclays Center,Q,True,40.683665999999995,-73.97881,local,BOTH
-16,4 Avenue,Atlantic Av - Barclays Center,D,True,40.683665999999995,-73.97881,express,BOTH
-17,4 Avenue,Atlantic Av - Barclays Center,N,True,40.683665999999995,-73.97881,express,BOTH
-18,4 Avenue,Atlantic Av - Barclays Center,R,True,40.683665999999995,-73.97881,local,BOTH
-19,4 Avenue,Atlantic Av - Barclays Center,2,True,40.683665999999995,-73.97881,express,BOTH
-20,4 Avenue,Atlantic Av - Barclays Center,3,True,40.683665999999995,-73.97881,express,BOTH
-21,4 Avenue,Atlantic Av - Barclays Center,4,True,40.683665999999995,-73.97881,express,BOTH
-22,4 Avenue,Atlantic Av - Barclays Center,5,True,40.683665999999995,-73.97881,express,BOTH
-23,4 Avenue,Bay Ridge Av,R,False,40.634966999999996,-74.023377,local,NEITHER
-24,4 Avenue,DeKalb Av,B,True,40.690635,-73.981824,express,BOTH
-25,4 Avenue,DeKalb Av,Q,True,40.690635,-73.981824,local,BOTH
-26,4 Avenue,DeKalb Av,R,True,40.690635,-73.981824,local,BOTH
-27,4 Avenue,Prospect Av,R,False,40.665414,-73.99287199999999,local,NEITHER
-28,4 Avenue,Union St,R,False,40.677316,-73.98311,local,NEITHER
-29,Astoria,30th Av,N,True,40.766779,-73.921479,express,NEITHER
-30,Astoria,30th Av,W,True,40.766779,-73.921479,local,NEITHER
-31,Astoria,36th Av,N,True,40.756803999999995,-73.929575,express,NEITHER
-32,Astoria,36th Av,W,True,40.756803999999995,-73.929575,local,NEITHER
-33,Astoria,39th Av,N,True,40.752882,-73.932755,express,NEITHER
-34,Astoria,39th Av,W,True,40.752882,-73.932755,local,NEITHER
-35,Astoria,Astoria Blvd,N,True,40.770258,-73.917843,express,NEITHER
-36,Astoria,Astoria Blvd,W,True,40.770258,-73.917843,local,NEITHER
-37,Astoria,Broadway,N,True,40.76182,-73.925508,express,NEITHER
-38,Astoria,Broadway,W,True,40.76182,-73.925508,local,NEITHER
-39,Astoria,Astoria - Ditmars Blvd,N,True,40.775036,-73.91203399999999,express,NEITHER
-40,Astoria,Astoria - Ditmars Blvd,W,True,40.775036,-73.91203399999999,local,NEITHER
-41,Brighton,7th Av,B,True,40.67705,-73.972367,express,NEITHER
-42,Brighton,7th Av,Q,True,40.67705,-73.972367,local,NEITHER
-43,Brighton,Av H,Q,False,40.62927,-73.961639,local,DOWNTOWN
-44,Brighton,Av J,Q,False,40.625039,-73.960803,local,NEITHER
-45,Brighton,Av M,Q,False,40.617618,-73.959399,local,NEITHER
-46,Brighton,Av U,Q,False,40.5993,-73.955929,local,NEITHER
-47,Brighton,Beverly Rd,Q,False,40.644031,-73.964492,local,NEITHER
-48,Brighton,Brighton Beach,B,True,40.577621,-73.961376,express,NEITHER
-49,Brighton,Brighton Beach,Q,True,40.577621,-73.961376,local,NEITHER
-50,Brighton,Church Av,B,True,40.650527000000004,-73.962982,express,NEITHER
-51,Brighton,Church Av,Q,True,40.650527000000004,-73.962982,local,NEITHER
-52,Brighton,Cortelyou Rd,Q,False,40.640927000000005,-73.963891,local,NEITHER
-53,Brighton,Kings Highway,B,True,40.608670000000004,-73.957734,express,BOTH
-54,Brighton,Kings Highway,Q,True,40.608670000000004,-73.957734,local,BOTH
-55,Brighton,Neck Rd,Q,False,40.595246,-73.955161,local,NEITHER
-56,Brighton,Newkirk Plaza,B,True,40.635082000000004,-73.962793,express,NEITHER
-57,Brighton,Newkirk Plaza,Q,True,40.635082000000004,-73.962793,local,NEITHER
-58,Brighton,Ocean Parkway,Q,False,40.576312,-73.968501,local,NEITHER
-59,Brighton,Parkside Av,Q,False,40.655291999999996,-73.961495,local,NEITHER
-60,Brighton,Prospect Park,B,True,40.661614,-73.962246,express,BOTH
-61,Brighton,Prospect Park,Q,True,40.661614,-73.962246,local,BOTH
-62,Brighton,Prospect Park,S2,True,40.661614,-73.962246,express,BOTH
-63,Brighton,Sheepshead Bay,B,True,40.586896,-73.954155,express,NEITHER
-64,Brighton,Sheepshead Bay,Q,True,40.586896,-73.954155,local,NEITHER
-65,Brighton,Coney Island - Stillwell Av,D,True,40.577422,-73.98123299999999,express,BOTH
-66,Brighton,Coney Island - Stillwell Av,F,True,40.577422,-73.98123299999999,local,BOTH
-67,Brighton,Coney Island - Stillwell Av,N,True,40.577422,-73.98123299999999,express,BOTH
-68,Brighton,Coney Island - Stillwell Av,Q,True,40.577422,-73.98123299999999,local,BOTH
-69,Brighton,West 8th St - New York Aquarium,F,True,40.576127,-73.975939,local,NEITHER
-70,Brighton,West 8th St - New York Aquarium,Q,True,40.576127,-73.975939,local,NEITHER
-71,Broadway,23rd St,R,True,40.741303,-73.98934399999999,local,NEITHER
-72,Broadway,23rd St,W,True,40.741303,-73.98934399999999,local,NEITHER
-73,Broadway,28th St,R,True,40.745494,-73.988691,local,NEITHER
-74,Broadway,28th St,W,True,40.745494,-73.988691,local,NEITHER
-75,Broadway,34th St - Herald Square,B,True,40.749567,-73.98795,express,BOTH
-76,Broadway,34th St - Herald Square,D,True,40.749567,-73.98795,express,BOTH
-77,Broadway,34th St - Herald Square,F,True,40.749567,-73.98795,local,BOTH
-78,Broadway,34th St - Herald Square,M,True,40.749567,-73.98795,local,BOTH
-79,Broadway,34th St - Herald Square,N,True,40.749567,-73.98795,express,BOTH
-80,Broadway,34th St - Herald Square,Q,True,40.749567,-73.98795,express,BOTH
-81,Broadway,34th St - Herald Square,R,True,40.749567,-73.98795,local,BOTH
-82,Broadway,34th St - Herald Square,W,True,40.749567,-73.98795,local,BOTH
-83,Broadway,49th St,N,True,40.759901,-73.984139,express,UPTOWN
-84,Broadway,49th St,R,True,40.759901,-73.984139,local,UPTOWN
-85,Broadway,49th St,W,True,40.759901,-73.984139,local,UPTOWN
-86,Broadway,57th St - 7th Av,N,True,40.764664,-73.98065799999999,express,NEITHER
-87,Broadway,57th St - 7th Av,Q,True,40.764664,-73.98065799999999,express,NEITHER
-88,Broadway,57th St - 7th Av,R,True,40.764664,-73.98065799999999,local,NEITHER
-89,Broadway,57th St - 7th Av,W,True,40.764664,-73.98065799999999,local,NEITHER
-90,Broadway,5th Av - 59 St,N,True,40.764811,-73.973347,express,NEITHER
-91,Broadway,5th Av - 59 St,R,True,40.764811,-73.973347,local,NEITHER
-92,Broadway,5th Av - 59 St,W,True,40.764811,-73.973347,local,NEITHER
-93,Broadway,8th St - NYU,R,True,40.730328,-73.99262900000001,local,NEITHER
-94,Broadway,8th St - NYU,W,True,40.730328,-73.99262900000001,local,NEITHER
-95,Broadway,Canal St,J,True,40.719527,-74.001775,local,NEITHER
-96,Broadway,Canal St,N,True,40.719527,-74.001775,express,NEITHER
-97,Broadway,Canal St,Q,True,40.719527,-74.001775,express,NEITHER
-98,Broadway,Canal St,R,True,40.719527,-74.001775,local,NEITHER
-99,Broadway,Canal St,W,True,40.719527,-74.001775,local,NEITHER
-100,Broadway,Canal St,Z,True,40.719527,-74.001775,express,NEITHER
-101,Broadway,Canal St,6,True,40.719527,-74.001775,local,BOTH
-102,Broadway,City Hall,R,True,40.713282,-74.006978,local,NEITHER
-103,Broadway,Cortlandt St,R,True,40.710668,-74.01102900000001,local,BOTH
-104,Broadway,Cortlandt St,W,True,40.710668,-74.01102900000001,local,BOTH
-105,Broadway,Jay St - Metrotech,A,True,40.69218,-73.98594200000001,express,BOTH
-106,Broadway,Jay St - Metrotech,C,True,40.69218,-73.98594200000001,local,BOTH
-107,Broadway,Jay St - Metrotech,F,True,40.69218,-73.98594200000001,local,BOTH
-108,Broadway,Jay St - Metrotech,R,True,40.69218,-73.98594200000001,local,BOTH
-109,Broadway,Lexington Av - 59th St,N,True,40.76266,-73.967258,express,NEITHER
-110,Broadway,Lexington Av - 59th St,R,True,40.76266,-73.967258,local,NEITHER
-111,Broadway,Lexington Av - 59th St,W,True,40.76266,-73.967258,local,NEITHER
-112,Broadway,59th St,4,True,40.76266,-73.967258,express,NEITHER
-113,Broadway,59th St,5,True,40.76266,-73.967258,express,NEITHER
-114,Broadway,59th St,6,True,40.76266,-73.967258,local,NEITHER
-115,Broadway,Prince St,W,True,40.724329,-73.997702,local,NEITHER
-116,Broadway,Prince St,R,True,40.724329,-73.997702,local,NEITHER
-117,Broadway,Rector St,R,True,40.70722,-74.01334200000001,local,NEITHER
-118,Broadway,Rector St,W,True,40.70722,-74.01334200000001,local,NEITHER
-119,Broadway,42nd St - Port Authority Bus Terminal,A,True,40.754672,-73.986754,express,BOTH
-120,Broadway,42nd St - Port Authority Bus Terminal,C,True,40.754672,-73.986754,local,BOTH
-121,Broadway,42nd St - Port Authority Bus Terminal,E,True,40.754672,-73.986754,local,BOTH
-122,Broadway,Times Square - 42nd St,N,True,40.754672,-73.986754,express,BOTH
-123,Broadway,Times Square - 42nd St,Q,True,40.754672,-73.986754,express,BOTH
-124,Broadway,Times Square - 42nd St,R,True,40.754672,-73.986754,local,BOTH
-125,Broadway,Times Square - 42nd St,W,True,40.754672,-73.986754,local,BOTH
-126,Broadway,Times Square - 42nd St,1,True,40.754672,-73.986754,local,BOTH
-127,Broadway,Times Square - 42nd St,2,True,40.754672,-73.986754,express,BOTH
-128,Broadway,Times Square - 42nd St,3,True,40.754672,-73.986754,express,BOTH
-129,Broadway,Times Square - 42nd St,7,True,40.754672,-73.986754,local,BOTH
-130,Broadway,Times Square - 42nd St,S1,True,40.754672,-73.986754,express,NEITHER
-131,Broadway,14th St - Union Square,L,True,40.735735999999996,-73.99056800000001,local,BOTH
-132,Broadway,14th St - Union Square,N,True,40.735735999999996,-73.99056800000001,express,BOTH
-133,Broadway,14th St - Union Square,Q,True,40.735735999999996,-73.99056800000001,express,BOTH
-134,Broadway,14th St - Union Square,R,True,40.735735999999996,-73.99056800000001,local,BOTH
-135,Broadway,14th St - Union Square,W,True,40.735735999999996,-73.99056800000001,local,BOTH
-136,Broadway,14th St - Union Square,4,True,40.735735999999996,-73.99056800000001,express,NEITHER
-137,Broadway,14th St - Union Square,5,True,40.735735999999996,-73.99056800000001,express,NEITHER
-138,Broadway,14th St - Union Square,6,True,40.735735999999996,-73.99056800000001,local,NEITHER
-139,Broadway,Whitehall St,R,True,40.703087,-74.01299399999999,local,NEITHER
-140,Broadway,Whitehall St,W,True,40.703087,-74.01299399999999,local,NEITHER
-141,Broadway,South Ferry,1,True,40.703087,-74.01299399999999,local,BOTH
-142,Broadway Jamaica,104th St,J,True,40.695178000000006,-73.84433,local,NEITHER
-143,Broadway Jamaica,104th St,Z,True,40.695178000000006,-73.84433,express,NEITHER
-144,Broadway Jamaica,111th St,J,False,40.697418,-73.836345,local,NEITHER
-145,Broadway Jamaica,121st St,J,True,40.700492,-73.828294,local,NEITHER
-146,Broadway Jamaica,121st St,Z,True,40.700492,-73.828294,express,NEITHER
-147,Broadway Jamaica,Alabama Av,J,True,40.676992,-73.89865400000001,local,NEITHER
-148,Broadway Jamaica,Chauncey St,J,True,40.682893,-73.91045600000001,local,NEITHER
-149,Broadway Jamaica,Chauncey St,Z,True,40.682893,-73.91045600000001,express,NEITHER
-150,Broadway Jamaica,Cleveland St,J,False,40.679947,-73.884639,local,NEITHER
-151,Broadway Jamaica,Crescent St,J,True,40.683194,-73.873785,local,NEITHER
-152,Broadway Jamaica,Crescent St,Z,True,40.683194,-73.873785,express,NEITHER
-153,Broadway Jamaica,Cypress Hills,J,False,40.689941,-73.87255,local,NEITHER
-154,Broadway Jamaica,75th St - Elderts Ln,J,True,40.691324,-73.867139,local,NEITHER
-155,Broadway Jamaica,75th St - Elderts Ln,Z,True,40.691324,-73.867139,express,NEITHER
-156,Broadway Jamaica,Flushing Av,J,True,40.70026,-73.941126,local,BOTH
-157,Broadway Jamaica,Flushing Av,M,True,40.70026,-73.941126,local,BOTH
-158,Broadway Jamaica,85th St - Forest Parkway,J,False,40.692434999999996,-73.86001,local,NEITHER
-159,Broadway Jamaica,Gates Av,J,True,40.68963,-73.92227,local,NEITHER
-160,Broadway Jamaica,Gates Av,Z,True,40.68963,-73.92227,express,NEITHER
-161,Broadway Jamaica,Halsey St,J,False,40.686370000000004,-73.91655899999999,local,NEITHER
-162,Broadway Jamaica,Hewes St,J,True,40.70687,-73.95343100000001,local,NEITHER
-163,Broadway Jamaica,Hewes St,M,True,40.70687,-73.95343100000001,local,NEITHER
-164,Broadway Jamaica,Kosciusko St,J,False,40.693342,-73.928814,local,NEITHER
-165,Broadway Jamaica,Marcy Av,J,True,40.708359,-73.957757,local,BOTH
-166,Broadway Jamaica,Marcy Av,M,True,40.708359,-73.957757,local,BOTH
-167,Broadway Jamaica,Marcy Av,Z,True,40.708359,-73.957757,express,BOTH
-168,Broadway Jamaica,Myrtle Av,J,True,40.697207,-73.93565699999999,local,NEITHER
-169,Broadway Jamaica,Myrtle Av,M,True,40.697207,-73.93565699999999,local,NEITHER
-170,Broadway Jamaica,Myrtle Av,Z,True,40.697207,-73.93565699999999,express,NEITHER
-171,Broadway Jamaica,Norwood Av,J,True,40.68141,-73.880039,local,NEITHER
-172,Broadway Jamaica,Norwood Av,Z,True,40.68141,-73.880039,express,NEITHER
-173,Broadway Jamaica,Van Siclen Av,J,True,40.678024,-73.891688,local,NEITHER
-174,Broadway Jamaica,Van Siclen Av,Z,True,40.678024,-73.891688,express,NEITHER
-175,Broadway Jamaica,Woodhaven Blvd,J,True,40.693878999999995,-73.851576,local,NEITHER
-176,Broadway Jamaica,Woodhaven Blvd,Z,True,40.693878999999995,-73.851576,express,NEITHER
-177,Canarsie,1st Av,L,False,40.730953,-73.981628,local,NEITHER
-178,Canarsie,3rd Av,L,False,40.732849,-73.986122,local,NEITHER
-179,Canarsie,14th St,A,True,40.739777000000004,-74.002578,express,BOTH
-180,Canarsie,14th St,C,True,40.739777000000004,-74.002578,local,BOTH
-181,Canarsie,14th St,E,True,40.739777000000004,-74.002578,local,BOTH
-182,Canarsie,8th Av,L,True,40.739777000000004,-74.002578,local,BOTH
-183,Canarsie,Atlantic Av,L,False,40.675345,-73.903097,local,NEITHER
-184,Canarsie,Bedford Av,L,False,40.717304,-73.956872,local,NEITHER
-185,Canarsie,Bushwick Av,L,False,40.682829,-73.905249,local,NEITHER
-189,Canarsie,DeKalb Av,L,False,40.703811,-73.918425,local,NEITHER
-190,Canarsie,East 105th St,L,False,40.650573,-73.899485,local,NEITHER
-191,Canarsie,Graham Av,L,False,40.714565,-73.944053,local,NEITHER
-192,Canarsie,Grand St,L,False,40.711926,-73.94067,local,NEITHER
-193,Canarsie,Halsey St,L,False,40.695602,-73.904084,local,NEITHER
-194,Canarsie,Jefferson St,L,False,40.706607,-73.922913,local,NEITHER
-195,Canarsie,Livonia Av,L,False,40.664038,-73.900571,local,NEITHER
-196,Canarsie,Metropolitan Av,G,True,40.714063,-73.950275,local,NEITHER
-197,Canarsie,Lorimer St,L,True,40.714063,-73.950275,local,NEITHER
-198,Canarsie,Montrose Av,L,False,40.707739000000004,-73.93985,local,NEITHER
-199,Canarsie,Morgan Av,L,False,40.706152,-73.93314699999999,local,NEITHER
-200,Canarsie,Myrtle - Wyckoff Avs,L,True,40.699814,-73.911586,local,BOTH
-201,Canarsie,Myrtle - Wyckoff Avs,M,True,40.699814,-73.911586,local,BOTH
-202,Canarsie,New Lots Av,L,False,40.658733000000005,-73.899232,local,NEITHER
-203,Canarsie,Sutter Av,L,False,40.669367,-73.901975,local,NEITHER
-204,Canarsie,Wilson Av,L,False,40.688764,-73.904046,local,UPTOWN
-205,Franklin,Franklin Av,C,True,40.680596,-73.955827,local,BOTH
-206,Franklin,Franklin Av,S2,True,40.680596,-73.955827,express,BOTH
-207,Franklin,Park Place,S2,False,40.674772,-73.957624,express,BOTH
-208,Myrtle,Central Av,M,False,40.697857,-73.927397,local,NEITHER
-209,Myrtle,Forest Av,M,False,40.704423,-73.903077,local,NEITHER
-210,Myrtle,Fresh Pond Rd,M,False,40.706185999999995,-73.895877,local,NEITHER
-211,Myrtle,Knickerbocker Av,M,False,40.698664,-73.91971099999999,local,NEITHER
-212,Myrtle,Middle Village - Metropolitan Av,M,False,40.711396,-73.889601,local,BOTH
-213,Myrtle,Seneca Av,M,False,40.702762,-73.90774,local,NEITHER
-214,Nassau,Bowery,J,True,40.720279999999995,-73.993915,local,NEITHER
-215,Nassau,Bowery,Z,True,40.720279999999995,-73.993915,express,NEITHER
-216,Nassau,Broad St,J,True,40.706476,-74.01105600000001,local,NEITHER
-217,Nassau,Broad St,Z,True,40.706476,-74.01105600000001,express,NEITHER
-218,Sea Beach,18th Av,N,False,40.620671,-73.990414,express,NEITHER
-219,Sea Beach,20th Av,N,False,40.61741,-73.985026,express,NEITHER
-220,Sea Beach,86th St,N,False,40.592721000000004,-73.97823000000001,express,NEITHER
-221,Sea Beach,8th Av,N,False,40.635064,-74.011719,express,UPTOWN
-222,Sea Beach,Av U,N,False,40.597473,-73.979137,express,NEITHER
-223,Sea Beach,Bay Parkway,N,False,40.611815,-73.981848,express,NEITHER
-224,Sea Beach,Fort Hamilton Parkway,N,False,40.631386,-74.005351,express,NEITHER
-225,Sea Beach,Kings Highway,N,False,40.603922999999995,-73.98035300000001,express,NEITHER
-226,West End,18th Av,D,False,40.607954,-74.001736,express,NEITHER
-227,West End,20th Av,D,False,40.604556,-73.998168,express,NEITHER
-228,West End,25th Av,D,False,40.597704,-73.986829,express,NEITHER
-229,West End,50th St,D,False,40.63626,-73.994791,express,NEITHER
-230,West End,55th St,D,False,40.631434999999996,-73.995476,express,NEITHER
-231,West End,62nd St,D,True,40.626472,-73.996895,express,BOTH
-232,West End,New Utrecht Av,N,True,40.626472,-73.996895,express,BOTH
-233,West End,71st St,D,False,40.619589000000005,-73.998864,express,NEITHER
-234,West End,79th St,D,False,40.613501,-74.00061,express,NEITHER
-235,West End,9th Av,D,False,40.646291999999995,-73.994324,express,NEITHER
-236,West End,Bay 50th St,D,False,40.588840999999995,-73.983765,express,NEITHER
-237,West End,Bay Parkway,D,False,40.601875,-73.993728,express,BOTH
-238,West End,Fort Hamilton Parkway,D,False,40.640914,-73.994304,express,NEITHER
-239,63rd Street,21st St,F,False,40.754203000000004,-73.942836,express,BOTH
-240,63rd Street,Lexington Av - 63rd St,F,True,40.764627000000004,-73.96611,local,BOTH
-241,63rd Street,Lexington Av - 63rd St,Q,True,40.764627000000004,-73.96611,local,BOTH
-242,63rd Street,Roosevelt Island,F,False,40.759145000000004,-73.95326,express,BOTH
-243,6 Avenue,14th St,F,True,40.738228,-73.996209,local,NEITHER
-244,6 Avenue,6th Av,L,True,40.738228,-73.996209,local,NEITHER
-245,6 Avenue,14th St,M,True,40.738228,-73.996209,local,NEITHER
-246,6 Avenue,14th St,1,True,40.738228,-73.996209,local,NEITHER
-247,6 Avenue,14th St,2,True,40.738228,-73.996209,express,NEITHER
-248,6 Avenue,14th St,3,True,40.738228,-73.996209,express,NEITHER
-249,6 Avenue,23rd St,F,True,40.742878000000005,-73.99282099999999,local,NEITHER
-250,6 Avenue,23rd St,M,True,40.742878000000005,-73.99282099999999,local,NEITHER
-251,6 Avenue,2nd Av,F,False,40.723402,-73.989938,local,NEITHER
-252,6 Avenue,42nd St - Bryant Park,B,True,40.754222,-73.984569,express,NEITHER
-253,6 Avenue,42nd St - Bryant Park,D,True,40.754222,-73.984569,express,NEITHER
-254,6 Avenue,42nd St - Bryant Park,F,True,40.754222,-73.984569,local,NEITHER
-255,6 Avenue,42nd St - Bryant Park,M,True,40.754222,-73.984569,local,NEITHER
-256,6 Avenue,5th Av,7,True,40.754222,-73.984569,express,NEITHER
-257,6 Avenue,47-50th Sts - Rockefeller Center,B,True,40.758663,-73.981329,express,BOTH
-258,6 Avenue,47-50th Sts - Rockefeller Center,D,True,40.758663,-73.981329,express,BOTH
-259,6 Avenue,47-50th Sts - Rockefeller Center,F,True,40.758663,-73.981329,local,BOTH
-260,6 Avenue,47-50th Sts - Rockefeller Center,M,True,40.758663,-73.981329,local,BOTH
-261,6 Avenue,57th St,F,False,40.763971999999995,-73.97745,local,NEITHER
-262,6 Avenue,7th Av,F,True,40.666271,-73.980305,local,NEITHER
-263,6 Avenue,Bergen St,F,True,40.686145,-73.99086199999999,local,NEITHER
-264,6 Avenue,Bergen St,G,True,40.686145,-73.99086199999999,local,NEITHER
-265,6 Avenue,Broadway - Lafayette St,B,True,40.725297,-73.996204,express,BOTH
-266,6 Avenue,Broadway - Lafayette St,D,True,40.725297,-73.996204,express,BOTH
-267,6 Avenue,Broadway - Lafayette St,F,True,40.725297,-73.996204,local,BOTH
-268,6 Avenue,Broadway - Lafayette St,M,True,40.725297,-73.996204,local,BOTH
-269,6 Avenue,Bleecker St,6,True,40.725297,-73.996204,local,BOTH
-270,6 Avenue,Carroll St,F,True,40.680303,-73.995048,local,NEITHER
-271,6 Avenue,Carroll St,G,True,40.680303,-73.995048,local,NEITHER
-272,6 Avenue,Church Av,F,True,40.644040999999994,-73.979678,local,BOTH
-273,6 Avenue,Delancey St,F,True,40.718610999999996,-73.988114,local,NEITHER
-274,6 Avenue,Delancey St,J,True,40.718610999999996,-73.988114,local,NEITHER
-275,6 Avenue,Delancey St,M,True,40.718610999999996,-73.988114,local,NEITHER
-276,6 Avenue,Delancey St,Z,True,40.718610999999996,-73.988114,express,NEITHER
-277,6 Avenue,East Broadway,F,False,40.713715,-73.990173,local,NEITHER
-278,6 Avenue,Fort Hamilton Parkway,F,True,40.650782,-73.975776,local,NEITHER
-279,6 Avenue,Grand St,B,True,40.718267,-73.993753,express,NEITHER
-280,6 Avenue,Grand St,D,True,40.718267,-73.993753,express,NEITHER
-281,6 Avenue,15th St - Prospect Park,F,True,40.660365000000006,-73.979493,local,NEITHER
-282,6 Avenue,Smith - 9th Sts,F,True,40.67358,-73.995959,local,NEITHER
-283,6 Avenue,Smith - 9th Sts,G,True,40.67358,-73.995959,local,NEITHER
-285,6 Avenue,York St,F,False,40.699743,-73.986885,local,NEITHER
-286,8 Avenue,103rd St,B,True,40.796092,-73.961454,local,NEITHER
-287,8 Avenue,103rd St,C,True,40.796092,-73.961454,local,NEITHER
-288,8 Avenue,116th St,B,True,40.805085,-73.954882,local,NEITHER
-289,8 Avenue,116th St,C,True,40.805085,-73.954882,local,NEITHER
-290,8 Avenue,125th St,A,True,40.811109,-73.952343,express,BOTH
-291,8 Avenue,125th St,B,True,40.811109,-73.952343,local,BOTH
-292,8 Avenue,125th St,C,True,40.811109,-73.952343,local,BOTH
-293,8 Avenue,125th St,D,True,40.811109,-73.952343,express,BOTH
-294,8 Avenue,135th St,B,True,40.817894,-73.947649,local,NEITHER
-295,8 Avenue,135th St,C,True,40.817894,-73.947649,local,NEITHER
-296,8 Avenue,145th St,A,True,40.824783000000004,-73.944216,express,NEITHER
-297,8 Avenue,145th St,B,True,40.824783000000004,-73.944216,local,NEITHER
-298,8 Avenue,145th St,C,True,40.824783000000004,-73.944216,local,NEITHER
-299,8 Avenue,145th St,D,True,40.824783000000004,-73.944216,express,NEITHER
-300,8 Avenue,155th St,C,False,40.830518,-73.941514,local,NEITHER
-301,8 Avenue,163rd St - Amsterdam Av,C,False,40.836013,-73.939892,local,NEITHER
-304,8 Avenue,175th St,A,False,40.847390999999995,-73.939704,express,BOTH
-305,8 Avenue,181st St,A,False,40.851695,-73.937969,express,NEITHER
-306,8 Avenue,190th St,A,False,40.859021999999996,-73.93418,express,NEITHER
-307,8 Avenue,23rd St,C,True,40.745906,-73.998041,local,NEITHER
-308,8 Avenue,23rd St,E,True,40.745906,-73.998041,local,NEITHER
-309,8 Avenue,34th St - Penn Station,A,True,40.752287,-73.993391,express,BOTH
-310,8 Avenue,34th St - Penn Station,C,True,40.752287,-73.993391,local,BOTH
-311,8 Avenue,34th St - Penn Station,E,True,40.752287,-73.993391,local,BOTH
-312,8 Avenue,50th St,C,True,40.762456,-73.985984,local,DOWNTOWN
-313,8 Avenue,50th St,E,True,40.762456,-73.985984,local,DOWNTOWN
-314,8 Avenue,59th St - Columbus Circle,A,True,40.768296,-73.981736,express,BOTH
-315,8 Avenue,59th St - Columbus Circle,B,True,40.768296,-73.981736,local,BOTH
-316,8 Avenue,59th St - Columbus Circle,C,True,40.768296,-73.981736,local,BOTH
-317,8 Avenue,59th St - Columbus Circle,D,True,40.768296,-73.981736,express,BOTH
-318,8 Avenue,59th St - Columbus Circle,1,True,40.768296,-73.981736,local,BOTH
-319,8 Avenue,72nd St,B,True,40.775594,-73.97641,local,NEITHER
-320,8 Avenue,72nd St,C,True,40.775594,-73.97641,local,NEITHER
-321,8 Avenue,81st St - Museum of Natural History,B,True,40.781433,-73.972143,local,NEITHER
-322,8 Avenue,81st St - Museum of Natural History,C,True,40.781433,-73.972143,local,NEITHER
-323,8 Avenue,86th St,B,True,40.785868,-73.96891600000001,local,NEITHER
-324,8 Avenue,86th St,C,True,40.785868,-73.96891600000001,local,NEITHER
-325,8 Avenue,96th St,B,True,40.791646,-73.964699,local,NEITHER
-326,8 Avenue,96th St,C,True,40.791646,-73.964699,local,NEITHER
-327,8 Avenue,Canal St,A,True,40.720824,-74.005229,express,NEITHER
-328,8 Avenue,Canal St,C,True,40.720824,-74.005229,local,NEITHER
-329,8 Avenue,Canal St,E,True,40.720824,-74.005229,local,NEITHER
-330,8 Avenue,Cathedral Parkway - 110th St,B,True,40.800605,-73.958158,local,NEITHER
-331,8 Avenue,Cathedral Parkway - 110th St,C,True,40.800605,-73.958158,local,NEITHER
-332,8 Avenue,Chambers St,A,True,40.714110999999995,-74.008585,express,NEITHER
-333,8 Avenue,Chambers St,C,True,40.714110999999995,-74.008585,local,NEITHER
-334,8 Avenue,World Trade Center,E,True,40.714110999999995,-74.008585,local,BOTH
-335,8 Avenue,Park Place,2,True,40.714110999999995,-74.008585,express,NEITHER
-336,8 Avenue,Park Place,3,True,40.714110999999995,-74.008585,express,NEITHER
-337,8 Avenue,Dyckman St,A,False,40.865491,-73.92727099999999,express,NEITHER
-338,8 Avenue,High St,A,True,40.699337,-73.990531,express,NEITHER
-339,8 Avenue,High St,C,True,40.699337,-73.990531,local,NEITHER
-340,8 Avenue,Inwood - 207th St,A,False,40.868072,-73.919899,express,BOTH
-341,8 Avenue,Spring St,C,True,40.726227,-74.003739,local,NEITHER
-342,8 Avenue,Spring St,E,True,40.726227,-74.003739,local,NEITHER
-343,8 Avenue,West 4th St - Washington Square,A,True,40.732338,-74.000495,express,BOTH
-344,8 Avenue,West 4th St - Washington Square,B,True,40.732338,-74.000495,express,BOTH
-345,8 Avenue,West 4th St - Washington Square,C,True,40.732338,-74.000495,local,BOTH
-346,8 Avenue,West 4th St - Washington Square,D,True,40.732338,-74.000495,express,BOTH
-347,8 Avenue,West 4th St - Washington Square,E,True,40.732338,-74.000495,local,BOTH
-348,8 Avenue,West 4th St - Washington Square,F,True,40.732338,-74.000495,local,BOTH
-349,8 Avenue,West 4th St - Washington Square,M,True,40.732338,-74.000495,local,BOTH
-350,Archer Av,Jamaica - Van Wyck,E,False,40.702566,-73.816859,express,BOTH
-351,Archer Av,Jamaica Center - Parsons/Archer,E,True,40.702147,-73.801109,express,BOTH
-352,Archer Av,Jamaica Center - Parsons/Archer,J,True,40.702147,-73.801109,local,BOTH
-353,Archer Av,Jamaica Center - Parsons/Archer,Z,True,40.702147,-73.801109,express,BOTH
-354,Archer Av,Sutphin Blvd - Archer Av - JFK Airport,E,True,40.700486,-73.807969,express,BOTH
-355,Archer Av,Sutphin Blvd - Archer Av - JFK Airport,J,True,40.700486,-73.807969,local,BOTH
-356,Archer Av,Sutphin Blvd - Archer Av - JFK Airport,Z,True,40.700486,-73.807969,express,BOTH
-357,Concourse,155th St,B,True,40.830135,-73.938209,local,NEITHER
-358,Concourse,155th St,D,True,40.830135,-73.938209,express,NEITHER
-359,Concourse,167th St,B,True,40.833769000000004,-73.918432,local,NEITHER
-360,Concourse,167th St,D,True,40.833769000000004,-73.918432,express,NEITHER
-361,Concourse,170th St,B,True,40.839306,-73.9134,local,NEITHER
-362,Concourse,170th St,D,True,40.839306,-73.9134,express,NEITHER
-363,Concourse,174-175th Sts,B,True,40.8459,-73.910136,local,NEITHER
-364,Concourse,174-175th Sts,D,True,40.8459,-73.910136,express,NEITHER
-365,Concourse,182-183rd Sts,B,True,40.856093,-73.900741,local,NEITHER
-366,Concourse,182-183rd Sts,D,True,40.856093,-73.900741,express,NEITHER
-367,Concourse,Bedford Park Blvd,B,True,40.873244,-73.88713800000001,local,NEITHER
-368,Concourse,Bedford Park Blvd,D,True,40.873244,-73.88713800000001,express,NEITHER
-369,Concourse,Fordham Rd,B,True,40.861296,-73.897749,local,NEITHER
-370,Concourse,Fordham Rd,D,True,40.861296,-73.897749,express,NEITHER
-371,Concourse,Kingsbridge Rd,B,True,40.866978,-73.893509,local,BOTH
-372,Concourse,Kingsbridge Rd,D,True,40.866978,-73.893509,express,BOTH
-373,Concourse,Norwood - 205th St,D,False,40.874811,-73.878855,express,NEITHER
-374,Concourse,Tremont Av,B,True,40.85041,-73.905227,local,NEITHER
-375,Concourse,Tremont Av,D,True,40.85041,-73.905227,express,NEITHER
-376,Crosstown,21st St,G,False,40.744065,-73.949724,local,NEITHER
-377,Crosstown,Bedford - Nostrand Avs,G,False,40.689627,-73.95352199999999,local,NEITHER
-378,Crosstown,Broadway,G,False,40.706092,-73.95030799999999,local,NEITHER
-379,Crosstown,Classon Av,G,False,40.688873,-73.96007,local,NEITHER
-380,Crosstown,Clinton - Washington Avs,G,False,40.688089,-73.96683900000001,local,NEITHER
-381,Crosstown,Flushing Av,G,False,40.700377,-73.950234,local,NEITHER
-382,Crosstown,Fulton St,G,False,40.687119,-73.975375,local,NEITHER
-383,Crosstown,Greenpoint Av,G,False,40.731352,-73.954449,local,NEITHER
-384,Crosstown,Myrtle - Willoughby Avs,G,False,40.694568,-73.949046,local,NEITHER
-385,Crosstown,Nassau Av,G,False,40.724635,-73.951277,local,NEITHER
-386,Culver,18th Av,F,False,40.629754999999996,-73.97697099999999,local,NEITHER
-387,Culver,Av I,F,False,40.625322,-73.976127,local,NEITHER
-388,Culver,Av N,F,False,40.615140000000004,-73.974197,local,NEITHER
-389,Culver,Av P,F,False,40.608944,-73.973022,local,NEITHER
-390,Culver,Av U,F,False,40.596063,-73.973357,local,NEITHER
-391,Culver,Av X,F,False,40.589620000000004,-73.97425,local,NEITHER
-392,Culver,Bay Parkway,F,False,40.620769,-73.975264,local,NEITHER
-393,Culver,Ditmas Av,F,False,40.636119,-73.978172,local,NEITHER
-394,Culver,Kings Highway,F,False,40.603217,-73.97236099999999,local,NEITHER
-395,Culver,Neptune Av,F,False,40.581011,-73.974574,local,NEITHER
-396,Fulton,Broadway Junction,A,True,40.678334,-73.905316,express,NEITHER
-397,Fulton,Broadway Junction,C,True,40.678334,-73.905316,local,NEITHER
-398,Fulton,Broadway Junction,L,True,40.678334,-73.905316,local,NEITHER
-399,Fulton,Broadway Junction,J,True,40.678334,-73.905316,local,NEITHER
-400,Fulton,Broadway Junction,Z,True,40.678334,-73.905316,express,NEITHER
-401,Fulton,Clinton - Washington Avs,C,False,40.683263000000004,-73.965838,local,NEITHER
-402,Fulton,Euclid Av,A,True,40.675377000000005,-73.872106,express,BOTH
-403,Fulton,Euclid Av,C,True,40.675377000000005,-73.872106,local,BOTH
-404,Fulton,Hoyt - Schermerhorn Sts,A,True,40.688484,-73.985001,express,NEITHER
-405,Fulton,Hoyt - Schermerhorn Sts,C,True,40.688484,-73.985001,local,NEITHER
-406,Fulton,Hoyt - Schermerhorn Sts,G,True,40.688484,-73.985001,local,NEITHER
-408,Fulton,Kingston - Throop Avs,C,True,40.679921,-73.94085799999999,local,NEITHER
-409,Fulton,Lafayette Av,C,False,40.686113,-73.973946,local,NEITHER
-411,Fulton,Liberty Av,C,True,40.674541999999995,-73.896548,local,NEITHER
-412,Fulton,Nostrand Av,A,True,40.680438,-73.95042600000001,express,NEITHER
-413,Fulton,Nostrand Av,C,True,40.680438,-73.95042600000001,local,NEITHER
-415,Fulton,Ralph Av,C,True,40.678822,-73.92078599999999,local,NEITHER
-417,Fulton,Rockaway Av,C,True,40.678340000000006,-73.911946,local,NEITHER
-419,Fulton,Shepherd Av,C,True,40.67413,-73.88075,local,NEITHER
-420,Fulton,Utica Av,A,True,40.679364,-73.930729,express,BOTH
-421,Fulton,Utica Av,C,True,40.679364,-73.930729,local,BOTH
-422,Liberty,Rockaway Blvd,A1,True,40.680429,-73.843853,local,NEITHER
-423,Fulton,Van Siclen Av,C,True,40.672709999999995,-73.89035799999999,local,NEITHER
-424,Liberty,104th St,A1,False,40.681711,-73.837683,local,NEITHER
-425,Liberty,111th St,A1,False,40.684331,-73.832163,local,NEITHER
-426,Liberty,80th St,A,False,40.679371,-73.858992,express,NEITHER
-427,Liberty,88th St,A,False,40.679843,-73.85146999999999,express,NEITHER
-428,Liberty,Grant Av,A,False,40.677044,-73.86505,express,NEITHER
-429,Liberty,Ozone Park - Lefferts Blvd,A1,False,40.685951,-73.82579799999999,local,BOTH
-430,Liberty,Rockaway Blvd,A,True,40.680429,-73.843853,express,NEITHER
-431,Queens Boulevard,169th St,F,False,40.71047,-73.793604,express,NEITHER
-432,Queens Boulevard,36th St,M,True,40.752039,-73.928781,local,NEITHER
-433,Queens Boulevard,36th St,R,True,40.752039,-73.928781,local,NEITHER
-434,Queens Boulevard,46th St,M,True,40.756312,-73.913333,local,NEITHER
-435,Queens Boulevard,46th St,R,True,40.756312,-73.913333,local,NEITHER
-436,Queens Boulevard,5th Av - 53rd St,E,True,40.760166999999996,-73.975224,local,NEITHER
-437,Queens Boulevard,5th Av - 53rd St,M,True,40.760166999999996,-73.975224,local,NEITHER
-438,Queens Boulevard,63rd Drive - Rego Park,M,True,40.729846,-73.861604,local,NEITHER
-439,Queens Boulevard,63rd Drive - Rego Park,R,True,40.729846,-73.861604,local,NEITHER
-440,Queens Boulevard,65th St,M,True,40.749669,-73.898453,local,NEITHER
-441,Queens Boulevard,65th St,R,True,40.749669,-73.898453,local,NEITHER
-442,Queens Boulevard,67th Av,M,True,40.726523,-73.852719,local,NEITHER
-443,Queens Boulevard,67th Av,R,True,40.726523,-73.852719,local,NEITHER
-444,Queens Boulevard,75th Av,E,True,40.718331,-73.837324,express,NEITHER
-445,Queens Boulevard,75th Av,F,True,40.718331,-73.837324,express,NEITHER
-446,Queens Boulevard,7th Av,B,True,40.762862,-73.981637,express,NEITHER
-447,Queens Boulevard,7th Av,D,True,40.762862,-73.981637,express,NEITHER
-448,Queens Boulevard,7th Av,E,True,40.762862,-73.981637,local,NEITHER
-449,Queens Boulevard,Briarwood - Van Wyck Blvd,F,True,40.709179,-73.820574,express,NEITHER
-450,Queens Boulevard,Elmhurst Av,M,True,40.742453999999995,-73.882017,local,NEITHER
-451,Queens Boulevard,Elmhurst Av,R,True,40.742453999999995,-73.882017,local,NEITHER
-452,Queens Boulevard,Forest Hills - 71st Av,E,True,40.721691,-73.844521,express,BOTH
-453,Queens Boulevard,Forest Hills - 71st Av,F,True,40.721691,-73.844521,express,BOTH
-454,Queens Boulevard,Forest Hills - 71st Av,M,True,40.721691,-73.844521,local,BOTH
-455,Queens Boulevard,Forest Hills - 71st Av,R,True,40.721691,-73.844521,local,BOTH
-456,Queens Boulevard,Grand Av - Newtown,M,True,40.737015,-73.877223,local,NEITHER
-457,Queens Boulevard,Grand Av - Newtown,R,True,40.737015,-73.877223,local,NEITHER
-458,Queens Boulevard,Jackson Heights - Roosevelt Av,E,True,40.746644,-73.891338,express,BOTH
-459,Queens Boulevard,Jackson Heights - Roosevelt Av,F,True,40.746644,-73.891338,express,BOTH
-460,Queens Boulevard,Jackson Heights - Roosevelt Av,M,True,40.746644,-73.891338,local,BOTH
-461,Queens Boulevard,Jackson Heights - Roosevelt Av,R,True,40.746644,-73.891338,local,BOTH
-462,Queens Boulevard,74th St - Broadway,7,True,40.746644,-73.891338,express,BOTH
-463,Queens Boulevard,Jamaica - 179th St,F,False,40.712646,-73.783817,express,BOTH
-464,Queens Boulevard,Kew Gardens - Union Turnpike,E,True,40.714441,-73.831008,express,BOTH
-465,Queens Boulevard,Kew Gardens - Union Turnpike,F,True,40.714441,-73.831008,express,BOTH
-466,Queens Boulevard,Lexington Av - 53rd St,E,True,40.757552000000004,-73.96905500000001,express,BOTH
-467,Queens Boulevard,Lexington Av - 53rd St,M,True,40.757552000000004,-73.96905500000001,local,BOTH
-469,Queens Boulevard,Northern Blvd,M,True,40.752885,-73.906006,local,NEITHER
-470,Queens Boulevard,Northern Blvd,R,True,40.752885,-73.906006,local,NEITHER
-471,Queens Boulevard,Parsons Blvd,F,False,40.707564,-73.803326,express,NEITHER
-472,Queens Boulevard,Queens Plaza,E,True,40.748973,-73.93724300000001,express,BOTH
-473,Queens Boulevard,Queens Plaza,M,True,40.748973,-73.93724300000001,local,BOTH
-474,Queens Boulevard,Queens Plaza,R,True,40.748973,-73.93724300000001,local,BOTH
-475,Queens Boulevard,Steinway St,M,True,40.756879,-73.92074000000001,local,NEITHER
-476,Queens Boulevard,Steinway St,R,True,40.756879,-73.92074000000001,local,NEITHER
-477,Queens Boulevard,Sutphin Blvd,F,False,40.705459999999995,-73.81070799999999,express,NEITHER
-478,Queens Boulevard,Woodhaven Blvd,M,True,40.733106,-73.869229,local,NEITHER
-479,Queens Boulevard,Woodhaven Blvd,R,True,40.733106,-73.869229,local,NEITHER
-480,Rockaway,Aqueduct,A2,True,40.668234000000005,-73.834058,local,BOTH
-481,Rockaway,Aqueduct,A3,True,40.668234000000005,-73.834058,local,BOTH
-484,Rockaway,Beach 105th St,A3,True,40.583209000000004,-73.827559,local,NEITHER
-485,Rockaway,Beach 105th St,S3,True,40.583209000000004,-73.827559,local,NEITHER
-486,Rockaway,Beach 25th St,A2,False,40.600066,-73.761353,local,NEITHER
-487,Rockaway,Beach 36th St,A2,False,40.595397999999996,-73.768175,local,NEITHER
-488,Rockaway,Beach 44th St,A2,False,40.592943,-73.776013,local,NEITHER
-489,Rockaway,Beach 60th St,A2,False,40.592374,-73.788522,local,NEITHER
-490,Rockaway,Beach 67th St,A2,False,40.590927,-73.796924,local,NEITHER
-491,Rockaway,Beach 90th St,A3,True,40.588034,-73.813641,local,NEITHER
-492,Rockaway,Beach 90th St,S3,True,40.588034,-73.813641,local,NEITHER
-493,Rockaway,Beach 98th St,A3,True,40.585307,-73.82055799999999,local,NEITHER
-494,Rockaway,Beach 98th St,S3,True,40.585307,-73.82055799999999,local,NEITHER
-495,Rockaway,Broad Channel,A3,True,40.608382,-73.815925,local,NEITHER
-496,Rockaway,Broad Channel,S3,True,40.608382,-73.815925,local,NEITHER
-497,Rockaway,Far Rockaway - Mott Av,A2,True,40.603995,-73.75540500000001,local,BOTH
-499,Rockaway,Howard Beach - JFK Airport,A2,True,40.660476,-73.830301,local,BOTH
-500,Rockaway,Howard Beach - JFK Airport,A3,True,40.660476,-73.830301,local,BOTH
-501,Rockaway,Rockaway Park - Beach 116th St,A3,True,40.580903,-73.835592,local,BOTH
-502,Rockaway,Rockaway Park - Beach 116th St,S3,True,40.580903,-73.835592,local,BOTH
-503,Broadway-7th Ave,103rd St,1,False,40.799446,-73.968379,local,NEITHER
-504,Broadway-7th Ave,116th St - Columbia University,1,False,40.807722,-73.96410999999999,local,NEITHER
-505,Broadway-7th Ave,125th St,1,False,40.815581,-73.958372,local,NEITHER
-506,Broadway-7th Ave,137th St - City College,1,False,40.822008000000004,-73.953676,local,NEITHER
-507,Broadway-7th Ave,145th St,1,False,40.826551,-73.95036,local,NEITHER
-508,Broadway-7th Ave,157th St,1,False,40.834041,-73.94489,local,NEITHER
-509,Broadway-7th Ave,168th St,A,True,40.840556,-73.94013299999999,express,BOTH
-510,Broadway-7th Ave,168th St,C,True,40.840556,-73.94013299999999,local,BOTH
-511,Broadway-7th Ave,168th St,1,True,40.840556,-73.94013299999999,local,NEITHER
-512,Broadway-7th Ave,181st St,1,False,40.849505,-73.933596,local,NEITHER
-513,Broadway-7th Ave,18th St,1,False,40.741040000000005,-73.99787099999999,local,NEITHER
-514,Broadway-7th Ave,191st St,1,False,40.855225,-73.929412,local,NEITHER
-515,Broadway-7th Ave,207th St,1,False,40.864614,-73.918819,local,NEITHER
-516,Broadway-7th Ave,215th St,1,False,40.869444,-73.915279,local,NEITHER
-517,Broadway-7th Ave,231st St,1,False,40.878856,-73.904834,local,BOTH
-518,Broadway-7th Ave,238th St,1,False,40.884667,-73.90087,local,NEITHER
-519,Broadway-7th Ave,23rd St,1,False,40.744081,-73.995657,local,NEITHER
-520,Broadway-7th Ave,28th St,1,False,40.747215000000004,-73.993365,local,NEITHER
-521,Broadway-7th Ave,34th St - Penn Station,1,True,40.750372999999996,-73.991057,local,BOTH
-522,Broadway-7th Ave,34th St - Penn Station,2,True,40.750372999999996,-73.991057,express,BOTH
-523,Broadway-7th Ave,34th St - Penn Station,3,True,40.750372999999996,-73.991057,express,BOTH
-524,Broadway-7th Ave,50th St,1,False,40.761728000000005,-73.98384899999999,local,NEITHER
-525,Broadway-7th Ave,66th St - Lincoln Center,1,False,40.77344,-73.982209,local,BOTH
-526,Broadway-7th Ave,72nd St,1,True,40.778453000000006,-73.98196999999999,local,BOTH
-527,Broadway-7th Ave,72nd St,2,True,40.778453000000006,-73.98196999999999,express,BOTH
-528,Broadway-7th Ave,72nd St,3,True,40.778453000000006,-73.98196999999999,express,BOTH
-529,Broadway-7th Ave,79th St,1,False,40.783934,-73.979917,local,NEITHER
-530,Broadway-7th Ave,86th St,1,False,40.788644,-73.976218,local,NEITHER
-531,Broadway-7th Ave,96th St,1,True,40.793919,-73.972323,local,BOTH
-532,Broadway-7th Ave,96th St,2,True,40.793919,-73.972323,express,BOTH
-533,Broadway-7th Ave,96th St,3,True,40.793919,-73.972323,express,BOTH
-534,Broadway-7th Ave,Canal St,1,False,40.722854,-74.006277,local,NEITHER
-535,Broadway-7th Ave,Cathedral Parkway - 110th St,1,False,40.803967,-73.966847,local,NEITHER
-536,Broadway-7th Ave,Chambers St,1,True,40.715478000000004,-74.009266,local,BOTH
-537,Broadway-7th Ave,Chambers St,2,True,40.715478000000004,-74.009266,express,BOTH
-538,Broadway-7th Ave,Chambers St,3,True,40.715478000000004,-74.009266,express,BOTH
-539,Broadway-7th Ave,Christopher St,1,False,40.733422,-74.00290600000001,local,NEITHER
-540,Broadway-7th Ave,WTC - Cortlandt,1,False,40.712188,-74.012188,local,BOTH
-541,Broadway-7th Ave,Dyckman St,1,False,40.860531,-73.925536,local,DOWNTOWN
-542,Broadway-7th Ave,Franklin St,1,False,40.719318,-74.006886,local,NEITHER
-543,Broadway-7th Ave,Houston St,1,False,40.728251,-74.005367,local,NEITHER
-544,Broadway-7th Ave,Marble Hill - 225th St,1,False,40.874561,-73.90983100000001,local,NEITHER
-545,Broadway-7th Ave,Rector St,1,False,40.707513,-74.01378299999999,local,NEITHER
-546,Broadway-7th Ave,Van Cortlandt Park - 242nd St,1,False,40.889247999999995,-73.898583,local,NEITHER
-547,Clark,Court St,R,True,40.693219,-73.989998,local,NEITHER
-548,Clark,Borough Hall,2,True,40.693219,-73.989998,local,BOTH
-549,Clark,Borough Hall,3,True,40.693219,-73.989998,local,BOTH
-550,Clark,Borough Hall,4,True,40.693219,-73.989998,express,UPTOWN
-551,Clark,Borough Hall,5,True,40.693219,-73.989998,express,UPTOWN
-552,Clark,Clark St,2,True,40.697466,-73.993086,local,NEITHER
-553,Clark,Clark St,3,True,40.697466,-73.993086,local,NEITHER
-554,Clark,Fulton St,A,True,40.709416,-74.006571,express,BOTH
-555,Clark,Fulton St,C,True,40.709416,-74.006571,local,BOTH
-556,Clark,Fulton St,J,True,40.709416,-74.006571,local,BOTH
-557,Clark,Fulton St,Z,True,40.709416,-74.006571,express,BOTH
-558,Clark,Fulton St,2,True,40.709416,-74.006571,express,BOTH
-559,Clark,Fulton St,3,True,40.709416,-74.006571,express,BOTH
-560,Clark,Fulton St,4,True,40.709416,-74.006571,express,BOTH
-561,Clark,Fulton St,5,True,40.709416,-74.006571,express,BOTH
-562,Clark,Wall St,2,True,40.706821000000005,-74.0091,express,NEITHER
-563,Clark,Wall St,3,True,40.706821000000005,-74.0091,express,NEITHER
-564,Dyre Av,Baychester Av,5,False,40.878663,-73.83859100000001,local,NEITHER
-565,Dyre Av,Eastchester - Dyre Av,5,False,40.8883,-73.830834,local,NEITHER
-566,Dyre Av,Gun Hill Rd,5,False,40.869526,-73.846384,local,BOTH
-567,Dyre Av,Morris Park,5,False,40.854364000000004,-73.860495,local,NEITHER
-568,Dyre Av,Pelham Parkway,5,False,40.858985,-73.85535899999999,local,BOTH
-569,Eastern Parkway,Bergen St,2,True,40.680828999999996,-73.975098,local,NEITHER
-570,Eastern Parkway,Bergen St,3,True,40.680828999999996,-73.975098,local,NEITHER
-571,Eastern Parkway,Eastern Parkway - Brooklyn Museum,2,True,40.671987,-73.964375,local,NEITHER
-572,Eastern Parkway,Eastern Parkway - Brooklyn Museum,3,True,40.671987,-73.964375,local,NEITHER
-573,Eastern Parkway,Botanic Garden,S2,True,40.670682,-73.95813100000001,express,NEITHER
-574,Eastern Parkway,Franklin Av,2,True,40.670682,-73.95813100000001,local,NEITHER
-575,Eastern Parkway,Franklin Av,3,True,40.670682,-73.95813100000001,local,NEITHER
-576,Eastern Parkway,Franklin Av,4,True,40.670682,-73.95813100000001,express,NEITHER
-577,Eastern Parkway,Franklin Av,5,True,40.670682,-73.95813100000001,express,NEITHER
-578,Eastern Parkway,Grand Army Plaza,2,True,40.675235,-73.971046,local,NEITHER
-579,Eastern Parkway,Grand Army Plaza,3,True,40.675235,-73.971046,local,NEITHER
-580,Eastern Parkway,Hoyt St,2,True,40.690545,-73.985065,local,NEITHER
-581,Eastern Parkway,Hoyt St,3,True,40.690545,-73.985065,local,NEITHER
-582,Eastern Parkway,Kingston Av,3,False,40.669399,-73.942161,local,NEITHER
-583,Eastern Parkway,Nevins St,2,True,40.688246,-73.980492,local,NEITHER
-584,Eastern Parkway,Nevins St,3,True,40.688246,-73.980492,local,NEITHER
-585,Eastern Parkway,Nevins St,4,True,40.688246,-73.980492,express,NEITHER
-586,Eastern Parkway,Nevins St,5,True,40.688246,-73.980492,express,NEITHER
-587,Eastern Parkway,Nostrand Av,3,False,40.669847,-73.950466,local,NEITHER
-588,Eastern Parkway,Crown Heights - Utica Av,3,True,40.668896999999994,-73.93294200000001,local,BOTH
-589,Eastern Parkway,Crown Heights - Utica Av,4,True,40.668896999999994,-73.93294200000001,express,BOTH
-590,Flushing,103rd St,7,False,40.749865,-73.8627,local,NEITHER
-591,Flushing,111th St,7,False,40.75173,-73.855334,local,NEITHER
-592,Flushing,34th St - Hudson Yards,7,False,40.755882,-74.00191,local,BOTH
-593,Flushing,Court Square - 23 St,E,True,40.747023,-73.945264,express,NEITHER
-594,Flushing,Court Square - 23 St,G,True,40.747023,-73.945264,local,NEITHER
-595,Flushing,Court Square - 23 St,M,True,40.747023,-73.945264,local,NEITHER
-596,Flushing,Court Square - 23 St,7,True,40.747023,-73.945264,local,BOTH
-597,Flushing,82nd St - Jackson Heights,7,False,40.747659000000006,-73.883697,local,NEITHER
-598,Flushing,90th St Elmhurst,7,False,40.748408000000005,-73.876613,local,NEITHER
-599,Flushing,46th St - Bliss St,7,False,40.743132,-73.918435,local,NEITHER
-600,Flushing,69th St - Fisk Av,7,False,40.746325,-73.896403,local,NEITHER
-601,Flushing,Flushing - Main St,7,False,40.7596,-73.83003000000001,local,BOTH
-602,Flushing,Grand Central - 42nd St,4,True,40.751431,-73.97604100000001,express,BOTH
-603,Flushing,Grand Central - 42nd St,5,True,40.751431,-73.97604100000001,express,BOTH
-604,Flushing,Grand Central - 42nd St,6,True,40.751431,-73.97604100000001,local,BOTH
-605,Flushing,Grand Central - 42nd St,7,True,40.751431,-73.97604100000001,local,BOTH
-606,Flushing,Grand Central - 42nd St,S1,True,40.751431,-73.97604100000001,express,NEITHER
-607,Flushing,Hunters Point Av,7,False,40.742216,-73.948916,local,NEITHER
-608,Flushing,Junction Blvd,7,False,40.749145,-73.869527,local,BOTH
-609,Flushing,52nd St - Lincoln Av,7,False,40.744149,-73.912549,local,NEITHER
-610,Flushing,40th St - Lowery St,7,False,40.743781,-73.92401600000001,local,NEITHER
-611,Flushing,Mets - Willets Point,7,False,40.754622,-73.845625,local,NEITHER
-612,Flushing,Queensboro Plaza,N,True,40.750582,-73.940202,express,NEITHER
-613,Flushing,Queensboro Plaza,W,True,40.750582,-73.940202,local,NEITHER
-614,Flushing,Queensboro Plaza,7,True,40.750582,-73.940202,local,NEITHER
-615,Flushing,33rd St - Rawson St,7,False,40.744587,-73.93099699999999,local,NEITHER
-616,Flushing,Vernon Blvd - Jackson Av,7,False,40.742626,-73.953581,local,NEITHER
-617,Flushing,61st St - Woodside,7,False,40.74563,-73.902984,local,BOTH
-618,Jerome,138th St,4,True,40.813224,-73.929849,local,NEITHER
-619,Jerome,138th St,5,True,40.813224,-73.929849,local,NEITHER
-620,Jerome,149th St - Grand Concourse,2,True,40.818375,-73.927351,local,NEITHER
-621,Jerome,149th St - Grand Concourse,4,True,40.818375,-73.927351,local,NEITHER
-622,Jerome,149th St - Grand Concourse,5,True,40.818375,-73.927351,local,NEITHER
-623,Jerome,167th St,4,False,40.835537,-73.9214,local,NEITHER
-624,Jerome,170th St,4,False,40.840075,-73.91779100000001,local,NEITHER
-625,Jerome,176th St,4,False,40.84848,-73.911794,local,NEITHER
-626,Jerome,183rd St,4,False,40.858407,-73.903879,local,NEITHER
-627,Jerome,Bedford Park Blvd - Lehman College,4,False,40.873412,-73.890064,local,NEITHER
-628,Jerome,Burnside Av,4,False,40.853453,-73.907684,local,NEITHER
-629,Jerome,Fordham Rd,4,False,40.862803,-73.901034,local,BOTH
-630,Jerome,Kingsbridge Rd,4,False,40.86776,-73.89717399999999,local,NEITHER
-631,Jerome,Mosholu Parkway,4,False,40.87975,-73.88465500000001,local,NEITHER
-632,Jerome,Mt Eden Av,4,False,40.844434,-73.91468499999999,local,NEITHER
-633,Jerome,Woodlawn,4,False,40.886037,-73.878751,local,NEITHER
-634,Jerome,161st St - Yankee Stadium,B,True,40.827994,-73.925831,local,BOTH
-635,Jerome,161st St - Yankee Stadium,D,True,40.827994,-73.925831,express,BOTH
-636,Jerome,161st St - Yankee Stadium,4,True,40.827994,-73.925831,express,BOTH
-637,Lenox,Central Park North (110 St),2,True,40.799075,-73.95182199999999,express,NEITHER
-638,Lenox,Central Park North (110 St),3,True,40.799075,-73.95182199999999,express,NEITHER
-639,Lenox,116th St,2,True,40.802098,-73.949625,express,NEITHER
-640,Lenox,116th St,3,True,40.802098,-73.949625,express,NEITHER
-641,Lenox,125th St,2,True,40.807753999999996,-73.945495,express,NEITHER
-642,Lenox,125th St,3,True,40.807753999999996,-73.945495,express,NEITHER
-643,Lenox,135th St,2,True,40.814229,-73.94077,express,BOTH
-644,Lenox,135th St,3,True,40.814229,-73.94077,express,BOTH
-645,Lenox,145th St,3,False,40.820421,-73.936245,express,NEITHER
-646,Lenox,Harlem - 148th St,3,False,40.823879999999996,-73.93647,express,NEITHER
-647,Lexington,103rd St,6,False,40.7906,-73.947478,local,NEITHER
-648,Lexington,110th St,6,False,40.79502,-73.94425,local,NEITHER
-649,Lexington,116th St,6,False,40.798629,-73.94161700000001,local,NEITHER
-650,Lexington,125th St,4,True,40.804138,-73.93759399999999,express,BOTH
-651,Lexington,125th St,5,True,40.804138,-73.93759399999999,express,BOTH
-652,Lexington,125th St,6,True,40.804138,-73.93759399999999,local,BOTH
-653,Lexington,23rd St,6,False,40.739864000000004,-73.986599,local,BOTH
-654,Lexington,28th St,6,False,40.74307,-73.984264,local,DOWNTOWN
-655,Lexington,33rd St,6,False,40.746081,-73.982076,local,NEITHER
-658,Lexington,51st St,6,True,40.757107,-73.97192,local,BOTH
-659,Lexington,68th St - Hunter College,6,False,40.768141,-73.96387,local,NEITHER
-660,Lexington,77th St,6,False,40.77362,-73.959874,local,NEITHER
-661,Lexington,86th St,4,True,40.779492,-73.955589,express,NEITHER
-662,Lexington,86th St,5,True,40.779492,-73.955589,express,NEITHER
-663,Lexington,86th St,6,True,40.779492,-73.955589,local,UPTOWN
-664,Lexington,96th St,6,False,40.785672,-73.95107,local,NEITHER
-665,Lexington,Astor Place,6,False,40.730053999999996,-73.99107,local,NEITHER
-666,Lexington,Bowling Green,4,True,40.704817,-74.014065,express,BOTH
-667,Lexington,Bowling Green,5,True,40.704817,-74.014065,express,BOTH
-668,Lexington,Chambers St,J,True,40.713065,-74.004131,local,NEITHER
-669,Lexington,Chambers St,Z,True,40.713065,-74.004131,express,NEITHER
-670,Lexington,Brooklyn Bridge - City Hall,4,True,40.713065,-74.004131,express,BOTH
-671,Lexington,Brooklyn Bridge - City Hall,5,True,40.713065,-74.004131,express,BOTH
-672,Lexington,Brooklyn Bridge - City Hall,6,True,40.713065,-74.004131,local,BOTH
-673,Lexington,Spring St,6,False,40.722301,-73.997141,local,NEITHER
-674,Lexington,Wall St,4,True,40.707557,-74.011862,express,NEITHER
-675,Lexington,Wall St,5,True,40.707557,-74.011862,express,NEITHER
-676,New Lots,Junius St,3,False,40.663515000000004,-73.902447,local,NEITHER
-677,New Lots,New Lots Av,3,False,40.666235,-73.884079,local,NEITHER
-678,New Lots,Pennsylvania Av,3,False,40.664635,-73.89489499999999,local,NEITHER
-679,New Lots,Rockaway Av,3,False,40.662549,-73.908946,local,NEITHER
-680,New Lots,Saratoga Av,3,False,40.661453,-73.916327,local,NEITHER
-681,New Lots,Sutter Av,3,False,40.664716999999996,-73.92260999999999,local,NEITHER
-682,New Lots,Van Siclen Av,3,False,40.665449,-73.889395,local,NEITHER
-683,Nostrand,Beverly Rd,2,True,40.645098,-73.948959,local,NEITHER
-684,Nostrand,Beverly Rd,5,True,40.645098,-73.948959,local,NEITHER
-685,Nostrand,Church Av,2,True,40.650843,-73.949575,local,BOTH
-686,Nostrand,Church Av,5,True,40.650843,-73.949575,local,BOTH
-687,Nostrand,Flatbush Av - Brooklyn College,2,True,40.632836,-73.947642,local,BOTH
-688,Nostrand,Flatbush Av - Brooklyn College,5,True,40.632836,-73.947642,local,BOTH
-689,Nostrand,Newkirk Av,2,True,40.639967,-73.948411,local,NEITHER
-690,Nostrand,Newkirk Av,5,True,40.639967,-73.948411,local,NEITHER
-691,Nostrand,President St,2,True,40.667883,-73.950683,local,NEITHER
-692,Nostrand,President St,5,True,40.667883,-73.950683,local,NEITHER
-693,Nostrand,Sterling St,2,True,40.662742,-73.95085,local,NEITHER
-694,Nostrand,Sterling St,5,True,40.662742,-73.95085,local,NEITHER
-695,Nostrand,Winthrop St,2,True,40.656652,-73.9502,local,NEITHER
-696,Nostrand,Winthrop St,5,True,40.656652,-73.9502,local,NEITHER
-697,Pelham,3rd Ave - 138th St,6,False,40.810476,-73.926138,local,NEITHER
-698,Pelham,Brook Av,6,False,40.807565999999994,-73.91924,local,NEITHER
-699,Pelham,Buhre Av,6,False,40.84681,-73.83256899999999,local,NEITHER
-700,Pelham,Castle Hill Av,6,False,40.834255,-73.85122199999999,local,NEITHER
-701,Pelham,Cypress Av,6,False,40.805368,-73.91404200000001,local,NEITHER
-702,Pelham,E 143rd St - St Mary's St,6,False,40.808719,-73.907657,local,NEITHER
-703,Pelham,E 149th St,6,False,40.812118,-73.904098,local,NEITHER
-704,Pelham,Elder Av,6,False,40.828584,-73.879159,local,NEITHER
-705,Pelham,Hunts Point Av,6,False,40.820948,-73.890549,local,BOTH
-706,Pelham,Longwood Av,6,False,40.816103999999996,-73.896435,local,NEITHER
-707,Pelham,Middletown Rd,6,False,40.843863,-73.836322,local,NEITHER
-708,Pelham,Morrison Av - Soundview Av,6,False,40.829521,-73.874516,local,NEITHER
-709,Pelham,Parkchester,6,False,40.833226,-73.860816,local,NEITHER
-710,Pelham,Pelham Bay Park,6,False,40.852462,-73.828121,local,BOTH
-711,Pelham,St Lawrence Av,6,False,40.831509000000004,-73.86761800000001,local,NEITHER
-712,Pelham,Westchester Square - East Tremont Av,6,False,40.839892,-73.842952,local,NEITHER
-713,Pelham,Whitlock Av,6,False,40.826525,-73.88628299999999,local,NEITHER
-714,Pelham,Zerega Av,6,False,40.836488,-73.847036,local,NEITHER
-715,White Plains Road,3rd Av - 149th St,2,True,40.816109000000004,-73.917757,local,BOTH
-716,White Plains Road,3rd Av - 149th St,5,True,40.816109000000004,-73.917757,local,BOTH
-717,White Plains Road,174th St,2,True,40.837288,-73.887734,local,NEITHER
-718,White Plains Road,174th St,5,True,40.837288,-73.887734,local,NEITHER
-719,White Plains Road,219th St,2,True,40.883895,-73.862633,local,NEITHER
-721,White Plains Road,225th St,2,True,40.888022,-73.860341,local,NEITHER
-723,White Plains Road,233rd St,2,True,40.893193,-73.857473,local,BOTH
-725,White Plains Road,Nereid Av,2,True,40.898379,-73.854376,local,NEITHER
-727,White Plains Road,Allerton Av,2,True,40.865462,-73.867352,local,NEITHER
-729,White Plains Road,Bronx Park East,2,True,40.848828000000005,-73.86845699999999,local,NEITHER
-731,White Plains Road,Burke Av,2,True,40.871356,-73.867164,local,NEITHER
-733,White Plains Road,East 180th St,2,True,40.841894,-73.873488,local,BOTH
-734,White Plains Road,East 180th St,5,True,40.841894,-73.873488,local,BOTH
-735,White Plains Road,West Farms Square - East Tremont Av,2,True,40.840295000000005,-73.880049,local,NEITHER
-736,White Plains Road,West Farms Square - East Tremont Av,5,True,40.840295000000005,-73.880049,local,NEITHER
-737,White Plains Road,Freeman St,2,True,40.829993,-73.891865,local,NEITHER
-738,White Plains Road,Freeman St,5,True,40.829993,-73.891865,local,NEITHER
-739,White Plains Road,Gun Hill Rd,2,True,40.87785,-73.866256,local,BOTH
-741,White Plains Road,Intervale Av,2,True,40.822181,-73.896736,local,NEITHER
-742,White Plains Road,Intervale Av,5,True,40.822181,-73.896736,local,NEITHER
-743,White Plains Road,Jackson Av,2,True,40.81649,-73.90780699999999,local,NEITHER
-744,White Plains Road,Jackson Av,5,True,40.81649,-73.90780699999999,local,NEITHER
-745,White Plains Road,Pelham Parkway,2,True,40.857192,-73.867615,local,BOTH
-746,Liberty,Rockaway Blvd,A3,True,40.680429,-73.843853,local,NEITHER
-747,White Plains Road,Prospect Av,2,True,40.819585,-73.90177,local,NEITHER
-748,White Plains Road,Prospect Av,5,True,40.819585,-73.90177,local,NEITHER
-749,White Plains Road,Simpson St,2,True,40.824073,-73.893064,local,BOTH
-750,White Plains Road,Simpson St,5,True,40.824073,-73.893064,local,BOTH
-751,White Plains Road,Wakefield - 241st St,2,True,40.903125,-73.85061999999999,local,NEITHER
-752,Liberty,Rockaway Blvd,A2,True,40.680429,-73.843853,local,NEITHER
-753,2 Avenue,72nd St,Q,True,40.768878,-73.95756300000001,express,BOTH
-754,2 Avenue,86th St,Q,True,40.777989,-73.951589,express,BOTH
-755,2 Avenue,96th St,Q,True,40.783691999999995,-73.94765799999999,express,BOTH
-756,Broadway Jamaica,Alabama Av,Z,True,40.676992,-73.89865400000001,express,NEITHER
-757,Broadway,City Hall,W,True,40.713282,-74.006978,local,NEITHER
-758,Queens Boulevard,Briarwood - Van Wyck Blvd,E,True,40.709179,-73.820574,express,NEITHER
-759,Broadway Jamaica,Lorimer St,J,True,40.703957,-73.947374,local,NEITHER
-760,Broadway Jamaica,Lorimer St,M,True,40.703957,-73.947374,local,NEITHER
-761,Crosstown,Church Av,G,True,40.644040999999994,-73.979678,local,BOTH
-762,Crosstown,Fort Hamilton Parkway,G,True,40.650782,-73.975776,local,NEITHER
-763,Crosstown,15 St - Prospect Park,G,True,40.660365000000006,-73.979493,local,NEITHER
-764,6 Avenue,7th Av,G,True,40.666271,-73.980305,local,NEITHER
+0,4 Avenue,25th St,R,FALSE,40.660397,-73.998091,local,NEITHER
+1,4 Avenue,36th St,D,TRUE,40.655144,-74.003549,express,NEITHER
+2,4 Avenue,36th St,N,TRUE,40.655144,-74.003549,express,NEITHER
+3,4 Avenue,36th St,R,TRUE,40.655144,-74.003549,local,NEITHER
+4,4 Avenue,45th St,R,FALSE,40.648939,-74.010006,local,NEITHER
+5,4 Avenue,53rd St,R,FALSE,40.645069,-74.014034,local,NEITHER
+6,4 Avenue,59th St,N,TRUE,40.641362,-74.017881,express,NEITHER
+7,4 Avenue,59th St,R,TRUE,40.641362,-74.017881,local,NEITHER
+8,4 Avenue,77th St,R,FALSE,40.629742,-74.02551,local,NEITHER
+9,4 Avenue,86th St,R,FALSE,40.622687,-74.028398,local,NEITHER
+10,4 Avenue,95th St,R,FALSE,40.616622,-74.030876,local,NEITHER
+11,4 Avenue,4th Av - 9th St,F,TRUE,40.670847,-73.988302,local,NEITHER
+12,4 Avenue,4th Av - 9th St,G,TRUE,40.670847,-73.988302,local,NEITHER
+13,4 Avenue,4th Av - 9th St,R,TRUE,40.670847,-73.988302,local,NEITHER
+14,4 Avenue,Atlantic Av - Barclays Center,B,TRUE,40.683666,-73.97881,express,BOTH
+15,4 Avenue,Atlantic Av - Barclays Center,Q,TRUE,40.683666,-73.97881,local,BOTH
+16,4 Avenue,Atlantic Av - Barclays Center,D,TRUE,40.683666,-73.97881,express,BOTH
+17,4 Avenue,Atlantic Av - Barclays Center,N,TRUE,40.683666,-73.97881,express,BOTH
+18,4 Avenue,Atlantic Av - Barclays Center,R,TRUE,40.683666,-73.97881,local,BOTH
+19,4 Avenue,Atlantic Av - Barclays Center,2,TRUE,40.683666,-73.97881,express,BOTH
+20,4 Avenue,Atlantic Av - Barclays Center,3,TRUE,40.683666,-73.97881,express,BOTH
+21,4 Avenue,Atlantic Av - Barclays Center,4,TRUE,40.683666,-73.97881,express,BOTH
+22,4 Avenue,Atlantic Av - Barclays Center,5,TRUE,40.683666,-73.97881,express,BOTH
+23,4 Avenue,Bay Ridge Av,R,FALSE,40.634967,-74.023377,local,NEITHER
+24,4 Avenue,DeKalb Av,B,TRUE,40.690635,-73.981824,express,BOTH
+25,4 Avenue,DeKalb Av,Q,TRUE,40.690635,-73.981824,local,BOTH
+26,4 Avenue,DeKalb Av,R,TRUE,40.690635,-73.981824,local,BOTH
+27,4 Avenue,Prospect Av,R,FALSE,40.665414,-73.992872,local,NEITHER
+28,4 Avenue,Union St,R,FALSE,40.677316,-73.98311,local,NEITHER
+29,Astoria,30th Av,N,TRUE,40.766779,-73.921479,express,NEITHER
+30,Astoria,30th Av,W,TRUE,40.766779,-73.921479,local,NEITHER
+31,Astoria,36th Av,N,TRUE,40.756804,-73.929575,express,NEITHER
+32,Astoria,36th Av,W,TRUE,40.756804,-73.929575,local,NEITHER
+33,Astoria,39th Av,N,TRUE,40.752882,-73.932755,express,NEITHER
+34,Astoria,39th Av,W,TRUE,40.752882,-73.932755,local,NEITHER
+35,Astoria,Astoria Blvd,N,TRUE,40.770258,-73.917843,express,NEITHER
+36,Astoria,Astoria Blvd,W,TRUE,40.770258,-73.917843,local,NEITHER
+37,Astoria,Broadway,N,TRUE,40.76182,-73.925508,express,NEITHER
+38,Astoria,Broadway,W,TRUE,40.76182,-73.925508,local,NEITHER
+39,Astoria,Astoria - Ditmars Blvd,N,TRUE,40.775036,-73.912034,express,NEITHER
+40,Astoria,Astoria - Ditmars Blvd,W,TRUE,40.775036,-73.912034,local,NEITHER
+41,Brighton,7th Av,B,TRUE,40.67705,-73.972367,express,NEITHER
+42,Brighton,7th Av,Q,TRUE,40.67705,-73.972367,local,NEITHER
+43,Brighton,Av H,Q,FALSE,40.62927,-73.961639,local,DOWNTOWN
+44,Brighton,Av J,Q,FALSE,40.625039,-73.960803,local,NEITHER
+45,Brighton,Av M,Q,FALSE,40.617618,-73.959399,local,NEITHER
+46,Brighton,Av U,Q,FALSE,40.5993,-73.955929,local,NEITHER
+47,Brighton,Beverly Rd,Q,FALSE,40.644031,-73.964492,local,NEITHER
+48,Brighton,Brighton Beach,B,TRUE,40.577621,-73.961376,express,NEITHER
+49,Brighton,Brighton Beach,Q,TRUE,40.577621,-73.961376,local,NEITHER
+50,Brighton,Church Av,B,TRUE,40.650527,-73.962982,express,NEITHER
+51,Brighton,Church Av,Q,TRUE,40.650527,-73.962982,local,NEITHER
+52,Brighton,Cortelyou Rd,Q,FALSE,40.640927,-73.963891,local,NEITHER
+53,Brighton,Kings Highway,B,TRUE,40.60867,-73.957734,express,BOTH
+54,Brighton,Kings Highway,Q,TRUE,40.60867,-73.957734,local,BOTH
+55,Brighton,Neck Rd,Q,FALSE,40.595246,-73.955161,local,NEITHER
+56,Brighton,Newkirk Plaza,B,TRUE,40.635082,-73.962793,express,NEITHER
+57,Brighton,Newkirk Plaza,Q,TRUE,40.635082,-73.962793,local,NEITHER
+58,Brighton,Ocean Parkway,Q,FALSE,40.576312,-73.968501,local,NEITHER
+59,Brighton,Parkside Av,Q,FALSE,40.655292,-73.961495,local,NEITHER
+60,Brighton,Prospect Park,B,TRUE,40.661614,-73.962246,express,BOTH
+61,Brighton,Prospect Park,Q,TRUE,40.661614,-73.962246,local,BOTH
+62,Brighton,Prospect Park,S2,TRUE,40.661614,-73.962246,express,BOTH
+63,Brighton,Sheepshead Bay,B,TRUE,40.586896,-73.954155,express,NEITHER
+64,Brighton,Sheepshead Bay,Q,TRUE,40.586896,-73.954155,local,NEITHER
+65,Brighton,Coney Island - Stillwell Av,D,TRUE,40.577422,-73.981233,express,BOTH
+66,Brighton,Coney Island - Stillwell Av,F,TRUE,40.577422,-73.981233,local,BOTH
+67,Brighton,Coney Island - Stillwell Av,N,TRUE,40.577422,-73.981233,express,BOTH
+68,Brighton,Coney Island - Stillwell Av,Q,TRUE,40.577422,-73.981233,local,BOTH
+69,Brighton,West 8th St - New York Aquarium,F,TRUE,40.576127,-73.975939,local,NEITHER
+70,Brighton,West 8th St - New York Aquarium,Q,TRUE,40.576127,-73.975939,local,NEITHER
+71,Broadway,23rd St,R,TRUE,40.741303,-73.989344,local,NEITHER
+72,Broadway,23rd St,W,TRUE,40.741303,-73.989344,local,NEITHER
+73,Broadway,28th St,R,TRUE,40.745494,-73.988691,local,NEITHER
+74,Broadway,28th St,W,TRUE,40.745494,-73.988691,local,NEITHER
+75,Broadway,34th St - Herald Square,B,TRUE,40.749567,-73.98795,express,BOTH
+76,Broadway,34th St - Herald Square,D,TRUE,40.749567,-73.98795,express,BOTH
+77,Broadway,34th St - Herald Square,F,TRUE,40.749567,-73.98795,local,BOTH
+78,Broadway,34th St - Herald Square,M,TRUE,40.749567,-73.98795,local,BOTH
+79,Broadway,34th St - Herald Square,N,TRUE,40.749567,-73.98795,express,BOTH
+80,Broadway,34th St - Herald Square,Q,TRUE,40.749567,-73.98795,express,BOTH
+81,Broadway,34th St - Herald Square,R,TRUE,40.749567,-73.98795,local,BOTH
+82,Broadway,34th St - Herald Square,W,TRUE,40.749567,-73.98795,local,BOTH
+83,Broadway,49th St,N,TRUE,40.759901,-73.984139,express,UPTOWN
+84,Broadway,49th St,R,TRUE,40.759901,-73.984139,local,UPTOWN
+85,Broadway,49th St,W,TRUE,40.759901,-73.984139,local,UPTOWN
+86,Broadway,57th St - 7th Av,N,TRUE,40.764664,-73.980658,express,NEITHER
+87,Broadway,57th St - 7th Av,Q,TRUE,40.764664,-73.980658,express,NEITHER
+88,Broadway,57th St - 7th Av,R,TRUE,40.764664,-73.980658,local,NEITHER
+89,Broadway,57th St - 7th Av,W,TRUE,40.764664,-73.980658,local,NEITHER
+90,Broadway,5th Av - 59 St,N,TRUE,40.764811,-73.973347,express,NEITHER
+91,Broadway,5th Av - 59 St,R,TRUE,40.764811,-73.973347,local,NEITHER
+92,Broadway,5th Av - 59 St,W,TRUE,40.764811,-73.973347,local,NEITHER
+93,Broadway,8th St - NYU,R,TRUE,40.730328,-73.992629,local,NEITHER
+94,Broadway,8th St - NYU,W,TRUE,40.730328,-73.992629,local,NEITHER
+95,Broadway,Canal St,J,TRUE,40.719527,-74.001775,local,NEITHER
+96,Broadway,Canal St,N,TRUE,40.719527,-74.001775,express,NEITHER
+97,Broadway,Canal St,Q,TRUE,40.719527,-74.001775,express,NEITHER
+98,Broadway,Canal St,R,TRUE,40.719527,-74.001775,local,NEITHER
+99,Broadway,Canal St,W,TRUE,40.719527,-74.001775,local,NEITHER
+100,Broadway,Canal St,Z,TRUE,40.719527,-74.001775,express,NEITHER
+101,Broadway,Canal St,6,TRUE,40.719527,-74.001775,local,BOTH
+102,Broadway,City Hall,R,TRUE,40.713282,-74.006978,local,NEITHER
+103,Broadway,Cortlandt St,R,TRUE,40.710668,-74.011029,local,BOTH
+104,Broadway,Cortlandt St,W,TRUE,40.710668,-74.011029,local,BOTH
+105,Broadway,Jay St - Metrotech,A,TRUE,40.69218,-73.985942,express,BOTH
+106,Broadway,Jay St - Metrotech,C,TRUE,40.69218,-73.985942,local,BOTH
+107,Broadway,Jay St - Metrotech,F,TRUE,40.69218,-73.985942,local,BOTH
+108,Broadway,Jay St - Metrotech,R,TRUE,40.69218,-73.985942,local,BOTH
+109,Broadway,Lexington Av - 59th St,N,TRUE,40.76266,-73.967258,express,NEITHER
+110,Broadway,Lexington Av - 59th St,R,TRUE,40.76266,-73.967258,local,NEITHER
+111,Broadway,Lexington Av - 59th St,W,TRUE,40.76266,-73.967258,local,NEITHER
+112,Broadway,59th St,4,TRUE,40.76266,-73.967258,express,NEITHER
+113,Broadway,59th St,5,TRUE,40.76266,-73.967258,express,NEITHER
+114,Broadway,59th St,6,TRUE,40.76266,-73.967258,local,NEITHER
+115,Broadway,Prince St,W,TRUE,40.724329,-73.997702,local,NEITHER
+116,Broadway,Prince St,R,TRUE,40.724329,-73.997702,local,NEITHER
+117,Broadway,Rector St,R,TRUE,40.70722,-74.013342,local,NEITHER
+118,Broadway,Rector St,W,TRUE,40.70722,-74.013342,local,NEITHER
+119,Broadway,42nd St - Port Authority Bus Terminal,A,TRUE,40.754672,-73.986754,express,BOTH
+120,Broadway,42nd St - Port Authority Bus Terminal,C,TRUE,40.754672,-73.986754,local,BOTH
+121,Broadway,42nd St - Port Authority Bus Terminal,E,TRUE,40.754672,-73.986754,local,BOTH
+122,Broadway,Times Square - 42nd St,N,TRUE,40.754672,-73.986754,express,BOTH
+123,Broadway,Times Square - 42nd St,Q,TRUE,40.754672,-73.986754,express,BOTH
+124,Broadway,Times Square - 42nd St,R,TRUE,40.754672,-73.986754,local,BOTH
+125,Broadway,Times Square - 42nd St,W,TRUE,40.754672,-73.986754,local,BOTH
+126,Broadway,Times Square - 42nd St,1,TRUE,40.754672,-73.986754,local,BOTH
+127,Broadway,Times Square - 42nd St,2,TRUE,40.754672,-73.986754,express,BOTH
+128,Broadway,Times Square - 42nd St,3,TRUE,40.754672,-73.986754,express,BOTH
+129,Broadway,Times Square - 42nd St,7,TRUE,40.754672,-73.986754,local,BOTH
+130,Broadway,Times Square - 42nd St,S1,TRUE,40.754672,-73.986754,express,NEITHER
+131,Broadway,14th St - Union Square,L,TRUE,40.735736,-73.990568,local,BOTH
+132,Broadway,14th St - Union Square,N,TRUE,40.735736,-73.990568,express,BOTH
+133,Broadway,14th St - Union Square,Q,TRUE,40.735736,-73.990568,express,BOTH
+134,Broadway,14th St - Union Square,R,TRUE,40.735736,-73.990568,local,BOTH
+135,Broadway,14th St - Union Square,W,TRUE,40.735736,-73.990568,local,BOTH
+136,Broadway,14th St - Union Square,4,TRUE,40.735736,-73.990568,express,NEITHER
+137,Broadway,14th St - Union Square,5,TRUE,40.735736,-73.990568,express,NEITHER
+138,Broadway,14th St - Union Square,6,TRUE,40.735736,-73.990568,local,NEITHER
+139,Broadway,Whitehall St,R,TRUE,40.703087,-74.012994,local,NEITHER
+140,Broadway,Whitehall St,W,TRUE,40.703087,-74.012994,local,NEITHER
+141,Broadway,South Ferry,1,TRUE,40.703087,-74.012994,local,BOTH
+142,Broadway Jamaica,104th St,J,TRUE,40.695178,-73.84433,local,NEITHER
+143,Broadway Jamaica,104th St,Z,TRUE,40.695178,-73.84433,express,NEITHER
+144,Broadway Jamaica,111th St,J,FALSE,40.697418,-73.836345,local,NEITHER
+145,Broadway Jamaica,121st St,J,TRUE,40.700492,-73.828294,local,NEITHER
+146,Broadway Jamaica,121st St,Z,TRUE,40.700492,-73.828294,express,NEITHER
+147,Broadway Jamaica,Alabama Av,J,TRUE,40.676992,-73.898654,local,NEITHER
+148,Broadway Jamaica,Chauncey St,J,TRUE,40.682893,-73.910456,local,NEITHER
+149,Broadway Jamaica,Chauncey St,Z,TRUE,40.682893,-73.910456,express,NEITHER
+150,Broadway Jamaica,Cleveland St,J,FALSE,40.679947,-73.884639,local,NEITHER
+151,Broadway Jamaica,Crescent St,J,TRUE,40.683194,-73.873785,local,NEITHER
+152,Broadway Jamaica,Crescent St,Z,TRUE,40.683194,-73.873785,express,NEITHER
+153,Broadway Jamaica,Cypress Hills,J,FALSE,40.689941,-73.87255,local,NEITHER
+154,Broadway Jamaica,75th St - Elderts Ln,J,TRUE,40.691324,-73.867139,local,NEITHER
+155,Broadway Jamaica,75th St - Elderts Ln,Z,TRUE,40.691324,-73.867139,express,NEITHER
+156,Broadway Jamaica,Flushing Av,J,TRUE,40.70026,-73.941126,local,BOTH
+157,Broadway Jamaica,Flushing Av,M,TRUE,40.70026,-73.941126,local,BOTH
+158,Broadway Jamaica,85th St - Forest Parkway,J,FALSE,40.692435,-73.86001,local,NEITHER
+159,Broadway Jamaica,Gates Av,J,TRUE,40.68963,-73.92227,local,NEITHER
+160,Broadway Jamaica,Gates Av,Z,TRUE,40.68963,-73.92227,express,NEITHER
+161,Broadway Jamaica,Halsey St,J,FALSE,40.68637,-73.916559,local,NEITHER
+162,Broadway Jamaica,Hewes St,J,TRUE,40.70687,-73.953431,local,NEITHER
+163,Broadway Jamaica,Hewes St,M,TRUE,40.70687,-73.953431,local,NEITHER
+164,Broadway Jamaica,Kosciusko St,J,FALSE,40.693342,-73.928814,local,NEITHER
+165,Broadway Jamaica,Marcy Av,J,TRUE,40.708359,-73.957757,local,BOTH
+166,Broadway Jamaica,Marcy Av,M,TRUE,40.708359,-73.957757,local,BOTH
+167,Broadway Jamaica,Marcy Av,Z,TRUE,40.708359,-73.957757,express,BOTH
+168,Broadway Jamaica,Myrtle Av,J,TRUE,40.697207,-73.935657,local,NEITHER
+169,Broadway Jamaica,Myrtle Av,M,TRUE,40.697207,-73.935657,local,NEITHER
+170,Broadway Jamaica,Myrtle Av,Z,TRUE,40.697207,-73.935657,express,NEITHER
+171,Broadway Jamaica,Norwood Av,J,TRUE,40.68141,-73.880039,local,NEITHER
+172,Broadway Jamaica,Norwood Av,Z,TRUE,40.68141,-73.880039,express,NEITHER
+173,Broadway Jamaica,Van Siclen Av,J,TRUE,40.678024,-73.891688,local,NEITHER
+174,Broadway Jamaica,Van Siclen Av,Z,TRUE,40.678024,-73.891688,express,NEITHER
+175,Broadway Jamaica,Woodhaven Blvd,J,TRUE,40.693879,-73.851576,local,NEITHER
+176,Broadway Jamaica,Woodhaven Blvd,Z,TRUE,40.693879,-73.851576,express,NEITHER
+177,Canarsie,1st Av,L,FALSE,40.730953,-73.981628,local,NEITHER
+178,Canarsie,3rd Av,L,FALSE,40.732849,-73.986122,local,NEITHER
+179,Canarsie,14th St,A,TRUE,40.739777,-74.002578,express,BOTH
+180,Canarsie,14th St,C,TRUE,40.739777,-74.002578,local,BOTH
+181,Canarsie,14th St,E,TRUE,40.739777,-74.002578,local,BOTH
+182,Canarsie,8th Av,L,TRUE,40.739777,-74.002578,local,BOTH
+183,Canarsie,Atlantic Av,L,FALSE,40.675345,-73.903097,local,NEITHER
+184,Canarsie,Bedford Av,L,FALSE,40.717304,-73.956872,local,NEITHER
+185,Canarsie,Bushwick Av,L,FALSE,40.682829,-73.905249,local,NEITHER
+189,Canarsie,DeKalb Av,L,FALSE,40.703811,-73.918425,local,NEITHER
+190,Canarsie,East 105th St,L,FALSE,40.650573,-73.899485,local,NEITHER
+191,Canarsie,Graham Av,L,FALSE,40.714565,-73.944053,local,NEITHER
+192,Canarsie,Grand St,L,FALSE,40.711926,-73.94067,local,NEITHER
+193,Canarsie,Halsey St,L,FALSE,40.695602,-73.904084,local,NEITHER
+194,Canarsie,Jefferson St,L,FALSE,40.706607,-73.922913,local,NEITHER
+195,Canarsie,Livonia Av,L,FALSE,40.664038,-73.900571,local,NEITHER
+196,Canarsie,Metropolitan Av,G,TRUE,40.714063,-73.950275,express,NEITHER
+197,Canarsie,Lorimer St,L,TRUE,40.714063,-73.950275,local,NEITHER
+198,Canarsie,Montrose Av,L,FALSE,40.707739,-73.93985,local,NEITHER
+199,Canarsie,Morgan Av,L,FALSE,40.706152,-73.933147,local,NEITHER
+200,Canarsie,Myrtle - Wyckoff Avs,L,TRUE,40.699814,-73.911586,local,BOTH
+201,Canarsie,Myrtle - Wyckoff Avs,M,TRUE,40.699814,-73.911586,local,BOTH
+202,Canarsie,New Lots Av,L,FALSE,40.658733,-73.899232,local,NEITHER
+203,Canarsie,Sutter Av,L,FALSE,40.669367,-73.901975,local,NEITHER
+204,Canarsie,Wilson Av,L,FALSE,40.688764,-73.904046,local,UPTOWN
+205,Franklin,Franklin Av,C,TRUE,40.680596,-73.955827,local,BOTH
+206,Franklin,Franklin Av,S2,TRUE,40.680596,-73.955827,express,BOTH
+207,Franklin,Park Place,S2,FALSE,40.674772,-73.957624,express,BOTH
+208,Myrtle,Central Av,M,FALSE,40.697857,-73.927397,local,NEITHER
+209,Myrtle,Forest Av,M,FALSE,40.704423,-73.903077,local,NEITHER
+210,Myrtle,Fresh Pond Rd,M,FALSE,40.706186,-73.895877,local,NEITHER
+211,Myrtle,Knickerbocker Av,M,FALSE,40.698664,-73.919711,local,NEITHER
+212,Myrtle,Middle Village - Metropolitan Av,M,FALSE,40.711396,-73.889601,local,BOTH
+213,Myrtle,Seneca Av,M,FALSE,40.702762,-73.90774,local,NEITHER
+214,Nassau,Bowery,J,TRUE,40.72028,-73.993915,local,NEITHER
+215,Nassau,Bowery,Z,TRUE,40.72028,-73.993915,express,NEITHER
+216,Nassau,Broad St,J,TRUE,40.706476,-74.011056,local,NEITHER
+217,Nassau,Broad St,Z,TRUE,40.706476,-74.011056,express,NEITHER
+218,Sea Beach,18th Av,N,FALSE,40.620671,-73.990414,express,NEITHER
+219,Sea Beach,20th Av,N,FALSE,40.61741,-73.985026,express,NEITHER
+220,Sea Beach,86th St,N,FALSE,40.592721,-73.97823,express,NEITHER
+221,Sea Beach,8th Av,N,FALSE,40.635064,-74.011719,express,UPTOWN
+222,Sea Beach,Av U,N,FALSE,40.597473,-73.979137,express,NEITHER
+223,Sea Beach,Bay Parkway,N,FALSE,40.611815,-73.981848,express,NEITHER
+224,Sea Beach,Fort Hamilton Parkway,N,FALSE,40.631386,-74.005351,express,NEITHER
+225,Sea Beach,Kings Highway,N,FALSE,40.603923,-73.980353,express,NEITHER
+226,West End,18th Av,D,FALSE,40.607954,-74.001736,express,NEITHER
+227,West End,20th Av,D,FALSE,40.604556,-73.998168,express,NEITHER
+228,West End,25th Av,D,FALSE,40.597704,-73.986829,express,NEITHER
+229,West End,50th St,D,FALSE,40.63626,-73.994791,express,NEITHER
+230,West End,55th St,D,FALSE,40.631435,-73.995476,express,NEITHER
+231,West End,62nd St,D,TRUE,40.626472,-73.996895,express,BOTH
+232,West End,New Utrecht Av,N,TRUE,40.626472,-73.996895,express,BOTH
+233,West End,71st St,D,FALSE,40.619589,-73.998864,express,NEITHER
+234,West End,79th St,D,FALSE,40.613501,-74.00061,express,NEITHER
+235,West End,9th Av,D,FALSE,40.646292,-73.994324,express,NEITHER
+236,West End,Bay 50th St,D,FALSE,40.588841,-73.983765,express,NEITHER
+237,West End,Bay Parkway,D,FALSE,40.601875,-73.993728,express,BOTH
+238,West End,Fort Hamilton Parkway,D,FALSE,40.640914,-73.994304,express,NEITHER
+239,63rd Street,21st St,F,FALSE,40.754203,-73.942836,express,BOTH
+240,63rd Street,Lexington Av - 63rd St,F,TRUE,40.764627,-73.96611,local,BOTH
+241,63rd Street,Lexington Av - 63rd St,Q,TRUE,40.764627,-73.96611,local,BOTH
+242,63rd Street,Roosevelt Island,F,FALSE,40.759145,-73.95326,express,BOTH
+243,6 Avenue,14th St,F,TRUE,40.738228,-73.996209,local,NEITHER
+244,6 Avenue,6th Av,L,TRUE,40.738228,-73.996209,local,NEITHER
+245,6 Avenue,14th St,M,TRUE,40.738228,-73.996209,local,NEITHER
+246,6 Avenue,14th St,1,TRUE,40.738228,-73.996209,local,NEITHER
+247,6 Avenue,14th St,2,TRUE,40.738228,-73.996209,express,NEITHER
+248,6 Avenue,14th St,3,TRUE,40.738228,-73.996209,express,NEITHER
+249,6 Avenue,23rd St,F,TRUE,40.742878,-73.992821,local,NEITHER
+250,6 Avenue,23rd St,M,TRUE,40.742878,-73.992821,local,NEITHER
+251,6 Avenue,2nd Av,F,FALSE,40.723402,-73.989938,local,NEITHER
+252,6 Avenue,42nd St - Bryant Park,B,TRUE,40.754222,-73.984569,express,NEITHER
+253,6 Avenue,42nd St - Bryant Park,D,TRUE,40.754222,-73.984569,express,NEITHER
+254,6 Avenue,42nd St - Bryant Park,F,TRUE,40.754222,-73.984569,local,NEITHER
+255,6 Avenue,42nd St - Bryant Park,M,TRUE,40.754222,-73.984569,local,NEITHER
+256,6 Avenue,5th Av,7,TRUE,40.754222,-73.984569,express,NEITHER
+257,6 Avenue,47-50th Sts - Rockefeller Center,B,TRUE,40.758663,-73.981329,express,BOTH
+258,6 Avenue,47-50th Sts - Rockefeller Center,D,TRUE,40.758663,-73.981329,express,BOTH
+259,6 Avenue,47-50th Sts - Rockefeller Center,F,TRUE,40.758663,-73.981329,local,BOTH
+260,6 Avenue,47-50th Sts - Rockefeller Center,M,TRUE,40.758663,-73.981329,local,BOTH
+261,6 Avenue,57th St,F,FALSE,40.763972,-73.97745,local,NEITHER
+262,6 Avenue,7th Av,F,TRUE,40.666271,-73.980305,local,NEITHER
+263,6 Avenue,Bergen St,F,TRUE,40.686145,-73.990862,local,NEITHER
+264,6 Avenue,Bergen St,G,TRUE,40.686145,-73.990862,local,NEITHER
+265,6 Avenue,Broadway - Lafayette St,B,TRUE,40.725297,-73.996204,express,BOTH
+266,6 Avenue,Broadway - Lafayette St,D,TRUE,40.725297,-73.996204,express,BOTH
+267,6 Avenue,Broadway - Lafayette St,F,TRUE,40.725297,-73.996204,local,BOTH
+268,6 Avenue,Broadway - Lafayette St,M,TRUE,40.725297,-73.996204,local,BOTH
+269,6 Avenue,Bleecker St,6,TRUE,40.725297,-73.996204,local,BOTH
+270,6 Avenue,Carroll St,F,TRUE,40.680303,-73.995048,local,NEITHER
+271,6 Avenue,Carroll St,G,TRUE,40.680303,-73.995048,local,NEITHER
+272,6 Avenue,Church Av,F,TRUE,40.644041,-73.979678,local,BOTH
+273,6 Avenue,Delancey St,F,TRUE,40.718611,-73.988114,local,NEITHER
+274,6 Avenue,Delancey St,J,TRUE,40.718611,-73.988114,local,NEITHER
+275,6 Avenue,Delancey St,M,TRUE,40.718611,-73.988114,local,NEITHER
+276,6 Avenue,Delancey St,Z,TRUE,40.718611,-73.988114,express,NEITHER
+277,6 Avenue,East Broadway,F,FALSE,40.713715,-73.990173,local,NEITHER
+278,6 Avenue,Fort Hamilton Parkway,F,TRUE,40.650782,-73.975776,local,NEITHER
+279,6 Avenue,Grand St,B,TRUE,40.718267,-73.993753,express,NEITHER
+280,6 Avenue,Grand St,D,TRUE,40.718267,-73.993753,express,NEITHER
+281,6 Avenue,15th St - Prospect Park,F,TRUE,40.660365,-73.979493,local,NEITHER
+282,6 Avenue,Smith - 9th Sts,F,TRUE,40.67358,-73.995959,local,NEITHER
+283,6 Avenue,Smith - 9th Sts,G,TRUE,40.67358,-73.995959,local,NEITHER
+285,6 Avenue,York St,F,FALSE,40.699743,-73.986885,local,NEITHER
+286,8 Avenue,103rd St,B,TRUE,40.796092,-73.961454,local,NEITHER
+287,8 Avenue,103rd St,C,TRUE,40.796092,-73.961454,local,NEITHER
+288,8 Avenue,116th St,B,TRUE,40.805085,-73.954882,local,NEITHER
+289,8 Avenue,116th St,C,TRUE,40.805085,-73.954882,local,NEITHER
+290,8 Avenue,125th St,A,TRUE,40.811109,-73.952343,express,BOTH
+291,8 Avenue,125th St,B,TRUE,40.811109,-73.952343,local,BOTH
+292,8 Avenue,125th St,C,TRUE,40.811109,-73.952343,local,BOTH
+293,8 Avenue,125th St,D,TRUE,40.811109,-73.952343,express,BOTH
+294,8 Avenue,135th St,B,TRUE,40.817894,-73.947649,local,NEITHER
+295,8 Avenue,135th St,C,TRUE,40.817894,-73.947649,local,NEITHER
+296,8 Avenue,145th St,A,TRUE,40.824783,-73.944216,express,NEITHER
+297,8 Avenue,145th St,B,TRUE,40.824783,-73.944216,local,NEITHER
+298,8 Avenue,145th St,C,TRUE,40.824783,-73.944216,local,NEITHER
+299,8 Avenue,145th St,D,TRUE,40.824783,-73.944216,express,NEITHER
+300,8 Avenue,155th St,C,FALSE,40.830518,-73.941514,local,NEITHER
+301,8 Avenue,163rd St - Amsterdam Av,C,FALSE,40.836013,-73.939892,local,NEITHER
+304,8 Avenue,175th St,A,FALSE,40.847391,-73.939704,express,BOTH
+305,8 Avenue,181st St,A,FALSE,40.851695,-73.937969,express,NEITHER
+306,8 Avenue,190th St,A,FALSE,40.859022,-73.93418,express,NEITHER
+307,8 Avenue,23rd St,C,TRUE,40.745906,-73.998041,local,NEITHER
+308,8 Avenue,23rd St,E,TRUE,40.745906,-73.998041,local,NEITHER
+309,8 Avenue,34th St - Penn Station,A,TRUE,40.752287,-73.993391,express,BOTH
+310,8 Avenue,34th St - Penn Station,C,TRUE,40.752287,-73.993391,local,BOTH
+311,8 Avenue,34th St - Penn Station,E,TRUE,40.752287,-73.993391,local,BOTH
+312,8 Avenue,50th St,C,TRUE,40.762456,-73.985984,local,DOWNTOWN
+313,8 Avenue,50th St,E,TRUE,40.762456,-73.985984,local,DOWNTOWN
+314,8 Avenue,59th St - Columbus Circle,A,TRUE,40.768296,-73.981736,express,BOTH
+315,8 Avenue,59th St - Columbus Circle,B,TRUE,40.768296,-73.981736,local,BOTH
+316,8 Avenue,59th St - Columbus Circle,C,TRUE,40.768296,-73.981736,local,BOTH
+317,8 Avenue,59th St - Columbus Circle,D,TRUE,40.768296,-73.981736,express,BOTH
+318,8 Avenue,59th St - Columbus Circle,1,TRUE,40.768296,-73.981736,local,BOTH
+319,8 Avenue,72nd St,B,TRUE,40.775594,-73.97641,local,NEITHER
+320,8 Avenue,72nd St,C,TRUE,40.775594,-73.97641,local,NEITHER
+321,8 Avenue,81st St - Museum of Natural History,B,TRUE,40.781433,-73.972143,local,NEITHER
+322,8 Avenue,81st St - Museum of Natural History,C,TRUE,40.781433,-73.972143,local,NEITHER
+323,8 Avenue,86th St,B,TRUE,40.785868,-73.968916,local,NEITHER
+324,8 Avenue,86th St,C,TRUE,40.785868,-73.968916,local,NEITHER
+325,8 Avenue,96th St,B,TRUE,40.791646,-73.964699,local,NEITHER
+326,8 Avenue,96th St,C,TRUE,40.791646,-73.964699,local,NEITHER
+327,8 Avenue,Canal St,A,TRUE,40.720824,-74.005229,express,NEITHER
+328,8 Avenue,Canal St,C,TRUE,40.720824,-74.005229,local,NEITHER
+329,8 Avenue,Canal St,E,TRUE,40.720824,-74.005229,local,NEITHER
+330,8 Avenue,Cathedral Parkway - 110th St,B,TRUE,40.800605,-73.958158,local,NEITHER
+331,8 Avenue,Cathedral Parkway - 110th St,C,TRUE,40.800605,-73.958158,local,NEITHER
+332,8 Avenue,Chambers St,A,TRUE,40.714111,-74.008585,express,NEITHER
+333,8 Avenue,Chambers St,C,TRUE,40.714111,-74.008585,local,NEITHER
+334,8 Avenue,World Trade Center,E,TRUE,40.714111,-74.008585,local,BOTH
+335,8 Avenue,Park Place,2,TRUE,40.714111,-74.008585,express,NEITHER
+336,8 Avenue,Park Place,3,TRUE,40.714111,-74.008585,express,NEITHER
+337,8 Avenue,Dyckman St,A,FALSE,40.865491,-73.927271,express,NEITHER
+338,8 Avenue,High St,A,TRUE,40.699337,-73.990531,express,NEITHER
+339,8 Avenue,High St,C,TRUE,40.699337,-73.990531,local,NEITHER
+340,8 Avenue,Inwood - 207th St,A,FALSE,40.868072,-73.919899,express,BOTH
+341,8 Avenue,Spring St,C,TRUE,40.726227,-74.003739,local,NEITHER
+342,8 Avenue,Spring St,E,TRUE,40.726227,-74.003739,local,NEITHER
+343,8 Avenue,West 4th St - Washington Square,A,TRUE,40.732338,-74.000495,express,BOTH
+344,8 Avenue,West 4th St - Washington Square,B,TRUE,40.732338,-74.000495,express,BOTH
+345,8 Avenue,West 4th St - Washington Square,C,TRUE,40.732338,-74.000495,local,BOTH
+346,8 Avenue,West 4th St - Washington Square,D,TRUE,40.732338,-74.000495,express,BOTH
+347,8 Avenue,West 4th St - Washington Square,E,TRUE,40.732338,-74.000495,local,BOTH
+348,8 Avenue,West 4th St - Washington Square,F,TRUE,40.732338,-74.000495,local,BOTH
+349,8 Avenue,West 4th St - Washington Square,M,TRUE,40.732338,-74.000495,local,BOTH
+350,Archer Av,Jamaica - Van Wyck,E,FALSE,40.702566,-73.816859,express,BOTH
+351,Archer Av,Jamaica Center - Parsons/Archer,E,TRUE,40.702147,-73.801109,express,BOTH
+352,Archer Av,Jamaica Center - Parsons/Archer,J,TRUE,40.702147,-73.801109,local,BOTH
+353,Archer Av,Jamaica Center - Parsons/Archer,Z,TRUE,40.702147,-73.801109,express,BOTH
+354,Archer Av,Sutphin Blvd - Archer Av - JFK Airport,E,TRUE,40.700486,-73.807969,express,BOTH
+355,Archer Av,Sutphin Blvd - Archer Av - JFK Airport,J,TRUE,40.700486,-73.807969,local,BOTH
+356,Archer Av,Sutphin Blvd - Archer Av - JFK Airport,Z,TRUE,40.700486,-73.807969,express,BOTH
+357,Concourse,155th St,B,TRUE,40.830135,-73.938209,local,NEITHER
+358,Concourse,155th St,D,TRUE,40.830135,-73.938209,express,NEITHER
+359,Concourse,167th St,B,TRUE,40.833769,-73.918432,local,NEITHER
+360,Concourse,167th St,D,TRUE,40.833769,-73.918432,express,NEITHER
+361,Concourse,170th St,B,TRUE,40.839306,-73.9134,local,NEITHER
+362,Concourse,170th St,D,TRUE,40.839306,-73.9134,express,NEITHER
+363,Concourse,174-175th Sts,B,TRUE,40.8459,-73.910136,local,NEITHER
+364,Concourse,174-175th Sts,D,TRUE,40.8459,-73.910136,express,NEITHER
+365,Concourse,182-183rd Sts,B,TRUE,40.856093,-73.900741,local,NEITHER
+366,Concourse,182-183rd Sts,D,TRUE,40.856093,-73.900741,express,NEITHER
+367,Concourse,Bedford Park Blvd,B,TRUE,40.873244,-73.887138,local,NEITHER
+368,Concourse,Bedford Park Blvd,D,TRUE,40.873244,-73.887138,express,NEITHER
+369,Concourse,Fordham Rd,B,TRUE,40.861296,-73.897749,local,NEITHER
+370,Concourse,Fordham Rd,D,TRUE,40.861296,-73.897749,express,NEITHER
+371,Concourse,Kingsbridge Rd,B,TRUE,40.866978,-73.893509,local,BOTH
+372,Concourse,Kingsbridge Rd,D,TRUE,40.866978,-73.893509,express,BOTH
+373,Concourse,Norwood - 205th St,D,FALSE,40.874811,-73.878855,express,NEITHER
+374,Concourse,Tremont Av,B,TRUE,40.85041,-73.905227,local,NEITHER
+375,Concourse,Tremont Av,D,TRUE,40.85041,-73.905227,express,NEITHER
+376,Crosstown,21st St,G,FALSE,40.744065,-73.949724,express,NEITHER
+377,Crosstown,Bedford - Nostrand Avs,G,FALSE,40.689627,-73.953522,express,NEITHER
+378,Crosstown,Broadway,G,FALSE,40.706092,-73.950308,express,NEITHER
+379,Crosstown,Classon Av,G,FALSE,40.688873,-73.96007,express,NEITHER
+380,Crosstown,Clinton - Washington Avs,G,FALSE,40.688089,-73.966839,express,NEITHER
+381,Crosstown,Flushing Av,G,FALSE,40.700377,-73.950234,express,NEITHER
+382,Crosstown,Fulton St,G,FALSE,40.687119,-73.975375,express,NEITHER
+383,Crosstown,Greenpoint Av,G,FALSE,40.731352,-73.954449,express,NEITHER
+384,Crosstown,Myrtle - Willoughby Avs,G,FALSE,40.694568,-73.949046,express,NEITHER
+385,Crosstown,Nassau Av,G,FALSE,40.724635,-73.951277,express,NEITHER
+386,Culver,18th Av,F,FALSE,40.629755,-73.976971,local,NEITHER
+387,Culver,Av I,F,FALSE,40.625322,-73.976127,local,NEITHER
+388,Culver,Av N,F,FALSE,40.61514,-73.974197,local,NEITHER
+389,Culver,Av P,F,FALSE,40.608944,-73.973022,local,NEITHER
+390,Culver,Av U,F,FALSE,40.596063,-73.973357,local,NEITHER
+391,Culver,Av X,F,FALSE,40.58962,-73.97425,local,NEITHER
+392,Culver,Bay Parkway,F,FALSE,40.620769,-73.975264,local,NEITHER
+393,Culver,Ditmas Av,F,FALSE,40.636119,-73.978172,local,NEITHER
+394,Culver,Kings Highway,F,FALSE,40.603217,-73.972361,local,NEITHER
+395,Culver,Neptune Av,F,FALSE,40.581011,-73.974574,local,NEITHER
+396,Fulton,Broadway Junction,A,TRUE,40.678334,-73.905316,express,NEITHER
+397,Fulton,Broadway Junction,C,TRUE,40.678334,-73.905316,local,NEITHER
+398,Fulton,Broadway Junction,L,TRUE,40.678334,-73.905316,local,NEITHER
+399,Fulton,Broadway Junction,J,TRUE,40.678334,-73.905316,local,NEITHER
+400,Fulton,Broadway Junction,Z,TRUE,40.678334,-73.905316,express,NEITHER
+401,Fulton,Clinton - Washington Avs,C,FALSE,40.683263,-73.965838,local,NEITHER
+402,Fulton,Euclid Av,A,TRUE,40.675377,-73.872106,express,BOTH
+403,Fulton,Euclid Av,C,TRUE,40.675377,-73.872106,local,BOTH
+404,Fulton,Hoyt - Schermerhorn Sts,A,TRUE,40.688484,-73.985001,express,NEITHER
+405,Fulton,Hoyt - Schermerhorn Sts,C,TRUE,40.688484,-73.985001,local,NEITHER
+406,Fulton,Hoyt - Schermerhorn Sts,G,TRUE,40.688484,-73.985001,express,NEITHER
+408,Fulton,Kingston - Throop Avs,C,TRUE,40.679921,-73.940858,local,NEITHER
+409,Fulton,Lafayette Av,C,FALSE,40.686113,-73.973946,local,NEITHER
+411,Fulton,Liberty Av,C,TRUE,40.674542,-73.896548,local,NEITHER
+412,Fulton,Nostrand Av,A,TRUE,40.680438,-73.950426,express,NEITHER
+413,Fulton,Nostrand Av,C,TRUE,40.680438,-73.950426,local,NEITHER
+415,Fulton,Ralph Av,C,TRUE,40.678822,-73.920786,local,NEITHER
+417,Fulton,Rockaway Av,C,TRUE,40.67834,-73.911946,local,NEITHER
+419,Fulton,Shepherd Av,C,TRUE,40.67413,-73.88075,local,NEITHER
+420,Fulton,Utica Av,A,TRUE,40.679364,-73.930729,express,BOTH
+421,Fulton,Utica Av,C,TRUE,40.679364,-73.930729,local,BOTH
+422,Liberty,Rockaway Blvd,A1,TRUE,40.680429,-73.843853,local,NEITHER
+423,Fulton,Van Siclen Av,C,TRUE,40.67271,-73.890358,local,NEITHER
+424,Liberty,104th St,A1,FALSE,40.681711,-73.837683,local,NEITHER
+425,Liberty,111th St,A1,FALSE,40.684331,-73.832163,local,NEITHER
+426,Liberty,80th St,A,FALSE,40.679371,-73.858992,express,NEITHER
+427,Liberty,88th St,A,FALSE,40.679843,-73.85147,express,NEITHER
+428,Liberty,Grant Av,A,FALSE,40.677044,-73.86505,express,NEITHER
+429,Liberty,Ozone Park - Lefferts Blvd,A1,FALSE,40.685951,-73.825798,local,BOTH
+430,Liberty,Rockaway Blvd,A,TRUE,40.680429,-73.843853,express,NEITHER
+431,Queens Boulevard,169th St,F,FALSE,40.71047,-73.793604,express,NEITHER
+432,Queens Boulevard,36th St,M,TRUE,40.752039,-73.928781,local,NEITHER
+433,Queens Boulevard,36th St,R,TRUE,40.752039,-73.928781,local,NEITHER
+434,Queens Boulevard,46th St,M,TRUE,40.756312,-73.913333,local,NEITHER
+435,Queens Boulevard,46th St,R,TRUE,40.756312,-73.913333,local,NEITHER
+436,Queens Boulevard,5th Av - 53rd St,E,TRUE,40.760167,-73.975224,local,NEITHER
+437,Queens Boulevard,5th Av - 53rd St,M,TRUE,40.760167,-73.975224,local,NEITHER
+438,Queens Boulevard,63rd Drive - Rego Park,M,TRUE,40.729846,-73.861604,local,NEITHER
+439,Queens Boulevard,63rd Drive - Rego Park,R,TRUE,40.729846,-73.861604,local,NEITHER
+440,Queens Boulevard,65th St,M,TRUE,40.749669,-73.898453,local,NEITHER
+441,Queens Boulevard,65th St,R,TRUE,40.749669,-73.898453,local,NEITHER
+442,Queens Boulevard,67th Av,M,TRUE,40.726523,-73.852719,local,NEITHER
+443,Queens Boulevard,67th Av,R,TRUE,40.726523,-73.852719,local,NEITHER
+444,Queens Boulevard,75th Av,E,TRUE,40.718331,-73.837324,express,NEITHER
+445,Queens Boulevard,75th Av,F,TRUE,40.718331,-73.837324,express,NEITHER
+446,Queens Boulevard,7th Av,B,TRUE,40.762862,-73.981637,express,NEITHER
+447,Queens Boulevard,7th Av,D,TRUE,40.762862,-73.981637,express,NEITHER
+448,Queens Boulevard,7th Av,E,TRUE,40.762862,-73.981637,local,NEITHER
+449,Queens Boulevard,Briarwood - Van Wyck Blvd,F,TRUE,40.709179,-73.820574,express,NEITHER
+450,Queens Boulevard,Elmhurst Av,M,TRUE,40.742454,-73.882017,local,NEITHER
+451,Queens Boulevard,Elmhurst Av,R,TRUE,40.742454,-73.882017,local,NEITHER
+452,Queens Boulevard,Forest Hills - 71st Av,E,TRUE,40.721691,-73.844521,express,BOTH
+453,Queens Boulevard,Forest Hills - 71st Av,F,TRUE,40.721691,-73.844521,express,BOTH
+454,Queens Boulevard,Forest Hills - 71st Av,M,TRUE,40.721691,-73.844521,local,BOTH
+455,Queens Boulevard,Forest Hills - 71st Av,R,TRUE,40.721691,-73.844521,local,BOTH
+456,Queens Boulevard,Grand Av - Newtown,M,TRUE,40.737015,-73.877223,local,NEITHER
+457,Queens Boulevard,Grand Av - Newtown,R,TRUE,40.737015,-73.877223,local,NEITHER
+458,Queens Boulevard,Jackson Heights - Roosevelt Av,E,TRUE,40.746644,-73.891338,express,BOTH
+459,Queens Boulevard,Jackson Heights - Roosevelt Av,F,TRUE,40.746644,-73.891338,express,BOTH
+460,Queens Boulevard,Jackson Heights - Roosevelt Av,M,TRUE,40.746644,-73.891338,local,BOTH
+461,Queens Boulevard,Jackson Heights - Roosevelt Av,R,TRUE,40.746644,-73.891338,local,BOTH
+462,Queens Boulevard,74th St - Broadway,7,TRUE,40.746644,-73.891338,express,BOTH
+463,Queens Boulevard,Jamaica - 179th St,F,FALSE,40.712646,-73.783817,express,BOTH
+464,Queens Boulevard,Kew Gardens - Union Turnpike,E,TRUE,40.714441,-73.831008,express,BOTH
+465,Queens Boulevard,Kew Gardens - Union Turnpike,F,TRUE,40.714441,-73.831008,express,BOTH
+466,Queens Boulevard,Lexington Av - 53rd St,E,TRUE,40.757552,-73.969055,express,BOTH
+467,Queens Boulevard,Lexington Av - 53rd St,M,TRUE,40.757552,-73.969055,local,BOTH
+469,Queens Boulevard,Northern Blvd,M,TRUE,40.752885,-73.906006,local,NEITHER
+470,Queens Boulevard,Northern Blvd,R,TRUE,40.752885,-73.906006,local,NEITHER
+471,Queens Boulevard,Parsons Blvd,F,FALSE,40.707564,-73.803326,express,NEITHER
+472,Queens Boulevard,Queens Plaza,E,TRUE,40.748973,-73.937243,express,BOTH
+473,Queens Boulevard,Queens Plaza,M,TRUE,40.748973,-73.937243,local,BOTH
+474,Queens Boulevard,Queens Plaza,R,TRUE,40.748973,-73.937243,local,BOTH
+475,Queens Boulevard,Steinway St,M,TRUE,40.756879,-73.92074,local,NEITHER
+476,Queens Boulevard,Steinway St,R,TRUE,40.756879,-73.92074,local,NEITHER
+477,Queens Boulevard,Sutphin Blvd,F,FALSE,40.70546,-73.810708,express,NEITHER
+478,Queens Boulevard,Woodhaven Blvd,M,TRUE,40.733106,-73.869229,local,NEITHER
+479,Queens Boulevard,Woodhaven Blvd,R,TRUE,40.733106,-73.869229,local,NEITHER
+480,Rockaway,Aqueduct,A2,TRUE,40.668234,-73.834058,local,BOTH
+481,Rockaway,Aqueduct,A3,TRUE,40.668234,-73.834058,local,BOTH
+484,Rockaway,Beach 105th St,A3,TRUE,40.583209,-73.827559,local,NEITHER
+485,Rockaway,Beach 105th St,S3,TRUE,40.583209,-73.827559,local,NEITHER
+486,Rockaway,Beach 25th St,A2,FALSE,40.600066,-73.761353,local,NEITHER
+487,Rockaway,Beach 36th St,A2,FALSE,40.595398,-73.768175,local,NEITHER
+488,Rockaway,Beach 44th St,A2,FALSE,40.592943,-73.776013,local,NEITHER
+489,Rockaway,Beach 60th St,A2,FALSE,40.592374,-73.788522,local,NEITHER
+490,Rockaway,Beach 67th St,A2,FALSE,40.590927,-73.796924,local,NEITHER
+491,Rockaway,Beach 90th St,A3,TRUE,40.588034,-73.813641,local,NEITHER
+492,Rockaway,Beach 90th St,S3,TRUE,40.588034,-73.813641,local,NEITHER
+493,Rockaway,Beach 98th St,A3,TRUE,40.585307,-73.820558,local,NEITHER
+494,Rockaway,Beach 98th St,S3,TRUE,40.585307,-73.820558,local,NEITHER
+495,Rockaway,Broad Channel,A3,TRUE,40.608382,-73.815925,local,NEITHER
+496,Rockaway,Broad Channel,S3,TRUE,40.608382,-73.815925,local,NEITHER
+497,Rockaway,Far Rockaway - Mott Av,A2,TRUE,40.603995,-73.755405,local,BOTH
+499,Rockaway,Howard Beach - JFK Airport,A2,TRUE,40.660476,-73.830301,local,BOTH
+500,Rockaway,Howard Beach - JFK Airport,A3,TRUE,40.660476,-73.830301,local,BOTH
+501,Rockaway,Rockaway Park - Beach 116th St,A3,TRUE,40.580903,-73.835592,local,BOTH
+502,Rockaway,Rockaway Park - Beach 116th St,S3,TRUE,40.580903,-73.835592,local,BOTH
+503,Broadway-7th Ave,103rd St,1,FALSE,40.799446,-73.968379,local,NEITHER
+504,Broadway-7th Ave,116th St - Columbia University,1,FALSE,40.807722,-73.96411,local,NEITHER
+505,Broadway-7th Ave,125th St,1,FALSE,40.815581,-73.958372,local,NEITHER
+506,Broadway-7th Ave,137th St - City College,1,FALSE,40.822008,-73.953676,local,NEITHER
+507,Broadway-7th Ave,145th St,1,FALSE,40.826551,-73.95036,local,NEITHER
+508,Broadway-7th Ave,157th St,1,FALSE,40.834041,-73.94489,local,NEITHER
+509,Broadway-7th Ave,168th St,A,TRUE,40.840556,-73.940133,express,BOTH
+510,Broadway-7th Ave,168th St,C,TRUE,40.840556,-73.940133,local,BOTH
+511,Broadway-7th Ave,168th St,1,TRUE,40.840556,-73.940133,local,NEITHER
+512,Broadway-7th Ave,181st St,1,FALSE,40.849505,-73.933596,local,NEITHER
+513,Broadway-7th Ave,18th St,1,FALSE,40.74104,-73.997871,local,NEITHER
+514,Broadway-7th Ave,191st St,1,FALSE,40.855225,-73.929412,local,NEITHER
+515,Broadway-7th Ave,207th St,1,FALSE,40.864614,-73.918819,local,NEITHER
+516,Broadway-7th Ave,215th St,1,FALSE,40.869444,-73.915279,local,NEITHER
+517,Broadway-7th Ave,231st St,1,FALSE,40.878856,-73.904834,local,BOTH
+518,Broadway-7th Ave,238th St,1,FALSE,40.884667,-73.90087,local,NEITHER
+519,Broadway-7th Ave,23rd St,1,FALSE,40.744081,-73.995657,local,NEITHER
+520,Broadway-7th Ave,28th St,1,FALSE,40.747215,-73.993365,local,NEITHER
+521,Broadway-7th Ave,34th St - Penn Station,1,TRUE,40.750373,-73.991057,local,BOTH
+522,Broadway-7th Ave,34th St - Penn Station,2,TRUE,40.750373,-73.991057,express,BOTH
+523,Broadway-7th Ave,34th St - Penn Station,3,TRUE,40.750373,-73.991057,express,BOTH
+524,Broadway-7th Ave,50th St,1,FALSE,40.761728,-73.983849,local,NEITHER
+525,Broadway-7th Ave,66th St - Lincoln Center,1,FALSE,40.77344,-73.982209,local,BOTH
+526,Broadway-7th Ave,72nd St,1,TRUE,40.778453,-73.98197,local,BOTH
+527,Broadway-7th Ave,72nd St,2,TRUE,40.778453,-73.98197,express,BOTH
+528,Broadway-7th Ave,72nd St,3,TRUE,40.778453,-73.98197,express,BOTH
+529,Broadway-7th Ave,79th St,1,FALSE,40.783934,-73.979917,local,NEITHER
+530,Broadway-7th Ave,86th St,1,FALSE,40.788644,-73.976218,local,NEITHER
+531,Broadway-7th Ave,96th St,1,TRUE,40.793919,-73.972323,local,BOTH
+532,Broadway-7th Ave,96th St,2,TRUE,40.793919,-73.972323,express,BOTH
+533,Broadway-7th Ave,96th St,3,TRUE,40.793919,-73.972323,express,BOTH
+534,Broadway-7th Ave,Canal St,1,FALSE,40.722854,-74.006277,local,NEITHER
+535,Broadway-7th Ave,Cathedral Parkway - 110th St,1,FALSE,40.803967,-73.966847,local,NEITHER
+536,Broadway-7th Ave,Chambers St,1,TRUE,40.715478,-74.009266,local,BOTH
+537,Broadway-7th Ave,Chambers St,2,TRUE,40.715478,-74.009266,express,BOTH
+538,Broadway-7th Ave,Chambers St,3,TRUE,40.715478,-74.009266,express,BOTH
+539,Broadway-7th Ave,Christopher St,1,FALSE,40.733422,-74.002906,local,NEITHER
+540,Broadway-7th Ave,WTC - Cortlandt,1,FALSE,40.712188,-74.012188,local,BOTH
+541,Broadway-7th Ave,Dyckman St,1,FALSE,40.860531,-73.925536,local,DOWNTOWN
+542,Broadway-7th Ave,Franklin St,1,FALSE,40.719318,-74.006886,local,NEITHER
+543,Broadway-7th Ave,Houston St,1,FALSE,40.728251,-74.005367,local,NEITHER
+544,Broadway-7th Ave,Marble Hill - 225th St,1,FALSE,40.874561,-73.909831,local,NEITHER
+545,Broadway-7th Ave,Rector St,1,FALSE,40.707513,-74.013783,local,NEITHER
+546,Broadway-7th Ave,Van Cortlandt Park - 242nd St,1,FALSE,40.889248,-73.898583,local,NEITHER
+547,Clark,Court St,R,TRUE,40.693219,-73.989998,local,NEITHER
+548,Clark,Borough Hall,2,TRUE,40.693219,-73.989998,local,BOTH
+549,Clark,Borough Hall,3,TRUE,40.693219,-73.989998,local,BOTH
+550,Clark,Borough Hall,4,TRUE,40.693219,-73.989998,express,UPTOWN
+551,Clark,Borough Hall,5,TRUE,40.693219,-73.989998,express,UPTOWN
+552,Clark,Clark St,2,TRUE,40.697466,-73.993086,local,NEITHER
+553,Clark,Clark St,3,TRUE,40.697466,-73.993086,local,NEITHER
+554,Clark,Fulton St,A,TRUE,40.709416,-74.006571,express,BOTH
+555,Clark,Fulton St,C,TRUE,40.709416,-74.006571,local,BOTH
+556,Clark,Fulton St,J,TRUE,40.709416,-74.006571,local,BOTH
+557,Clark,Fulton St,Z,TRUE,40.709416,-74.006571,express,BOTH
+558,Clark,Fulton St,2,TRUE,40.709416,-74.006571,express,BOTH
+559,Clark,Fulton St,3,TRUE,40.709416,-74.006571,express,BOTH
+560,Clark,Fulton St,4,TRUE,40.709416,-74.006571,express,BOTH
+561,Clark,Fulton St,5,TRUE,40.709416,-74.006571,express,BOTH
+562,Clark,Wall St,2,TRUE,40.706821,-74.0091,express,NEITHER
+563,Clark,Wall St,3,TRUE,40.706821,-74.0091,express,NEITHER
+564,Dyre Av,Baychester Av,5,FALSE,40.878663,-73.838591,local,NEITHER
+565,Dyre Av,Eastchester - Dyre Av,5,FALSE,40.8883,-73.830834,local,NEITHER
+566,Dyre Av,Gun Hill Rd,5,FALSE,40.869526,-73.846384,local,BOTH
+567,Dyre Av,Morris Park,5,FALSE,40.854364,-73.860495,local,NEITHER
+568,Dyre Av,Pelham Parkway,5,FALSE,40.858985,-73.855359,local,BOTH
+569,Eastern Parkway,Bergen St,2,TRUE,40.680829,-73.975098,local,NEITHER
+570,Eastern Parkway,Bergen St,3,TRUE,40.680829,-73.975098,local,NEITHER
+571,Eastern Parkway,Eastern Parkway - Brooklyn Museum,2,TRUE,40.671987,-73.964375,local,NEITHER
+572,Eastern Parkway,Eastern Parkway - Brooklyn Museum,3,TRUE,40.671987,-73.964375,local,NEITHER
+573,Eastern Parkway,Botanic Garden,S2,TRUE,40.670682,-73.958131,express,NEITHER
+574,Eastern Parkway,Franklin Av,2,TRUE,40.670682,-73.958131,local,NEITHER
+575,Eastern Parkway,Franklin Av,3,TRUE,40.670682,-73.958131,local,NEITHER
+576,Eastern Parkway,Franklin Av,4,TRUE,40.670682,-73.958131,express,NEITHER
+577,Eastern Parkway,Franklin Av,5,TRUE,40.670682,-73.958131,express,NEITHER
+578,Eastern Parkway,Grand Army Plaza,2,TRUE,40.675235,-73.971046,local,NEITHER
+579,Eastern Parkway,Grand Army Plaza,3,TRUE,40.675235,-73.971046,local,NEITHER
+580,Eastern Parkway,Hoyt St,2,TRUE,40.690545,-73.985065,local,NEITHER
+581,Eastern Parkway,Hoyt St,3,TRUE,40.690545,-73.985065,local,NEITHER
+582,Eastern Parkway,Kingston Av,3,FALSE,40.669399,-73.942161,local,NEITHER
+583,Eastern Parkway,Nevins St,2,TRUE,40.688246,-73.980492,local,NEITHER
+584,Eastern Parkway,Nevins St,3,TRUE,40.688246,-73.980492,local,NEITHER
+585,Eastern Parkway,Nevins St,4,TRUE,40.688246,-73.980492,express,NEITHER
+586,Eastern Parkway,Nevins St,5,TRUE,40.688246,-73.980492,express,NEITHER
+587,Eastern Parkway,Nostrand Av,3,FALSE,40.669847,-73.950466,local,NEITHER
+588,Eastern Parkway,Crown Heights - Utica Av,3,TRUE,40.668897,-73.932942,local,BOTH
+589,Eastern Parkway,Crown Heights - Utica Av,4,TRUE,40.668897,-73.932942,express,BOTH
+590,Flushing,103rd St,7,FALSE,40.749865,-73.8627,local,NEITHER
+591,Flushing,111th St,7,FALSE,40.75173,-73.855334,local,NEITHER
+592,Flushing,34th St - Hudson Yards,7,FALSE,40.755882,-74.00191,local,BOTH
+593,Flushing,Court Square - 23 St,E,TRUE,40.747023,-73.945264,express,NEITHER
+594,Flushing,Court Square - 23 St,G,TRUE,40.747023,-73.945264,express,NEITHER
+595,Flushing,Court Square - 23 St,M,TRUE,40.747023,-73.945264,local,NEITHER
+596,Flushing,Court Square - 23 St,7,TRUE,40.747023,-73.945264,local,BOTH
+597,Flushing,82nd St - Jackson Heights,7,FALSE,40.747659,-73.883697,local,NEITHER
+598,Flushing,90th St Elmhurst,7,FALSE,40.748408,-73.876613,local,NEITHER
+599,Flushing,46th St - Bliss St,7,FALSE,40.743132,-73.918435,local,NEITHER
+600,Flushing,69th St - Fisk Av,7,FALSE,40.746325,-73.896403,local,NEITHER
+601,Flushing,Flushing - Main St,7,FALSE,40.7596,-73.83003,local,BOTH
+602,Flushing,Grand Central - 42nd St,4,TRUE,40.751431,-73.976041,express,BOTH
+603,Flushing,Grand Central - 42nd St,5,TRUE,40.751431,-73.976041,express,BOTH
+604,Flushing,Grand Central - 42nd St,6,TRUE,40.751431,-73.976041,local,BOTH
+605,Flushing,Grand Central - 42nd St,7,TRUE,40.751431,-73.976041,local,BOTH
+606,Flushing,Grand Central - 42nd St,S1,TRUE,40.751431,-73.976041,express,NEITHER
+607,Flushing,Hunters Point Av,7,FALSE,40.742216,-73.948916,local,NEITHER
+608,Flushing,Junction Blvd,7,FALSE,40.749145,-73.869527,local,BOTH
+609,Flushing,52nd St - Lincoln Av,7,FALSE,40.744149,-73.912549,local,NEITHER
+610,Flushing,40th St - Lowery St,7,FALSE,40.743781,-73.924016,local,NEITHER
+611,Flushing,Mets - Willets Point,7,FALSE,40.754622,-73.845625,local,NEITHER
+612,Flushing,Queensboro Plaza,N,TRUE,40.750582,-73.940202,express,NEITHER
+613,Flushing,Queensboro Plaza,W,TRUE,40.750582,-73.940202,local,NEITHER
+614,Flushing,Queensboro Plaza,7,TRUE,40.750582,-73.940202,local,NEITHER
+615,Flushing,33rd St - Rawson St,7,FALSE,40.744587,-73.930997,local,NEITHER
+616,Flushing,Vernon Blvd - Jackson Av,7,FALSE,40.742626,-73.953581,local,NEITHER
+617,Flushing,61st St - Woodside,7,FALSE,40.74563,-73.902984,local,BOTH
+618,Jerome,138th St,4,TRUE,40.813224,-73.929849,local,NEITHER
+619,Jerome,138th St,5,TRUE,40.813224,-73.929849,local,NEITHER
+620,Jerome,149th St - Grand Concourse,2,TRUE,40.818375,-73.927351,local,NEITHER
+621,Jerome,149th St - Grand Concourse,4,TRUE,40.818375,-73.927351,local,NEITHER
+622,Jerome,149th St - Grand Concourse,5,TRUE,40.818375,-73.927351,local,NEITHER
+623,Jerome,167th St,4,FALSE,40.835537,-73.9214,local,NEITHER
+624,Jerome,170th St,4,FALSE,40.840075,-73.917791,local,NEITHER
+625,Jerome,176th St,4,FALSE,40.84848,-73.911794,local,NEITHER
+626,Jerome,183rd St,4,FALSE,40.858407,-73.903879,local,NEITHER
+627,Jerome,Bedford Park Blvd - Lehman College,4,FALSE,40.873412,-73.890064,local,NEITHER
+628,Jerome,Burnside Av,4,FALSE,40.853453,-73.907684,local,NEITHER
+629,Jerome,Fordham Rd,4,FALSE,40.862803,-73.901034,local,BOTH
+630,Jerome,Kingsbridge Rd,4,FALSE,40.86776,-73.897174,local,NEITHER
+631,Jerome,Mosholu Parkway,4,FALSE,40.87975,-73.884655,local,NEITHER
+632,Jerome,Mt Eden Av,4,FALSE,40.844434,-73.914685,local,NEITHER
+633,Jerome,Woodlawn,4,FALSE,40.886037,-73.878751,local,NEITHER
+634,Jerome,161st St - Yankee Stadium,B,TRUE,40.827994,-73.925831,local,BOTH
+635,Jerome,161st St - Yankee Stadium,D,TRUE,40.827994,-73.925831,express,BOTH
+636,Jerome,161st St - Yankee Stadium,4,TRUE,40.827994,-73.925831,express,BOTH
+637,Lenox,Central Park North (110 St),2,TRUE,40.799075,-73.951822,express,NEITHER
+638,Lenox,Central Park North (110 St),3,TRUE,40.799075,-73.951822,express,NEITHER
+639,Lenox,116th St,2,TRUE,40.802098,-73.949625,express,NEITHER
+640,Lenox,116th St,3,TRUE,40.802098,-73.949625,express,NEITHER
+641,Lenox,125th St,2,TRUE,40.807754,-73.945495,express,NEITHER
+642,Lenox,125th St,3,TRUE,40.807754,-73.945495,express,NEITHER
+643,Lenox,135th St,2,TRUE,40.814229,-73.94077,express,BOTH
+644,Lenox,135th St,3,TRUE,40.814229,-73.94077,express,BOTH
+645,Lenox,145th St,3,FALSE,40.820421,-73.936245,express,NEITHER
+646,Lenox,Harlem - 148th St,3,FALSE,40.82388,-73.93647,express,NEITHER
+647,Lexington,103rd St,6,FALSE,40.7906,-73.947478,local,NEITHER
+648,Lexington,110th St,6,FALSE,40.79502,-73.94425,local,NEITHER
+649,Lexington,116th St,6,FALSE,40.798629,-73.941617,local,NEITHER
+650,Lexington,125th St,4,TRUE,40.804138,-73.937594,express,BOTH
+651,Lexington,125th St,5,TRUE,40.804138,-73.937594,express,BOTH
+652,Lexington,125th St,6,TRUE,40.804138,-73.937594,local,BOTH
+653,Lexington,23rd St,6,FALSE,40.739864,-73.986599,local,BOTH
+654,Lexington,28th St,6,FALSE,40.74307,-73.984264,local,DOWNTOWN
+655,Lexington,33rd St,6,FALSE,40.746081,-73.982076,local,NEITHER
+658,Lexington,51st St,6,TRUE,40.757107,-73.97192,local,BOTH
+659,Lexington,68th St - Hunter College,6,FALSE,40.768141,-73.96387,local,NEITHER
+660,Lexington,77th St,6,FALSE,40.77362,-73.959874,local,NEITHER
+661,Lexington,86th St,4,TRUE,40.779492,-73.955589,express,NEITHER
+662,Lexington,86th St,5,TRUE,40.779492,-73.955589,express,NEITHER
+663,Lexington,86th St,6,TRUE,40.779492,-73.955589,local,UPTOWN
+664,Lexington,96th St,6,FALSE,40.785672,-73.95107,local,NEITHER
+665,Lexington,Astor Place,6,FALSE,40.730054,-73.99107,local,NEITHER
+666,Lexington,Bowling Green,4,TRUE,40.704817,-74.014065,express,BOTH
+667,Lexington,Bowling Green,5,TRUE,40.704817,-74.014065,express,BOTH
+668,Lexington,Chambers St,J,TRUE,40.713065,-74.004131,local,NEITHER
+669,Lexington,Chambers St,Z,TRUE,40.713065,-74.004131,express,NEITHER
+670,Lexington,Brooklyn Bridge - City Hall,4,TRUE,40.713065,-74.004131,express,BOTH
+671,Lexington,Brooklyn Bridge - City Hall,5,TRUE,40.713065,-74.004131,express,BOTH
+672,Lexington,Brooklyn Bridge - City Hall,6,TRUE,40.713065,-74.004131,local,BOTH
+673,Lexington,Spring St,6,FALSE,40.722301,-73.997141,local,NEITHER
+674,Lexington,Wall St,4,TRUE,40.707557,-74.011862,express,NEITHER
+675,Lexington,Wall St,5,TRUE,40.707557,-74.011862,express,NEITHER
+676,New Lots,Junius St,3,FALSE,40.663515,-73.902447,local,NEITHER
+677,New Lots,New Lots Av,3,FALSE,40.666235,-73.884079,local,NEITHER
+678,New Lots,Pennsylvania Av,3,FALSE,40.664635,-73.894895,local,NEITHER
+679,New Lots,Rockaway Av,3,FALSE,40.662549,-73.908946,local,NEITHER
+680,New Lots,Saratoga Av,3,FALSE,40.661453,-73.916327,local,NEITHER
+681,New Lots,Sutter Av,3,FALSE,40.664717,-73.92261,local,NEITHER
+682,New Lots,Van Siclen Av,3,FALSE,40.665449,-73.889395,local,NEITHER
+683,Nostrand,Beverly Rd,2,TRUE,40.645098,-73.948959,local,NEITHER
+684,Nostrand,Beverly Rd,5,TRUE,40.645098,-73.948959,local,NEITHER
+685,Nostrand,Church Av,2,TRUE,40.650843,-73.949575,local,BOTH
+686,Nostrand,Church Av,5,TRUE,40.650843,-73.949575,local,BOTH
+687,Nostrand,Flatbush Av - Brooklyn College,2,TRUE,40.632836,-73.947642,local,BOTH
+688,Nostrand,Flatbush Av - Brooklyn College,5,TRUE,40.632836,-73.947642,local,BOTH
+689,Nostrand,Newkirk Av,2,TRUE,40.639967,-73.948411,local,NEITHER
+690,Nostrand,Newkirk Av,5,TRUE,40.639967,-73.948411,local,NEITHER
+691,Nostrand,President St,2,TRUE,40.667883,-73.950683,local,NEITHER
+692,Nostrand,President St,5,TRUE,40.667883,-73.950683,local,NEITHER
+693,Nostrand,Sterling St,2,TRUE,40.662742,-73.95085,local,NEITHER
+694,Nostrand,Sterling St,5,TRUE,40.662742,-73.95085,local,NEITHER
+695,Nostrand,Winthrop St,2,TRUE,40.656652,-73.9502,local,NEITHER
+696,Nostrand,Winthrop St,5,TRUE,40.656652,-73.9502,local,NEITHER
+697,Pelham,3rd Ave - 138th St,6,FALSE,40.810476,-73.926138,local,NEITHER
+698,Pelham,Brook Av,6,FALSE,40.807566,-73.91924,local,NEITHER
+699,Pelham,Buhre Av,6,FALSE,40.84681,-73.832569,local,NEITHER
+700,Pelham,Castle Hill Av,6,FALSE,40.834255,-73.851222,local,NEITHER
+701,Pelham,Cypress Av,6,FALSE,40.805368,-73.914042,local,NEITHER
+702,Pelham,E 143rd St - St Mary's St,6,FALSE,40.808719,-73.907657,local,NEITHER
+703,Pelham,E 149th St,6,FALSE,40.812118,-73.904098,local,NEITHER
+704,Pelham,Elder Av,6,FALSE,40.828584,-73.879159,local,NEITHER
+705,Pelham,Hunts Point Av,6,FALSE,40.820948,-73.890549,local,BOTH
+706,Pelham,Longwood Av,6,FALSE,40.816104,-73.896435,local,NEITHER
+707,Pelham,Middletown Rd,6,FALSE,40.843863,-73.836322,local,NEITHER
+708,Pelham,Morrison Av - Soundview Av,6,FALSE,40.829521,-73.874516,local,NEITHER
+709,Pelham,Parkchester,6,FALSE,40.833226,-73.860816,local,NEITHER
+710,Pelham,Pelham Bay Park,6,FALSE,40.852462,-73.828121,local,BOTH
+711,Pelham,St Lawrence Av,6,FALSE,40.831509,-73.867618,local,NEITHER
+712,Pelham,Westchester Square - East Tremont Av,6,FALSE,40.839892,-73.842952,local,NEITHER
+713,Pelham,Whitlock Av,6,FALSE,40.826525,-73.886283,local,NEITHER
+714,Pelham,Zerega Av,6,FALSE,40.836488,-73.847036,local,NEITHER
+715,White Plains Road,3rd Av - 149th St,2,TRUE,40.816109,-73.917757,local,BOTH
+716,White Plains Road,3rd Av - 149th St,5,TRUE,40.816109,-73.917757,local,BOTH
+717,White Plains Road,174th St,2,TRUE,40.837288,-73.887734,local,NEITHER
+718,White Plains Road,174th St,5,TRUE,40.837288,-73.887734,local,NEITHER
+719,White Plains Road,219th St,2,TRUE,40.883895,-73.862633,local,NEITHER
+721,White Plains Road,225th St,2,TRUE,40.888022,-73.860341,local,NEITHER
+723,White Plains Road,233rd St,2,TRUE,40.893193,-73.857473,local,BOTH
+725,White Plains Road,Nereid Av,2,TRUE,40.898379,-73.854376,local,NEITHER
+727,White Plains Road,Allerton Av,2,TRUE,40.865462,-73.867352,local,NEITHER
+729,White Plains Road,Bronx Park East,2,TRUE,40.848828,-73.868457,local,NEITHER
+731,White Plains Road,Burke Av,2,TRUE,40.871356,-73.867164,local,NEITHER
+733,White Plains Road,East 180th St,2,TRUE,40.841894,-73.873488,local,BOTH
+734,White Plains Road,East 180th St,5,TRUE,40.841894,-73.873488,local,BOTH
+735,White Plains Road,West Farms Square - East Tremont Av,2,TRUE,40.840295,-73.880049,local,NEITHER
+736,White Plains Road,West Farms Square - East Tremont Av,5,TRUE,40.840295,-73.880049,local,NEITHER
+737,White Plains Road,Freeman St,2,TRUE,40.829993,-73.891865,local,NEITHER
+738,White Plains Road,Freeman St,5,TRUE,40.829993,-73.891865,local,NEITHER
+739,White Plains Road,Gun Hill Rd,2,TRUE,40.87785,-73.866256,local,BOTH
+741,White Plains Road,Intervale Av,2,TRUE,40.822181,-73.896736,local,NEITHER
+742,White Plains Road,Intervale Av,5,TRUE,40.822181,-73.896736,local,NEITHER
+743,White Plains Road,Jackson Av,2,TRUE,40.81649,-73.907807,local,NEITHER
+744,White Plains Road,Jackson Av,5,TRUE,40.81649,-73.907807,local,NEITHER
+745,White Plains Road,Pelham Parkway,2,TRUE,40.857192,-73.867615,local,BOTH
+746,Liberty,Rockaway Blvd,A3,TRUE,40.680429,-73.843853,local,NEITHER
+747,White Plains Road,Prospect Av,2,TRUE,40.819585,-73.90177,local,NEITHER
+748,White Plains Road,Prospect Av,5,TRUE,40.819585,-73.90177,local,NEITHER
+749,White Plains Road,Simpson St,2,TRUE,40.824073,-73.893064,local,BOTH
+750,White Plains Road,Simpson St,5,TRUE,40.824073,-73.893064,local,BOTH
+751,White Plains Road,Wakefield - 241st St,2,TRUE,40.903125,-73.85062,local,NEITHER
+752,Liberty,Rockaway Blvd,A2,TRUE,40.680429,-73.843853,local,NEITHER
+753,2 Avenue,72nd St,Q,TRUE,40.768878,-73.957563,express,BOTH
+754,2 Avenue,86th St,Q,TRUE,40.777989,-73.951589,express,BOTH
+755,2 Avenue,96th St,Q,TRUE,40.783692,-73.947658,express,BOTH
+756,Broadway Jamaica,Alabama Av,Z,TRUE,40.676992,-73.898654,express,NEITHER
+757,Broadway,City Hall,W,TRUE,40.713282,-74.006978,local,NEITHER
+758,Queens Boulevard,Briarwood - Van Wyck Blvd,E,TRUE,40.709179,-73.820574,express,NEITHER
+759,Broadway Jamaica,Lorimer St,J,TRUE,40.703957,-73.947374,local,NEITHER
+760,Broadway Jamaica,Lorimer St,M,TRUE,40.703957,-73.947374,local,NEITHER
+761,Crosstown,Church Av,G,TRUE,40.644041,-73.979678,local,BOTH
+762,Crosstown,Fort Hamilton Parkway,G,TRUE,40.650782,-73.975776,local,NEITHER
+763,Crosstown,15th St - Prospect Park,G,TRUE,40.660365,-73.979493,local,NEITHER
+764,6 Avenue,7th Av,G,TRUE,40.666271,-73.980305,local,NEITHER
