@@ -164,6 +164,8 @@ def route(start, end, mta, current_state):
 
     #You should never get here
     print("Impossible or Something Broke...")
+    print (start)
+    print (end)
     return None
 
 #def route(start, end):
