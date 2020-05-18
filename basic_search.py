@@ -1,3 +1,9 @@
+# Team Wish Upon A*
+# Samantha Ngo, Daniel Rozenzaft, Anton Goretsky
+# CSCI 35000 - Artificial Intelligence
+# AI MTA Trip Planner: Main A* Algorithm and Driver File
+# 2020-05-18
+
 from queue import PriorityQueue
 #from collections import deque
 from subway_system import Subway_System

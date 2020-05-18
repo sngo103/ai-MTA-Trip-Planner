@@ -1,3 +1,9 @@
+# Team Wish Upon A*
+# Samantha Ngo, Daniel Rozenzaft, Anton Goretsky
+# CSCI 35000 - Artificial Intelligence
+# AI MTA Trip Planner: API Functions
+# 2020-05-18
+
 # This file contains functions for the following APIs:
 # - Google Maps: https://googlemaps.github.io/google-maps-services-python/docs/index.html#
 
@@ -35,14 +41,14 @@ gmaps = googlemaps.Client(key=api_key)
 # print("DISTANCE MATRIX API ==========================================================================================================================")
 # DISTANCE MATRIX: Gets travel distance and time for a matrix of origins and destinations.
 # - Can't specify both arrival_time and departure_time - must pick one
-param_origins = ["Coney Island, Brooklyn, NY"]
-param_dests = ["Atlantic Terminal, Brooklyn, NY"]
-param_mode = "transit"
-param_transit_mode = "subway"
-param_depart_time = datetime(year=2020, month=5, day=5, hour=10, minute=0, second=0)
-param_arrive_time = datetime(year=2020, month=5, day=5, hour=10, minute=25, second=0)
-distance_test = gmaps.distance_matrix(origins=param_origins, destinations=param_dests, mode=param_mode,
-                                     transit_mode=param_transit_mode, departure_time=param_depart_time)
+# param_origins = ["Coney Island, Brooklyn, NY"]
+# param_dests = ["Atlantic Terminal, Brooklyn, NY"]
+# param_mode = "transit"
+# param_transit_mode = "subway"
+# param_depart_time = datetime(year=2020, month=5, day=5, hour=10, minute=0, second=0)
+# param_arrive_time = datetime(year=2020, month=5, day=5, hour=10, minute=25, second=0)
+# distance_test = gmaps.distance_matrix(origins=param_origins, destinations=param_dests, mode=param_mode,
+#                                      transit_mode=param_transit_mode, departure_time=param_depart_time)
 # print("Distance from", param_origins, "to", param_dests, "leaving at", str(param_depart_time))
 # print(distance_test)
 # print()
