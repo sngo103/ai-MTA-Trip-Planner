@@ -4,6 +4,43 @@
 
 For our current plans, issues, and features, please see notes.txt
 
+Note: All three of us have been working together via Microsoft LiveShare.
+We often host on Daniel's PC, so most commits are in his name.
+
+NEXT FIXES:
+-(Manually) fill in unlisted latitude and longitude values in stop_directory.csv
+-General code cleanup in subway_system.py and basic_search.py
+-Apply current_state structure?
+-Route is sometimes not picking the shortest path
+    -Needs confirmation
+
+ISSUE:
+-Import loops resulting from current_state structure
+    -current_state is not being utilized at the moment
+
+NEXT STEPS:
+- Have algorithm better detect which train to start/end with if the user inputs stops with many available trains
+    -Currently randomized
+- ensure that the user does not need to enter the exact name of desired stops
+    -there is presently no way to distinguish between stops with the same station name
+        -ex: "7th Av" is a stop in Brooklyn on the F/G, a different Brooklyn stop on the B/Q, and a Manhattan stop on the B/D/E
+        -the current method of relating user-inputted station names to stopIDs (mta.findStop) cannot distinguish between these different stations
+    -current solution: allowing keywords (algorithm accepts substrings of station names)
+    -potential improvement: use a drop-down GUI?
+
+
+Things Completed:
+
+-Much improved A* search, supporting transfers and routes in both directions
+-Heuristic that takes into account latitude/longitude-based distance to the end stop, number of transfers made, and distance to the end stop (now including transfers!)
+-Four-borough data set (though a few latitude and longitude values need to be inputted)
+-Standardized station names in stop_directory (same types of dashes are used; "th," "rd" or "nd" are inputted for all numbered station names)
+-Continuing to fix issues related to null pointers in data files
+-Resolved issue in Stop class __eq__ method
+-Smarter, heuristic-based train selection for starting stations with multiple line options
+-Heuristic takes into account total stops to destination, including transfers
+-Randomly chosen starting and ending stations when there are multiple options that match user inputs
+
 Samantha Ngo | 23765404
 CSCI 350
 Assignment 3
