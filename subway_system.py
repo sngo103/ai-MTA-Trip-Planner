@@ -11,8 +11,7 @@ import googlemaps
 import api
 from datetime import datetime
 
-# Subway system and stop class
-
+# Stop Class, a.k.a. the Node
 class Stop():
     # Variables
     stopID = -1
@@ -144,17 +143,16 @@ class Stop():
     def __hash__(self):
         return hash(str(self))
 
-# ================================================================================
-
+# =========================================================================================================================================================
+# Initialization Data
 # Stop Directory: connects line names to route details
 directory_data = open('stop_directory.csv','r').read().split('\n')
-
 # Transfers Directory: connections stopIDs to available transfers at the same location
 transfers_data = open('stop_transfers.csv', 'r').read().split('\n')
-
 #Stop Order Directory: connects line names to stops they visit
 stop_order_data = open('stop_order.csv', 'r').read().split('\n')
 
+# Subway System Class
 class Subway_System():
     def __init__(self, directory, transfers, train_lines):
         self.transfers = self.setupTransfers(transfers) # Dictionary: key stopID -> value list of transferable stops
