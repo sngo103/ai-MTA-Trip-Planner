@@ -106,11 +106,12 @@ def directions(origin, destination, mode="transit", depart_time=datetime.now(), 
             depart_stop = train['departure_stop']['name']
             arrive_stop = train['arrival_stop']['name']
             entry = "STEP " + str(macroStep) + ": Take " + train_direction + " bound " + train_line + " train " + stops + " stops from " + depart_stop + " to " + arrive_stop
-        # Else, throw an error:
+        # Else, return an error message:
         else:
             return ["Not processing other modes of travel right now."]
     return retList
 
+# Testing:
 # param_origin = "Coney Island, Brooklyn, NY" # Can be address or coordinates
 # param_waypoints = []
 # param_dest = "Atlantic Terminal, Brooklyn, NY"
