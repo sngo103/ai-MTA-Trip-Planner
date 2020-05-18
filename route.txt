@@ -1,20 +1,23 @@
 
 
 
-Start at: Ocean Parkway (Q)
+Start at: 42nd St - Bryant Park (B)
 
 
 Intermediate Stops:
 
-Q, Brighton Beach, 0, 262.50219669151903
-B, Brighton Beach, 1, 202.50219669151903
-B, Sheepshead Bay, 1, 182.64864935922753
-B, Kings Highway, 1, 162.23776958790197
-B, Newkirk Plaza, 1, 142.12134491197057
-B, Church Av, 1, 122.18472408416716
-B, Prospect Park, 1, 102.32189803569149
-B, 7th Av, 1, 82.12084814943877
-B, Atlantic Av - Barclays Center, 1, -99999938.03112079
+B, 34th St - Herald Square, 0, 238.90217458318713
+B, West 4th St - Washington Square, 0, 219.41685855657613
+B, Broadway - Lafayette St, 0, 199.15535574612244
+B, Grand St, 0, 179.05708338008102
+B, DeKalb Av, 0, 158.84347386165996
+B, Atlantic Av - Barclays Center, 0, 138.8200772692946
+B, 7th Av, 0, 118.7843266758787
+B, Prospect Park, 0, 98.80431488297344
+B, Church Av, 0, 78.78763211860405
+B, Newkirk Plaza, 0, 58.78179278930143
+B, Kings Highway, 0, 38.78200837804026
+B, Sheepshead Bay, 0, -99999981.21821716
 
 
-Arrive at: Atlantic Av - Barclays Center (B)
+Arrive at: Sheepshead Bay (B)

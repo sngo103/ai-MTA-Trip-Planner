@@ -199,7 +199,6 @@ class Subway_System():
             data = line.split(',')
             train = data[0]
             order = data[1:]
-            print(order)
             order = list(map(lambda x: self.directory[x], order))
             system_dict[train] = order
 
