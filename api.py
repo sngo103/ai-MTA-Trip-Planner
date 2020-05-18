@@ -4,7 +4,7 @@
 # AI MTA Trip Planner: API Functions
 # 2020-05-18
 
-# This file contains functions for the following APIs:
+# Google API Python Library Reference:
 # - Google Maps: https://googlemaps.github.io/google-maps-services-python/docs/index.html#
 
 import sys
@@ -12,6 +12,7 @@ import json
 import googlemaps
 from datetime import datetime
 
+# Read in API Key
 try:
     file = open("api_key.txt")
     api_key = file.readline()
@@ -20,7 +21,7 @@ except:
     sys.exit("No api_key.txt found.")
 gmaps = googlemaps.Client(key=api_key)
 
-# Sample Code ==================================================================
+# Sample Code Usage ==================================================================
 # # Geocoding an address
 # geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
 # #print("GEOCODE RESULT:", geocode_result)
@@ -38,7 +39,7 @@ gmaps = googlemaps.Client(key=api_key)
 # #print("Directions RESULT:", directions_result)
 # ==============================================================================
 
-# print("DISTANCE MATRIX API ==========================================================================================================================")
+# DISTANCE MATRIX API ==========================================================================================================================")
 # DISTANCE MATRIX: Gets travel distance and time for a matrix of origins and destinations.
 # - Can't specify both arrival_time and departure_time - must pick one
 # param_origins = ["Coney Island, Brooklyn, NY"]
@@ -53,8 +54,8 @@ gmaps = googlemaps.Client(key=api_key)
 # print(distance_test)
 # print()
 
-# print("DIRECTIONS API ===============================================================================================================================")
-# DIRECTIONS: Gets travel directions
+# DIRECTIONS API ===============================================================================================================================")
+# DIRECTIONS: Gets travel directions using transit or walking from Google
 # - Can't specify both arrival_time and departure_time - must pick one
 # Parameters:
 # - origin (string address or list[lat, long]) – 1 ONLY - The address or latitude/longitude value from which you wish to calculate directions.
@@ -66,7 +67,9 @@ gmaps = googlemaps.Client(key=api_key)
 # - transit_mode (string or list of strings) – Specifies one or more preferred modes: “bus”, “subway”, “train”, “tram”, “rail”=[“train”, “tram”, “subway”]
 # - transit_routing_preference (string) – Specifies preferences for transit requests: “less_walking” or “fewer_transfers”
 def directions(origin, destination, mode="transit", depart_time=datetime.now(), arrive_time=0):
+    # Initialize variable to store directions by step:
     retList = []
+    # Get directions from API:
     if arrive_time != 0:
         directions = gmaps.directions(origin=origin, destination=destination, mode=mode, departure_time=depart_time)
         entry = "Directions from " + str(origin) + " to " + str(destination) + " arriving at " + str(arrive_time)
@@ -74,9 +77,11 @@ def directions(origin, destination, mode="transit", depart_time=datetime.now(), 
         directions = gmaps.directions(origin=origin, destination=destination, mode=mode, arrival_time=arrive_time)
         entry = "Directions from " + str(origin) + " to" + str(destination) + " leaving at " + str(depart_time)
     retList.append(entry)
+    # Get Steps
     directions = directions[0]['legs'][0]['steps']
-    #print(directions)
+    # Break up steps in main steps and substeps; get each step and store in the return list:
     for macroStep in range(len(directions)):
+        # If mode is walking:
         if directions[macroStep]['travel_mode'] == 'WALKING':
             entry = "STEP " + str(macroStep) + ": " + directions[macroStep]['html_instructions']
             retList.append(entry)
@@ -92,6 +97,7 @@ def directions(origin, destination, mode="transit", depart_time=datetime.now(), 
                         retList.append(entry)
                     except:
                         entry = "---STEP " + str(microStep) + ": You have reached your destination."
+        # If mode is transit:
         elif directions[macroStep]['travel_mode'] == 'TRANSIT':
             train = directions[macroStep]['transit_details']
             train_direction = train['headsign']
@@ -100,8 +106,9 @@ def directions(origin, destination, mode="transit", depart_time=datetime.now(), 
             depart_stop = train['departure_stop']['name']
             arrive_stop = train['arrival_stop']['name']
             entry = "STEP " + str(macroStep) + ": Take " + train_direction + " bound " + train_line + " train " + stops + " stops from " + depart_stop + " to " + arrive_stop
+        # Else, throw an error:
         else:
-            sys.exit("Not processing other modes of travel right now.")
+            return ["Not processing other modes of travel right now."]
     return retList
 
 # param_origin = "Coney Island, Brooklyn, NY" # Can be address or coordinates
