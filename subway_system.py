@@ -133,7 +133,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return (50 * totalDist + 50 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd + 2 * self.localOrExpress())
+        return 50 * totalDist + 50 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd + 6 * self.localOrExpress() + 2 * (100 - self.stopsToEnd) * self.localOrExpress()
 
     def __hash__(self):
         return hash(str(self))
