@@ -1,20 +1,38 @@
 
 
 
-Start at: Ocean Parkway (Q)
+Start at: Beach 98th St (A3)
 
 
 Intermediate Stops:
 
-Q, Brighton Beach, 0, 262.50219669151903
-B, Brighton Beach, 1, 202.50219669151903
-B, Sheepshead Bay, 1, 182.64864935922753
-B, Kings Highway, 1, 162.23776958790197
-B, Newkirk Plaza, 1, 142.12134491197057
-B, Church Av, 1, 122.18472408416716
-B, Prospect Park, 1, 102.32189803569149
-B, 7th Av, 1, 82.12084814943877
-B, Atlantic Av - Barclays Center, 1, -99999938.03112079
+A3, Beach 90th St, 0, 2678.204576788513
+A3, Broad Channel, 0, 2696.017087681862
+A3, Howard Beach - JFK Airport, 0, 2832.7937207280925
+A3, Aqueduct, 0, 2863.550883258781
+A2, Rockaway Blvd, 1, 2961.2215962000832
+A, Rockaway Blvd, 2, 2911.2215962000832
+A, 88th St, 2, 2883.5187702515746
+A, 80th St, 2, 2859.03276831355
+A, Grant Av, 2, 2826.4474689608082
+A, Euclid Av, 2, 2797.873644323617
+A, Broadway Junction, 2, 2783.5178614320976
+C, Broadway Junction, 3, 2933.5178614320976
+C, Rockaway Av, 3, 2940.8408419719476
+C, Ralph Av, 3, 2968.5722825767316
+C, Utica Av, 3, 3016.310779372884
+C, Kingston - Throop Avs, 3, 3076.740875437711
+C, Nostrand Av, 3, 3139.9427752291795
+C, Franklin Av, 3, 3176.389047869001
+S2, Franklin Av, 4, 3226.389047869001
+S2, Park Place, 4, 3202.0591320255867
+S2, Botanic Garden, 4, 3183.4681662912126
+3, Franklin Av, 5, 1333.4681662912126
+3, Nostrand Av, 5, 1253.4269417132548
+3, Kingston Av, 5, 1171.7366894710617
+3, Crown Heights - Utica Av, 5, 1085.3577321526782
+3, Sutter Av, 5, 968.8571463461855
+3, Saratoga Av, 5, -99999114.72129118
 
 
-Arrive at: Atlantic Av - Barclays Center (B)
+Arrive at: Saratoga Av (3)

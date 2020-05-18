@@ -104,6 +104,11 @@ class Stop():
             return -50
         return 0
 
+    def localOrExpress(self):
+        if self.express == 'express':
+            return -25
+        return 25
+
     # Apply latitude/longitude distance formula
     def getDist(self, lat1, lat2, long1, long2):
         lat1 = math.radians(float(lat1))
@@ -126,7 +131,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return (totalDist + 100 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd)
+        return (50 * totalDist + 50 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd + 2 * self.localOrExpress())
 
     def __hash__(self):
         return hash(str(self))
@@ -199,7 +204,7 @@ class Subway_System():
             data = line.split(',')
             train = data[0]
             order = data[1:]
-            print(order)
+            #print(order)
             order = list(map(lambda x: self.directory[x], order))
             system_dict[train] = order
 

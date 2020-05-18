@@ -737,5 +737,5 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express
 760,Broadway Jamaica,Lorimer St,M,TRUE,40.703957,-73.947374,local
 761,Crosstown,Church Av,G,TRUE,40.644041,-73.979678,local
 762,Crosstown,Fort Hamilton Parkway,G,TRUE,40.650782,-73.975776,local
-763,Crosstown,15 St - Prospect Park,G,TRUE,40.660365,-73.979493,local
+763,Crosstown,15th St - Prospect Park,G,TRUE,40.660365,-73.979493,local
 764,6 Avenue,7th Av,G,TRUE,40.666271,-73.980305,local
