@@ -1,5 +1,7 @@
 import math, random
-#import random
+import sys
+import json
+import googlemaps
 
 # Subway system and stop class
 
@@ -139,7 +141,6 @@ transfers_data = open('stop_transfers.csv', 'r').read().split('\n')
 stop_order_data = open('stop_order.csv', 'r').read().split('\n')
 
 class Subway_System():
-
     def __init__(self, directory, transfers, train_lines):
         self.transfers = self.setupTransfers(transfers) # Dictionary: key stopID -> value list of transferable stops
         self.directory = self.setupDirectory(directory) # Dictionary of Stop Nodes: key stopID -> Stop Node
@@ -147,6 +148,13 @@ class Subway_System():
         self.addNodeTransfers()
         self.addPrevNext()
         self.total_stops = len(self.directory) # Total node(stops) in the search space
+        try:
+            file = open("api_key.txt")
+            api_key = file.readline()
+            file.close()
+        except:
+            sys.exit("No api_key.txt found.")
+        self.gmaps = googlemaps.Client(key=api_key)
 
     def setupTransfers(self, transfers):
         # {stopID : list of transferable stops}
@@ -273,6 +281,34 @@ class Subway_System():
         #Yell at programmer if the stops are on different lines
         #print ('The ' + line + ' train does not stop at ' + str(self.directory[stopID]) + '. Please try again.')
         return -1
+
+    def startToStation(self, address_str):
+        retDict = {"start":{"address" : "", "name" : "", "latitude" : 0, "longitude" : 0},
+                   "nearest_station": -1,
+                   "walking_instructions" : []}
+        place = self.gmaps.find_place(input=address_str, input_type="textquery",fields=["formatted_address", "geometry", "name"], language="en", location_bias="rectangle:40.495992,-74.257159|40.915568,-73.699215")["candidates"][0]
+        place_lat = place['geometry']['location']['lat']
+        retDict["start"]["latitude"] = place_lat
+        place_lng = place['geometry']['location']['lng']
+        retDict["start"]["longitude"] = place_lng
+        retDict["start"]["address"] = place['formatted_address']
+        retDict["start"]["name"] = place['name']
+        nearest = self.gmaps.places_nearby(location=[place_lat, place_lng], rank_by="distance", type="subway_station")['results'][0]
+        station_name = nearest['name']
+        station_lat = nearest['geometry']['location']['lat']
+        station_lng = nearest['geometry']['location']['lng']
+        stopID = -1
+        leastDist = 1000000000
+        for id, node in self.directory.items():
+            dist = node.getDist(node.latitude, place_lat, node.longitude, place_lng)
+            if dist < leastDist:
+                leastDist = dist
+                stopID = id
+        retDict["nearest_station"] = stopID
+        return place
+
+    def stationToEnd(self):
+        pass
 
     # Calculate the number of stops needed to the end goal, INCLUDING TRANSFERS
     def transferStopsToEnd(self, stop):
