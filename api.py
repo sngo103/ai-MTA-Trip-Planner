@@ -32,7 +32,7 @@ gmaps = googlemaps.Client(key=api_key)
 # #print("Directions RESULT:", directions_result)
 # ==============================================================================
 
-print("DISTANCE MATRIX API ==========================================================================================================================")
+# print("DISTANCE MATRIX API ==========================================================================================================================")
 # DISTANCE MATRIX: Gets travel distance and time for a matrix of origins and destinations.
 # - Can't specify both arrival_time and departure_time - must pick one
 param_origins = ["Coney Island, Brooklyn, NY"]
@@ -43,11 +43,11 @@ param_depart_time = datetime(year=2020, month=5, day=5, hour=10, minute=0, secon
 param_arrive_time = datetime(year=2020, month=5, day=5, hour=10, minute=25, second=0)
 distance_test = gmaps.distance_matrix(origins=param_origins, destinations=param_dests, mode=param_mode,
                                      transit_mode=param_transit_mode, departure_time=param_depart_time)
-print("Distance from", param_origins, "to", param_dests, "leaving at", str(param_depart_time))
-print(distance_test)
-print()
+# print("Distance from", param_origins, "to", param_dests, "leaving at", str(param_depart_time))
+# print(distance_test)
+# print()
 
-print("DIRECTIONS API ===============================================================================================================================")
+# print("DIRECTIONS API ===============================================================================================================================")
 # DIRECTIONS: Gets travel directions
 # - Can't specify both arrival_time and departure_time - must pick one
 # Parameters:
@@ -59,29 +59,33 @@ print("DIRECTIONS API ==========================================================
 # - optimize_waypoints (bool) – Optimize the provided route by rearranging the waypoints in a more efficient order.
 # - transit_mode (string or list of strings) – Specifies one or more preferred modes: “bus”, “subway”, “train”, “tram”, “rail”=[“train”, “tram”, “subway”]
 # - transit_routing_preference (string) – Specifies preferences for transit requests: “less_walking” or “fewer_transfers”
-def directions(origin, destination, waypoints=[], mode="transit", transit_mode="subway", depart_time=datetime.now(), arrive_time=0):
-    if arrive_time == 0:
-        directions = gmaps.directions(origin=origin, destination=destination, mode=mode, transit_mode=transit_mode, departure_time=depart_time)
-        print("Directions from", param_origins, "to", param_dests, "arriving at", str(arrive_time))
+def directions(origin, destination, mode="transit", depart_time=datetime.now(), arrive_time=0):
+    retList = []
+    if arrive_time != 0:
+        directions = gmaps.directions(origin=origin, destination=destination, mode=mode, departure_time=depart_time)
+        entry = "Directions from " + origin + " to " + destination + " arriving at " + str(arrive_time)
     else:
-        directions = gmaps.directions(origin=origin, destination=destination, mode=mode, transit_mode=transit_mode, arrival_time=arrive_time)
-        print("Directions from", origin, "to", destination, "leaving at", str(depart_time))
-    print()
+        directions = gmaps.directions(origin=origin, destination=destination, mode=mode, arrival_time=arrive_time)
+        entry = "Directions from " + origin + " to" + destination + " leaving at " + str(depart_time)
+    retList.append(entry)
     directions = directions[0]['legs'][0]['steps']
-    print("Steps:")
+    #print(directions)
     for macroStep in range(len(directions)):
         if directions[macroStep]['travel_mode'] == 'WALKING':
-            print("STEP", macroStep, ":", directions[macroStep]['html_instructions'])
-            steps = directions[macroStep]['steps']
-            for microStep in range(len(steps)):
-                step_dist = steps[microStep]['distance']['text']
-                step_time = steps[microStep]['duration']['text']
-                step_mode = steps[microStep]['travel_mode']
-                try:
-                    step_html = steps[microStep]['html_instructions']
-                    print("---STEP", microStep, ":", step_html)
-                except:
-                    print("---STEP", microStep, ": You have reached your destination.")
+            entry = "STEP " + str(macroStep) + ": " + directions[macroStep]['html_instructions']
+            retList.append(entry)
+            if 'steps' in directions[macroStep]:
+                steps = directions[macroStep]['steps']
+                for microStep in range(len(steps)):
+                    step_dist = steps[microStep]['distance']['text']
+                    step_time = steps[microStep]['duration']['text']
+                    step_mode = steps[microStep]['travel_mode']
+                    try:
+                        step_html = steps[microStep]['html_instructions']
+                        entry = "---STEP " + str(microStep) + ": " + step_html
+                        retList.append(entry)
+                    except:
+                        entry = "---STEP " + str(microStep) + ": You have reached your destination."
         elif directions[macroStep]['travel_mode'] == 'TRANSIT':
             train = directions[macroStep]['transit_details']
             train_direction = train['headsign']
@@ -89,16 +93,16 @@ def directions(origin, destination, waypoints=[], mode="transit", transit_mode="
             stops = train['num_stops']
             depart_stop = train['departure_stop']['name']
             arrive_stop = train['arrival_stop']['name']
-            print("STEP", macroStep, ": Take", train_direction, "bound", train_line, stops, "stops from", depart_stop, "to", arrive_stop)
+            entry = "STEP " + str(macroStep) + ": Take " + train_direction + " bound " + train_line + " train " + stops + " stops from " + depart_stop + " to " + arrive_stop
         else:
-            print("Not processing other modes of travel right now.")
-    return True
+            sys.exit("Not processing other modes of travel right now.")
+    return retList
 
-param_origin = "Coney Island, Brooklyn, NY" # Can be address or coordinates
-param_waypoints = []
-param_dest = "Atlantic Terminal, Brooklyn, NY"
-param_mode = "transit"
-param_transit_mode = "subway"
-param_depart_time = datetime(year=2020, month=6, day=5, hour=10, minute=0, second=0)
-param_arrive_time = datetime(year=2020, month=6, day=5, hour=10, minute=53, second=0)
-directions(origin=param_origin, destination=param_dest, waypoints=[], mode=param_mode, transit_mode=param_transit_mode, depart_time=param_depart_time, arrive_time=param_arrive_time)
+# param_origin = "Coney Island, Brooklyn, NY" # Can be address or coordinates
+# param_waypoints = []
+# param_dest = "Atlantic Terminal, Brooklyn, NY"
+# param_mode = "transit"
+# param_transit_mode = "subway"
+# param_depart_time = datetime(year=2020, month=6, day=5, hour=10, minute=0, second=0)
+# param_arrive_time = datetime(year=2020, month=6, day=5, hour=10, minute=53, second=0)
+# directions(origin=param_origin, destination=param_dest, waypoints=[], mode=param_mode, transit_mode=param_transit_mode, depart_time=param_depart_time, arrive_time=param_arrive_time)

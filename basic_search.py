@@ -20,7 +20,8 @@ def main():
     output.write(text)
     print (text)
 
-    # print(mta.startToStation("Hunter College"))
+    # Start to Station Usage:
+    # print(mta.startToStation("Knapp Street Pizza"))
 
 
 def initialize_system():

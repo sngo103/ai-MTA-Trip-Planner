@@ -2,6 +2,8 @@ import math, random
 import sys
 import json
 import googlemaps
+import api
+from datetime import datetime
 
 # Subway system and stop class
 
@@ -300,12 +302,18 @@ class Subway_System():
         stopID = -1
         leastDist = 1000000000
         for id, node in self.directory.items():
-            dist = node.getDist(node.latitude, place_lat, node.longitude, place_lng)
+            dist = node.getDist(node.latitude, station_lat, node.longitude, station_lng)
             if dist < leastDist:
                 leastDist = dist
                 stopID = id
         retDict["nearest_station"] = stopID
-        return place
+        param_origin = retDict["start"]["name"] # Can be address or coordinates
+        param_dest = station_name
+        param_mode = "walking"
+        param_depart_time = datetime(year=2020, month=6, day=5, hour=10, minute=0, second=0)
+        param_arrive_time = 0
+        retDict["walking_instructions"] = api.directions(origin=param_origin, destination=param_dest, mode=param_mode, depart_time=param_depart_time, arrive_time=param_arrive_time)
+        return retDict
 
     def stationToEnd(self):
         pass
