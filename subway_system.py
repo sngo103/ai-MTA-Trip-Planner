@@ -134,7 +134,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return 200 * totalDist + 1000 * self.transferCount + self.checkEndStop(end) + 300 * self.checkEndLines(end) + 0 * (20 * self.stopsToEnd + 6 * self.localOrExpress()) + 2 * (100 - self.stopsToEnd) * self.localOrExpress() * (1000 * self.transferCount)
+        return 200 * totalDist + 1000 * self.transferCount + self.checkEndStop(end) + 300 * self.checkEndLines(end) + 0 * (20 * self.stopsToEnd + 1 * self.localOrExpress()) + 2 * (100 - self.stopsToEnd) * self.localOrExpress() * (1000 * self.transferCount)
 
     # Returns the hash of this Stop Node object
     def __hash__(self):
@@ -268,7 +268,7 @@ class Subway_System():
         # Relate user input names to stops:
         options = []
         for stop in self.directory:
-            if stop_name in self.directory[stop].station_name:
+            if stop_name.lower() in self.directory[stop].station_name.lower():
                 if accessibility and self.directory[stop].accessibility == 'BOTH' or not accessibility:
                     options.append(self.directory[stop])
 

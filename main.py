@@ -16,7 +16,7 @@ def main():
     print("=====================================================================")
     print(" AI MTA TRIP PLANNER by Team Wish Upon A*")
     print("=====================================================================")
-    print("Welcome, user, my name is AI Greg! I'm here to help you get to where you're going.")
+    print("Welcome, user, my name is AI Greg! I'm here to help you get to where you're going.\n")
     print("First, do you need accessible stations? Type Yes or No. Then press Enter.")
     accessible = input().strip()
     while(not(accessible.lower() == "yes" or accessible.lower() == "no")):
@@ -28,13 +28,13 @@ def main():
         accessible = False
     start_walking = []
     end_walking = []
-    print("Great, now what is your starting point? You can type the address or name of a place.")
+    print("\nGreat, now what is your starting point? You can type the address or name of a place.")
     print("Not sure what the name is? Enter what you know, we'll figure it out.")
     start = input().strip()
     startNodes = mta.findStop(start, accessible)
     if startNodes == []:
         try:
-            print("Let me try and figure out what station you mean...")
+            print("\nLet me try and figure out what station you mean...")
             start_walking = mta.startToStation(start)
             start = mta.directory[start_walking["nearest_station"]]
             print("I estimated your start station to be", '(', start.station_name, ')', start.line)
@@ -58,7 +58,7 @@ def main():
         start = startNodes[startIndex]
         print("Starting Point:", possibleStarts[startIndex])
     print("Okay, now what is your ending point? You can type the address or name of a place.")
-    print("Not sure what the name is? Enter what you know, we'll figure it out.")
+    print("Not sure what the name is? Enter what you know, we'll figure it out.\n")
     end = input().strip()
     endNodes = mta.findStop(end, accessible)
     if endNodes == []:
@@ -70,7 +70,7 @@ def main():
         except:
             sys.exit("Sorry, I cannot figure out what your start point is. Please try a different query.")
     else:
-        print("Which of these do you mean? Please select one by inputting its index.")
+        print("\nWhich of these do you mean? Please select one by inputting its index.")
         possibleEnds = list(map(lambda x: x.station_name + " " + x.line + " Train", endNodes))
         for i in range(len(possibleEnds)):
             print(i, ":", possibleEnds[i])
@@ -86,7 +86,7 @@ def main():
             endIndex = int(input().strip())
         end = endNodes[endIndex]
         print("Ending Point:", possibleEnds[endIndex])
-    print("Thank you! Give me one moment. Calculating...")
+    print("\nThank you! Give me one moment. Calculating...")
     directions = route(start, end, mta, accessible)
     print("...done! Here are your directions:")
     try:
@@ -104,7 +104,7 @@ def main():
             #print(item)
     except:
         pass
-    print("Have a safe trip!\n")
+    print("\nHave a safe trip!\n")
 
     # # Start to Station Usage:
     # print(mta.startToStation("Knapp Street Pizza"))
@@ -219,7 +219,7 @@ def excludeTags(s):
         
         elif not exclude:
             if i > 0 and s[i].isupper() and s[i-1].islower():
-                clean_str += '\n'
+                clean_str += '. '
             clean_str += s[i]
 
     return clean_str.replace('&nbsp;', ' ')
