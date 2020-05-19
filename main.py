@@ -26,7 +26,8 @@ def main():
         accessible = True
     elif accessible == "No":
         accessible = False
-
+    start_walking = []
+    end_walking = []
     print("Great, now what is your starting point? You can type the address or name of a place.")
     print("Not sure what the name is? Enter what you know, we'll figure it out.")
     start = input().strip()
@@ -34,7 +35,8 @@ def main():
     if startNodes == []:
         try:
             print("Let me try and figure out what station you mean...")
-            start = mta.directory[mta.startToStation(start)["nearest_station"]]
+            start_walking = mta.startToStation(start)
+            start = mta.directory[start_walking["nearest_station"]]
             print("I estimated your start station to be", start.station_name, start.line)
         except:
             sys.exit("Sorry, I cannot figure out what your start point is. Please try a different query.")
@@ -43,8 +45,8 @@ def main():
         possibleStarts = list(map(lambda x: x.station_name + " " + x.line + " Train", startNodes))
         for i in range(len(possibleStarts)):
             print(i, ":", possibleStarts[i])
-        startIndex = int(input().strip())
-        while(not (startIndex < len(possibleStarts) and startIndex > -1)):
+        startIndex = input().strip()
+        while((not isinstance(startIndex, int)) or (not (startIndex < len(possibleStarts) and startIndex > -1))):
             print("Sorry, I didn't get that. Please try again.")
             print("Which of these do you mean? Please select one by inputting its index.")
             for i in range(len(possibleStarts)):
@@ -59,7 +61,8 @@ def main():
     if endNodes == []:
         try:
             print("Let me try and figure out what station you mean...")
-            end = mta.directory[mta.startToStation(end)["nearest_station"]]
+            end_walking = mta.stationToEnd(end)
+            end = mta.directory[end_walking["nearest_station"]]
             print("I estimated your end station to be", end.station_name, end.line)
         except:
             sys.exit("Sorry, I cannot figure out what your start point is. Please try a different query.")
@@ -69,7 +72,7 @@ def main():
         for i in range(len(possibleEnds)):
             print(i, ":", possibleEnds[i])
         endIndex = int(input().strip())
-        while(not (endIndex < len(possibleEnds) and endIndex > -1)):
+        while((not isinstance(endIndex, int)) or (not (endIndex < len(possibleEnds) and endIndex > -1))):
             print("Sorry, I didn't get that. Please try again.")
             print("Which of these do you mean? Please select one by inputting its index.")
             for i in range(len(possibleEnds)):
@@ -80,7 +83,17 @@ def main():
     print("Thank you! Give me one moment. Calculating...")
     directions = route(start, end, mta, accessible)
     print("...done! Here are your directions:")
+    try:
+        for item in start_walking["walking_instructions"]:
+            print(item)
+    except:
+        pass
     print(directions)
+    try:
+        for item in end_walking["walking_instructions"]:
+            print(item)
+    except:
+        pass
     print("Have a safe trip!")
 
     # # Start to Station Usage:
