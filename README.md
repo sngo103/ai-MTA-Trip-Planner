@@ -4,7 +4,9 @@
 ### CSCI 35000 - Artificial Intelligence 
 ### 2020-05-18
 
---- Project Description Here
+#### Project Description
+
+
 
 _**Note:** All three of us have been working together in real time on the same code via Microsoft LiveShare. We often host on Daniel's PC, therefore most commits are in his name._
 
@@ -41,8 +43,28 @@ _**Note:** All three of us have been working together in real time on the same c
 - Resolved issue in Stop class \_\_eq\_\_ method
 
 #### Unresolved Issues:
-- Import loops resulting from current_state structure
-    - current_state is not being utilized at the moment
+- The A train splits off into 3 types in the Rockaways
+    - Transfers between A trains were treated as negligible
+    - Printing only shows a single version
+    - Must be split back into its 3 types for optimal use.
+- At "Aqeuduct Race Track", there exist the only instance of a "split stop"
+    - North and South directions are independent stops on single line, our structure cannot handle that.
+    - Currently handled by combining into a single stop.
+- The heuristic balance between choosing an express train or local train is very sensisitve
+    - Some routes will favor express routes as desired
+    - Some will switch to an express train at a seemingly odd point
+    - Currently favors express slightly
+    - May need to do more stern evaluation and implement heuristic adjustments per cases
+- Accessibility constraint may crash on certain routes.
+    - There exists an issue in adding some stations to the priority queue when feature is on
+    - Priority queue empties before destination is reached.
+    - Need to adjust station adding to make sure this never happens.
+    - Otherwise, results appear optimal.
+- Walking directions are limited to picking the closest station to interpreted input address
+    - No multiple starting point selection
+    - No address interpretation options
+- Printing walking directions has a slight formatting issue.
+
 
 #### For the Future:
 - Have algorithm better detect which train to start/end if the user inputs stops with many available trains
