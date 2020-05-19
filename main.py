@@ -31,6 +31,7 @@ def main():
     print("\nGreat, now what is your starting point? You can type the address or name of a place.")
     print("Not sure what the name is? Enter what you know, I'll figure it out.\n")
     start = input().strip()
+    start_input = start
     startNodes = mta.findStop(start, accessible)
     if startNodes == []:
         try:
@@ -60,6 +61,7 @@ def main():
     print("\nOkay, now what is your ending point? You can type the address or name of a place.")
     print("Not sure what the name is? Enter what you know, I'll figure it out.\n")
     end = input().strip()
+    end_input = end
     endNodes = mta.findStop(end, accessible)
     if endNodes == []:
         try:
@@ -89,19 +91,26 @@ def main():
     print("\nThank you! Give me one moment. Calculating...")
     directions = route(start, end, mta, accessible)
     print("...done! Here are your directions:\n")
+    if start != end:
+        try:
+            if start_walking['walking_instructions']:
+                print ('Start at: ' + start_input + '. Walking instructions to subway:\n')
+            for item in start_walking["walking_instructions"]:
+                if 'STEP' in item:
+                    print(excludeTags(item))
+                #print(item)
+            print ('\nBoard at: ' + start.station_name + ' (' + globalStart.line[0] + ')')
+        except:
+            pass
+        print(directions)
     try:
-        for item in start_walking["walking_instructions"]:
-            if '[' not in item and '-' not in item:
-                print(excludeTags(item))
-            #print(item)
-    except:
-        pass
-    print(directions)
-    try:
+        if start == end: #If no train is taken
+            print ('Exit at: ' + end.station_name + ' (' + end.line[0] + '). Walking instructions to destination:\n')
         for item in end_walking["walking_instructions"]:
-            if '[' not in item and '-' not in item:
+            if 'STEP' in item:
                 print(excludeTags(item))
             #print(item)
+        print ('Arrive at: ' + end_input)
     except:
         pass
     print("\nHave a safe trip!\n")
@@ -161,51 +170,63 @@ def route(start, end, mta, accessibility):
         # Goal Test, also traces back the route
         if end == currentStop and end.station_name == currentStop.station_name:
             #trace back route
-            route = '\n\nArrive at: ' + end.station_name + ' (' + currentStop.line[0] + ')\n'
+            #route = '\n\nArrive at: ' + end.station_name + ' (' + currentStop.line[0] + ')\n'
+            route = ''
             while currentStop != start:
                 if not (currentStop.line[0] == currentStop.lastVisited.line[0] and currentStop.station_name == currentStop.lastVisited.station_name): #Avoid double printing transfers
-                    route = currentStop.line[0] + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + '\n' + route
+                    route = currentStop.line[0] + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + ', ' + str(currentStop.stopsToStart) + '\n' + route
                 if currentStop.line[0] != currentStop.lastVisited.line[0]:
                     route = '\nTransfer at ' + currentStop.lastVisited.station_name + ' to the (' + currentStop.line[0] + ') train at ' + currentStop.station_name + '.\n\n' + route
                 currentStop = currentStop.lastVisited
-            start = currentStop
-            route = '\n\nStart at: ' + start.station_name + ' (' + start.line[0] + ')\n\n\n' + 'Intermediate Stops:\n\n' + route
+            global globalStart #Used to print the correct boarding line for the user
+            globalStart = currentStop
+            #route = '\n\nStart at: ' + globalStart.station_name + ' (' + globalStart.line[0] + ')\n\n\n' + 
+            route = '\nIntermediate Stops:\n\n' + route
             return route
 
         # Get neighbors: nextStop, prevStop, transfers
         neighbor_dirs = []
         if currentStop.nextStop:
-            neighbor_dirs.append(currentStop.nextStop)
-        if currentStop.transfers: #Already a list, so we can concatenate
-            neighbor_dirs += currentStop.transfers
-        if currentStop.prevStop:
-            neighbor_dirs.append(currentStop.prevStop)
+            if not accessibility or currentStop.accessibility == 'BOTH' or not currentStop.lastVisited or currentStop.lastVisited.line[0] == currentStop.line[0] or currentStop.accessibility == 'UPTOWN':
+                neighbor_dirs.append(currentStop.nextStop)
+        if currentStop.transfers:
+            for transfer in range(len(currentStop.transfers)):
+                if not accessibility or currentStop.transfers[transfer].accessibility != 'NEITHER' or currentStop.line[0] == currentStop.transfers[transfer].line[0]:
+                    neighbor_dirs.append(currentStop.transfers[transfer])
+        if currentStop.prevStop:            
+            if not accessibility or currentStop.accessibility == 'BOTH' or not currentStop.lastVisited or currentStop.lastVisited.line[0] == currentStop.line[0] or currentStop.accessibility == 'DOWNTOWN':
+                neighbor_dirs.append(currentStop.prevStop)
 
-        #Add unexplored neighbors to frontier
+        #Add unexplored neighbors (with valid accessibility options if requested) to frontier
         for direc in neighbor_dirs:
             if direc.stopID not in explored:
+                #print(direc)
                 direc.start = start
                 direc.end = end
                 direc.lastVisited = currentStop #Set last visited stop for each unexplored neighbor
-                #update transferCount
+
+                #update transferCount and stopsToStart
                 if currentStop.line != direc.line and direc != start and direc != end:
                     direc.transferCount = currentStop.transferCount + 1
+                    #direc.stopsToStart = currentStop.stopsToStart
                 else:
                     #print (str(start) + ', ' + str(currentStop) + ', ' + str(direc))
                     direc.transferCount = currentStop.transferCount
-                #update stopsToEnd if neighbor and end lines are the same
+                    #direc.stopsToStart = currentStop.stopsToStart + 1
+                
+                if currentStop.line != direc.line and direc != start:
+                    direc.stopsToStart = currentStop.stopsToStart
+                elif direc != start:
+                    direc.stopsToStart = currentStop.stopsToStart + 1
+                
+                #update stopsToEnd
                 direc.stopsToEnd = mta.transferStopsToEnd(direc)
-
-                if accessibility and direc in currentStop.transfers:
-                    transferVal = direc.heuristic(start, end)
-                    if (direc.accessibility == 'BOTH' or direc.prevStop and direc.accessibility == 'DOWNTOWN' and direc.prevStop.heuristic(start, end) < transferVal
-                        or direc.nextStop and direc.accessibility == 'UPTOWN' and direc.nextStop.heuristic(start,end) < transferVal):
-                        frontier.put(direc)
 
                 frontier.put(direc)
 
     #You should never get here
     print("Impossible or Something Broke...")
+    print (accessibility)
     print (start)
     print (end)
     return None
@@ -221,11 +242,15 @@ def excludeTags(s):
             exclude = False
         
         elif not exclude:
-            if i > 0 and s[i].isupper() and s[i-1].islower():
-                clean_str += '. '
             clean_str += s[i]
+    clean_str = clean_str.replace('&nbsp;', '')
 
-    return clean_str.replace('&nbsp;', ' ')
+    cleaner_str = ''
+    for i in range(len(clean_str)):
+        if i > 8 and clean_str[i].isupper() and not clean_str[i-1].isspace() and clean_str[i-1] != '/':
+            cleaner_str += '. '
+        cleaner_str += clean_str[i]
+    return cleaner_str + '.'
 
 if __name__ == "__main__":
     main()

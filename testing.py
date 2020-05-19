@@ -2,9 +2,9 @@ from main import route, initialize_system
 from subway_system import Subway_System
 import random
 
-#f = open('testing.txt','w')
-#f.write('')
-#f.close()
+f = open('testing.txt','w')
+f.write('')
+f.close()
 f = open('testing.txt', 'a')
 
 alphstr = 'abcdefghiklmnopqrstuvwyzABCDEFGHIKLMNOPQRSTUVWY'

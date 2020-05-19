@@ -32,6 +32,7 @@ class Stop():
     transferCount = 0
     #initialized as a large number to encourage staying on a train that stops at the goal stop
     stopsToEnd = 100
+    stopsToStart = 0
 
     # Constructor to initialize the Stop Node
     def __init__(self, stopID, neighborhood, station_name, line, transfers, latitude, longitude, express, accessibility):
@@ -134,7 +135,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return 50 * totalDist + 100 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd + 1 * self.localOrExpress()
+        return 50 * totalDist + 1000 * self.transferCount + 20 * self.stopsToStart + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd + 1 * self.localOrExpress()
 
     # Returns the hash of this Stop Node object
     def __hash__(self):
