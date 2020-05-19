@@ -4,11 +4,10 @@
 ### CSCI 35000 - Artificial Intelligence 
 ### 2020-05-18
 
-#### Project Description
-
-
-
 _**Note:** All three of us have been working together in real time on the same code via Microsoft LiveShare. We often host on Daniel's PC, therefore most commits are in his name._
+
+#### Project Description
+This project is a trip planner application that services four boroughs of NYC. Given a start and a destination, either an address or subway station, this application will generate the an optimal or sub-optimal route to the destination. If the user needs wheelchair accessibility, the application will provide a route with only accessible stations in mind. The directions provided will include the NYC subway, and walking directions to and from start and end addresses, if specified. This project uses the A* informed search algorithm with various heuristic metrics, from transfers counts to express train bias. Walking directions are provided via the Google Maps API. Data was generated using one pre-made dataset which we heavily modified by hand and by custom script to include all stops and more information. Evalutation was done manually and subjectively due to the various service changes around the coronavirus providing conflicting routes, and select lines being no longer in service. A several thousand route test file was generated and evaluated by hand for "optimality".
 
 #### Dependencies:
 - Python version: >3.6.0
@@ -58,12 +57,12 @@ _**Note:** All three of us have been working together in real time on the same c
 - Accessibility constraint may crash on certain routes.
     - There exists an issue in adding some stations to the priority queue when feature is on
     - Priority queue empties before destination is reached.
-    - Need to adjust station adding to make sure this never happens.
-    - Otherwise, results appear optimal.
+    - Need to adjust station adding to make sure this never happens, otherwise, results appear optimal.
 - Walking directions are limited to picking the closest station to interpreted input address
     - No multiple starting point selection
     - No address interpretation options
 - Printing walking directions has a slight formatting issue.
+- Staten Island is not included.
 
 
 #### For the Future:
