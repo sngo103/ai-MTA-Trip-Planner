@@ -19,12 +19,12 @@ def main():
     print("Welcome, user, my name is AI Greg! I'm here to help you get to where you're going.")
     print("First, do you need accessible stations? Type Yes or No. Then press Enter.")
     accessible = input().strip()
-    while(not(accessible == "Yes" or accessible == "No")):
+    while(not(accessible.lower() == "yes" or accessible.lower() == "no")):
         print("Sorry, I didn't understand that. Please type exactly Yes or No. Then press Enter.")
         accessible = input()
-    if accessible == "Yes":
+    if accessible.lower() == "yes":
         accessible = True
-    elif accessible == "No":
+    elif accessible.lower() == "no":
         accessible = False
     start_walking = []
     end_walking = []
@@ -37,12 +37,12 @@ def main():
             print("Let me try and figure out what station you mean...")
             start_walking = mta.startToStation(start)
             start = mta.directory[start_walking["nearest_station"]]
-            print("I estimated your start station to be", start.station_name, start.line)
+            print("I estimated your start station to be", '(', start.station_name, ')', start.line)
         except:
             sys.exit("Sorry, I cannot figure out what your start point is. Please try a different query.")
     else:
         print("Which of these do you mean? Please select one by inputting its index.")
-        possibleStarts = list(map(lambda x: x.station_name + " " + x.line + " Train", startNodes))
+        possibleStarts = list(map(lambda x: x.station_name + " (" + x.line + ")", startNodes))
         for i in range(len(possibleStarts)):
             print(i, ":", possibleStarts[i])
         startIndex = input().strip()
@@ -85,16 +85,20 @@ def main():
     print("...done! Here are your directions:")
     try:
         for item in start_walking["walking_instructions"]:
-            print(item)
+            if '[' not in item and '-' not in item:
+                print(excludeTags(item))
+            #print(item)
     except:
         pass
     print(directions)
     try:
         for item in end_walking["walking_instructions"]:
-            print(item)
+            if '[' not in item and '-' not in item:
+                print(excludeTags(item))
+            #print(item)
     except:
         pass
-    print("Have a safe trip!")
+    print("Have a safe trip!\n")
 
     # # Start to Station Usage:
     # print(mta.startToStation("Knapp Street Pizza"))
@@ -196,6 +200,23 @@ def route(start, end, mta, accessibility):
     print (start)
     print (end)
     return None
+
+def excludeTags(s):
+    clean_str = ''
+    exclude = False
+    for i in range(len(s)):
+        if s[i] == '<':
+            exclude = True
+
+        elif s[i] == '>':
+            exclude = False
+        
+        elif not exclude:
+            if i > 0 and s[i].isupper() and s[i-1].islower():
+                clean_str += '\n'
+            clean_str += s[i]
+
+    return clean_str.replace('&nbsp;', ' ')
 
 if __name__ == "__main__":
     main()

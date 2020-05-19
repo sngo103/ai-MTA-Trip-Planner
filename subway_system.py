@@ -134,7 +134,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return 200 * totalDist + 100 * self.transferCount + self.checkEndStop(end) + 300 * self.checkEndLines(end) + 0 * (20 * self.stopsToEnd + 6 * self.localOrExpress()) + 2 * (100 - self.stopsToEnd) * self.localOrExpress() * (100 * self.transferCount)
+        return 200 * totalDist + 1000 * self.transferCount + self.checkEndStop(end) + 300 * self.checkEndLines(end) + 0 * (20 * self.stopsToEnd + 6 * self.localOrExpress()) + 2 * (100 - self.stopsToEnd) * self.localOrExpress() * (1000 * self.transferCount)
 
     # Returns the hash of this Stop Node object
     def __hash__(self):
