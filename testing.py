@@ -9,7 +9,7 @@ directory_data, transfers_data, stop_order_data, mta = initialize_system()
 
 
 def generateRoute(start, end, mta):
-    return route(start, end, mta)
+    return route(start, end, mta, False)
 
 for i in range(25):
     start = random.choice(alphstr)
