@@ -17,7 +17,7 @@ def main():
     directory_data, transfers_data, stop_order_data, mta = initialize_system()
 
     output = open('route.txt', 'w')
-    text = route(args[0],args[1], mta, current_state)
+    text = route(args[0],args[1], mta)
     output.write(text)
     print(text)
     # # Start to Station Usage:
@@ -39,7 +39,7 @@ def initialize_system():
 
     return directory_data, transfers_data, stop_order_data, mta
 
-def route(start, end, mta, current_state):
+def route(start, end, mta):
     start = mta.findStop(start)
     end = mta.findStop(end)
 
@@ -264,8 +264,6 @@ def route(start, end, mta, current_state):
 #    #You should never get here
 #    print("Impossible or Something Broke...")
 #    return None
-
-
 
 if __name__ == "__main__":
     main()
