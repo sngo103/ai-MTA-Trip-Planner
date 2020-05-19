@@ -85,20 +85,11 @@ class Stop():
 
         return (myVal < otherVal)
 
-    # ???? # Will involve measurement of distance to the landmark
-
     # Determines if this Stop Node shares the same station as the given Stop Node parameter
-    # *Two Stop Nodes are "equal" if you can transfer between them without exiting the station
+    # Two Stop Nodes are "equal" if you can transfer between them without exiting the station
     def __eq__ (self, stop2):
-        #stops are equal if they have the same stopID
+        # Stops are also equal if they have the same stopID
         a = stop2.stopID == self.stopID
-
-        #b is not included in measurement for start evaluation, since the transfers of stop are not equally good
-        '''c = self.startEval and stop2.startEval
-        if c:
-            return a'''
-
-        #a stop is as good as it's transfers when we're not evaluating a starting stop
         b = False
         for stop in range(len(self.transfers)):
             if self.transfers[stop].stopID == stop2.stopID:
@@ -143,7 +134,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return 50 * totalDist + 50 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd + 6 * self.localOrExpress() + 2 * (100 - self.stopsToEnd) * self.localOrExpress()
+        return 200 * totalDist + 0 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 0 * (20 * self.stopsToEnd + 6 * self.localOrExpress()) + 2 * (100 - self.stopsToEnd) * self.localOrExpress() * (100 * self.transferCount)
 
     # Returns the hash of this Stop Node object
     def __hash__(self):
@@ -259,6 +250,7 @@ class Subway_System():
     # Get the first StopID that matches a user-inputted station NAME and LINE
     # Based on substrings of Stop names
     def findStop(self, stop_name, line):
+        #put all of this inside if (accessible) if that is needed
         if not line:
             for stop in self.directory:
                 if stop_name in self.directory[stop].station_name:

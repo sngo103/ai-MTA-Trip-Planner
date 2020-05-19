@@ -578,9 +578,9 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 591,Flushing,111th St,7,FALSE,40.75173,-73.855334,local,NEITHER
 592,Flushing,34th St - Hudson Yards,7,FALSE,40.755882,-74.00191,local,BOTH
 593,Flushing,Court Square - 23 St,E,TRUE,40.747023,-73.945264,express,NEITHER
-594,Flushing,Court Square - 23 St,G,TRUE,40.747023,-73.945264,express,NEITHER
+594,Flushing,Court Square,G,TRUE,40.747023,-73.945264,express,NEITHER
 595,Flushing,Court Square - 23 St,M,TRUE,40.747023,-73.945264,local,NEITHER
-596,Flushing,Court Square - 23 St,7,TRUE,40.747023,-73.945264,local,BOTH
+596,Flushing,Court Square,7,TRUE,40.747023,-73.945264,express,BOTH
 597,Flushing,82nd St - Jackson Heights,7,FALSE,40.747659,-73.883697,local,NEITHER
 598,Flushing,90th St Elmhurst,7,FALSE,40.748408,-73.876613,local,NEITHER
 599,Flushing,46th St - Bliss St,7,FALSE,40.743132,-73.918435,local,NEITHER
@@ -589,18 +589,18 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 602,Flushing,Grand Central - 42nd St,4,TRUE,40.751431,-73.976041,express,BOTH
 603,Flushing,Grand Central - 42nd St,5,TRUE,40.751431,-73.976041,express,BOTH
 604,Flushing,Grand Central - 42nd St,6,TRUE,40.751431,-73.976041,local,BOTH
-605,Flushing,Grand Central - 42nd St,7,TRUE,40.751431,-73.976041,local,BOTH
+605,Flushing,Grand Central - 42nd St,7,TRUE,40.751431,-73.976041,express,BOTH
 606,Flushing,Grand Central - 42nd St,S1,TRUE,40.751431,-73.976041,express,NEITHER
-607,Flushing,Hunters Point Av,7,FALSE,40.742216,-73.948916,local,NEITHER
+607,Flushing,Hunters Point Av,7,FALSE,40.742216,-73.948916,express,NEITHER
 608,Flushing,Junction Blvd,7,FALSE,40.749145,-73.869527,local,BOTH
 609,Flushing,52nd St - Lincoln Av,7,FALSE,40.744149,-73.912549,local,NEITHER
 610,Flushing,40th St - Lowery St,7,FALSE,40.743781,-73.924016,local,NEITHER
 611,Flushing,Mets - Willets Point,7,FALSE,40.754622,-73.845625,local,NEITHER
 612,Flushing,Queensboro Plaza,N,TRUE,40.750582,-73.940202,express,NEITHER
 613,Flushing,Queensboro Plaza,W,TRUE,40.750582,-73.940202,local,NEITHER
-614,Flushing,Queensboro Plaza,7,TRUE,40.750582,-73.940202,local,NEITHER
+614,Flushing,Queensboro Plaza,7,TRUE,40.750582,-73.940202,express,NEITHER
 615,Flushing,33rd St - Rawson St,7,FALSE,40.744587,-73.930997,local,NEITHER
-616,Flushing,Vernon Blvd - Jackson Av,7,FALSE,40.742626,-73.953581,local,NEITHER
+616,Flushing,Vernon Blvd - Jackson Av,7,FALSE,40.742626,-73.953581,express,NEITHER
 617,Flushing,61st St - Woodside,7,FALSE,40.74563,-73.902984,local,BOTH
 618,Jerome,138th St,4,TRUE,40.813224,-73.929849,local,NEITHER
 619,Jerome,138th St,5,TRUE,40.813224,-73.929849,local,NEITHER

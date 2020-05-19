@@ -1,38 +1,18 @@
 
 
 
-Start at: Aqueduct (A2)
+Start at: Bowling Green (5)
 
 
 Intermediate Stops:
 
-A3, Rockaway Blvd, 1, 3366.5836433232516
-A, Rockaway Blvd, 2, -2133.4163566767484
-A, 88th St, 2, -2191.870328394653
-A, 80th St, 2, -2244.0103776466785
-A, Grant Av, 2, -2290.461004971985
-A, Euclid Av, 2, -2332.5101389837127
-A, Broadway Junction, 2, -2299.6790869912475
-A, Utica Av, 2, -2272.776806203337
-A, Nostrand Av, 2, -2261.1904868665347
-A, Hoyt - Schermerhorn Sts, 2, -2199.9983558312697
-A, Jay St - Metrotech, 2, -2281.1997485807274
-A, High St, 2, -2356.617553842074
-A, Fulton St, 2, -2377.8094243120618
-A, Chambers St, 2, -2452.7346609854712
-A, Canal St, 2, -2562.7876687504004
-A, West 4th St - Washington Square, 2, -2691.2417049951346
-A, 14th St, 2, -2768.4964404705906
-A, 34th St - Penn Station, 2, -2913.7581715064434
-A, 42nd St - Port Authority Bus Terminal, 2, -3021.818038183129
-A, 59th St - Columbus Circle, 2, -3138.322472528226
-A, 125th St, 2, -3372.091101122436
-A, 145th St, 2, -3476.3917051472686
-A, 168th St, 2, -3564.084246421039
-A, 175th St, 2, -3635.680928899307
-A, 181st St, 2, -3711.17801303106
-A, 190th St, 2, -3792.315129246735
-A, Dyckman St, 2, -100003885.18015687
+5, Wall St, 0, 1325.5811157558667
+5, Fulton St, 0, 1321.4425888023104
+5, Brooklyn Bridge - City Hall, 0, 1324.4598084690192
+5, 14th St - Union Square, 0, 1435.3051690686198
+5, Grand Central - 42nd St, 0, 1644.7971511203054
+7, Grand Central - 42nd St, 1, -3105.2028488796946
+7, Vernon Blvd - Jackson Av, 1, -100003478.56569588
 
 
-Arrive at: Dyckman St (A)
+Arrive at: Vernon Blvd - Jackson Av (7)

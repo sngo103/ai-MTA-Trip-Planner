@@ -1,22 +1,20 @@
-from basic_search import route, initialize_system
+from main import route, initialize_system
 from subway_system import Subway_System
-from subway_system import Current_State
 import random
 
-f = open('testing.txt','a')
+f = open('testing.txt','w')
 
 alphstr = 'abcdefghiklmnopqrstuvwyzABCDEFGHIKLMNOPQRSTUVWY'
 directory_data, transfers_data, stop_order_data, mta = initialize_system()
-current_state = None
 
 
-def generateRoute(start, end, mta, current_state):
-    return route(start, end, mta, current_state)
+def generateRoute(start, end, mta):
+    return route(start, end, mta)
 
-for i in range(200):
+for i in range(25):
     start = random.choice(alphstr)
     end = random.choice(alphstr)
-    output = generateRoute(start, end, mta, current_state)
+    output = generateRoute(start, end, mta)
     f.write('\n\n' + str(i))
     if not output:
         print(i)
