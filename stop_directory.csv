@@ -130,7 +130,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 128,Broadway,Times Square - 42nd St,3,TRUE,40.754672,-73.986754,express,BOTH
 129,Broadway,Times Square - 42nd St,7,TRUE,40.754672,-73.986754,local,BOTH
 130,Broadway,Times Square - 42nd St,S1,TRUE,40.754672,-73.986754,express,NEITHER
-131,Broadway,14th St - Union Square,L,TRUE,40.735736,-73.990568,local,BOTH
+131,Broadway,14th St - Union Square,L,TRUE,40.735736,-73.990568,express,BOTH
 132,Broadway,14th St - Union Square,N,TRUE,40.735736,-73.990568,express,BOTH
 133,Broadway,14th St - Union Square,Q,TRUE,40.735736,-73.990568,express,BOTH
 134,Broadway,14th St - Union Square,R,TRUE,40.735736,-73.990568,local,BOTH
@@ -181,7 +181,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 179,Canarsie,14th St,A,TRUE,40.739777,-74.002578,express,BOTH
 180,Canarsie,14th St,C,TRUE,40.739777,-74.002578,local,BOTH
 181,Canarsie,14th St,E,TRUE,40.739777,-74.002578,local,BOTH
-182,Canarsie,8th Av,L,TRUE,40.739777,-74.002578,local,BOTH
+182,Canarsie,8th Av,L,TRUE,40.739777,-74.002578,express,BOTH
 183,Canarsie,Atlantic Av,L,FALSE,40.675345,-73.903097,local,NEITHER
 184,Canarsie,Bedford Av,L,FALSE,40.717304,-73.956872,local,NEITHER
 185,Canarsie,Bushwick Av,L,FALSE,40.682829,-73.905249,local,NEITHER
@@ -240,7 +240,7 @@ Stop ID,Neighborhood,Station Name,Line,canTransfer,Latitude,Longitude,Express,Ac
 241,63rd Street,Lexington Av - 63rd St,Q,TRUE,40.764627,-73.96611,local,BOTH
 242,63rd Street,Roosevelt Island,F,FALSE,40.759145,-73.95326,express,BOTH
 243,6 Avenue,14th St,F,TRUE,40.738228,-73.996209,local,NEITHER
-244,6 Avenue,6th Av,L,TRUE,40.738228,-73.996209,local,NEITHER
+244,6 Avenue,6th Av,L,TRUE,40.738228,-73.996209,express,NEITHER
 245,6 Avenue,14th St,M,TRUE,40.738228,-73.996209,local,NEITHER
 246,6 Avenue,14th St,1,TRUE,40.738228,-73.996209,local,NEITHER
 247,6 Avenue,14th St,2,TRUE,40.738228,-73.996209,express,NEITHER

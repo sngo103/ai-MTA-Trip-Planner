@@ -165,6 +165,8 @@ def route(start, end, mta, accessibility):
             while currentStop != start:
                 if not (currentStop.line[0] == currentStop.lastVisited.line[0] and currentStop.station_name == currentStop.lastVisited.station_name): #Avoid double printing transfers
                     route = currentStop.line[0] + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + '\n' + route
+                if currentStop.line[0] != currentStop.lastVisited.line[0]:
+                    route = '\nTransfer at ' + currentStop.lastVisited.station_name + ' to the (' + currentStop.line[0] + ') train at ' + currentStop.station_name + '.\n\n' + route
                 currentStop = currentStop.lastVisited
             start = currentStop
             route = '\n\nStart at: ' + start.station_name + ' (' + start.line[0] + ')\n\n\n' + 'Intermediate Stops:\n\n' + route
