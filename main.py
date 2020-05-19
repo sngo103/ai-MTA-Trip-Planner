@@ -45,7 +45,10 @@ def main():
         possibleStarts = list(map(lambda x: x.station_name + " (" + x.line + ")", startNodes))
         for i in range(len(possibleStarts)):
             print(i, ":", possibleStarts[i])
-        startIndex = input().strip()
+        try:
+            startIndex = int(input().strip())
+        except:
+            startIndex = input().strip()
         while((not isinstance(startIndex, int)) or (not (startIndex < len(possibleStarts) and startIndex > -1))):
             print("Sorry, I didn't get that. Please try again.")
             print("Which of these do you mean? Please select one by inputting its index.")
@@ -71,7 +74,10 @@ def main():
         possibleEnds = list(map(lambda x: x.station_name + " " + x.line + " Train", endNodes))
         for i in range(len(possibleEnds)):
             print(i, ":", possibleEnds[i])
-        endIndex = int(input().strip())
+        try:
+            endIndex = int(input().strip())
+        except:
+            endIndex = input().strip()
         while((not isinstance(endIndex, int)) or (not (endIndex < len(possibleEnds) and endIndex > -1))):
             print("Sorry, I didn't get that. Please try again.")
             print("Which of these do you mean? Please select one by inputting its index.")
