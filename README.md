@@ -4,14 +4,14 @@
 ### CSCI 35000 - Artificial Intelligence 
 ### 2020-05-18
 
-<Project Description>
+--- Project Description Here
 
 _**Note:** All three of us have been working together in real time on the same code via Microsoft LiveShare. We often host on Daniel's PC, therefore most commits are in his name._
 
 #### Dependencies:
 - Python version: >3.6.0
-- Outside Modules Used: sys, math, random, queue, json, googlemaps, datetime
-- Google Maps API Key: *An API KEY will be emailed to Professor Raja by the Blackboard submission deadline. The API Key is to be placed in the main directory as "api_key.txt". It is not uploaded to the repo and is included in the .gitignore for security reasons.
+- Outside Modules Used: sys, math, random, **queue**, json, **googlemaps**, **datetime**
+- **Google Maps API Key**: *An API KEY will be emailed to Professor Raja by the Blackboard submission deadline. The API Key is to be placed in the main directory as "api_key.txt". It is not uploaded to the repo and is included in the .gitignore for security reasons.
 
 #### Our Environment Specifics(conditions under which we wrote and ran our code):
 - Python Version: 3.7.4
@@ -30,7 +30,7 @@ _**Note:** All three of us have been working together in real time on the same c
 - Four-borough data set (though a few latitude and longitude values need to be inputted)
 - Standardized station names in stop_directory (same types of dashes are used; "th," "rd" or "nd" are inputted for all numbered station names)
 - Continuing to fix issues related to null pointers in data files
-- Resolved issue in Stop class __eq__ method
+- Resolved issue in Stop class \_\_eq\_\_ method
 - Smarter, heuristic-based train selection for starting stations with multiple line options
 - Heuristic takes into account total stops to destination, including transfers
 - Randomly chosen starting and ending stations when there are multiple options that match user inputs
