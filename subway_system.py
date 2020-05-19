@@ -112,8 +112,8 @@ class Stop():
     # Returns a constant value based on whether it is an express or local stop to be used in the heuristic:
     def localOrExpress(self):
         if self.express == 'express':
-            return -25
-        return 25
+            return -50
+        return 50
 
     # Apply latitude/longitude distance formula to get distance between two coords
     def getDist(self, lat1, lat2, long1, long2):

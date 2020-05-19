@@ -174,14 +174,14 @@ def route(start, end, mta, accessibility):
             route = ''
             while currentStop != start:
                 if not (currentStop.line[0] == currentStop.lastVisited.line[0] and currentStop.station_name == currentStop.lastVisited.station_name): #Avoid double printing transfers
-                    route = currentStop.line[0] + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + ', ' + str(currentStop.stopsToStart) + '\n' + route
+                    route = currentStop.line[0] + ', ' + currentStop.station_name + '\n' + route#', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + ', ' + str(currentStop.stopsToStart) + '\n' + route
                 if currentStop.line[0] != currentStop.lastVisited.line[0]:
                     route = '\nTransfer at ' + currentStop.lastVisited.station_name + ' to the (' + currentStop.line[0] + ') train at ' + currentStop.station_name + '.\n\n' + route
                 currentStop = currentStop.lastVisited
             global globalStart #Used to print the correct boarding line for the user
             globalStart = currentStop
             #route = '\n\nStart at: ' + globalStart.station_name + ' (' + globalStart.line[0] + ')\n\n\n' + 
-            route = '\nIntermediate Stops:\n\n' + route
+            route = '\nIntermediate Stops (Accessibility = ' + str(accessibility) + '):\n\n' + route
             return route
 
         # Get neighbors: nextStop, prevStop, transfers
@@ -191,12 +191,13 @@ def route(start, end, mta, accessibility):
                 neighbor_dirs.append(currentStop.nextStop)
         if currentStop.transfers:
             for transfer in range(len(currentStop.transfers)):
-                if not accessibility or currentStop.transfers[transfer].accessibility != 'NEITHER' or currentStop.line[0] == currentStop.transfers[transfer].line[0]:
+                if not accessibility or currentStop.transfers[transfer].accessibility != 'NEITHER' or not currentStop.lastVisited or currentStop.lastVisited.line[0] == currentStop.transfers[transfer].line[0]:
                     neighbor_dirs.append(currentStop.transfers[transfer])
         if currentStop.prevStop:            
             if not accessibility or currentStop.accessibility == 'BOTH' or not currentStop.lastVisited or currentStop.lastVisited.line[0] == currentStop.line[0] or currentStop.accessibility == 'DOWNTOWN':
                 neighbor_dirs.append(currentStop.prevStop)
-
+        #for item in neighbor_dirs:
+        #    print (item)
         #Add unexplored neighbors (with valid accessibility options if requested) to frontier
         for direc in neighbor_dirs:
             if direc.stopID not in explored:
