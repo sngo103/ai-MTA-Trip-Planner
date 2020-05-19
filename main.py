@@ -8,23 +8,90 @@ from queue import PriorityQueue
 from subway_system import Subway_System
 import sys, math
 
-args = sys.argv[1:]
+# args = sys.argv[1:]
 
 def main():
-    if len(args) != 2:
-        sys.exit("---Incorrect usage. Must be 'python main.py <origin_str> <destination_str>'")
+    if len(sys.argv) != 1:
+        sys.exit("---Incorrect usage. Must be 'python main.py'")
 
     directory_data, transfers_data, stop_order_data, mta = initialize_system()
+    print("=====================================================================")
+    print(" AI MTA TRIP PLANNER by Team Wish Upon A*")
+    print("=====================================================================")
+    print("Welcome, user, my name is AI Greg! I'm here to help you get to where you're going.")
+    print("First, do you need accessible stations? Type Yes or No. Then press Enter.")
+    accessible = input().strip()
+    while(not(accessible == "Yes" or accessible == "No")):
+        print("Sorry, I didn't understand that. Please type exactly Yes or No. Then press Enter.")
+        accessible = input()
+    if accessible == "Yes":
+        accessible = True
+    elif accessible == "No":
+        accessible = False
+    print("Great, now what is your starting point? You can type the address or name of a place.")
+    print("Not sure what the name is? Enter what you know, we'll figure it out.")
+    start = input().strip()
+    startNodes = mta.findStop(start)
+    if startNodes == []:
+        try:
+            print("Let me try and figure out what station you mean...")
+            start = mta.directory[mta.startToStation(start)["nearest_station"]]
+            print("I estimated your start station to be", start.station_name, start.line)
+        except:
+            sys.exit("Sorry, I cannot figure out what your start point is. Please try a different query.")
+    else:
+        print("Which of these do you mean? Please select one by inputting its index.")
+        possibleStarts = list(map(lambda x: x.station_name + " " + x.line + " Train", startNodes))
+        for i in range(len(possibleStarts)):
+            print(i, ":", possibleStarts[i])
+        startIndex = int(input().strip())
+        while(not (startIndex < len(possibleStarts) and startIndex > -1)):
+            print("Sorry, I didn't get that. Please try again.")
+            print("Which of these do you mean? Please select one by inputting its index.")
+            for i in range(len(possibleStarts)):
+                print(i, ":", possibleStarts[i])
+            startIndex = int(input().strip())
+        start = startNodes[startIndex]
+        print("Starting Point:", possibleStarts[startIndex])
+    print("Okay, now what is your ending point? You can type the address or name of a place.")
+    print("Not sure what the name is? Enter what you know, we'll figure it out.")
+    end = input().strip()
+    endNodes = mta.findStop(end)
+    if endNodes == []:
+        try:
+            print("Let me try and figure out what station you mean...")
+            end = mta.directory[mta.startToStation(end)["nearest_station"]]
+            print("I estimated your end station to be", end.station_name, end.line)
+        except:
+            sys.exit("Sorry, I cannot figure out what your start point is. Please try a different query.")
+    else:
+        print("Which of these do you mean? Please select one by inputting its index.")
+        possibleEnds = list(map(lambda x: x.station_name + " " + x.line + " Train", endNodes))
+        for i in range(len(possibleEnds)):
+            print(i, ":", possibleEnds[i])
+        endIndex = int(input().strip())
+        while(not (endIndex < len(possibleEnds) and endIndex > -1)):
+            print("Sorry, I didn't get that. Please try again.")
+            print("Which of these do you mean? Please select one by inputting its index.")
+            for i in range(len(possibleEnds)):
+                print(i, ":", possibleEnds[i])
+            endIndex = int(input().strip())
+        end = endNodes[endIndex]
+        print("Ending Point:", possibleEnds[endIndex])
+    print("Thank you! Give me one moment. Calculating...")
+    directions = route(start, end, mta)
+    print("...done! Here are your directions:")
+    print(directions)
+    print("Have a safe trip!")
+    #output = open('route.txt', 'w')
+    # output.write(text)
 
-    output = open('route.txt', 'w')
-    text = route(args[0],args[1], mta)
-    output.write(text)
-    print(text)
     # # Start to Station Usage:
     # print(mta.startToStation("Knapp Street Pizza"))
     # print()
     # # Station to End Usage:
     # print(mta.stationToEnd("Kinkun Books"))
+    return True
 
 def initialize_system():
     # Stop Directory
@@ -40,8 +107,8 @@ def initialize_system():
     return directory_data, transfers_data, stop_order_data, mta
 
 def route(start, end, mta):
-    start = mta.findStop(start)
-    end = mta.findStop(end)
+    # start = mta.findStop(start)
+    # end = mta.findStop(end)
 
     if not start or not end:
         sys.exit("\nNo station with the specified name was found. Please try again, or contact an administrator.'")
@@ -65,7 +132,7 @@ def route(start, end, mta):
         explored.add(currentStop.stopID)
 
         # If it's not the starting stop
-        if currentStop.lastVisited:  
+        if currentStop.lastVisited:
             # Add all transfers of last visited stop to explored.
             for stop in currentStop.lastVisited.transfers:
                 explored.add(stop.stopID) # Isn't allowed to expand transfers of last visited stop(s)
