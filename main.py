@@ -8,8 +8,6 @@ from queue import PriorityQueue
 from subway_system import Subway_System
 import sys, math
 
-# args = sys.argv[1:]
-
 def main():
     if len(sys.argv) != 1:
         sys.exit("---Incorrect usage. Must be 'python main.py'")
@@ -28,10 +26,11 @@ def main():
         accessible = True
     elif accessible == "No":
         accessible = False
+
     print("Great, now what is your starting point? You can type the address or name of a place.")
     print("Not sure what the name is? Enter what you know, we'll figure it out.")
     start = input().strip()
-    startNodes = mta.findStop(start)
+    startNodes = mta.findStop(start, accessible)
     if startNodes == []:
         try:
             print("Let me try and figure out what station you mean...")
@@ -56,7 +55,7 @@ def main():
     print("Okay, now what is your ending point? You can type the address or name of a place.")
     print("Not sure what the name is? Enter what you know, we'll figure it out.")
     end = input().strip()
-    endNodes = mta.findStop(end)
+    endNodes = mta.findStop(end, accessible)
     if endNodes == []:
         try:
             print("Let me try and figure out what station you mean...")
@@ -79,7 +78,7 @@ def main():
         end = endNodes[endIndex]
         print("Ending Point:", possibleEnds[endIndex])
     print("Thank you! Give me one moment. Calculating...")
-    directions = route(start, end, mta)
+    directions = route(start, end, mta, accessible)
     print("...done! Here are your directions:")
     print(directions)
     print("Have a safe trip!")
