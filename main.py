@@ -6,7 +6,7 @@
 
 from queue import PriorityQueue
 from subway_system import Subway_System
-import sys, math
+import sys, math, random
 
 def main():
     if len(sys.argv) != 1:
@@ -17,7 +17,7 @@ def main():
     print(" AI MTA TRIP PLANNER by Team Wish Upon A*")
     print("=====================================================================")
     print("Welcome, user, my name is AI Greg! I'm here to help you get to where you're going.\n")
-    print("First, do you need accessible stations? Type Yes or No. Then press Enter.")
+    print("First, do you need accessible stations? Type Yes or No. Then press Enter.\n")
     accessible = input().strip()
     while(not(accessible.lower() == "yes" or accessible.lower() == "no")):
         print("Sorry, I didn't understand that. Please type exactly Yes or No. Then press Enter.")
@@ -29,20 +29,20 @@ def main():
     start_walking = []
     end_walking = []
     print("\nGreat, now what is your starting point? You can type the address or name of a place.")
-    print("Not sure what the name is? Enter what you know, we'll figure it out.")
+    print("Not sure what the name is? Enter what you know, I'll figure it out.\n")
     start = input().strip()
     startNodes = mta.findStop(start, accessible)
     if startNodes == []:
         try:
             print("\nLet me try and figure out what station you mean...")
-            start_walking = mta.startToStation(start)
+            start_walking = mta.startToStation(start, accessible)
             start = mta.directory[start_walking["nearest_station"]]
-            print("I estimated your start station to be", '(', start.station_name, ')', start.line)
+            print("I estimated your start station to be " + start.station_name + ' (' + start.line[0] + ')')
         except:
             sys.exit("Sorry, I cannot figure out what your start point is. Please try a different query.")
     else:
         print("Which of these do you mean? Please select one by inputting its index.")
-        possibleStarts = list(map(lambda x: x.station_name + " (" + x.line + ")", startNodes))
+        possibleStarts = list(map(lambda x: x.station_name + " (" + x.line[0] + ")", startNodes))
         for i in range(len(possibleStarts)):
             print(i, ":", possibleStarts[i])
         try:
@@ -57,21 +57,21 @@ def main():
             startIndex = int(input().strip())
         start = startNodes[startIndex]
         print("Starting Point:", possibleStarts[startIndex])
-    print("Okay, now what is your ending point? You can type the address or name of a place.")
-    print("Not sure what the name is? Enter what you know, we'll figure it out.\n")
+    print("\nOkay, now what is your ending point? You can type the address or name of a place.")
+    print("Not sure what the name is? Enter what you know, I'll figure it out.\n")
     end = input().strip()
     endNodes = mta.findStop(end, accessible)
     if endNodes == []:
         try:
             print("Let me try and figure out what station you mean...")
-            end_walking = mta.stationToEnd(end)
+            end_walking = mta.stationToEnd(end, accessible)
             end = mta.directory[end_walking["nearest_station"]]
-            print("I estimated your end station to be", end.station_name, end.line)
+            print("I estimated your end station to be " + end.station_name + ' (' + end.line[0] + ')')
         except:
             sys.exit("Sorry, I cannot figure out what your start point is. Please try a different query.")
     else:
         print("\nWhich of these do you mean? Please select one by inputting its index.")
-        possibleEnds = list(map(lambda x: x.station_name + " " + x.line + " Train", endNodes))
+        possibleEnds = list(map(lambda x: x.station_name + " (" + x.line[0] + ")", endNodes))
         for i in range(len(possibleEnds)):
             print(i, ":", possibleEnds[i])
         try:
@@ -88,7 +88,7 @@ def main():
         print("Ending Point:", possibleEnds[endIndex])
     print("\nThank you! Give me one moment. Calculating...")
     directions = route(start, end, mta, accessible)
-    print("...done! Here are your directions:")
+    print("...done! Here are your directions:\n")
     try:
         for item in start_walking["walking_instructions"]:
             if '[' not in item and '-' not in item:
@@ -128,8 +128,8 @@ def initialize_system():
 
 
 def route(start, end, mta, accessibility):
-    # start = mta.findStop(start, accessibility)
-    # end = mta.findStop(end, accessibility)
+    #start = random.choice(mta.findStop(start, accessibility))
+    #end = random.choice(mta.findStop(end, accessibility))
 
     if not start or not end:
         sys.exit("\nNo station with the specified name was found. Please try again, or contact an administrator.'")
@@ -161,12 +161,13 @@ def route(start, end, mta, accessibility):
         # Goal Test, also traces back the route
         if end == currentStop and end.station_name == currentStop.station_name:
             #trace back route
-            route = '\n\nArrive at: ' + end.station_name + ' (' + currentStop.line + ')\n'
+            route = '\n\nArrive at: ' + end.station_name + ' (' + currentStop.line[0] + ')\n'
             while currentStop != start:
-                route = currentStop.line + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + '\n' + route
+                if not (currentStop.line[0] == currentStop.lastVisited.line[0] and currentStop.station_name == currentStop.lastVisited.station_name): #Avoid double printing transfers
+                    route = currentStop.line[0] + ', ' + currentStop.station_name + ', ' + str(currentStop.transferCount) + ', ' + str(currentStop.heuristic(start, end)) + '\n' + route
                 currentStop = currentStop.lastVisited
             start = currentStop
-            route = '\n\n\nStart at: ' + start.station_name + ' (' + start.line + ')\n\n\n' + 'Intermediate Stops:\n\n' + route
+            route = '\n\nStart at: ' + start.station_name + ' (' + start.line[0] + ')\n\n\n' + 'Intermediate Stops:\n\n' + route
             return route
 
         # Get neighbors: nextStop, prevStop, transfers

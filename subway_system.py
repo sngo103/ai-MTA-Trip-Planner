@@ -4,7 +4,7 @@
 # AI MTA Trip Planner: Class Structure
 # 2020-05-18
 
-import math, random
+import math
 import sys
 import json
 import googlemaps
@@ -134,7 +134,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return 200 * totalDist + 1000 * self.transferCount + self.checkEndStop(end) + 300 * self.checkEndLines(end) + 0 * (20 * self.stopsToEnd + 1 * self.localOrExpress()) + 2 * (100 - self.stopsToEnd) * self.localOrExpress() * (1000 * self.transferCount)
+        return 50 * totalDist + 50 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 20 * self.stopsToEnd + 2 * self.localOrExpress()
 
     # Returns the hash of this Stop Node object
     def __hash__(self):
@@ -247,36 +247,17 @@ class Subway_System():
                     order[i].setNextStop(order[i+1])
         return
 
-    # Get the first StopID that matches a user-inputted station NAME and LINE
-    # Based on substrings of Stop names
-    '''def findStop(self, stop_name, line):
-        #put all of this inside if (accessible) if that is needed
-        if not line:
-            for stop in self.directory:
-                if stop_name in self.directory[stop].station_name:
-                    return self.directory[stop]
-            return False
-        else:
-            for stop in self.directory:
-                if stop_name in self.directory[stop].station_name and line == stop.line:
-                    return self.directory[stop]
-            return False'''
-
-    # Get the first StopID that matches a user-inputted station NAME only
-    # Based on substrings of Stop names
+    # Get the list of stops that match a user-inputted station name keyword
+    # Based on substrings of stop names
     def findStop(self, stop_name, accessibility):
-        # Relate user input names to stops:
+        # Relate user input names to stops
         options = []
         for stop in self.directory:
             if stop_name.lower() in self.directory[stop].station_name.lower():
                 if accessibility and self.directory[stop].accessibility == 'BOTH' or not accessibility:
                     options.append(self.directory[stop])
 
-        # Randomly choose between stations with the same name or search keyword
-        if options:
-            return options
-        # Prevent inputs that are not stop names
-        return []
+        return options # Prevent inputs that are not stop names
 
     # Calculate the number of stops between two stations on the same line
     def stopsToEnd(self, line, stop):
@@ -298,7 +279,7 @@ class Subway_System():
     # Get walking directions from origin to nearest subway station
     # Params:
     # - start_addr: text query address of origin, NOT lat,long
-    def startToStation(self, start_addr): # Assumes the start station is unknown
+    def startToStation(self, start_addr, accessibility): # Assumes the start station is unknown
         retDict = {"start":{"address" : "", "name" : "", "latitude" : 0, "longitude" : 0},
                    "nearest_station": -1,
                    "walking_instructions" : []}
@@ -325,9 +306,15 @@ class Subway_System():
         for id, node in self.directory.items():
             dist = node.getDist(node.latitude, station_lat, node.longitude, station_lng)
             if dist < leastDist:
-                leastDist = dist
-                stopID = id
+                if not accessibility or node.accessibility == 'BOTH':
+                    leastDist = dist
+                    stopID = id
         retDict["nearest_station"] = stopID
+        # Update nearest for accessibility (Google API does not support accessibility)
+        nearest = self.gmaps.places_nearby(location=[self.directory[stopID].latitude, self.directory[stopID].longitude], rank_by="distance", type="subway_station")['results'][0]
+        station_name = nearest['name']
+        station_lat = nearest['geometry']['location']['lat']
+        station_lng = nearest['geometry']['location']['lng']
         # Get walking directions from the start address to the nearest station:
         param_origin = [place_lat, place_lng]
         param_dest = [station_lat, station_lng]
@@ -341,7 +328,7 @@ class Subway_System():
     # Get walking directions from nearest subway station to destination
     # Params:
     # - end_addr(str): text query address of destination, NOT lat,long
-    def stationToEnd(self, end_addr): # End station can be known or unknown
+    def stationToEnd(self, end_addr, accessibility): # End station can be known or unknown
         retDict = {"end":{"address" : "", "name" : "", "latitude" : 0, "longitude" : 0},
                    "nearest_station": -1,
                    "walking_instructions" : []}
@@ -368,9 +355,15 @@ class Subway_System():
         for id, node in self.directory.items():
             dist = node.getDist(node.latitude, station_lat, node.longitude, station_lng)
             if dist < leastDist:
-                leastDist = dist
-                stopID = id
+                if not accessibility or node.accessibility == 'BOTH':
+                    leastDist = dist
+                    stopID = id
         retDict["nearest_station"] = stopID
+        # Update nearest for accessibility (Google API does not support accessibility)
+        nearest = self.gmaps.places_nearby(location=[self.directory[stopID].latitude, self.directory[stopID].longitude], rank_by="distance", type="subway_station")['results'][0]
+        station_name = nearest['name']
+        station_lat = nearest['geometry']['location']['lat']
+        station_lng = nearest['geometry']['location']['lng']
         # Get walking directions from the nearest station to the destination to the user's desired end location:
         param_origin = [station_lat, station_lng]
         param_dest = [place_lat, place_lng]
