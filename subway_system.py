@@ -274,9 +274,9 @@ class Subway_System():
 
         # Randomly choose between stations with the same name or search keyword
         if options:
-            return random.choice(options)
+            return options
         # Prevent inputs that are not stop names
-        return False
+        return []
 
     # Calculate the number of stops between two stations on the same line
     def stopsToEnd(self, line, stop):
