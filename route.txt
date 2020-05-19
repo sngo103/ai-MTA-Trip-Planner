@@ -1,18 +1,20 @@
 
 
 
-Start at: Bowling Green (5)
+Start at: Times Square - 42nd St (Q)
 
 
 Intermediate Stops:
 
-5, Wall St, 0, 1325.5811157558667
-5, Fulton St, 0, 1321.4425888023104
-5, Brooklyn Bridge - City Hall, 0, 1324.4598084690192
-5, 14th St - Union Square, 0, 1435.3051690686198
-5, Grand Central - 42nd St, 0, 1644.7971511203054
-7, Grand Central - 42nd St, 1, -3105.2028488796946
-7, Vernon Blvd - Jackson Av, 1, -100003478.56569588
+Q, 34th St - Herald Square, 0, 1203.4770426465661
+Q, 14th St - Union Square, 0, 1219.4989330471687
+5, 14th St - Union Square, 1, -478730.5010669528
+5, Brooklyn Bridge - City Hall, 1, -483731.09644640516
+Z, Chambers St, 2, -968581.0964464052
+Z, Fulton St, 2, -978577.0458568087
+5, Fulton St, 3, -1468527.0458568085
+5, Wall St, 3, -1483548.63923717
+5, Bowling Green, 3, -101498549.53720099
 
 
-Arrive at: Vernon Blvd - Jackson Av (7)
+Arrive at: Bowling Green (5)

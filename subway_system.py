@@ -134,7 +134,7 @@ class Stop():
         #totalDist = distToStart + distToGoal
         totalDist = (self.getDist(self.latitude, start.latitude, self.longitude, start.longitude)
             + self.getDist(self.latitude, end.latitude, self.longitude, end.longitude))
-        return 200 * totalDist + 0 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 0 * (20 * self.stopsToEnd + 6 * self.localOrExpress()) + 2 * (100 - self.stopsToEnd) * self.localOrExpress() * (100 * self.transferCount)
+        return 200 * totalDist + 100 * self.transferCount + self.checkEndStop(end) + self.checkEndLines(end) + 0 * (20 * self.stopsToEnd + 6 * self.localOrExpress()) + 2 * (100 - self.stopsToEnd) * self.localOrExpress() * (100 * self.transferCount)
 
     # Returns the hash of this Stop Node object
     def __hash__(self):
@@ -249,7 +249,7 @@ class Subway_System():
 
     # Get the first StopID that matches a user-inputted station NAME and LINE
     # Based on substrings of Stop names
-    def findStop(self, stop_name, line):
+    '''def findStop(self, stop_name, line):
         #put all of this inside if (accessible) if that is needed
         if not line:
             for stop in self.directory:
@@ -260,16 +260,18 @@ class Subway_System():
             for stop in self.directory:
                 if stop_name in self.directory[stop].station_name and line == stop.line:
                     return self.directory[stop]
-            return False
+            return False'''
 
     # Get the first StopID that matches a user-inputted station NAME only
     # Based on substrings of Stop names
-    def findStop(self, stop_name):
+    def findStop(self, stop_name, accessibility):
         # Relate user input names to stops:
         options = []
         for stop in self.directory:
             if stop_name in self.directory[stop].station_name:
-                options.append(self.directory[stop])
+                if accessibility and self.directory[stop].accessibility == 'BOTH' or not accessibility:
+                    options.append(self.directory[stop])
+
         # Randomly choose between stations with the same name or search keyword
         if options:
             return options
