@@ -6,7 +6,7 @@
 
 <Project Description>
 
-*Note: All three of us have been working together in real time on the same code via Microsoft LiveShare. We often host on Daniel's PC, therefore most commits are in his name.
+_**Note:** All three of us have been working together in real time on the same code via Microsoft LiveShare. We often host on Daniel's PC, therefore most commits are in his name._
 
 #### Dependencies:
 - Python version: >3.6.0
@@ -18,7 +18,7 @@
 - Operating System: Windows 10
 - IDE: Atom
 
-#### Usage Instructions: python main.py
+#### Usage Instructions: ```python main.py```
 
 #### Important Notes:
 - The modules queue, googlemaps, datetime, and json MUST be installed(via pip or other) in order for the program to work.
