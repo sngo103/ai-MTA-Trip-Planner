@@ -25,6 +25,7 @@ _**Note:** All three of us have been working together in real time on the same c
 #### Important Notes:
 - The modules queue, googlemaps, datetime, and json MUST be installed(via pip or other) in order for the program to work.
 - A working Google Maps API Key must be in the main directory in order for the program to work. See Dependencies for more information on where and when you will receive the API Key.
+- We didn't not focus on the user interface as much as we did the algorithms and structure, so there is little protection against incorrectly formatted input. Please try to follow the input specifications provided closely to avoid any unexpected and irrelevant errors.
 
 #### Task Breakdown:
 - Anton: Wrote enhanced A* algorithm, fine-tuned heuristics, conducted testing, researched state-of-the-art and potential algorithms
