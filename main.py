@@ -17,7 +17,7 @@ def main():
     directory_data, transfers_data, stop_order_data, mta = initialize_system()
 
     output = open('route.txt', 'w')
-    text = route(args[0],args[1], mta)
+    text = route(args[0],args[1], mta, False)
     output.write(text)
     print(text)
     # # Start to Station Usage:
@@ -39,9 +39,9 @@ def initialize_system():
 
     return directory_data, transfers_data, stop_order_data, mta
 
-def route(start, end, mta):
-    start = mta.findStop(start)
-    end = mta.findStop(end)
+def route(start, end, mta, accessibility):
+    start = mta.findStop(start, accessibility)
+    end = mta.findStop(end, accessibility)
 
     if not start or not end:
         sys.exit("\nNo station with the specified name was found. Please try again, or contact an administrator.'")
@@ -87,14 +87,6 @@ def route(start, end, mta):
             neighbor_dirs.append(currentStop.nextStop)
         if currentStop.transfers: #Already a list, so we can concatenate
             neighbor_dirs += currentStop.transfers
-            #for transfer in currentStop.transfers:
-                # if accessibility == 'DOWNTOWN' and transfer.prevStop.heuristic(start, end) < transfer.nextStop.heuristic(start,end):
-                    #add it to the frontier, since you can transfer as a disabled person
-                # if accessibility == 'UPTOWN' and transfer.prevStop.heuristic(start, end) > transfer.nextStop.heuristic(start,end):
-                    #add it to the frontier, since you can transfer as a disabled person
-                # if accessibility == 'BOTH':
-                    #add it to the frontier, no questions asked
-                #else: don't add it, it's not accessible in your direction
         if currentStop.prevStop:
             neighbor_dirs.append(currentStop.prevStop)
 
@@ -112,6 +104,13 @@ def route(start, end, mta):
                     direc.transferCount = currentStop.transferCount
                 #update stopsToEnd if neighbor and end lines are the same
                 direc.stopsToEnd = mta.transferStopsToEnd(direc)
+
+                if accessibility and direc in currentStop.transfers:
+                    transferVal = direc.heuristic(start, end)
+                    if (direc.accessibility == 'BOTH' or direc.prevStop and direc.accessibility == 'DOWNTOWN' and direc.prevStop.heuristic(start, end) < transferVal
+                        or direc.nextStop and direc.accessibility == 'UPTOWN' and direc.nextStop.heuristic(start,end) < transferVal):
+                        frontier.put(direc)
+
                 frontier.put(direc)
 
     #You should never get here
