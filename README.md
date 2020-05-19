@@ -16,7 +16,7 @@ _**Note:** All three of us have been working together in real time on the same c
 #### Our Environment Specifics(conditions under which we wrote and ran our code):
 - Python Version: 3.7.4
 - Operating System: Windows 10
-- IDE: Atom
+- IDE: Atom, Microsoft Visual Studio 2019, Microsoft LiveShare
 
 #### Usage Instructions: ```python main.py```
 
@@ -24,29 +24,28 @@ _**Note:** All three of us have been working together in real time on the same c
 - The modules queue, googlemaps, datetime, and json MUST be installed(via pip or other) in order for the program to work.
 - A working Google Maps API Key must be in the main directory in order for the program to work. See Dependencies for more information on where and when you will receive the API Key.
 
+#### Task Breakdown:
+- Anton: Wrote enhanced A* algorithm, fine-tuned heuristics, conducted testing, researched state-of-the-art and potential algorithms
+- Samantha: Designed and built search space structure, wrote api functions, created dataset, fine-tuned heuristics, wrote terminal feedback
+- Daniel: Designed and built search space algorithm facilitation functions, wrote basic A* algorithm and DFS algorithm, worked on enhanced A* algorithm, created dataset, fine-tuned heuristics, conducted testing, debugged terminal feedback structure
+
 #### Accomplishments:
 - Much improved A* search, supporting transfers and routes in both directions
-- Heuristic that takes into account latitude/longitude-based distance to the end stop, number of transfers made, and distance to the end stop (now including transfers!)
-- Four-borough data set (though a few latitude and longitude values need to be inputted)
-- Standardized station names in stop_directory (same types of dashes are used; "th," "rd" or "nd" are inputted for all numbered station names)
-- Continuing to fix issues related to null pointers in data files
-- Resolved issue in Stop class \_\_eq\_\_ method
 - Smarter, heuristic-based train selection for starting stations with multiple line options
 - Heuristic takes into account total stops to destination, including transfers
-- Randomly chosen starting and ending stations when there are multiple options that match user inputs
-
-#### More To Do:
-- (Manually) fill in unlisted latitude and longitude values in stop_directory.csv
-- General code cleanup in subway_system.py and basic_search.py
-- Route is sometimes not picking the shortest path
-    - Needs confirmation
+- Heuristic that takes into account latitude/longitude-based distance to the end stop, number of transfers made, and distance to the end stop (now including transfers!)
+- Designed and built efficient search space for traversal
+- Created four-borough dataset
+- Standardized station names in stop_directory 
+- Fixed issues related to null pointers in data files
+- Resolved issue in Stop class \_\_eq\_\_ method
 
 #### Unresolved Issues:
 - Import loops resulting from current_state structure
     - current_state is not being utilized at the moment
 
 #### For the Future:
-- Have algorithm better detect which train to start/end with if the user inputs stops with many available trains
+- Have algorithm better detect which train to start/end if the user inputs stops with many available trains
     - Currently randomized
 - ensure that the user does not need to enter the exact name of desired stops
     - there is presently no way to distinguish between stops with the same station name
@@ -54,4 +53,12 @@ _**Note:** All three of us have been working together in real time on the same c
         - the current method of relating user-inputted station names to stopIDs (mta.findStop) cannot distinguish between these different stations
     - current solution: allowing keywords (algorithm accepts substrings of station names)
     - potential improvement: use a drop-down GUI?
-
+- Continue Fine-tuning heuristic
+- Integrate buses
+- Integrate ai-powered walking directions
+- Add Timetable
+- Add Real-Time Updates
+- Resolve A train issues
+- Route is sometimes not picking the shortest path
+    - Needs confirmation
+ - Include railroads
