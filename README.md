@@ -3,6 +3,7 @@
 ### Anton Goretsky, Samantha Ngo, Daniel Rozenzaft | Hunter College
 ### CSCI 35000 - Artificial Intelligence 
 ### 2020-05-18
+### Video Link | https://www.youtube.com/watch?v=Q_QdKQvubSc&feature=youtu.be
 
 _**Note:** All three of us have been working together in real time on the same code via Microsoft LiveShare. We often host on Daniel's PC, therefore most commits are in his name._
 
