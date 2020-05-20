@@ -7,7 +7,7 @@
 _**Note:** All three of us have been working together in real time on the same code via Microsoft LiveShare. We often host on Daniel's PC, therefore most commits are in his name._
 
 #### Project Description
-This project is a trip planner application that services four boroughs of NYC. Given a start and a destination, either an address or subway station, this application will generate the an optimal or sub-optimal route to the destination. If the user needs wheelchair accessibility, the application will provide a route with only accessible stations in mind. The directions provided will include the NYC subway, and walking directions to and from start and end addresses, if specified. This project uses the A* informed search algorithm with various heuristic metrics, from transfers counts to express train bias. Walking directions are provided via the Google Maps API. Data was generated using one pre-made dataset which we heavily modified by hand and by custom script to include all stops and more information. Evalutation was done manually and subjectively due to the various service changes around the coronavirus providing conflicting routes, and select lines being no longer in service. A several thousand route test file was generated and evaluated by hand for "optimality".
+This project is a trip planner application that services four boroughs of NYC. Given a start and a destination, either an address or subway station, this application will generate the an optimal or sub-optimal route to the destination. If the user needs wheelchair accessibility, the application will provide a route with only accessible stations in mind. The directions provided will include the NYC subway, and walking directions to and from start and end addresses, if specified. This project uses the A* informed search algorithm with various heuristic metrics, from transfers counts to express train bias. Walking directions are provided via the Google Maps API. Data was generated using one pre-made dataset which we heavily modified by hand and by custom script to include all stops and more information. Evalutation was done manually and subjectively due to the various service changes around the coronavirus providing conflicting routes, and select lines being no longer in service. A several thousand route test file was generated and evaluated manually for "optimality."
 
 #### Dependencies:
 - Python version: >3.6.0
@@ -22,7 +22,7 @@ This project is a trip planner application that services four boroughs of NYC. G
 #### Usage Instructions: ```python main.py```
 
 #### Important Notes:
-- The modules queue, googlemaps, datetime, and json MUST be installed(via pip or other) in order for the program to work.
+- The modules queue, googlemaps, datetime, and json MUST be installed (via pip or other) in order for the program to work.
 - A working Google Maps API Key must be in the main directory in order for the program to work. See Dependencies for more information on where and when you will receive the API Key.
 - We didn't not focus on the user interface as much as we did the algorithms and structure, so there is little protection against incorrectly formatted input. Please try to follow the input specifications provided closely to avoid any unexpected and irrelevant errors.
 
@@ -47,9 +47,9 @@ This project is a trip planner application that services four boroughs of NYC. G
     - Transfers between A trains were treated as negligible
     - Printing only shows a single version
     - Must be split back into its 3 types for optimal use.
-- At "Aqeuduct Race Track", there exist the only instance of a "split stop"
-    - North and South directions are independent stops on single line, our structure cannot handle that.
-    - Currently handled by combining into a single stop.
+- At "Aqueduct," there exists the only instance of a "split stop"
+    - North and South directions are independent stops on single line: our structure cannot handle that.
+    - Currently handled by combining "Aqueduct - North Conduit Av' and "Aqueduct Racetrack" into a single stop, "Aqueduct."
 - The heuristic balance between choosing an express train or local train is very sensisitve
     - Some routes will favor express routes as desired
     - Some will switch to an express train at a seemingly odd point
@@ -57,8 +57,9 @@ This project is a trip planner application that services four boroughs of NYC. G
     - May need to do more stern evaluation and implement heuristic adjustments per cases
 - Accessibility constraint may crash on certain routes.
     - There exists an issue in adding some stations to the priority queue when feature is on
-    - Priority queue empties before destination is reached.
-    - Need to adjust station adding to make sure this never happens, otherwise, results appear optimal.
+    - Priority queue empties before destination is reached
+    - Seems to be caused by the A train divergences
+    - Need to adjust station adding under accessibility constraint to make sure this never happens, otherwise, results appear       optimal.
 - Walking directions are limited to picking the closest station to interpreted input address
     - No multiple starting point selection
     - No address interpretation options
@@ -67,20 +68,12 @@ This project is a trip planner application that services four boroughs of NYC. G
 
 
 #### For the Future:
-- Have algorithm better detect which train to start/end if the user inputs stops with many available trains
-    - Currently randomized
-- ensure that the user does not need to enter the exact name of desired stops
-    - there is presently no way to distinguish between stops with the same station name
-        - Ex: "7th Av" is a stop in Brooklyn on the F/G, a different Brooklyn stop on the B/Q, and a Manhattan stop on the B/D/E
-        - the current method of relating user-inputted station names to stopIDs (mta.findStop) cannot distinguish between these different stations
-    - current solution: allowing keywords (algorithm accepts substrings of station names)
-    - potential improvement: use a drop-down GUI?
-- Continue Fine-tuning heuristic
+- Continue fine-tuning heuristic
 - Integrate buses
 - Integrate ai-powered walking directions
 - Add Timetable
 - Add Real-Time Updates
 - Resolve A train issues
 - Route is sometimes not picking the shortest path
-    - Needs confirmation
- - Include railroads
+    - Not always choosing available express options when they are optimal
+ - Include commuter rail
